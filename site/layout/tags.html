@@ -1,0 +1,24 @@
+{{ define "all-tags"}}
+{{ template "head" .}}
+
+<body>
+  {{template "header" .}}
+
+  <div class="body">
+
+    <h1>Site Index</h1>
+
+    <div class="all-tags">
+      {{range .Tags}}
+      <a class="post-tag" href="tags/{{.}}.html">#{{.}}</a>
+      {{end}}
+    </div>
+
+  </div>
+
+  {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

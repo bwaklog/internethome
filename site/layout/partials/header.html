@@ -1,0 +1,19 @@
+{{define "header"}}
+<header>
+  <nav>
+    <div class="navigations">
+      <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
+      {{range .Layout.Navbar}}
+      {{ if eq . "index" }}
+      <a href="/">{{ $.Layout.Author }}</a>
+      {{else}}
+      <a href="/{{.}}.html">{{.}}</a>
+      {{end}}
+      {{end}}
+    </div>
+    <div class="theme-toggle-div">
+      <img class="theme-toggle" alt="site logo" id="theme-toggle" src="/static/favicon.png" />
+    </div>
+  </nav>
+</header>
+{{end}}

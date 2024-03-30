@@ -1,0 +1,9 @@
+navbar:
+  - index
+  - anna
+  - works
+  - tags
+  - posts
+baseURL: https://hegde.live/
+siteScripts:
+author: Aditya Hegde

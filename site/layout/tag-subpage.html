@@ -1,0 +1,32 @@
+{{ define "tag-subpage"}}
+{{ template "head" .}}
+
+<body>
+    {{template "header" .}}
+
+    <div class="body">
+
+        <h1>#{{ .Frontmatter.Title }} Collection</h1>
+
+        <div class="posts">
+            {{range .SpecificTagTemplates}}
+            <a class="post-card" href="/posts/{{.FilenameWithoutExtension}}.html">
+                <div class="post-card-div">
+                    <div class="post-card description">
+                        <h3>{{.Frontmatter.Title}}</h3>
+                        <p>{{.Frontmatter.Description}}</p>
+                    </div>
+                    <p class="post-card description date">{{.Frontmatter.Date}}</p>
+                </div>
+            </a>
+            {{end}}
+        </div>
+
+    </div>
+
+    {{template "footer" .}}
+</body>
+
+</html>
+
+{{ end}}

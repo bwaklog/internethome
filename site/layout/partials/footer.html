@@ -1,0 +1,34 @@
+{{define "footer"}}
+<footer>
+    <!--img class="footer-image" src="/static/favicon.png" /-->
+    <div class="footer-text">
+        Rendered with <span style="color: #ff4a6a">&#10084;</span> by
+        <a href="https://github.com/acmpesuecc/anna"
+            >anna</a
+        >
+        <br />
+        page source <a id="commit-hash" href="https://github.com/bwaklog/internethome/">here</a>
+    </div>
+    <em>Amh</em>
+</footer>
+<script>
+    // get github latest commit hash for https://github.com/internethome
+    const repoURL = "https://api.github.com/repos/bwaklog/internethome/commits/HEAD"
+
+    fetch(repoURL)
+        .then(response => response.json())
+        .then(data => {
+            const latestCommitHash = data.sha.slice(0, 7);
+
+            const commitHashElement = document.getElementById('commit-hash');
+            commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`
+            commitHashElement.textContent = `${latestCommitHash}`;
+
+            console.log('Latest commit hash:', latestCommitHash);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error)
+        });
+
+</script>
+{{end}}
