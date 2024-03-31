@@ -12,6 +12,8 @@ tags:
   - talk
 ---
 
+<i>Presented and written by Adhesh, Anirudh, Aditya and Nathan</i>
+
 Building personal blogs from the ground up can be a tedious process. Some of us have had our hands deep in vanilla HTML and CSS, which isn't fun to maintain.
 We all want to get to the point and share our thoughts on the web. But, there is a small bump that stops us from doing so
 
