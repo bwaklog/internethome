@@ -1,7 +1,6 @@
 [build]
-command = "make"
-publish = "anna/site/rendered"
-environment = { GO_VERSION = "1.22.1" }
+command = "./install.sh"
+publish = "site/rendered"
 
 [[redirects]]
 from = "/*"
