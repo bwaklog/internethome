@@ -20,7 +20,8 @@
   <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" />
   <link rel="alternate" type="application/atom+xml" title="feed" href="/feed.atom">
-  <link rel="preload stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- <link href="/static/style.css" rel="stylesheet/" type="text/css"> -->
   <script src="/static/scripts/light.js" defer></script>
 
   {{range .Frontmatter.JSFiles}}
@@ -36,6 +37,5 @@
   <meta property="og:title" content="~/{{ $.Layout.Author }}/{{ .Frontmatter.Title }}">
   <meta property="og:description" content="{{ .Frontmatter.Description }}">
   <meta property="og:image" content="{{ .Frontmatter.PreviewImage }}">
-
 </head>
 {{end}}

@@ -1,40 +1,18 @@
 function lightScheme() {
   // change the tags
   document.documentElement.style.setProperty("--color-text", "#282828");
-  document.documentElement.style.setProperty("--color-text-dim", "#2828282a");
+  document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
   document.documentElement.style.setProperty("--color-background", "#FFFFFF");
-  document.documentElement.style.setProperty(
-    "--color-postcard-text",
-    "#484848",
-  );
-  document.documentElement.style.setProperty("--catppuccino-crust", "#dce0e8");
-  document.documentElement.style.setProperty("--color-primary", "#FF4A6A");
-  document.documentElement.style.setProperty(
-    "--color-primary-dim",
-    "#FF4A6A7f",
-  );
-
-  // set body - background-color and background-image to none
+  document.documentElement.style.setProperty("--color-background-dim", "#dadada");
+  document.documentElement.style.setProperty("--inline-code-bg", "#dce0e8");
 }
 
 function darkScheme() {
-  document.documentElement.style.setProperty("--color-text", "#ffffff");
-  document.documentElement.style.setProperty("--color-text-dim", "#ffffff2a");
+  document.documentElement.style.setProperty("--color-text", "#d8d8d8");
+  document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
   document.documentElement.style.setProperty("--color-background", "#131313");
-  document.documentElement.style.setProperty(
-    "--color-postcard-text",
-    "#b4befe5f",
-  );
-  document.documentElement.style.setProperty(
-    "--color-white-accent",
-    "#ffffff35",
-  );
-  document.documentElement.style.setProperty("--catppuccino-crust", "#1e1e2d");
-  document.documentElement.style.setProperty("--color-primary", "#FF4A6A");
-  document.documentElement.style.setProperty(
-    "--color-primary-dim",
-    "#FF4A6A7f",
-  );
+  document.documentElement.style.setProperty("--color-background-dim", "#2a2a2a");
+  document.documentElement.style.setProperty("--inline-code-bg", "#1d1f21");
 }
 
 // store user toggle preference in local storage. Site must remember what theme was last used

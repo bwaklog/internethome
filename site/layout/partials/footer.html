@@ -7,9 +7,9 @@
             >anna</a
         >
         <br />
-        page source <a id="commit-hash" href="https://github.com/bwaklog/internethome/">here</a>
+        page source <a id="commit-hash" href="https://github.com/bwaklog/internethome/">here</a> updated on <span id="commit-date">god knows when</span>
     </div>
-    <em>Amh</em>
+    <!-- <em>Amh</em> -->
 </footer>
 <script>
     // get github latest commit hash for https://github.com/internethome
@@ -25,10 +25,14 @@
             commitHashElement.textContent = `${latestCommitHash}`;
 
             console.log('Latest commit hash:', latestCommitHash);
+
+            const commitDate = data.commit.author.date;
+            const readable_date = new Date(commitDate).toDateString();
+            console.log('Latest commit date:', readable_date);
+            document.getElementById('commit-date').textContent = readable_date;
         })
         .catch(error => {
             console.error('Error fetching data:', error)
         });
-
 </script>
 {{end}}
