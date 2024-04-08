@@ -2,11 +2,9 @@
 {{ template "head" .}}
 
 <body>
-
+    {{template "header" .}}
     <div class="container">
-        {{template "header" .}}
 
-        <div class="body">
             {{if eq .Frontmatter.Type "post"}}
             <div class="post-info">
                 <h1>{{.Frontmatter.Title}}</h1>
@@ -33,42 +31,15 @@
             {{else}}
             {{end}}
             {{.Body}}
-            <div class="overlay" />
-        </div>
 
         <script>
             hljs.highlightAll();
             hljs.addPlugin(new CopyButtonPlugin());
         </script>
-        <script defer>
-        document.addEventListener("DOMContentLoaded", function() {
-          const images = document.querySelectorAll('img[data-src]');
 
-          const options = {
-            rootMargin: '0px',
-            threshold: 0.1 // Adjust the threshold as needed
-          };
-
-          const observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.getAttribute('data-src');
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-              }
-            });
-          }, options);
-
-          images.forEach(img => {
-            observer.observe(img);
-          });
-        });
-        </script>
-
-        {{template "footer" .}}
     </div>
-
+  </div>
+    {{template "footer" .}}
 </body>
 
 </html>

@@ -2,10 +2,9 @@
 {{ template "head" .}}
 
 <body>
+    {{template "header" .}}
     <div class="container">
-        {{template "header" .}}
 
-        <div class="body">
 
             <div class="posts">
                 {{range $PostDate, $Post := .Posts}}
@@ -21,10 +20,8 @@
                 {{end}}
             </div>
 
-        </div>
-
-        {{template "footer" .}}
     </div>
+    {{template "footer" .}}
 </body>
 
 </html>

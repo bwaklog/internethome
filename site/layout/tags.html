@@ -2,10 +2,8 @@
 {{ template "head" .}}
 
 <body>
+    {{template "header" .}}
     <div class="container">
-        {{template "header" .}}
-
-        <div class="body">
 
             <h1>Site Index</h1>
 
@@ -14,11 +12,11 @@
                 <a class="post-tag" href="tags/{{.}}.html">#{{.}}</a>
                 {{end}}
             </div>
+    <br/>
+    {{ template "search" .}}
 
-        </div>
-
-        {{template "footer" .}}
     </div>
+    {{template "footer" .}}
 </body>
 
 </html>
