@@ -1,6 +1,6 @@
 ---
-date: 2024-03-07
-title: Anna Docs
+date: 2024-04-10
+title: Anna Documentation
 ---
 
 ```text
@@ -19,6 +19,7 @@ Pronounced: `/ɐnːɐ/` which means rice in Kannada 🍚
 
 This Project is a part of the ACM PESU-ECC's yearly [AIEP](https://acmpesuecc.github.io/aiep) program, and is maintained by [Adhesh Athrey](https://github.com/DedLad), [Nathan Paul](https://github.com/polarhive), [Anirudh Sudhir](https://github.com/anirudhsudhir), and [Aditya Hegde](https://github.com/bwaklog)
 
+---
 ## Directory structure
 
 The ssg currently requires the following directory structure
@@ -50,6 +51,7 @@ The ssg currently requires the following directory structure
 │    └ /rendered (This directory is created by the ssg)
 └── /test (Stores mock data required to test the SSG)
     ├── /engine
+    │   ├── /merged_data_test
     │   ├── /render_engine_generated
     │   ├── /render_page
     │   ├── /render_tags
@@ -73,18 +75,39 @@ The ssg currently requires the following directory structure
   - The `posts.html` file defines the layout of a page displaying all the posts of the site
   - The layout files can be composed of smaller html files which are stored in the `partials/` folder
 
-#### Layout
+## Building layouts
 
-The layout files can access the following rendered data from the markdown files:
+Each layout file(except `posts.html` and `tags.html`) can access any data from the entire ssg
 
-- `{{.CompleteURL}}` : Returns the complete url of the given page
-- `{{.FilenameWithoutExtension}}` : Returns the name of the current file
-- `{{.Date}}` : Returns the last modified date of the current file
-- `{{.Frontmatter.[Tagname]}}` : Returns the value of the frontmatter tag
-  - Example: `{{.Frontmatter.Title}}` : Returns the value of the title tag
-- `{{.Body}}` : Returns the markdown body rendered to HTML
-- `{{.Layout.[Tagname]}}`: Returns the particular configuration detail of the page
-  - Example: `{{.Layout.Navbar}}` : Returns a string slice with the names of all the navbar elements
+The URL for the current page can be accessed using `{{.PageURL}}`
+
+To access the data for a particular page, use Go templating syntax:
+
+```html
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{$PageData.CompleteURL}}
+```
+
+To access the page data for `posts.html`, `tags.html` and partials, set {{$PageData := .TemplateData}}
+
+All of the following page data fields can be accessed in the above manner:
+
+- `{{$PageData.CompleteURL}}` : Returns the complete url of the given page
+- `{{$PageData.Date}}` : Returns the last modified date of the current file
+- `{{$PageData.Frontmatter.[Tagname]}}` : Returns the value of the frontmatter tag
+  - Example: `{{$PageData.Frontmatter.Title}}` : Returns the value of the title tag
+- `{{$PageData.Body}}` : Returns the markdown body rendered to HTML
+- `{{$PageData.Layout.[Tagname]}}`: Returns the particular configuration detail of the page
+  - Example: `{{$PageData.Layout.Navbar}}` : Returns a string slice with the names of all the navbar elements
+
+In addition to page data, the following fields can be accessed:
+
+- `{{.DeepDataMerge.Tags}}` - A map that stores the template of the tag sub-pages for a particular tag url
+- `{{.DeepDataMerge.TagsMap}}` - A map that stores a slice of templates of all posts for a particular tag url
+- `{{.DeepDataMerge.LayoutConfig}}` - Stores the layout parsed from `config.yml`
+- `{{.DeepDataMerge.Posts}}` - Stores a slice of templates of all posts
+- `{{.DeepDataMerge.JSONIndex}}` - Stores the JSON index generated for a particular site
+(primarily used for search and graphing of tags)
 
 ## Notes
 
@@ -106,10 +129,12 @@ The layout files can access the following rendered data from the markdown files:
 - `title` : The title of the current page
 - `date`: The date of the current page
 - `draft`: When set to 'true', the current page is not rendered unless the '-d' flag is used
+- `scripts`: Stores the page-level scripts to be added
 - `type`: Sets the type of the page. Use type 'post' for posts
 - `description`: Stores the description of the current post previewed in posts.html
 - `previewimage`: Stores the preview image of the current page
 - `tags`: Stores the tags of the particular page
+- `authors`: Stores (multiple) author/s of a particular page
 
 (**The above tags are Frontmatter tags**)
 
@@ -131,8 +156,7 @@ navbar:
   - posts
 
 baseURL: http://localhost:8000/
-# Replace this with the actual canonical-url of your site.
-
+# Replace this with the actual canonical-url of your site
 # baseURL tells search-engines (SEO), web-crawlers (robots.txt) so people can discover your site on the internet.
 # It's also embeded in your sitemap / atom feed and can be used to change metadata about your site.
 
@@ -141,32 +165,54 @@ siteScripts:
 author: Anna
 ```
 
-## Install
+---
 
-Once you have a directory structure, install `anna` using:
+# Using Anna locally
 
-```sh
-go install github.com/acmpesuecc/anna@latest
+## Installing from releases
+
+```sh 
+curl -L https://github.com/acmpesuecc/anna/releases/download/<tag>/<release>.tar.gz > anna.tar.gz
+tar -xvf anna.tar.gz
+./anna
 ```
 
-Or if you have git installed, clone our repository:
+## Using homebrew on MacOS
 
-```sh
-git clone github.com/acmpesuecc/anna --depth=1
-cd anna
-go run .
+```sh 
+brew tap anna-ssg/anna
+brew install anna
 ```
 
-## Flags
+> If you don't have a site dir with the pre-requisite layout template; anna proceeds to fetch the default site dir from our GitHub repository
 
+
+## Usage
 ```text
 Usage:
   anna [flags]
 
 Flags:
-  -a, --addr stringwhich sip address to serve rendered content to (default "8000")
-  -d, --draft           renders draft posts
-  -h, --help            help for ssg
-  -s, --serve           serve the rendered content
-  -v, --validate-html   validate semantic HTML
+  -a, --addr string   ip address to serve rendered content to (default "8000")
+  -d, --draft         renders draft posts
+  -h, --help          help for anna
+  -l, --layout        validates html layouts
+  -p, --prof          enable profiling
+  -s, --serve         serve the rendered content
+  -v, --version       prints current version number
+  -w, --webconsole    wizard to setup anna
 ```
+
+---
+
+## Contributing to Anna
+
+Detailed documentation for our SSG can be found: [here](https://anna-docs.netlify.app/)
+
+If you have git installed, clone our repository and build against the latest commit
+
+```sh
+git clone github.com/acmpesuecc/anna; cd anna
+go build
+```
+

@@ -32,6 +32,15 @@
   <script src="/static/scripts/{{.}}" defer></script>
   {{end}}
 
+  <script defer>
+    // add lazy loading to all images
+
+    document.querySelectorAll('img').forEach((img) => {
+      img.setAttribute('loading', 'lazy');
+    });
+
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/static/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Frontmatter.Title }}">

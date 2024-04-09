@@ -5,9 +5,9 @@
       <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
       {{range .Layout.Navbar}}
       {{ if eq . "index" }}
-      <a href="/">{{ $.Layout.Author }}</a>
+      <a class="header-element" href="/">{{ $.Layout.Author }}</a>
       {{else}}
-      <a href="/{{.}}.html">{{.}}</a>
+      <a class="header-element"  href="/{{.}}.html">{{.}}</a>
       {{end}}
       {{end}}
     </div>

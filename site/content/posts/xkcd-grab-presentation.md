@@ -3,7 +3,7 @@ date: 2023-12-09
 title: My first HSP talk
 draft: false
 type: post
-description: My presentation in the 2023 HSP Project Expo. xkcd-grab demonstration, fuzzy searchinig, web scraping and more.
+description: I recently got the oppourtunity to take part in the project expo hosted by the club HSP part of PESU ECity campus. As part of this expo, I presented one of my on going projects.
 tags:
   - hsp
   - python

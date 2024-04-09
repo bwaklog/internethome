@@ -1,9 +1,9 @@
 ---
 date: 2024-03-08
 title: Workflow
-draft: false
+draft: true
 type: post
-description: Here are some things I cant live without
+description: Here are some things I cant live without on my system.
 previewimage: https://i.imgur.com/TR4Dkq4.jpg
 tags:
   - blog
@@ -16,7 +16,7 @@ At first, yes these things were a bit intriguing, but once u leave the learning 
 
 ## My Most Used terminal tools
 
-- [nsim](https://neovim.io/) as my primary config with [packer](https://github.com/wbthomason/packer.nvim)
+- [nvim](https://neovim.io/) with the LazyVim config
 - honorable mention to [zed](https://zed.dev/), which has been amazing
 - [zsh](https://en.wikipedia.org/wiki/Z_shell) Z-Shell as my default shell with [oh-my-zsh](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Amethyst](https://github.com/ianyh/Amethyst) as my Window Manager

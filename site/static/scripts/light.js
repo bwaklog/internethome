@@ -4,6 +4,7 @@ function lightScheme() {
   document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
   document.documentElement.style.setProperty("--color-background", "#FFFFFF");
   document.documentElement.style.setProperty("--color-background-dim", "#dadada");
+  document.documentElement.style.setProperty("--color-background-low", "#dadada7a");
   document.documentElement.style.setProperty("--inline-code-bg", "#dce0e8");
 }
 
@@ -12,6 +13,7 @@ function darkScheme() {
   document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
   document.documentElement.style.setProperty("--color-background", "#131313");
   document.documentElement.style.setProperty("--color-background-dim", "#2a2a2a");
+  document.documentElement.style.setProperty("--color-background-low", "#2a2a2a7a");
   document.documentElement.style.setProperty("--inline-code-bg", "#1d1f21");
 }
 

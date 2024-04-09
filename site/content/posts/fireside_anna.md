@@ -5,7 +5,7 @@ type: post
 draft: false
 description:
   This page contains a post about anna, a static site generator written in Go. This team
-  project was built as part of AIEP 2024
+  project was built as part of AIEP 2024.
 tags:
   - acm
   - hsp
@@ -155,7 +155,7 @@ The previous mod time of the file would then be retrieved from a map holding the
 The new function checks if a child process is running:
 
 - For the first render, when a process has not been created, a new process is created that runs anna ("go run main.go --serve")
-- For successive renders, the existing process is killed and a new process is spawned once again that runs anna. 
+- For successive renders, the existing process is killed and a new process is spawned once again that runs anna.
 
 This prototype was not very efficient as it created and killed processes for every change.
 It had multiple goroutines attempting to walk the directories at the same time.
@@ -331,4 +331,3 @@ We are at week: 3/6 and have a lot of things in store and bugs to squash!
 
 Today [anna](https://github.com/acmpesuecc/anna/releases/latest) is tagged at v1.0.0 and we use it on our personal sites:
 [hegde.live](https://hegde.live) // [sudhir.live](https://sudhir.live) // [polarhive.net](https://polarhive.net)
-

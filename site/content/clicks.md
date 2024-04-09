@@ -75,7 +75,6 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
 
 ![Cannon Rebel struggles](https://i.imgur.com/r1W9ohZ.jpg)
 
-<!-- ![Pondicherry Villa](https://i.imgur.com/miFjoRG.jpg) -->
 ![Pondicherry Villa](https://i.imgur.com/Pu176PH.jpg)
 
 ![Ikea Bengaluru storage](https://i.imgur.com/HZ3hHs0.jpg)
@@ -92,10 +91,6 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
 </div>
 
 <script>
-    // select all images except theme toggle
-
-    // $(document).ready(function(){$("image-grid > img").click(function(){this.requestFullscreen()})}); 
-
     const galleryImages = document.querySelectorAll('img:not(#theme-toggle)');
     const imageOverlay = document.querySelector('.image-overlay');
     const largeImage = document.querySelector('.large-image');
@@ -106,8 +101,6 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
         imageOverlay.style.visibility = 'visible';
         imageOverlay.style.opacity = '1';
         largeImage.src = image.src;
-        largeImage.style.maxWidth = 'auto';
-        largeImage.style.maxHeight = '80%';
         });
     });
 

@@ -20,11 +20,9 @@
                     {{ end }}
 
                 </p>
-                <div class="tags-paceholder">
+                <div class="tags-placeholder">
                     {{range .Frontmatter.Tags}}
-                    <div class="tag">
                         <a class="post-tag" href="/tags/{{.}}.html">#{{.}}</a>
-                    </div>
                     {{end}}
                 </div>
             </div>
