@@ -4,7 +4,7 @@ navbar:
   # - works
   - clicks
   - tags
-  - posts
+  # - posts
 baseURL: https://hegde.live/
 siteScripts:
 author: Aditya Hegde

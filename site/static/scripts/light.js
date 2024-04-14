@@ -2,10 +2,10 @@ function lightScheme() {
   // change the tags
   document.documentElement.style.setProperty("--color-text", "#282828");
   document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
-  document.documentElement.style.setProperty("--color-background", "#FFFFFF");
+  document.documentElement.style.setProperty("--color-background", "#FAF9F6");
   document.documentElement.style.setProperty("--color-background-dim", "#dadada");
   document.documentElement.style.setProperty("--color-background-low", "#dadada7a");
-  document.documentElement.style.setProperty("--inline-code-bg", "#dce0e8");
+  document.documentElement.style.setProperty("--inline-code-bg", "#ff4a6a28");
 }
 
 function darkScheme() {

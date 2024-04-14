@@ -33,10 +33,11 @@
                 data[key]["Frontmatter"]["Title"].toLowerCase();
               if (title.includes(searchValue.toLowerCase())) {
                 var a = document.createElement("a");
-                a.innerHTML = data[key]["Frontmatter"]["Title"];
+                a.innerHTML = `${data[key]["Frontmatter"]["Title"]}`;
                 a.href = `/${data[key]["CompleteURL"]}`;
                 resultDiv.appendChild(a);
                 resultDiv.appendChild(
+                  document.createElement("br"),
                   document.createElement("br"),
                 );
               }

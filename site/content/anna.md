@@ -1,6 +1,11 @@
 ---
 date: 2024-04-10
 title: Anna Documentation
+description: The following page consists of a semi-detailed documentation of how to use anna as your ssg, or for other purposes. It includes instructions for usage of go templates with DDM, and other features
+tags: 
+  - acm
+  - project
+  - documentation
 ---
 
 ```text

@@ -1,6 +1,6 @@
 /* Creating named values cuz im stupid */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-text: #ffffff;
         --color-text-dim: #ffffff7f;
@@ -9,27 +9,38 @@
         --color-background-low: #2a2a2a7a;
         --inline-code-bg: #1d1f21;
     }
-}
+} */
 
 @media (prefers-color-scheme: light) {
     :root {
         --color-text: #000000;
         --color-text-dim: #000000;
-        --color-background: #ffffff;
+        --color-background: #FAF9F6;
         --color-background-dim: #fafafa;
         --color-background-low: #fafafa7a;
-        --inline-code-bg: #dce0e8;
+        --inline-code-bg: #ff4a6a28;
     }
 }
 
 :root {
     --color-primary: #ff4a6a;
     --color-primary-dim: #ff4a6aef;
+    --color-primary-low: #ff4a6a50;
 }
 
 @font-face {
     font-family: IosevkaPragmataPro;
     src: url(./fonts/mono/IosevkaPragmataPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: Newsreader;
+    src: url(./fonts/Newsreader/Newsreader.ttf);
+}
+
+@font-face {
+    font-family: NewsreaderItalic;
+    src: url(./fonts/Newsreader/Newsreader-Italic.ttf);
 }
 
 body {
@@ -48,6 +59,9 @@ body {
     line-height: 1.5;
 
     text-rendering: optimizeLegibility;
+
+    /* text opacity  */
+    color: var(--color-text-dim);
 
     font-weight: 400;
     background-color: var(--color-background);
@@ -96,13 +110,14 @@ footer,
 header {
     flex: 0;
     position: fixed;
-    background-color: var(--color-background-low);
+    /* background-color: var(--color-background-low); */
+    background-color: var(--color-background);
     color: var(--color-text);
-    fill-opacity: 0.8;
+    /* fill-opacity: 0.8; */
 
-    backdrop-filter: brightness(50%);
+    /* backdrop-filter: brightness(50%);
     backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px); */
 
     z-index: 900;
     width: 100%;
@@ -161,8 +176,8 @@ hr {
     opacity: 0.5;
     /* thickeness of hr */
     border: 1px solid var(--color-text-dim);
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    /* margin-top: .8rem; */
+    /* margin-bottom: .8rem; */
 }
 
 ul,
@@ -241,33 +256,48 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-weight: 650;
+    font-weight: 550;
     text-align: left;
     word-break: break-word;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     color: var(--color-text);
+
+    font-family: NewsreaderItalic, sans;
 }
 
 h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
+    /* margin-top: 0.4rem; */
+    /* margin-bottom: 0.4rem; */
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* margin-top: 0.4rem; */
+    /* margin-bottom: 0.4rem; */
+}
+
+h3, h4 {
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
 }
 
 h5,
 h6 {
     opacity: 0.6;
     font-weight: 550;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
 }
 
 .navigations {
@@ -292,7 +322,7 @@ form-container {
 #searchSiteInput {
     background: var(--color-background);
     color: var(--color-text);
-    border: 1px solid var(--color-primary);
+    border: 1.5px solid var(--color-primary-dim);
 
     width: 100%;
 
@@ -325,13 +355,23 @@ form-container {
     margin-top: 0.5rem;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
+    
+    & > a { color: var(--color-text);}
+    font-family: Newsreader;
+    font-weight: 550;
+
+    & > a {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 
 a {
     color: var(--color-primary);
     text-decoration: none;
     position: relative;
-
     &:hover {
         text-decoration: none;
     }
@@ -437,16 +477,23 @@ details > img {
         font-size: 1.1rem;
         padding: auto;
         margin: auto;
-        padding-inline: 0.3rem;
+        padding-inline: 0.1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
     }
 }
 
 .all-tags {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    line-break:loose;
     flex-wrap: wrap;
-    justify-content: center;
+    line-height: 2;
+
+    & > .post-tag {
+        margin-top: 1rem;
+    }
 }
 
 .tags-placeholder {
@@ -459,12 +506,16 @@ details > img {
 .post-tag {
     user-select: none;
     margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
 }
 
 .post-info {
     border-bottom: 1px solid var(--color-text-dim);
     /* margin-top: 1rem; */
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
+    padding-bottom: 1em;
 
     & > h1 {
         margin: 0;
@@ -472,11 +523,15 @@ details > img {
     }
 
     p {
-        font-style: italic;
+        /* font-style: italic; */
         padding: 0;
         margin: 0;
         font-weight: 200;
     }
+}
+
+.post-info-bottom {
+    color: var(--color-text);
 }
 
 .posts {
@@ -510,7 +565,6 @@ details > img {
 
 .post-card.div {
     display: grid;
-
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
 
@@ -530,6 +584,9 @@ details > img {
         font-size: 1.5rem;
         color: var(--color-text);
         opacity: 0.85;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     & > .date {
@@ -610,7 +667,7 @@ details > img {
 
 pre code {
     font-family: IosevkaPragmataPro, monospace;
-    background: white;
+    /* background: ; */
     overflow-x: scroll;
     scrollbar-width: none;
     border-radius: 0.5rem;
@@ -628,12 +685,14 @@ pre code.hljs {
 p > code,
 li > code,
 dd > code,
-td > code h1 > code,
+td > code,
+h1 > code,
 h2 > code,
 h3 > code,
-h4 > code {
+h4 > code,
+a > code {
     font-family: IosevkaPragmataPro, monospace;
-    color: var(--color-primary);
+    color: var(--color-text);
     background-color: var(--inline-code-bg);
     border-radius: 5px;
     word-wrap: break-word;
@@ -650,18 +709,19 @@ h4 > code {
 }
 
 blockquote {
+    width: 100%;
     & > p {
-        font-style: italic;
+        font-family: NewsreaderItalic;
         font-size: 1.2rem;
-        margin-left: 1rem;
-        font-weight: 300;
-
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        font-weight: 450;
     }
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-    border-left: 3px solid var(--color-primary-dim);
-    margin-left: 0px;
+    border-left: 3px solid var(--color-primary);
+    /* background-color: var(--inline-code-bg); */
+    margin: 0;
 }
 
 @media (max-width: 800px) {

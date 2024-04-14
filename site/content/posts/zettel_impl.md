@@ -11,6 +11,7 @@ tags:
     - blog
     - tech
     - aiep
+    - WIP
 ---
 
 # Proof of concept
@@ -28,7 +29,7 @@ together to make it accessible on the site.
 
 ---
 
-## 1.0 Figuring out the named links.
+### 1.0 Figuring out the named links.
 
 All notes usually have titles as a phrase that can be referred to in a certain note. Our job as the SSG is to link these two notes together. For example
 
@@ -42,14 +43,14 @@ porttitor lobortis sed ut sem.
 
 The above md file is referencing a note namely `Nunc ullamcorper`. What needs to be done is, this "callout" is to be replaced by a link to that specific "note".
 
-### 1.1 Basic Working Model
+#### 1.1 Basic Working Model
 
 The parser must search through the `Body` section of these *notes*.
 There are supposed to be "user defined" references to notes, which the parser must identify and add.
 The specific reference to the `template data` of that specific post is appended with the information of all the links that it has found during parsing of the file.
 This can be utilised later by the templating engine.
 
-### <a name="linking-automation"></a>1.2 Automation of linking process
+#### <a name="linking-automation"></a>1.2 Automation of linking process
 
 The previous method suggests the user has to manually link posts.
 With automation, the goal is to remove the need for manually entering these links.
@@ -58,7 +59,7 @@ For example, `[[Nunc ullamcorper]]` will reference the markdown file which conta
 These callouts to other notes are to be picked out by the parser and replaced with a proper markdown reference in the buffer, so that the acutal file remains untouched.
 For example `[[Nunc ullamcorper]]` will be updated to `[Nunc ullamcorper](/notes/zettel_name/123782734234)`.
 
-### 1.3 Automation of file creation
+#### 1.3 Automation of file creation
 
 This is a step forward from from [Automation of linking process](#linking-automation). As we are not a text editing application, this feature will make the process of creating subnotes simpler.
 
@@ -66,7 +67,7 @@ Other than just the parser identifying the `[[]]` callouts, during the live relo
 
 ---
 
-## 2.0 Restructuring
+### 2.0 Restructuring
 
 As of now, our content directory looks somewhat like this:
 
@@ -93,7 +94,7 @@ head: true
 ---
 ```
 
-### 2.1 Concept of the `Mega Struct` (Deep Data Merge)
+#### 2.1 Concept of the `Mega Struct` & Deep Data Merge
 
 As each zettel must have access to the information of all other zettels, the implementation of a Deep Data Merge is quite necessary.
 Each page is rendered by passsing a `Mega Struct` that the entire data of the notes section.
@@ -123,13 +124,3 @@ type Note struct {
     LinkedNotes   []string
 }
 ```
-
----
-
-# TODO for zettelkasten impl
-
-- [ ] Generation of Linked Notes
-    - [ ] Implement 1.1 version of linking (user defined references to notes)
-    - [ ] Implement automation for the process of linking. Using `[[]]` callouts to file names.
-- Tests:
-    - [ ] unit tests for parsing parocess of the package rendering processes of package

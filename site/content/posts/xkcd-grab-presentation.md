@@ -7,7 +7,7 @@ description: I recently got the oppourtunity to take part in the project expo ho
 tags:
   - hsp
   - python
-  - talks
+  - talk
   - cli
   - blog
   - tech
