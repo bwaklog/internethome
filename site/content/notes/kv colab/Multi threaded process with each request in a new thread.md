@@ -12,4 +12,18 @@ R2 -> INCR K -> Thread 2
 
 If there aren't any guard rails in place for this process, the output in the kv could be unpredictable where. To ensure data correctness after execution of both operations, we need to add in a locking mechanism.
 
+Without locks, there is a good chance for unpredictable output. The final data wouldn't represent the true correct value
+
+```text
+      ┌─────────┐ 
+T1 -> │  K + 1  │ ===> 10 ++ ~> 11
+      └─────────┘
+	  
+      ┌─────────┐ 
+T2 -> │  K + 1  │ ===> 10 ++ ~> 11
+      └─────────┘
+```
+
 These locks to threads ensure concurrency safety where at max only *one thread* can aquire a lock.2 
+
+![IMG](/static/images/notes/aqu-rel_lock_multi_thread.png)
