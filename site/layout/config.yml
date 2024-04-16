@@ -4,6 +4,7 @@ navbar:
   # - works
   - clicks
   - tags
+  # - notes
   # - posts
 baseURL: https://hegde.live/
 siteScripts:

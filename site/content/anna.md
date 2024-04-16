@@ -6,6 +6,7 @@ tags:
   - acm
   - project
   - documentation
+type: page
 ---
 
 ```text

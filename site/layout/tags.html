@@ -1,19 +1,58 @@
 {{ define "all-tags"}}
+{{$PageData := .TemplateData}}
 {{ template "head" .}}
 
 <body>
     {{template "header" .}}
     <div class="container">
 
-            <h1>Site Index</h1>
+        <h1>Site Index</h1>
 
-            <div class="all-tags">
-                {{range .Tags}}
-                <a class="post-tag" href="tags/{{.}}.html"><code>{{.}}</code></a>
-                {{end}}
-            </div>
-    <br/>
-    {{ template "search" .}}
+        <div class="all-tags">
+            {{ range .TagNames }}
+            <a class="post-tag" href="/tags/{{ . }}.html"><code>{{.}}</code></a>
+            {{end}}
+        </div>
+        <br />
+        {{ template "search" .}}
+
+        <hr />
+
+        <h2>Some recent posts </h2>
+
+        <div class="posts">
+            {{range $index, $Post := (slice .DeepDataMerge.Posts 0 3)}}
+            <a class="post-card" href="/{{ .CompleteURL }}">
+                <div class="post-card div">
+                    <h3>{{$Post.Frontmatter.Title}}</h3>
+                    <p>{{$Post.Frontmatter.Description}}</p>
+                    <p>
+                        {{ range .Frontmatter.Tags }}
+                            <code>{{ . }}</code>
+                        {{ end }}
+                    </p>
+                    <p class="post-card date">{{$Post.Frontmatter.Date}}</p>
+                </div>
+            </a>
+            {{end}}
+        </div>
+
+        <hr />
+
+        <h2>Curated Notes</h2>
+        <div class="posts">
+            {{ range .DeepDataMerge.Notes }}
+            {{ if eq .Frontmatter.Head true }}
+            <a class="post-card" href="/{{ .CompleteURL }}">
+                <div class="post-card div">
+                    <h3>{{.Frontmatter.Title}}</h3>
+                    <p>{{.Frontmatter.Description}}</p>
+                    <p class="post-card date">{{.Frontmatter.Date}}</p>
+                </div>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
 
     </div>
     {{template "footer" .}}

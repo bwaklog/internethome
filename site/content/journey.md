@@ -1,5 +1,6 @@
 ---
 title: Journey
+type: page
 ---
 
 # Timeline

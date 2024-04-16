@@ -1,11 +1,17 @@
 {{define "header"}}
+
+{{ $PageData := index .DeepDataMerge.Templates .PageURL }}
+{{ if eq $PageData nil }}
+  {{ $PageData = .TemplateData }}
+{{ end }}
+
 <header>
   <nav>
     <div class="navigations">
       <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
-      {{range .Layout.Navbar}}
+      {{ range .DeepDataMerge.LayoutConfig.Navbar }}
       {{ if eq . "index" }}
-      <a class="header-element" href="/">{{ $.Layout.Author }}</a>
+      <a class="header-element" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
       {{else}}
       <a class="header-element"  href="/{{.}}.html">{{.}}</a>
       {{end}}

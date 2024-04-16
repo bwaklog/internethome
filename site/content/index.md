@@ -3,6 +3,7 @@ date: 2024-02-24
 title: Aditya Hegde
 description: My Internet Home
 previewimage: /static/me.jpeg
+type: page
 ---
 
 ## Hey! I'm Aditya Hegde

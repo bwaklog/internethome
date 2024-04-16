@@ -1,5 +1,6 @@
 ---
 title: Works
+type: page
 ---
 
 # Works

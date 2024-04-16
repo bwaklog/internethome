@@ -1,9 +1,7 @@
 {{define "search"}}
-<div class="form-container">
 <form class="siteSearch" id="searchSite">
-  <input type="text" placeholder="Search Site" id="searchSiteInput" name="searchSite" required autocomplete="off" />
+  <input type="text" placeholder="Search Post or Page" id="searchSiteInput" name="searchSite" required autocomplete="off" />
 </form>
-</div>
 <div id="site_search_result"></div>
 <script>
   var resultDiv = document.getElementById("site_search_result");
@@ -33,11 +31,10 @@
                 data[key]["Frontmatter"]["Title"].toLowerCase();
               if (title.includes(searchValue.toLowerCase())) {
                 var a = document.createElement("a");
-                a.innerHTML = `${data[key]["Frontmatter"]["Title"]}`;
+                a.innerHTML = data[key]["Frontmatter"]["Title"];
                 a.href = `/${data[key]["CompleteURL"]}`;
                 resultDiv.appendChild(a);
                 resultDiv.appendChild(
-                  document.createElement("br"),
                   document.createElement("br"),
                 );
               }

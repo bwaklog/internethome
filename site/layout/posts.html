@@ -1,4 +1,5 @@
 {{ define "posts"}}
+{{$PageData := .TemplateData}}
 {{ template "head" .}}
 
 <body>
@@ -8,12 +9,11 @@
             <h1>Posts</h1>
 
             <div class="posts">
-                {{range $PostDate, $Post := .Posts}}
-                <a class="post-card" href="posts/{{$Post.FilenameWithoutExtension}}.html">
+                {{range $PostDate, $Post := .DeepDataMerge.Posts}}
+                <a class="post-card" href="/{{ .CompleteURL }}">
                     <div class="post-card div">
                         <h3>{{$Post.Frontmatter.Title}}</h3>
                         <p>{{$Post.Frontmatter.Description}}</p>
-                        <!-- <p>{{ printf "%s" $Post.Body }}</p> -->
                         <p class="post-card date">{{$Post.Frontmatter.Date}}</p>
                     </div>
                 </a>

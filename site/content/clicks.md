@@ -3,6 +3,7 @@ date: 2024-02-24
 title: Snapshots
 description: Photodump
 previewimage: https://i.imgur.com/KUet9BN.jpg
+type: page
 ---
 
 # Snapshots

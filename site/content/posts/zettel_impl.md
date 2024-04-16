@@ -124,3 +124,11 @@ type Note struct {
     LinkedNotes   []string
 }
 ```
+
+## TODO for zettelkasten impl
+
+- [x] Generation of Linked Notes
+    - [x] Implement 1.1 version of linking (user defined references to notes)
+    - [x] Implement automation for the process of linking. Using `[[]]` callouts to file names.
+- Tests:
+    - [ ] unit tests for parsing parocess of the package rendering processes of package

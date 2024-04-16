@@ -1,27 +1,31 @@
 {{ define "page"}}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
 {{ template "head" .}}
 
 <body>
     {{template "header" .}}
     <div class="container">
 
-            {{if eq .Frontmatter.Type "post"}}
+            {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
-                <h1>{{.Frontmatter.Title}}</h1>
+                <h1>{{$PageData.Frontmatter.Title}}</h1>
                 <p>
-                    Published on {{.Frontmatter.Date}}
+                    Published on {{$PageData.Frontmatter.Date}}
                     <!-- if lenght of frontmatter authors is 0 -->
                     by
-                    {{ if eq (len .Frontmatter.Authors) 0 }}
-                    {{$.Layout.Author}}
+
+                    {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
+                        {{$.DeepDataMerge.LayoutConfig.Author}}
                     {{ else }}
-                    {{range .Frontmatter.Authors }}
-                    {{ . }},
+
+                    {{range $PageData.Frontmatter.Authors }}
+                        {{ . }},
                     {{ end }}
+
                     {{ end }}
 
                     <div class="tags-placeholder">
-                    {{range .Frontmatter.Tags}}
+                    {{range $PageData.Frontmatter.Tags}}
                         <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
                     {{end}}
                     </div>
@@ -30,12 +34,8 @@
             </div>
             {{else}}
             {{end}}
-            {{.Body}}
-
-        <script>
-            hljs.highlightAll();
-            hljs.addPlugin(new CopyButtonPlugin());
-        </script>
+            
+            {{$PageData.Body}}
 
     </div>
   </div>

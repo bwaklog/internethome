@@ -1,0 +1,65 @@
+{{ define "note"}}
+{{$PageData := index .DeepDataMerge.Notes .PageURL}}
+{{ template "head-note" .}}
+
+<body>
+    {{template "header" .}}
+    <div class="container">
+
+        {{if eq $PageData.Frontmatter.Type "note"}}
+        <div class="post-info">
+            <h1>{{$PageData.Frontmatter.Title}}</h1>
+            <p>
+                Published on {{$PageData.Frontmatter.Date}}
+                <!-- if lenght of frontmatter authors is 0 -->
+                by
+
+                {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
+                {{$.DeepDataMerge.LayoutConfig.Author}}
+                {{ else }}
+
+                {{range $PageData.Frontmatter.Authors }}
+                {{ . }},
+                {{ end }}
+
+                {{ end }}
+
+            <div class="tags-placeholder">
+                {{range $PageData.Frontmatter.Tags}}
+                <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
+                {{end}}
+            </div>
+            </p>
+
+        </div>
+        {{else}}
+        {{end}}
+
+        {{$PageData.Body}}
+        <hr />
+        <section class="notes">
+            {{ $CurratedNotes := index .DeepDataMerge.LinkStore .PageURL}}
+            {{ if eq (len $CurratedNotes ) 0 }}
+            {{ else }}
+            <h3>Related Posts</h3>
+            {{range index .DeepDataMerge.LinkStore .PageURL }}
+            <a class="note-card" href="/{{ .CompleteURL }}">
+                <div class="note-card div">
+                    <h4>{{ .Frontmatter.Title }}</h4>
+                    <p>{{ .Frontmatter.Description }}</p>
+                    <p>{{ .Frontmatter.Date }}</p>
+                </div>
+            </a>
+            {{end}}
+            {{ end }}
+        </section>
+
+    </div>
+    </div>
+    {{template "footer" .}}
+    {{ template "hover" .}}
+</body>
+
+</html>
+
+{{ end}}
