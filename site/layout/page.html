@@ -23,13 +23,15 @@
                     {{ end }}
 
                     {{ end }}
-
-                    <div class="tags-placeholder">
-                    {{range $PageData.Frontmatter.Tags}}
-                        <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
-                    {{end}}
-                    </div>
                 </p>
+                {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
+                {{ else }}
+                <div class="tags-placeholder">
+                    {{range $PageData.Frontmatter.Tags}}
+                    <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
+                    {{end}}
+                </div>
+                {{ end }}
 
             </div>
             {{else}}

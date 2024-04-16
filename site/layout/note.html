@@ -1,10 +1,10 @@
 {{ define "note"}}
 {{$PageData := index .DeepDataMerge.Notes .PageURL}}
-{{ template "head-note" .}}
+{{ template "head" .}}
 
 <body>
     {{template "header" .}}
-    <div class="container">
+    <div class="container notetype">
 
         {{if eq $PageData.Frontmatter.Type "note"}}
         <div class="post-info">
@@ -23,36 +23,37 @@
                 {{ end }}
 
                 {{ end }}
-
+            </p>
+            {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
+            {{ else }}
             <div class="tags-placeholder">
                 {{range $PageData.Frontmatter.Tags}}
                 <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
                 {{end}}
             </div>
-            </p>
+            {{ end }}
 
         </div>
         {{else}}
         {{end}}
 
         {{$PageData.Body}}
+        {{ $CurratedNotes := index .DeepDataMerge.LinkStore .PageURL}}
+        {{ if eq (len $CurratedNotes ) 0 }}
+        {{ else }}
         <hr />
         <section class="notes">
-            {{ $CurratedNotes := index .DeepDataMerge.LinkStore .PageURL}}
-            {{ if eq (len $CurratedNotes ) 0 }}
-            {{ else }}
-            <h3>Related Posts</h3>
+            <h5>References in this note</h5>
             {{range index .DeepDataMerge.LinkStore .PageURL }}
             <a class="note-card" href="/{{ .CompleteURL }}">
                 <div class="note-card div">
-                    <h4>{{ .Frontmatter.Title }}</h4>
-                    <p>{{ .Frontmatter.Description }}</p>
-                    <p>{{ .Frontmatter.Date }}</p>
+                    <p>• {{ .Frontmatter.Title }} | {{ .Frontmatter.Date }}</p>
+                    <p class="note-card desc">{{ .Frontmatter.Description}}</p>
                 </div>
             </a>
             {{end}}
-            {{ end }}
         </section>
+        {{ end }}
 
     </div>
     </div>

@@ -10,8 +10,8 @@ type: page
 
 ---
 
-### Pondicherry 2022
-##### Camera: Canon Rebel EOS
+##### Pondicherry 2022
+###### Camera: Canon Rebel EOS
 
 <div class="image-grid">
 
@@ -38,8 +38,8 @@ type: page
 
 ---
 
-### /college
-##### Camera: Canon Rebel, iPhone 12 & Canon Powershot
+##### /college
+###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
 
 <div class="image-grid">
 
@@ -61,8 +61,8 @@ type: page
 
 ---
 
-### /dev/random
-##### Camera: Canon Rebel, iPhone 12 & Canon Powershot
+##### /dev/random
+###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
 ###### Some really blurry pictures
 
 <div class="image-grid">

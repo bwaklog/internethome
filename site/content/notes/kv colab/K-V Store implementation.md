@@ -2,7 +2,7 @@
 title: K-V Store implementation
 date: 2024-04-16
 type: note
-previewimage: /static/me.jpeg
+description: The following collection of all notes i've made while trying to figure out CRDT, Automerge, how Redis works, what makes it so special and more
 ---
 ## Understanding Redis
 

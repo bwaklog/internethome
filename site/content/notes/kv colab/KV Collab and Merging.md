@@ -2,6 +2,7 @@
 title: KV Collab and Merging
 type: note
 head: true
+description: The following collection of all notes i've made while trying to figure out CRDT, Automerge, how Redis works, what makes it so special and more
 date: 2024-04-14
 ---
 
