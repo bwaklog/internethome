@@ -9,8 +9,8 @@ date: 2024-04-14
 # Refereals
 
 - [Automerge](https://automerge.org/) using CRDT implementation
-- [Google Docs]() using the same inplementation
-- [WebRTC](https://webrtc.org/) enabling **real time** communication : server less apporach. More of a P2P approach
+- [Google Docs]() using the same implementation
+- [WebRTC](https://webrtc.org/) enabling **real time** communication : server less approach. More of a P2P approach
 - [MPL](https://github.com/automerge/mpl) P2P Document synchronisation system for automerge
 - Think about [Web Sockets]() for client/server communications
 

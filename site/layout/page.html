@@ -9,12 +9,11 @@
 
             {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
-                <h1>{{$PageData.Frontmatter.Title}}</h1>
+                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
                 <p>
-                    Published on {{$PageData.Frontmatter.Date}}
+                    {{$PageData.Frontmatter.Date}}
                     <!-- if lenght of frontmatter authors is 0 -->
-                    by
-
+                    ~
                     {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
                         {{$.DeepDataMerge.LayoutConfig.Author}}
                     {{ else }}

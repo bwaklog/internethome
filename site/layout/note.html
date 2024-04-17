@@ -1,6 +1,6 @@
 {{ define "note"}}
 {{$PageData := index .DeepDataMerge.Notes .PageURL}}
-{{ template "head" .}}
+{{ template "head-note" .}}
 
 <body>
     {{template "header" .}}
@@ -10,9 +10,9 @@
         <div class="post-info">
             <h1>{{$PageData.Frontmatter.Title}}</h1>
             <p>
-                Published on {{$PageData.Frontmatter.Date}}
+                {{$PageData.Frontmatter.Date}}
                 <!-- if lenght of frontmatter authors is 0 -->
-                by
+                ~
 
                 {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
                 {{$.DeepDataMerge.LayoutConfig.Author}}

@@ -43,6 +43,14 @@ type: page
 
 <div class="image-grid">
 
+![Hole in the Wall in Kormangala is a vibe!](https://i.imgur.com/zLDGtul.jpg)
+
+![HEHEHEHE](https://i.imgur.com/eCGcOri.jpg)
+
+![Vidhan Soudha, which ive surprisingly never even after spending my whole life here](https://i.imgur.com/ohigp5U.jpg)
+
+![Frist go meetup in bangalore with Sudhir and Nathan](https://i.imgur.com/G0JYhn1.jpg)
+
 ![Blurry snap from foss talk](https://i.imgur.com/7OAa8tn.jpg)
 
 ![First hackathon - hacknite](https://i.imgur.com/Yg3di6k.jpg)
@@ -85,8 +93,22 @@ type: page
 </div>
 
 
+<script>
+    const galleryImages = document.querySelectorAll('img:not(#theme-toggle)');
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            // open source
+            window.navigator.vibrate(500);
+            window.open(image.src, '_blank');
+        });
+        // add lazy loading
+        image.setAttribute('loading', 'lazy');
+    });
+</script>
+
 <!-- Some chat GPT'd code for handling images -->
-<div class="image-overlay">
+<!-- <div class="image-overlay">
     <span class="close">&times;</span>
     <img loading="lazy" src="" alt="Large image" class="large-image">
 </div>
@@ -118,4 +140,4 @@ type: page
     });
 
 
-</script>
+</script> -->

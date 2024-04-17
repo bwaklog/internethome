@@ -16,7 +16,7 @@ I love exploring challenging problems, its what keeps me working.
 
 On this site I will be sharing my journey, my zettels' and projects along with a a random [photo dump](/clicks.html)
 
-🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni.
+🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the *Mentoring* and *Design* team.
 
 I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_. 
 
@@ -35,7 +35,9 @@ Besides the written content, I like taking pictures, so you might as well come a
 
 You can find all the indexes of this site at the [tags](/tags.html). Its a portal to all the [posts](/posts.html) and [notes](/notes.html) that are dumped onto the site.
 
-You can reach me out at [aditya.mh@outlook.com](mailto:aditya.mh@outlook.com)
+You can reach me out at [aditya.mh@outlook.com](mailto:aditya.mh@outlook.com) 📩
+
+<br />
 
 Socials: [Instagram](https://www.instagram.com/adi.hegdee/), [Twitter](https://twitter.com/bwaklog), [Béhance](https://be.net/bwaklog)
 

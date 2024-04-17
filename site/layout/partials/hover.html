@@ -110,6 +110,14 @@
                     hoverDiv.remove();
                 });
             });
+
+            anchor.addEventListener('click', function(e) {
+                var hoverDivs = document.querySelectorAll('#hoverDiv');
+                // kill all hoverDiv elements
+                hoverDivs.forEach(function (hoverDiv) {
+                    hoverDiv.remove();
+                });
+            })
     });
 
 

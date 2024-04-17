@@ -24,6 +24,6 @@ T2 -> │  K + 1  │ ===> 10 ++ ~> 11
       └─────────┘
 ```
 
-These locks to threads ensure concurrency safety where at max only *one thread* can aquire a lock.2 
+These locks to threads ensure concurrency safety where at max only *one thread* can acquire a lock. This can be achieved with the help of using *mutexes* or *semaphores*. 
 
-![IMG](/static/images/notes/aqu-rel_lock_multi_thread.png)
+![Diagram representing how the locking mechanism would take place](/static/images/notes/aqu-rel_lock_multi_thread.png)
