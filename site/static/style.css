@@ -68,6 +68,21 @@
   src: url(./fonts/others/Inter.ttf);
 }
 
+/* ::selection {
+  text-shadow: 1px 1px 8px var(--color-primary-dim);
+  background-color: var(--color-background-low);
+} */
+
+/* * {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+} */
+
+:root {
+  overscroll-behavior: none;
+}
+
 body {
   font-family:
     Inter,
@@ -86,7 +101,7 @@ body {
 
   text-rendering: optimizeLegibility;
 
-  /* text opacity  */
+  /* text opacity*/
   color: var(--color-text-dim);
 
   font-weight: 400;
@@ -313,7 +328,6 @@ h6 {
   color: var(--color-text);
 
   font-family: NewsreaderItalic, sans;
-  /* font-family: inherit; */
 }
 
 /* h1, h2 {
@@ -571,7 +585,7 @@ details>img {
 .post-info {
   font-family: NewsreaderItalic, serif;
   border-bottom: 1px dotted var(--color-text-dim);
-  /* margin-top: 1rem; */
+  margin-top: 1rem;
   /* margin-bottom: .6rem; */
   padding-bottom: .6rem; 
   line-height: 1.3;
@@ -587,6 +601,10 @@ details>img {
     margin: 0;
     font-weight: 500;
     font-size: .95rem;
+  }
+
+  i {
+    font-family: NewsreaderItalic, sans;
   }
 }
 
@@ -762,11 +780,17 @@ body:has(.container.notetype) {
   padding: 0;
 }
 
+.image-grid > p {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
 .image-grid>p>img {
   &:hover {
     filter: none;
     animation: none;
-    scale: 1;
+    /* scale: 1; */
   }
 }
 

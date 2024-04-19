@@ -35,6 +35,9 @@
 
             </div>
             {{else}}
+            <div class="post-info">
+            <p>{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
+            </div>
             {{end}}
             
             {{$PageData.Body}}

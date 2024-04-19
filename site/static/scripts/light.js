@@ -1,7 +1,9 @@
 function lightScheme() {
   // change the tags
-  document.documentElement.style.setProperty("--color-text", "#282828");
+  // document.documentElement.style.setProperty("--color-text", "#282828");
   document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
+  document.documentElement.style.setProperty("--color-text", "#000000");
+  // document.documentElement.style.setProperty("--color-text-dim", "#0000005a");
   document.documentElement.style.setProperty("--color-background", "#ffffff");
   document.documentElement.style.setProperty("--color-background-dim", "#dadada");
   document.documentElement.style.setProperty("--color-background-low", "#dadada7a");
@@ -13,6 +15,8 @@ function darkScheme() {
   document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
   document.documentElement.style.setProperty("--color-background", "#0a0a0a");
   // document.documentElement.style.setProperty("--color-background", "#000000");
+  // document.documentElement.style.setProperty("--color-background", "#0a0a0a");
+  document.documentElement.style.setProperty("--color-background", "#000000");
   document.documentElement.style.setProperty("--color-background-dim", "#2a2a2a");
   document.documentElement.style.setProperty("--color-background-low", "#2a2a2a7a");
   document.documentElement.style.setProperty("--inline-code-bg", "#1d1f21");
