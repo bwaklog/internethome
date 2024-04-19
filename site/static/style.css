@@ -216,7 +216,7 @@ footer {
 
 i,
 em {
-  font-family:
+  /* font-family:
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -227,7 +227,7 @@ em {
     Cantarell,
     "Open Sans",
     "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
 }
 
 hr {

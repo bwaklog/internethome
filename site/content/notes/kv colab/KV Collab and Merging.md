@@ -19,5 +19,6 @@ date: 2024-04-14
 
 ## Resources
 
-- [Raft Paper](/static/papers/raft.pdf) by Diego Ongaro and John Ousterhout from Stanford University
+- [Raft Paper](/static/papers/raft.pdf) by *Diego Ongaro* and *John Ousterhout* from Stanford University
 - [Creation of a Local-First Collaboration software with Automerge](/static/papers/automerge-acm-tech-talk.pdf) by Martin Kleppmann
+- Original Paper on [Lamport Time Clocks](/static/papers/time-clocks.pdf)
