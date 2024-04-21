@@ -3,25 +3,23 @@
 {{ template "head" .}}
 
 <body>
-    {{template "header" .}}
     <div class="container">
+        {{template "header" .}}
 
             <h1>Posts</h1>
 
             <div class="posts">
-                {{range $PostDate, $Post := .DeepDataMerge.Posts}}
-                <a class="post-card" href="/{{ .CompleteURL }}">
-                    <div class="post-card div">
-                        <h3>{{$Post.Frontmatter.Title}}</h3>
-                        <p>{{$Post.Frontmatter.Description}}</p>
-                        <p class="post-card date">{{$Post.Frontmatter.Date}}</p>
-                    </div>
-                </a>
+                {{range $index, $Post := .DeepDataMerge.Posts}}
+                <p><a class="post-card" href="/{{ .CompleteURL }}">
+                    <span class="post-card-heading">{{$Post.Frontmatter.Title}}</span>
+
+                </a> - {{$Post.Frontmatter.Description}} </p>
+
                 {{end}}
             </div>
 
+            {{template "footer" .}}
     </div>
-    {{template "footer" .}}
 </body>
 
 </html>

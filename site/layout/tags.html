@@ -3,8 +3,8 @@
 {{ template "head" .}}
 
 <body>
-    {{template "header" .}}
     <div class="container">
+        {{template "header" .}}
 
         <h1>Site Index</h1>
 
@@ -13,7 +13,7 @@
             <a class="post-tag" href="/tags/{{ . }}.html"><code>{{.}}</code></a>
             {{end}}
         </div>
-        
+
         {{ template "search" .}}
 
         <hr />
@@ -25,19 +25,13 @@
         <h2>Some recent posts </h2>
 
         <div class="posts">
-            {{range $index, $Post := (slice .DeepDataMerge.Posts 0 3)}}
-            <a class="post-card" href="/{{ .CompleteURL }}">
-                <div class="post-card div">
-                    <h3>{{$Post.Frontmatter.Title}}</h3>
-                    <p class="post-card date">{{$Post.Frontmatter.Date}}</p>
-                    <p>{{$Post.Frontmatter.Description}}</p>
-                    <p class="post-card tags">
-                        {{ range .Frontmatter.Tags }}
-                            <code>{{ . }}</code>
-                        {{ end }}
-                    </p>
-                </div>
-            </a>
+            {{range $index, $Post := .DeepDataMerge.Posts}}
+            <p>
+                <a class="post-card-heading" href="/{{ .CompleteURL }}">
+                    {{$Post.Frontmatter.Title}}
+                </a>
+                {{$Post.Frontmatter.Description}}
+            </p>
             {{end}}
         </div>
 
@@ -48,19 +42,17 @@
         <div class="posts">
             {{ range .DeepDataMerge.Notes }}
             {{ if eq .Frontmatter.Head true }}
-            <a class="post-card" href="/{{ .CompleteURL }}">
-                <div class="post-card div">
-                    <h3>{{.Frontmatter.Title}}</h3>
-                    <p class="post-card date">{{.Frontmatter.Date}}</p>
-                    <p>{{.Frontmatter.Description}}</p>
-                </div>
-            </a>
+            <p>
+            <a class="post-card-heading" href="/{{ .CompleteURL }}">
+                {{.Frontmatter.Title}}
+            </a>{{.Frontmatter.Description}}
+            </p>
             {{ end }}
             {{ end }}
         </div>
 
+        {{template "footer" .}}
     </div>
-    {{template "footer" .}}
 </body>
 
 </html>

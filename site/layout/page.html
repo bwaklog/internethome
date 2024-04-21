@@ -3,9 +3,9 @@
 {{ template "head" .}}
 
 <body>
-    {{template "header" .}}
 
     <div class="container">
+        {{template "header" .}}
 
             {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
@@ -39,12 +39,12 @@
             <p>{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
             </div>
             {{end}}
-            
+
             {{$PageData.Body}}
 
+            {{template "footer" .}}
     </div>
   </div>
-    {{template "footer" .}}
 </body>
 
 </html>

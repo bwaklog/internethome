@@ -1,7 +1,7 @@
 ---
 title: Notes from Go Blore 13/04/2024
 date: 2024-04-13
-type: post
+type: draft
 tags:
   - go
   - tech
@@ -22,5 +22,3 @@ This post contains a few notes from the Go Blore meetup on 13th April 2024. The 
 - Using [net/http/pprof](https://pkg.go.dev/net/http/pprof) with go to profile either the CPU, memory or block profiling
 - Visualisation of profiling using either the CLI, web flow diagram or flame graph
 - Breaking down the code with profiling and finding places to improve performance
-
-

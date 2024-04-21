@@ -1,6 +1,6 @@
 ---
 title: Implementing Zettelkasten in Anna
-description: This post focuses of the Proof of Concept behind how we plan to integrate zettelkasten in anna(our SSG) and implementing the new note taking functionality, supporting a new version of *Deep Data Merge* along with
+description: This post focuses of the Proof of Concept of zettelkasten and deep data merge implementation in Anna
 authors:
     - Aditya Hegde
     - Anirudh Sudhir

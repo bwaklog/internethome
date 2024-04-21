@@ -20,15 +20,18 @@
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   <!-- <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/tokyo-night-dark.min.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night.css"> -->
+  <link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
+
 
   <!-- MathJax -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
   <!-- Hopefully some working clipboard copying -->
-  <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" />
+  <!-- <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" /> -->
+
   <link rel="alternate" type="application/atom+xml" title="feed" href="/feed.atom">
   <link rel="stylesheet" href="/static/style.css">
   <!-- <link href="/static/style.css" rel="stylesheet/" type="text/css"> -->
@@ -44,7 +47,7 @@
   </script>
   {{ end }}
 
-  {{range $PageData.Frontmatter.JSFiles}}  
+  {{range $PageData.Frontmatter.JSFiles}}
     <script src="/static/scripts/{{.}}" defer></script>
   {{end}}
 

@@ -33,15 +33,18 @@ type: page
 
 </div>
 
-
-
-
 ---
 
 ##### /college
 ###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
 
 <div class="image-grid">
+
+![Shot down wall](https://i.imgur.com/4aCMwYW.jpg)
+
+![Window through the fort](https://i.imgur.com/A7OPUuM.jpg)
+
+![Ghat descent on west cost](https://i.imgur.com/agAwA6L.jpg)
 
 ![Hole in the Wall in Kormangala is a vibe!](https://i.imgur.com/zLDGtul.jpg)
 

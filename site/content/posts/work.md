@@ -3,7 +3,7 @@ date: 2024-03-09
 title: Quality of work
 draft: false
 type: post
-description: A few thoughts off of my mind, my perspective on effort. A wall that no one can pass through unless you change your approach or perspective of a situation.
+description: A few thoughts off of my mind, my perspective on effort.
 tags:
     - blog
     - thoughts

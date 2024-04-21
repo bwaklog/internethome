@@ -3,8 +3,8 @@
 {{ template "head" .}}
 
 <body>
-    {{template "header" .}}
     <div class="container">
+        {{template "header" .}}
 
             <h1>Site Index</h1>
             <hr />
@@ -13,18 +13,15 @@
             <div class="posts">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
-                <a class="post-card" href="/{{ .CompleteURL }}">
-                    <div class="post-card div">
-                        <h3>{{.Frontmatter.Title}}</h3>
-                        <p>{{.Frontmatter.Description}}</p>
-                        <p class="post-card description date">{{.Frontmatter.Date}}</p>
-                    </div>
-                </a>
+                <p><a class="post-card" href="/{{ .CompleteURL }}">
+                    <span class="post-card-heading">{{.Frontmatter.Title}}</span>
+
+                </a> - {{.Frontmatter.Description}} </p>
                 {{end}}
             </div>
 
+            {{template "footer" .}}
     </div>
-        {{template "footer" .}}
 </body>
 
 </html>

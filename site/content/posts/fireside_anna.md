@@ -4,8 +4,7 @@ date: 2024-04-04
 type: post
 draft: false
 description:
-  This page contains a post about anna, a static site generator written in Go. This team
-  project was built as part of AIEP 2024.
+  Presentation part of my teams fireside talk on our SSG - Anna
 tags:
   - acm
   - hsp
