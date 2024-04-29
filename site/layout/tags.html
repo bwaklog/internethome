@@ -18,35 +18,26 @@
 
         <hr />
 
-        <!-- <div id="chart"></div>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="/static/scripts/graph.js"></script> -->
 
-        <h2>Some recent posts </h2>
+        <h2 class="heading-plain">Some recent posts </h2>
+
+        <!-- <p>Here you can find all the posts and note heads that are part of this site. All the posts are categorised under tags, using which you can navigate.</p> -->
 
         <div class="posts">
             {{range $index, $Post := .DeepDataMerge.Posts}}
-            <p>
-                <a class="post-card-heading" href="/{{ .CompleteURL }}">
-                    {{$Post.Frontmatter.Title}}
-                </a>
-                {{$Post.Frontmatter.Description}}
-            </p>
+            <p><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a> ~ {{$Post.Frontmatter.Description}}</p>
             {{end}}
         </div>
 
         <hr />
 
 
-        <h2>Curated Notes</h2>
+        <h2 class="heading-plain">Curated Notes</h2>
         <div class="posts">
             {{ range .DeepDataMerge.Notes }}
             {{ if eq .Frontmatter.Head true }}
             <p>
-            <a class="post-card-heading" href="/{{ .CompleteURL }}">
-                {{.Frontmatter.Title}}
-            </a>{{.Frontmatter.Description}}
-            </p>
+            <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a> ~ {{.Frontmatter.Description}}</p>
             {{ end }}
             {{ end }}
         </div>

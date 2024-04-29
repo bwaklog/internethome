@@ -14,9 +14,9 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --color-heading: #ffffff;
-        --color-text: #d8d8d8;
+        --color-text: #c0c0c0;
         --color-text-dim: #d8d8d85a;
-        --color-background: #0f0f0f;
+        --color-background: #0f1011;
         --color-background-dim: #2a2a2a;
         --color-background-low: #2a2a2a7a;
         --inline-code-bg: #1d1f21;
@@ -60,11 +60,6 @@
 }
 
 @font-face {
-    font-family: FleuronRegular;
-    src: url(./fonts/others/FleuronRegular.otf);
-}
-
-@font-face {
     font-family: Inter;
     src: url(./fonts/others/Inter.ttf);
 }
@@ -74,9 +69,9 @@
     background-color: var(--selection-bg);
 }
 
-:root {
+/* :root {
     overscroll-behavior: none;
-}
+} */
 
 html {
     background-color: var(--color-background);
@@ -118,33 +113,31 @@ body {
     /* margin-left: auto; */
     /* margin-right: auto; */
 
-
-    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23ff4a6a' fill-opacity='0.18' fill-rule='evenodd'/%3E%3C/svg%3E");
-
     transition:
         margin 0.3s ease-in-out,
         height 0.3s ease-in-out;
 }
 
 @keyframes bg-scroll {
-  from {
-    background-position: 0% 0%;
-  }
-  to {
-    background-position: 0% 100%;
-  }
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% 100%;
+    }
 }
 
-/* html,
+html,
 body,
 header,
 footer,
-.container {
+.container,
+code {
     transition:
         background-color 100ms ease-in-out,
         color 100ms ease-in-out,
         height 0.3s ease-in-out;
-} */
+}
 
 .container {
     width: 45rem;
@@ -157,10 +150,10 @@ footer,
     /* margin-top: 3.5rem; */
     /* margin-bottom: 5rem; */
 
-    margin-top: 1.4rem;
-    margin-bottom: 1.4rem;
+    /* margin-top: 1.4rem; */
+    /* margin-bottom: 1.4rem; */
 
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
 
     transition:
         margin 0.3s ease-in-out,
@@ -173,30 +166,13 @@ header {
     /* position: fixed; */
     color: var(--color-text);
     border-bottom: 1px dotted var(--color-text);
-    /* font-family: Newsreader; */
 
-    /* backdrop-filter: brightness(50%); */
-    /* backdrop-filter: blur(15px); */
-    /* -webkit-backdrop-filter: blur(15px); */
-
-    /* width: 45rem; */
-    /* margin-left: auto; */
-
-    /* margin-bottom: 1rem; */
-
-    /* z-index: 900; */
     width: 100%;
 }
 
 footer {
     width: 100%;
     flex: 0;
-
-    /* position: fixed;
-    bottom: 0;
-    z-index: 900; */
-
-    /* background-color: var(--color-background); */
 
     display: flex;
     flex-direction: row;
@@ -219,6 +195,10 @@ footer {
     & > * {
         padding-inline: 1rem;
     }
+}
+
+.footer-text {
+    padding: 0;
 }
 
 hr {
@@ -316,7 +296,7 @@ h6 {
 
     margin-top: 0.8rem;
 
-    color: var(--color-heading);
+    color: var(--color-primary);
 
     font-family: NewsreaderItalic, sans;
     /* font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
@@ -358,6 +338,7 @@ h5,
 h6 {
     font-weight: 550;
     font-family:
+        Inter,
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
@@ -371,18 +352,23 @@ h6 {
         sans-serif;
 }
 
+.heading-plain {
+    color: var(--color-heading);
+}
+
 .navigations {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    /* font-family: LibreCaslonCondensed, NewsreaderItalic, serif; */
 
     /* margin-right: 1rem; */
 
     & > a {
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 450;
         word-wrap: break-word;
-        color: var(--color-text);
+        color: var(--color-heading);
     }
 }
 
@@ -444,10 +430,13 @@ form-container {
 a {
     color: var(--color-primary);
     text-decoration: none;
-    /* position: relative; */
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-a:not(.plain):not(.tag):not(.post-tag) {
+a:not(.plain):not(.tag):not(.post-tag):not(.post-card-heading):not(.note-card) {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2.5' stroke='gray' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25' /%3E%3C/svg%3E%0A");
     background-position: right 33%;
     background-repeat: no-repeat;
@@ -468,13 +457,14 @@ img:not(.theme-toggle):not(.profile-image) {
 }
 
 img:not(.large-image) {
-    width: 75%;
+    /* width: 75%; */
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
-    border-radius: 5px;
+    border-radius: 1px;
     overflow: hidden;
     object-fit: cover;
     object-position: center center;
@@ -644,7 +634,7 @@ details > img {
 }
 
 .post-card-heading {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin: 0;
     padding: 0;
     color: var(--color-primary);

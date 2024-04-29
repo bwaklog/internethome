@@ -1,6 +1,6 @@
 ---
 title: Taking a few messy leaps in a hackathon
-description: Hackathon problem statement on a p2p data synchronisation protocol. Learnings from failure
+description: Learnings from failure from Ingenius 12.0
 date: 2024-04-21
 type: post
 tags:

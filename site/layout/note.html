@@ -3,8 +3,8 @@
 {{ template "head-note" .}}
 
 <body>
-    {{template "header" .}}
     <div class="container notetype">
+        {{template "header" .}}
 
         {{if eq $PageData.Frontmatter.Type "note"}}
         <div class="post-info">
@@ -55,9 +55,9 @@
         </section>
         {{ end }}
 
+        {{template "footer" .}}
     </div>
     </div>
-    {{template "footer" .}}
     {{ template "hover" .}}
 </body>
 

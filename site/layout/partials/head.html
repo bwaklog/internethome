@@ -1,77 +1,94 @@
 {{define "head"}}
 <!-- If the template for a particular url does not exist(posts.html), setting it to the specific page template data -->
-{{ $PageData := index .DeepDataMerge.Templates .PageURL }}
-{{if eq $PageData nil }}
-{{ $PageData := index .DeepDataMerge.Notes .PageURL }}
-{{end}}
-{{if eq $PageData nil }}
-{{ $PageData = .TemplateData }}
-{{end}}
+{{ $PageData := index .DeepDataMerge.Templates .PageURL }} {{if eq $PageData nil
+}} {{ $PageData := index .DeepDataMerge.Notes .PageURL }} {{end}} {{if eq
+$PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="{{ $PageData.Frontmatter.Description }}"
+        />
+        <title>{{ $PageData.Frontmatter.Title }}</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ $PageData.Frontmatter.Description }}">
-  <title>{{ $PageData.Frontmatter.Title }}</title>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/tokyo-night-dark.min.css"
+        />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night.css"> -->
+        <link
+            href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
+            rel="stylesheet"
+            type="text/css"
+        />
 
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/tokyo-night-dark.min.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/tomorrow-night.css"> -->
-  <link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
-
-
-  <!-- Hopefully some working clipboard copying -->
-  <!-- <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+        <!-- Hopefully some working clipboard copying -->
+        <!-- <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" /> -->
 
-  <link rel="alternate" type="application/atom+xml" title="feed" href="/feed.atom">
-  <link rel="stylesheet" href="/static/style.css">
-  <!-- <link href="/static/style.css" rel="stylesheet/" type="text/css"> -->
-  <script src="/static/scripts/light.js" defer></script>
+        <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="feed"
+            href="/feed.atom"
+        />
+        <link rel="stylesheet" href="/static/style.css" />
+        <!-- <link href="/static/style.css" rel="stylesheet/" type="text/css"> -->
+        <script src="/static/scripts/light.js" defer></script>
 
-  <!-- Scripts filled in from plugins -->
-  {{ if $PageData.LiveReload }}
-  <script>
-    const eventSource = new EventSource('http://localhost:8000/events');
-    eventSource.onmessage = function (event) {
-      location.reload()
-    };
-  </script>
-  {{ end }}
+        <!-- Cloudflare Web Analytics -->
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "b16ba3a1a9d546b28b8f3dfae89358e1"}'
+        ></script>
+        <!-- End Cloudflare Web Analytics -->
 
-  {{range $PageData.Frontmatter.JSFiles}}
-    <script src="/static/scripts/{{.}}" defer></script>
-  {{end}}
+        <!-- Scripts filled in from plugins -->
+        {{ if $PageData.LiveReload }}
+        <script>
+            const eventSource = new EventSource("http://localhost:8000/events");
+            eventSource.onmessage = function (event) {
+                location.reload();
+            };
+        </script>
+        {{ end }} {{range $PageData.Frontmatter.JSFiles}}
+        <script src="/static/scripts/{{.}}" defer></script>
+        {{end}} {{range .DeepDataMerge.LayoutConfig.SiteScripts}}
+        <script src="/static/scripts/{{.}}" defer></script>
+        {{end}}
 
-  {{range .DeepDataMerge.LayoutConfig.SiteScripts}}
-  <script src="/static/scripts/{{.}}" defer></script>
-  {{end}}
+        <script defer>
+            // add lazy loading to all images
+            document.querySelectorAll("img").forEach((img) => {
+                img.setAttribute("loading", "lazy");
+            });
+        </script>
 
-  <script defer>
-    // add lazy loading to all images
-    document.querySelectorAll('img').forEach((img) => {
-      img.setAttribute('loading', 'lazy');
-    });
+        <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ $PageData.Frontmatter.Title }}" />
+        <meta
+            property="og:description"
+            content="{{ $PageData.Frontmatter.Description }}"
+        />
+        <meta
+            property="og:image"
+            content="{{ $PageData.Frontmatter.PreviewImage }}"
+        />
 
-  </script>
+        <!-- Thanks to Beau Smith on Stackoverflow -->
+        <meta name="format-detection" content="telephone=no" />
 
-  <link rel="icon" type="image/x-icon" href="/static/favicon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ $PageData.Frontmatter.Title }}">
-  <meta property="og:description" content="{{ $PageData.Frontmatter.Description }}">
-  <meta property="og:image" content="{{ $PageData.Frontmatter.PreviewImage }}">
-
-  <!-- Thanks to Beau Smith on Stackoverflow -->
-  <meta name="format-detection" content="telephone=no">
-
-  <script defer>
-    hljs.highlightAll();
-    // hljs.addPlugin(new CopyButtonPlugin());
-  </script>
-
-</head>
-{{end}}
+        <script defer>
+            hljs.highlightAll();
+            // hljs.addPlugin(new CopyButtonPlugin());
+        </script>
+    </head>
+    {{end}}
+</html>
