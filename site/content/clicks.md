@@ -5,31 +5,33 @@ description: Photodump
 previewimage: https://i.imgur.com/KUet9BN.jpg
 type: page
 ---
-
-# Snapshots
-
----
-
-##### Pondicherry 2022
-###### Camera: Canon Rebel EOS
+##### /dev/random
+###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
 
 <div class="image-grid">
 
-![Pondi costal drive](https://i.imgur.com/EdVqF3s.jpg)
+![Food menu](https://i.imgur.com/ejDRsdi.jpg)
 
-![Pondi costal view](https://i.imgur.com/K5RGcQI.jpg)
+![Another laptop shot](https://i.imgur.com/BqWCGqP.jpg)
 
-![Hillside drive](https://i.imgur.com/KUet9BN.jpg)
+![IKEA directions](https://i.imgur.com/553LQoC.jpg)
 
-![Peaky hills](https://i.imgur.com/h5S0i45.jpg)
+![IKEA Price sign](https://i.imgur.com/PukycFJ.jpg)
 
-![Bay of bengal from a window with some trees](https://i.imgur.com/cgACPjM.jpg)
+![IKEA Storage Space and a crane](https://i.imgur.com/RpA1Tbf.jpg)
 
-![Bay of bengal from a window](https://i.imgur.com/rwB61P4.jpg)
+![Keychron in some nice lighting](https://i.imgur.com/mroJJik.jpg)
 
-![More hills in tamil nadu](https://i.imgur.com/NTrFuRn.jpg)
+![Black and white rocks](https://i.imgur.com/sMMx1f0.jpg)
 
-![Railway Station](https://i.imgur.com/GJIXTg4.jpg)
+
+![Keychron K2 V2](https://i.imgur.com/NVUKPKO.jpg)
+
+![Cannon Rebel struggles](https://i.imgur.com/r1W9ohZ.jpg)
+
+![Pondicherry Villa](https://i.imgur.com/Pu176PH.jpg)
+
+![Ikea Bengaluru storage](https://i.imgur.com/HZ3hHs0.jpg)
 
 </div>
 
@@ -40,15 +42,13 @@ type: page
 
 <div class="image-grid">
 
-![Shot down wall](https://i.imgur.com/4aCMwYW.jpg)
+<!--[Shot down wall](https://i.imgur.com/4aCMwYW.jpg)-->
 
-![Window through the fort](https://i.imgur.com/A7OPUuM.jpg)
+<!--[Window through the fort](https://i.imgur.com/A7OPUuM.jpg)-->
 
 ![Ghat descent on west cost](https://i.imgur.com/agAwA6L.jpg)
 
 ![Hole in the Wall in Kormangala is a vibe!](https://i.imgur.com/zLDGtul.jpg)
-
-![HEHEHEHE](https://i.imgur.com/eCGcOri.jpg)
 
 ![Vidhan Soudha, which ive surprisingly never even after spending my whole life here](https://i.imgur.com/ohigp5U.jpg)
 
@@ -72,26 +72,26 @@ type: page
 
 ---
 
-##### /dev/random
-###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
-###### Some really blurry pictures
+##### Pondicherry 2022
+###### Camera: Canon Rebel EOS
 
 <div class="image-grid">
 
-![Keychron in some nice lighting](https://i.imgur.com/mroJJik.jpg)
+![Pondi costal drive](https://i.imgur.com/EdVqF3s.jpg)
 
-![Black and white rocks](https://i.imgur.com/sMMx1f0.jpg)
+![Pondi costal view](https://i.imgur.com/K5RGcQI.jpg)
 
+![Hillside drive](https://i.imgur.com/KUet9BN.jpg)
 
-![Keychron K2 V2](https://i.imgur.com/NVUKPKO.jpg)
+![Peaky hills](https://i.imgur.com/h5S0i45.jpg)
 
-![Cannon Rebel struggles](https://i.imgur.com/r1W9ohZ.jpg)
+![Bay of bengal from a window with some trees](https://i.imgur.com/cgACPjM.jpg)
 
-![Pondicherry Villa](https://i.imgur.com/Pu176PH.jpg)
+![Bay of bengal from a window](https://i.imgur.com/rwB61P4.jpg)
 
-![Ikea Bengaluru storage](https://i.imgur.com/HZ3hHs0.jpg)
+![More hills in tamil nadu](https://i.imgur.com/NTrFuRn.jpg)
 
-![A really blurry picture](https://i.imgur.com/5Gu1EZQ.jpg)
+![Railway Station](https://i.imgur.com/GJIXTg4.jpg)
 
 </div>
 

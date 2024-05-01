@@ -25,7 +25,7 @@
 
         <div class="posts">
             {{range $index, $Post := .DeepDataMerge.Posts}}
-            <p><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a> ~ {{$Post.Frontmatter.Description}}</p>
+            <p><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a> {{$Post.Frontmatter.Description}}</p>
             {{end}}
         </div>
 
@@ -37,7 +37,7 @@
             {{ range .DeepDataMerge.Notes }}
             {{ if eq .Frontmatter.Head true }}
             <p>
-            <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a> ~ {{.Frontmatter.Description}}</p>
+            <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a> {{.Frontmatter.Description}}</p>
             {{ end }}
             {{ end }}
         </div>

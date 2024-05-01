@@ -11,7 +11,7 @@
                 {{ if eq .Frontmatter.Head true }}
                 <p><a class="post-card" href="/{{ .CompleteURL }}">
                     <span class="post-card-heading">{{.Frontmatter.Title}}</span>
-                </a> - {{.Frontmatter.Description}} </p>
+                </a> {{.Frontmatter.Description}} </p>
                 </p>
                 {{ end }}
                 {{ end }}

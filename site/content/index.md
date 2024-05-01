@@ -6,7 +6,7 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
-# Hey! I'm Hegde 🌊
+## Hey! I'm Hegde 🌊
 
 Welcome to my home on the internet!
 
@@ -20,8 +20,11 @@ On this site I will be sharing my journey, my zettels' and projects along with a
 
 I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_.
 
+Currently reasearching on *Databases* and *Distributed Systems* 🕗. Working on a few projects in go and trying to get my way around rust.
+
 ## Projects i've worked on
 
+- Building [meerkat](https://github.com/bwaklog/meerkat) which forms a p2p distributed data synchronisation between nodes to serve as a foundation for future distributed projects.
 - Working on [anna](https://github.com/acmpesuecc/anna), a blazingly fast ssg written in go
 - [Net Nest](https://github.com/bwaklog/pleasebekind) providing a ML model for hate speech analysis for social media filters
 - [xkcd grab](https://github.com/bwaklog/xkcd-grab) being a unique xkcd cli application with fuzzy matching, web scraping and using local LLM to summaries comic snippets from images alone

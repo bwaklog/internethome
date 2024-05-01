@@ -9,10 +9,8 @@
 
             {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
-                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
                 <p>
                     {{$PageData.Frontmatter.Date}}
-                    <!-- if lenght of frontmatter authors is 0 -->
                     ~
                     {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
                         {{$.DeepDataMerge.LayoutConfig.Author}}
@@ -24,11 +22,13 @@
 
                     {{ end }}
                 </p>
+                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
                 {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
                 {{ else }}
                 <div class="tags-placeholder">
                     {{range $PageData.Frontmatter.Tags}}
                     <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
+                    <!-- <a class="post-tag" href="/tags/{{.}}.html">{{.}}</a> -->
                     {{end}}
                 </div>
                 {{ end }}
