@@ -4,6 +4,7 @@ navbar:
   # - works
   - clicks
   - tags
+  # - wiki
   # - notes
   # - posts
 baseURL: https://hegde.live/

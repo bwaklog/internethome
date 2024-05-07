@@ -6,16 +6,20 @@
     <div class="container">
         {{template "header" .}}
             <h1>Curated Notes</h1>
-            <div class="posts">
+            <table class="post-table">
                 {{ range .DeepDataMerge.Notes }}
                 {{ if eq .Frontmatter.Head true }}
-                <p><a class="post-card" href="/{{ .CompleteURL }}">
-                    <span class="post-card-heading">{{.Frontmatter.Title}}</span>
-                </a> {{.Frontmatter.Description}} </p>
-                </p>
+                <tr>
+                    <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
+                    <td>{{.Frontmatter.Date}}</td>
+                </tr>
+                <tr>
+                    <td> {{.Frontmatter.Description}}</td>
+                    <td></td>
+                </tr>
                 {{ end }}
                 {{ end }}
-            </div>
+            </table>
             {{template "footer" .}}
     </div>
 </body>

@@ -1,6 +1,6 @@
 ---
 title: Implementing Zettelkasten in Anna
-description: This post focuses of the Proof of Concept of zettelkasten and deep data merge implementation in Anna
+description: POC of backlink and DDM implementation in Anna
 authors:
     - Aditya Hegde
     - Anirudh Sudhir

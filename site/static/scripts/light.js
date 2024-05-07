@@ -5,7 +5,8 @@ function lightScheme() {
     document.documentElement.style.setProperty("--color-text", "#585858");
     document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
     // document.documentElement.style.setProperty("--color-text-dim", "#0000005a");
-    document.documentElement.style.setProperty("--color-background", "#FEFAF6");
+    // document.documentElement.style.setProperty("--color-background", "#FEFAF6");
+    document.documentElement.style.setProperty("--color-background", "#f4f4f4");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#dadada",
@@ -15,7 +16,10 @@ function lightScheme() {
         "#dadada7a",
     );
     document.documentElement.style.setProperty("--inline-code-bg", "#d1d1d17d");
-    document.documentElement.style.setProperty("--color-background-contrast", "#e8e8e8");
+    document.documentElement.style.setProperty(
+        "--color-background-contrast",
+        "#e8e8e8",
+    );
 }
 
 function darkScheme() {
@@ -35,7 +39,10 @@ function darkScheme() {
         "#2a2a2a7a",
     );
     document.documentElement.style.setProperty("--inline-code-bg", "#1d1f21");
-    document.documentElement.style.setProperty("--color-background-contrast", "#1a1a1a");
+    document.documentElement.style.setProperty(
+        "--color-background-contrast",
+        "#1a1a1a",
+    );
 }
 
 // store user toggle preference in local storage. Site must remember what theme was last used

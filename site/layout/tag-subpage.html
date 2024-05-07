@@ -10,16 +10,19 @@
             <hr />
             <h3>Posts tagged <code>{{ $PageData.Frontmatter.Title }}</code> </h3>
 
-            <div class="posts">
+            <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
-                <p><a class="post-card" href="/{{ .CompleteURL }}">
-                    <span class="post-card-heading">{{.Frontmatter.Title}}</span>
-
-                </a> {{.Frontmatter.Description}} </p>
+                <tr>
+                    <td><a class="post-card" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
+                    <td>{{.Frontmatter.Date}}</td>
+                </tr>
+                <tr>
+                    <td>{{.Frontmatter.Description}}</td>
+                    <td></td>
+                </tr>
                 {{end}}
-            </div>
-
+            </table>
             {{template "footer" .}}
     </div>
 </body>

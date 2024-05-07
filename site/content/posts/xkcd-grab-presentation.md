@@ -3,7 +3,7 @@ date: 2023-12-09
 title: My first HSP talk
 draft: false
 type: post
-description:  My presentation in the HSP PESUECC Project Expo on an feature rich xkcd-cli
+description:  HSP Project 2023 presentation
 tags:
   - hsp
   - python

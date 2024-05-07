@@ -11,6 +11,7 @@ type: page
 Welcome to my home on the internet!
 
 ![Image of me as a kid](/static/me.jpeg)
+Image of me as a kid
 
 I love exploring challenging problems, its what keeps me working.
 

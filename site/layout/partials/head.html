@@ -27,9 +27,16 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             type="text/css"
         />
 
+        <link href="/static/viewer.css" rel="stylesheet" />
+        <script src="/static/scripts/viewer.js"></script>
+
+        <script>
+            import { Viewer } from "viewer.js";
+        </script>
+
         <!-- Hopefully some working clipboard copying -->
         <!-- <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" /> -->
+        <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" /> -->
 
         <link
             rel="alternate"
