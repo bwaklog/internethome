@@ -12,7 +12,7 @@
                 {{range $index, $Post := .DeepDataMerge.Posts}}
                 <tr>
                     <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></td>
-                    <td>{{$Post.Frontmatter.Date}}</td>
+                    <td  class="post-table date">{{$Post.Frontmatter.Date}}</td>
                 </tr>
                 <tr>
                     <td>{{$Post.Frontmatter.Description}}</td>

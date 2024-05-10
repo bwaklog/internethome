@@ -11,7 +11,7 @@
                 {{ if eq .Frontmatter.Head true }}
                 <tr>
                     <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
-                    <td>{{.Frontmatter.Date}}</td>
+                    <td  class="post-table date">{{.Frontmatter.Date}}</td>
                 </tr>
                 <tr>
                     <td> {{.Frontmatter.Description}}</td>

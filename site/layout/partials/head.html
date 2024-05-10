@@ -27,12 +27,30 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             type="text/css"
         />
 
-        <link href="/static/viewer.css" rel="stylesheet" />
-        <script src="/static/scripts/viewer.js"></script>
+        <!-- <link href="/static/viewer.css" rel="stylesheet" />
+        <script type="text/javascript" src="/static/scripts/viewer.js"></script> -->
+        <!-- <script src="/static/scripts/view_code.js"></script> -->
 
-        <script>
-            import { Viewer } from "viewer.js";
-        </script>
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"
+            integrity="sha512-EC3CQ+2OkM+ZKsM1dbFAB6OGEPKRxi6EDRnZW9ys8LghQRAq6cXPUgXCCujmDrXdodGXX9bqaaCRtwj4h4wgSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css"
+            integrity="sha512-za6IYQz7tR0pzniM/EAkgjV1gf1kWMlVJHBHavKIvsNoUMKWU99ZHzvL6lIobjiE2yKDAKMDSSmcMAxoiWgoWA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        /> -->
+        <!-- <script>
+            // on dom content loaded
+            document.addEventListener("DOMContentLoaded", (event) => {
+                const gallery = new Viewer(document.getElementById("img-grid"));
+                console.log("DOM fully loaded and parsed");
+            });
+        </script> -->
 
         <!-- Hopefully some working clipboard copying -->
         <!-- <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
@@ -72,9 +90,14 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
         <script defer>
             // add lazy loading to all images
-            document.querySelectorAll("img").forEach((img) => {
-                img.setAttribute("loading", "lazy");
+            document.addEventListener("DOMContentLoaded", (event) => {
+                document.querySelectorAll("img").forEach((img) => {
+                    img.setAttribute("loading", "lazy");
+                });
             });
+            // document.querySelectorAll("img").forEach((img) => {
+            //     img.setAttribute("loading", "lazy");
+            // });
         </script>
 
         <link rel="icon" type="image/x-icon" href="/static/favicon.png" />

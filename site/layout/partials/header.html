@@ -12,13 +12,14 @@
       {{ range .DeepDataMerge.LayoutConfig.Navbar }}
       {{ if eq . "index" }}
       <a class="header-element" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
+
       {{else}}
       <a class="header-element"  href="/{{.}}.html">{{.}}</a>
       {{end}}
       {{end}}
     </div>
     <div class="theme-toggle-div">
-      <img class="theme-toggle" alt="site logo" id="theme-toggle" class="theme-toggle" src="/static/favicon.png" />
+      <img class="theme-toggle" alt="site logo" id="theme-toggle" class="theme-toggle" src="/static/pfp.jpeg" />
     </div>
   </nav>
   <!-- {{template "search" .}} -->

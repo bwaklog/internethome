@@ -6,7 +6,7 @@ function lightScheme() {
     document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
     // document.documentElement.style.setProperty("--color-text-dim", "#0000005a");
     // document.documentElement.style.setProperty("--color-background", "#FEFAF6");
-    document.documentElement.style.setProperty("--color-background", "#f4f4f4");
+    document.documentElement.style.setProperty("--color-background", "#fbfaf2");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#dadada",
@@ -28,7 +28,8 @@ function darkScheme() {
     document.documentElement.style.setProperty("--color-text", "#c0c0c0");
     document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
     // document.documentElement.style.setProperty("--color-background", "#0f0f0f");
-    document.documentElement.style.setProperty("--color-background", "#0f1011");
+    // document.documentElement.style.setProperty("--color-background", "#0b1215");
+    document.documentElement.style.setProperty("--color-background", "#0c0c0c");
     // document.documentElement.style.setProperty("--color-background", "#000000");
     document.documentElement.style.setProperty(
         "--color-background-dim",
@@ -64,12 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
     window.onload = function () {
         const toggle = document.getElementById("theme-toggle");
         toggle.onclick = function () {
-            toggle.style.transition = "transform .5s cubic-bezier(1,0,0,1)";
-            if (toggle.style.transform === "rotate(1080deg)") {
-                toggle.style.transform = "rotate(0deg)";
-            } else {
-                toggle.style.transform = "rotate(1080deg)";
-            }
+            // toggle.style.transition = "transform .5s cubic-bezier(1,0,0,1)";
+            // if (toggle.style.transform === "rotate(1080deg)") {
+            //     toggle.style.transform = "rotate(0deg)";
+            // } else {
+            //     toggle.style.transform = "rotate(1080deg)";
+            // }
+            toggle.style.scale = "scale .5s cubic-bezier(1,0,0,1)"
+            toggle.style.scale = "scale(.95)";
+            toggle.style.scale = "scale(1)";
             ThemeSwitch();
         };
     };

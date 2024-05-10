@@ -9,7 +9,7 @@
 
             {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
-                <p>
+                <p class="post-info-author">
                     {{$PageData.Frontmatter.Date}}
                     ~
                     {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
@@ -22,21 +22,22 @@
 
                     {{ end }}
                 </p>
-                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
-                {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
-                {{ else }}
                 <div class="tags-placeholder">
+                    <p>Related Tags:</p>
                     {{range $PageData.Frontmatter.Tags}}
                     <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
                     <!-- <a class="post-tag" href="/tags/{{.}}.html">{{.}}</a> -->
                     {{end}}
                 </div>
+                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
+                {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
+                {{ else }}
                 {{ end }}
 
             </div>
             {{else}}
             <div class="post-info">
-            <p>{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
+            <p class="post-info-author">{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
             </div>
             {{end}}
 
