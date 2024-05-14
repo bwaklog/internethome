@@ -6,9 +6,19 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
-## Hey! I'm Hegde 🌊
+<h2 class="spotlight text">Hey! I'm Hegde</h2>
+<div class="spotlight background"></div>
 
-Welcome to my home on the internet!
+<!--script>
+// timeout 2 seconds
+setTimeout(() => {
+    document.querySelector('.spotlight.text').style.fontFamily = 'LibreCaslonCondensedItalic';
+    document.querySelector('.spotlight.text').style.fontWeight = '550';
+
+}, 2000);
+</script-->
+
+Welcome to my home on the internet 🌊
 
 ![Image of me as a kid](/static/me.jpeg)
 Image of me as a kid
@@ -17,21 +27,21 @@ I love exploring challenging problems, its what keeps me working.
 
 On this site I will be sharing my journey, my zettels' and projects along with a random [photo dump](/clicks.html)
 
-🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the *Mentoring* and *Design* team.
+🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team.
 
 <!--iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=77.65997171401978%2C12.856427090051994%2C77.66943454742433%2C12.866374230785045&amp;layer=mapnik&amp;marker=12.86140070970536%2C77.66470313072205" style="border: 1px solid black"></iframe-->
 
 I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_. I'm a really huge fan of Tennis and Motersport.
 
-Currently reasearching on *Databases* and *Distributed Systems* 🕗. Working on a few projects in go and trying to get my way around rust.
+Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on a few projects in go and trying to get my way around rust.
 
 ## Projects i've worked on
 
-- Building [meerkat](https://github.com/bwaklog/meerkat) which forms a p2p distributed data synchronisation between nodes to serve as a foundation for future distributed projects.
-- Working on [anna](https://github.com/acmpesuecc/anna), a blazingly fast ssg written in go
-- [Net Nest](https://github.com/bwaklog/pleasebekind) providing a ML model for hate speech analysis for social media filters
-- [xkcd grab](https://github.com/bwaklog/xkcd-grab) being a unique xkcd cli application with fuzzy matching, web scraping and using local LLM to summaries comic snippets from images alone
-- [yake](https://github.com/bwaklog/yake) a minimal programming language written in C, making users perform arithmetic and printing operations with pointers
+-   Building [meerkat](https://github.com/bwaklog/meerkat) which forms a p2p distributed data synchronisation between nodes to serve as a foundation for future distributed projects.
+-   Working on [anna](https://github.com/acmpesuecc/anna), a blazingly fast ssg written in go
+-   [Net Nest](https://github.com/bwaklog/pleasebekind) providing a ML model for hate speech analysis for social media filters
+-   [xkcd grab](https://github.com/bwaklog/xkcd-grab) being a unique xkcd cli application with fuzzy matching, web scraping and using local LLM to summaries comic snippets from images alone
+-   [yake](https://github.com/bwaklog/yake) a minimal programming language written in C, making users perform arithmetic and printing operations with pointers
 
 You can find my work stashed in my repositories at [github/bwaklog](https://github.com/bwaklog).
 

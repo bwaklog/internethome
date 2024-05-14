@@ -37,9 +37,9 @@
   --color-primary-dim: #c1111fef;
   --color-primary-low: #c1111f50; */
 
-  --color-primary: #729ab9;
-  --color-primary-dim: #729ab9ef;
-  --color-primary-low: #729ab950;
+    --color-primary: #729ab9;
+    --color-primary-dim: #729ab9ef;
+    --color-primary-low: #729ab950;
 }
 
 @font-face {
@@ -63,9 +63,30 @@
 }
 
 @font-face {
+    font-family: LibreCaslonCondensedItalic;
+    src: url(./fonts/others/LibreCaslonCondensedItalic.ttf);
+}
+
+@font-face {
     font-family: Inter;
     src: url(./fonts/others/Inter.ttf);
 }
+
+@font-face {
+    font-family: Workbench;
+    src: url(./fonts/others/Workbench.ttf);
+}
+
+@font-face {
+    font-family: IllusionSerif-Italic;
+    src: url(./fonts/others/IllusionSerif-Italic.ttf);
+}
+
+@font-face {
+    font-family: IllusionSerif-Italic;
+    src: url(./fonts/others/IllusionSerif-Italic.ttf);
+}
+
 
 ::selection {
     /* text-shadow: 1px 1px 8px var(--color-primary-dim); */
@@ -210,7 +231,6 @@ li {
         /* disable styling */
         /* list-style-type: none; */
     }
-
 }
 
 ul,
@@ -288,6 +308,7 @@ p {
 }
 
 h1,
+.loader-h1,
 h2,
 h3,
 h4,
@@ -295,13 +316,14 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-weight: 550;
+    font-weight: 500;
     text-align: left;
     word-break: break-word;
 
-    /* color: var(--color-heading); */
-    color: var(--color-primary);
-    /* font-family: */
+    color: var(--color-heading);
+    /* color: var(--color-primary); */
+    font-family:
+        LibreCaslonCondensedItalic,
         Inter,
         system-ui,
         -apple-system,
@@ -316,7 +338,7 @@ h6 {
         sans-serif;
 
     line-height: 1.3;
-    font-family: NewsreaderItalic, serif;
+    /* font-family: NewsreaderItalic, serif; */
 
     &:hover {
         .anchor {
@@ -325,30 +347,32 @@ h6 {
     }
 }
 
+.loader-h1,
 h1 {
     /* font-size: 1.4rem; */
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    /* font-size: 1.8rem; */
     margin-top: 2rem;
 }
 
 h2 {
     /* font-size: 1.55rem; */
-    /* font-size: 1.3rem; */
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    /* font-size: 1.6rem; */
     margin-top: 1.5rem;
 }
 
 h3 {
     /* font-size: 1.3rem; */
-    /* font-size: 1.2rem; */
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    /* font-size: 1.4rem; */
     margin-top: 1.4rem;
 }
 
 h4 {
     /* font-size: 1.3rem; */
-    /* font-size: 1.1rem; */
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    /* font-size: 1.3rem; */
     margin-top: 1.3rem;
 }
 
@@ -472,18 +496,24 @@ a {
     color: var(--color-heading);
     text-decoration: none;
 
-    &:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):not(.anchor) {
+    &:not(.header-element):not(.footer-element):not(.post-tag):not(
+            .note-card
+        ):not(.anchor) {
         text-decoration: underline;
         text-decoration-style: wavy;
         -moz-text-decoration-style: wavy;
         text-decoration-color: var(--color-text-dim);
     }
 
-    &:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):visited {
+    &:not(.header-element):not(.footer-element):not(.post-tag):not(
+            .note-card
+        ):visited {
         color: var(--color-text);
     }
 
-    &:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):hover {
+    &:not(.header-element):not(.footer-element):not(.post-tag):not(
+            .note-card
+        ):hover {
         color: var(--color-heading);
         text-decoration-color: var(--color-heading);
     }
@@ -543,7 +573,6 @@ img:not(.large-image) {
     object-fit: cover;
     object-position: center center;
 
-
     transition: 150ms;
 }
 
@@ -583,10 +612,10 @@ figcaption {
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-bottom: 1rem;
 }
 
 .video-container iframe {
@@ -594,7 +623,7 @@ figcaption {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;;
+    height: 100%;
 }
 
 iframe {
@@ -670,7 +699,6 @@ details > img {
         margin-top: 1rem;
     }
 }
-
 
 .post-tag {
     user-select: none;
@@ -991,7 +1019,6 @@ a > code {
     }
 }
 
-
 blockquote {
     width: 100% - 1rem;
 
@@ -1064,6 +1091,67 @@ blockquote {
     border: 2px solid var(--color-text);
 }
 
+.spotlight.text {
+    font-family: IllusionSerif-Italic;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 45rem;
+    position: relative;
+    z-index: 100;
+    font-size: 4rem;
+
+    animation: spotlight-text 1s forwards cubic-bezier(0.16, 0.66, 1, 0.74);
+}
+
+.spotlight.background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 99;
+
+    animation: spotlight-background 2s forwards
+        cubic-bezier(0.16, 0.66, 1, 0.74);
+}
+
+@keyframes spotlight-text {
+    0% {
+        position: fixed;
+        text-shadow: 0 0 0rem var(--color-text);
+    }
+    25% {
+        position: fixed;
+        text-shadow: 0 0 .5rem var(--color-text);
+    }
+    50% {
+        position: fixed;
+        text-shadow: 0 0 1rem var(--color-text);
+    }
+    75% {
+        position: fixed;
+        text-shadow: 0 0 .5rem var(--color-text);
+    }
+    100% {
+        position: relative;
+        text-shadow: 0 0 0rem var(--color-text);
+    }
+}
+
+@keyframes spotlight-background {
+    0% {
+        background-color: var(--color-background);
+    }
+    75% {
+        background-color: var(--color-background);
+    }
+    100% {
+        background-color: transparent;
+        display: none;
+        z-index: -1;
+    }
+}
+
 @media (max-width: 900px) {
     .navigations {
         font-size: 0.9rem;
@@ -1107,6 +1195,10 @@ blockquote {
         column-count: 1;
     }
 
+    .spotlight.text {
+        width: auto;
+    }
+
     img,
     p > img,
     .container > p > img {
@@ -1119,19 +1211,15 @@ blockquote {
         margin-inline: 2%;
         width: auto;
         padding: 0;
-        /* margin-top: 5%;
-        margin-bottom: 5%; */
-
-        /* width: 30rem; */
     }
 }
 
-/* .ignore-css {
-    all:unset;
+.ignore-css {
+    all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
         width: min-content;
     }
-} */
+}

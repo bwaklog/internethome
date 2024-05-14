@@ -49,10 +49,8 @@ Meerkat is a p2p distributed application to maintain data synchronisation betwee
 
 ## Research for future improvements
 
+- [Raft Consensus Algorithm Paper](https://raft.github.io/raft.pdf)
 - Distributed Systems lecture by [Martin Kleppmann](https://martin.kleppmann.com/)
     <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=4qyZinhJjrAFyn2w&amp;controls=0&amp;list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-
-- Raft Consensus Algorithm Paper
-    <iframe src="https://raft.github.io/raft.pdf"></iframe>

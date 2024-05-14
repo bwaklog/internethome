@@ -29,8 +29,8 @@ function darkScheme() {
     document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
     // document.documentElement.style.setProperty("--color-background", "#0f0f0f");
     // document.documentElement.style.setProperty("--color-background", "#0b1215");
-    document.documentElement.style.setProperty("--color-background", "#0c0c0c");
-    // document.documentElement.style.setProperty("--color-background", "#000000");
+    // document.documentElement.style.setProperty("--color-background", "#0c0c0c");
+    document.documentElement.style.setProperty("--color-background", "#000000");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#2a2a2a",

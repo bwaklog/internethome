@@ -11,7 +11,7 @@
       <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
       {{ range .DeepDataMerge.LayoutConfig.Navbar }}
       {{ if eq . "index" }}
-      <a class="header-element" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
+      <a class="header-element shuffle author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
 
       {{else}}
       <a class="header-element"  href="/{{.}}.html">{{.}}</a>
