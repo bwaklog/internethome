@@ -87,9 +87,7 @@
     src: url(./fonts/others/IllusionSerif-Italic.ttf);
 }
 
-
 ::selection {
-    /* text-shadow: 1px 1px 8px var(--color-primary-dim); */
     background-color: var(--selection-bg);
 }
 
@@ -350,7 +348,7 @@ h6 {
 .loader-h1,
 h1 {
     /* font-size: 1.4rem; */
-    font-size: 1.5rem;
+    font-size: 2rem;
     /* font-size: 1.8rem; */
     margin-top: 2rem;
 }
@@ -1100,6 +1098,9 @@ blockquote {
     z-index: 100;
     font-size: 4rem;
 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
     animation: spotlight-text 1s forwards cubic-bezier(0.16, 0.66, 1, 0.74);
 }
 
@@ -1131,10 +1132,14 @@ blockquote {
     75% {
         position: fixed;
         text-shadow: 0 0 .5rem var(--color-text);
+        opacity: 1;
     }
     100% {
-        position: relative;
+        position: fixed;
         text-shadow: 0 0 0rem var(--color-text);
+        opacity: 0;
+        display: none;
+        visibility: hidden;
     }
 }
 

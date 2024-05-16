@@ -9,19 +9,34 @@ type: page
 <h2 class="spotlight text">Hey! I'm Hegde</h2>
 <div class="spotlight background"></div>
 
-<!--script>
-// timeout 2 seconds
-setTimeout(() => {
-    document.querySelector('.spotlight.text').style.fontFamily = 'LibreCaslonCondensedItalic';
-    document.querySelector('.spotlight.text').style.fontWeight = '550';
+<script>
+function disableScroll() {
+  // Get the current scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-}, 2000);
-</script-->
+  // Disable scrolling by overriding the window.onscroll function
+  window.onscroll = function() {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
 
-Welcome to my home on the internet 🌊
+function enableScroll() {
+  // Enable scrolling by setting the window.onscroll function to null
+  window.onscroll = null;
+}
+
+// Disable scrolling for 2 seconds
+disableScroll();
+setTimeout(enableScroll, 2000);
+</script>
+
+# Hey! I'm Hegde 🌊
 
 ![Image of me as a kid](/static/me.jpeg)
 Image of me as a kid
+
+Welcome to my home on the internet 🌊
 
 I love exploring challenging problems, its what keeps me working.
 
