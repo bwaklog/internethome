@@ -6,7 +6,8 @@ function lightScheme() {
     document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
     // document.documentElement.style.setProperty("--color-text-dim", "#0000005a");
     // document.documentElement.style.setProperty("--color-background", "#FEFAF6");
-    document.documentElement.style.setProperty("--color-background", "#fbfaf2");
+    // document.documentElement.style.setProperty("--color-background", "#fbfaf2");
+    document.documentElement.style.setProperty("--color-background", "#ffffff");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#dadada",
@@ -30,7 +31,7 @@ function darkScheme() {
     // document.documentElement.style.setProperty("--color-background", "#0f0f0f");
     // document.documentElement.style.setProperty("--color-background", "#0b1215");
     // document.documentElement.style.setProperty("--color-background", "#0c0c0c");
-    document.documentElement.style.setProperty("--color-background", "#000000");
+    document.documentElement.style.setProperty("--color-background", "#121616");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#2a2a2a",
@@ -74,9 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
             toggle.style.scale = "scale .5s cubic-bezier(1,0,0,1)"
             toggle.style.scale = "scale(.95)";
             toggle.style.scale = "scale(1)";
-            ThemeSwitch();
+            // ThemeSwitch();
         };
     };
+
+
+
     // check local storage for theme
     const theme = localStorage.getItem("theme");
     // if no theme exists

@@ -10,28 +10,28 @@ type: page
 
 <div class="image-grid">
 
-![Food menu](https://i.imgur.com/ejDRsdi.jpg)
+<img loading="lazy" alt="Food menu" src="https://i.imgur.com/ejDRsdi.jpg">
 
-![Another laptop shot](https://i.imgur.com/BqWCGqP.jpg)
+<img loading="lazy" alt="Another laptop shot" src="https://i.imgur.com/BqWCGqP.jpg">
 
-![IKEA directions](https://i.imgur.com/553LQoC.jpg)
+<img loading="lazy" alt="IKEA directions" src="https://i.imgur.com/553LQoC.jpg">
 
-![IKEA Price sign](https://i.imgur.com/PukycFJ.jpg)
+<img loading="lazy" alt="IKEA Price sign" src="https://i.imgur.com/PukycFJ.jpg">
 
-![IKEA Storage Space and a crane](https://i.imgur.com/RpA1Tbf.jpg)
+<img loading="lazy" alt="IKEA Storage Space and a crane" src="https://i.imgur.com/RpA1Tbf.jpg">
 
-![Keychron in some nice lighting](https://i.imgur.com/mroJJik.jpg)
+<img loading="lazy" alt="Keychron in some nice lighting" src="https://i.imgur.com/mroJJik.jpg">
 
-![Black and white rocks](https://i.imgur.com/sMMx1f0.jpg)
+<img loading="lazy" alt="Black and white rocks" src="https://i.imgur.com/sMMx1f0.jpg">
 
 
-![Keychron K2 V2](https://i.imgur.com/NVUKPKO.jpg)
+<img loading="lazy" alt="Keychron K2 V2" src="https://i.imgur.com/NVUKPKO.jpg">
 
-![Cannon Rebel struggles](https://i.imgur.com/r1W9ohZ.jpg)
+<img loading="lazy" alt="Cannon Rebel struggles" src="https://i.imgur.com/r1W9ohZ.jpg">
 
-![Pondicherry Villa](https://i.imgur.com/Pu176PH.jpg)
+<img loading="lazy" alt="Pondicherry Villa" src="https://i.imgur.com/Pu176PH.jpg">
 
-![Ikea Bengaluru storage](https://i.imgur.com/HZ3hHs0.jpg)
+<img loading="lazy" alt="Ikea Bengaluru storage" src="https://i.imgur.com/HZ3hHs0.jpg">
 
 </div>
 
@@ -46,27 +46,27 @@ type: page
 
 <!--[Window through the fort](https://i.imgur.com/A7OPUuM.jpg)-->
 
-![Ghat descent on west cost](https://i.imgur.com/agAwA6L.jpg)
+<img loading="lazy" alt="Ghat descent on west cost" src="https://i.imgur.com/agAwA6L.jpg">
 
-![Hole in the Wall in Kormangala is a vibe!](https://i.imgur.com/zLDGtul.jpg)
+<img loading="lazy" alt="Hole in the Wall in Kormangala is a vibe!" src="https://i.imgur.com/zLDGtul.jpg">
 
-![Vidhan Soudha, which ive surprisingly never even after spending my whole life here](https://i.imgur.com/ohigp5U.jpg)
+<img loading="lazy" alt="Vidhan Soudha, which ive surprisingly never even after spending my whole life here" src="https://i.imgur.com/ohigp5U.jpg">
 
-![Frist go meetup in bangalore with Sudhir and Nathan](https://i.imgur.com/G0JYhn1.jpg)
+<img loading="lazy" alt="Frist go meetup in bangalore with Sudhir and Nathan" src="https://i.imgur.com/G0JYhn1.jpg">
 
-![Blurry snap from foss talk](https://i.imgur.com/7OAa8tn.jpg)
+<img loading="lazy" alt="Blurry snap from foss talk" src="https://i.imgur.com/7OAa8tn.jpg">
 
-![First hackathon - hacknite](https://i.imgur.com/Yg3di6k.jpg)
+<img loading="lazy" alt="First hackathon - hacknite" src="https://i.imgur.com/Yg3di6k.jpg">
 
-![Foss talk with friends](https://i.imgur.com/WGTr4Wq.jpg)
+<img loading="lazy" alt="Foss talk with friends" src="https://i.imgur.com/WGTr4Wq.jpg">
 
-![The sexy mall](https://i.imgur.com/UbeGLEd.jpg)
+<img loading="lazy" alt="The sexy mall" src="https://i.imgur.com/UbeGLEd.jpg">
 
-![The sexy mall with a tree](https://i.imgur.com/W4cJO40.jpg)
+<img loading="lazy" alt="The sexy mall with a tree" src="https://i.imgur.com/W4cJO40.jpg">
 
-![Project expo presentation](https://i.imgur.com/JjjO75w.png)
+<img loading="lazy" alt="Project expo presentation" src="https://i.imgur.com/JjjO75w.png">
 
-![BeReal inside another](https://i.imgur.com/5HPnfMy.jpg)
+<img loading="lazy" alt="BeReal inside another" src="https://i.imgur.com/5HPnfMy.jpg">
 
 </div>
 

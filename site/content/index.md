@@ -6,6 +6,7 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
+<!--
 <h2 class="spotlight text">Hey! I'm Hegde</h2>
 <div class="spotlight background"></div>
 
@@ -30,11 +31,14 @@ function enableScroll() {
 disableScroll();
 setTimeout(enableScroll, 2000);
 </script>
+-->
 
 # Hey! I'm Hegde 🌊
 
-![Image of me as a kid](/static/me.jpeg)
-Image of me as a kid
+<figure>
+<img loading="lazy" alt="Image of me as a kid" src="/static/me.jpeg"></img>
+<figcaption>28th October 2008 | Canon PowerShot SD630</figcaption>
+</figure>
 
 Welcome to my home on the internet 🌊
 
@@ -44,11 +48,9 @@ On this site I will be sharing my journey, my zettels' and projects along with a
 
 🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team.
 
-<!--iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=77.65997171401978%2C12.856427090051994%2C77.66943454742433%2C12.866374230785045&amp;layer=mapnik&amp;marker=12.86140070970536%2C77.66470313072205" style="border: 1px solid black"></iframe-->
-
 I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_. I'm a really huge fan of Tennis and Motersport.
 
-Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on a few projects in go and trying to get my way around rust.
+Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on a few projects in go and trying to get my way around rust. Working on the `MIT 6.5640 lab` for distributed systems.
 
 ## Projects i've worked on
 
