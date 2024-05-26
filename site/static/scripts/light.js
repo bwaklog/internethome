@@ -2,19 +2,19 @@ function lightScheme() {
     // change the tags
     // document.documentElement.style.setProperty("--color-text", "#282828");
     document.documentElement.style.setProperty("--color-heading", "#000000");
-    document.documentElement.style.setProperty("--color-text", "#585858");
-    document.documentElement.style.setProperty("--color-text-dim", "#2828285a");
+    document.documentElement.style.setProperty("--color-text", "#10100ea0");
+    document.documentElement.style.setProperty("--color-text-dim", "#58585870");
     // document.documentElement.style.setProperty("--color-text-dim", "#0000005a");
     // document.documentElement.style.setProperty("--color-background", "#FEFAF6");
     // document.documentElement.style.setProperty("--color-background", "#fbfaf2");
-    document.documentElement.style.setProperty("--color-background", "#ffffff");
+    document.documentElement.style.setProperty("--color-background", "##ffffff");
     document.documentElement.style.setProperty(
         "--color-background-dim",
-        "#dadada",
+        "#ffffff7a",
     );
     document.documentElement.style.setProperty(
         "--color-background-low",
-        "#dadada7a",
+        "#ffffff50",
     );
     document.documentElement.style.setProperty("--inline-code-bg", "#d1d1d17d");
     document.documentElement.style.setProperty(
@@ -26,19 +26,20 @@ function lightScheme() {
 function darkScheme() {
     document.documentElement.style.setProperty("--color-heading", "#ffffff");
     // document.documentElement.style.setProperty("--color-text", "#585858");
-    document.documentElement.style.setProperty("--color-text", "#c0c0c0");
-    document.documentElement.style.setProperty("--color-text-dim", "#d8d8d85a");
+    document.documentElement.style.setProperty("--color-text", "#ffffffd0");
+    document.documentElement.style.setProperty("--color-text-dim", "#ffffff5a");
     // document.documentElement.style.setProperty("--color-background", "#0f0f0f");
     // document.documentElement.style.setProperty("--color-background", "#0b1215");
     // document.documentElement.style.setProperty("--color-background", "#0c0c0c");
-    document.documentElement.style.setProperty("--color-background", "#121616");
+    // document.documentElement.style.setProperty("--color-background", "#121616");
+    document.documentElement.style.setProperty("--color-background", "#10100e");
     document.documentElement.style.setProperty(
         "--color-background-dim",
-        "#2a2a2a",
+        "#10100e7a",
     );
     document.documentElement.style.setProperty(
         "--color-background-low",
-        "#2a2a2a7a",
+        "#10100e50",
     );
     document.documentElement.style.setProperty("--inline-code-bg", "#1d1f21");
     document.documentElement.style.setProperty(
@@ -49,7 +50,6 @@ function darkScheme() {
 
 // store user toggle preference in local storage. Site must remember what theme was last used
 // and apply it when the user returns to the site.
-
 function ThemeSwitch() {
     // on click of button with class toggle-theme, store theme in local and switch
     var theme = localStorage.getItem("theme");
@@ -75,12 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
             toggle.style.scale = "scale .5s cubic-bezier(1,0,0,1)"
             toggle.style.scale = "scale(.95)";
             toggle.style.scale = "scale(1)";
-            // ThemeSwitch();
+            ThemeSwitch();
         };
     };
-
-
-
     // check local storage for theme
     const theme = localStorage.getItem("theme");
     // if no theme exists

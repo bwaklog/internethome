@@ -36,7 +36,7 @@ setTimeout(enableScroll, 2000);
 # Hey! I'm Hegde 🌊
 
 <figure>
-<img loading="lazy" alt="Image of me as a kid" src="/static/me.jpeg"></img>
+<img loading="lazy" alt="Image of me as a kid" src="/static/me.jpeg">
 <figcaption>28th October 2008 | Canon PowerShot SD630</figcaption>
 </figure>
 

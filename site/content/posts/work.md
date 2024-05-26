@@ -25,4 +25,7 @@ Being true to your work is one more thing that is very important. Set your margi
 
 ---
 
-![xkcd comic 1658 - estimating time](https://imgs.xkcd.com/comics/estimating_time_2x.png)
+<figure>
+<img alt="xkcd comic 1658 - estimating time" loading="lazy" src="https://imgs.xkcd.com/comics/estimating_time_2x.png">
+<figcaption>xkcd comic 1658 - estimating time</figcaption>
+</figure>

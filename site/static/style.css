@@ -12,14 +12,14 @@
 } */
 
 :root {
-  --color-heading: #fafafa;
-  --color-text: #c0c0c0;
+  --color-heading: #ffffe6;
+  --color-text: #ffffe6aa;
   --color-text-dim: #d8d8d85a;
   /* --color-background: #fffff5; */
   /*--color-background: #0a0908;*/
-  --color-background: #111111;
-  --color-background-dim: #2a2a2a;
-  --color-background-low: #2a2a2a7a;
+  --color-background: #10100e;
+  --color-background-dim: #10100e7a;
+  --color-background-low: #10100e50;
   --color-background-contrast: #1a1a1a;
   --inline-code-bg: #1d1f21;
 }
@@ -27,15 +27,14 @@
 :root {
   --selection-bg: #d1d1d17d;
 
-  /* --color-primary: #ff4a6a;
+  --color-primary: #ff4a6a;
   --color-primary-dim: #ff4a6aef;
-  --color-primary-low: #ff4a6a50; */
+  --color-primary-low: #ff4a6a50;
 
-  --color-primary: #729ab9;
-  --color-primary-dim: #729ab9ef;
-  --color-primary-low: #729ab950;
+  /*--color-primary: #729ab9;*/
+  /*--color-primary-dim: #729ab9ef;*/
+  /*--color-primary-low: #729ab950;*/
 
-  /*--color-primary: #ff4000;*/
   /*--color-primary-dim: #ff4000;*/
   /*--color-primary-low: #ff4000;*/
   /**/
@@ -63,13 +62,30 @@
   font-family: Inter;
   src: url(./fonts/others/Inter.ttf);
   font-feature-settings: 'liga' 1, 'calt' 1;
+  /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: Inter;
+  }
 }
 
 @font-face {
   font-family: InterItalic;
   src: url(./fonts/others/InterItalic.ttf);
-  /*font-feature-settings: 'liga' 1, 'calt' 1;*/
   font-feature-settings: 'liga' 1, 'calt' 1;
+
+}
+
+@font-face {
+  font-family: Sora;
+  src: url(./fonts/sora/Sora.ttf);
+}
+
+@font-face {
+  font-family: SoraItalic;
+  src: url(./fonts/sora/SoraItalic.ttf);
 }
 
 
@@ -97,15 +113,13 @@ html {
 
 i,
 em {
-  font-family: EBGaramondItalic, serif;
-  font-style: normal;
-  font-size: 1.2rem;
+  font-family: InterItalic, EBGaramondItalic, serif;
+  font-style: italic;
+  font-size: 1rem;
 }
 
 body {
   font-family:
-    /* monospace, */
-    /* 'SFMono Nerd Font', */
     Inter,
     system-ui,
     -apple-system,
@@ -121,13 +135,14 @@ body {
   line-height: 1.5;
   /* gap between letters */
   letter-spacing: 0.1px;
+  font-variant-ligatures: common-ligatures;
 
   text-rendering: optimizeLegibility;
 
   /* text opacity*/
   color: var(--color-text);
 
-  font-weight: 450;
+  font-weight: 400;
   /* background-color: var(--color-background-dim); */
   font-size: 1rem;
   transition:
@@ -151,7 +166,7 @@ height 0.3s ease-in-out;
   /* border: 0.1em solid var(--color-text-dim); */
   /* border-radius: .1em; */
 
-  width: 45rem;
+  width: 40rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -189,7 +204,7 @@ nav {
   /* background-color: var(--color-background-low); */
   /* -webkit-backdrop-filter: blur(10px); */
 
-  filter: drop-shadow(0 0 0.1rem var(--color-text-dim));
+  filter: drop-shadow(0 0 1px var(--color-text-dim));
 
   /* padding: .8rem; */
   border-radius: 2rem;
@@ -203,7 +218,7 @@ nav {
   margin-top: 1.2rem;
   margin-left: auto;
   margin-right: auto;
-  width: 45rem;
+  width: 40rem;
 
   font-family: Inter, system-ui, sans-serif;
 
@@ -356,7 +371,7 @@ h6 {
 .loader-h1,
 h1 {
   font-size: 1.4rem;
-  /*font-size: 1.6rem; */
+  /*font-size: 1.6rem;*/
   margin-top: 1.6rem;
 }
 
@@ -448,7 +463,7 @@ form-container {
 #searchSiteInput {
   background: var(--color-background-dim);
   color: var(--color-text);
-  border: 2px solid var(--color-background-dim);
+  border: 2px solid var(--color-text-dim);
 
   width: 100%;
   margin-top: 1rem;
@@ -498,26 +513,15 @@ form-container {
 }
 
 a {
-  /* color: var(--color-heading); */
-  color: var(--color-primary);
+  color: var(--color-heading);
+  /*color: var(--color-primary);*/
   text-decoration: none;
-
   cursor: cell;
 
-  /*&:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):not(.anchor) {*/
-  /* text-decoration: underline;
-    text-decoration-style: dotted;
-    -moz-text-decoration-style: dotted;
-    text-decoration-color: var(--color-text-dim); */
-  /*}*/
-
-  &:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):visited {
-    color: var(--color-primary-dim);
-  }
-
-  &:not(.header-element):not(.footer-element):not(.post-tag):not(.note-card):hover {
-    color: var(--color-primary);
-    /* text-decoration-color: var(--color-heading); */
+  &:not(.header-element):not(.footer-element):not(.post-tag) {
+    /*gap between text and decpration*/
+    padding-bottom: 0.1rem;
+    text-decoration: underline;
   }
 }
 
@@ -539,7 +543,7 @@ a {
     "Helvetica Neue",
     sans-serif;
   font-style: normal;
-  font-size: 0.75em;
+  font-size: 0.95em;
   line-height: 0.75em;
   font-weight: 500;
   color: inherit;

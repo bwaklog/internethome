@@ -15,7 +15,7 @@ $(function () {
             $("nav").css("background-color", "var(--color-background-low)");
         } else {
             $("nav").css("backdrop-filter", "none");
-            $("nav").css("width", "45rem");
+            $("nav").css("width", "40rem");
             // if media width is less than 800px
             if ($(window).width() < 900) {
                 $("nav").css("width", "90%");
