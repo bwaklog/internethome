@@ -6,47 +6,29 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
-<!--
-<h2 class="spotlight text">Hey! I'm Hegde</h2>
-<div class="spotlight background"></div>
-
-<script>
-function disableScroll() {
-  // Get the current scroll position
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-  // Disable scrolling by overriding the window.onscroll function
-  window.onscroll = function() {
-    window.scrollTo(scrollLeft, scrollTop);
-  };
-}
-
-function enableScroll() {
-  // Enable scrolling by setting the window.onscroll function to null
-  window.onscroll = null;
-}
-
-// Disable scrolling for 2 seconds
-disableScroll();
-setTimeout(enableScroll, 2000);
-</script>
--->
-
 # Hey! I'm Hegde 🌊
 
-<figure>
+<!--figure>
 <img loading="lazy" alt="Image of me as a kid" src="/static/me.jpeg">
 <figcaption>28th October 2008 | Canon PowerShot SD630</figcaption>
-</figure>
+</figure-->
+
+<div class="container-flex">
+<div class="container-flex col">
+<img loading="lazy" style="width: 200px; height: auto;" alt="Image of me as a kid" src="/static/cl.jpg">
+</div>
+
+<div>
 
 Welcome to my home on the internet 🌊
 
 I love exploring challenging problems, its what keeps me working.
 
-On this site I will be sharing my journey, my zettels' and projects along with a random [photo dump](/clicks.html)
-
 🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team.
+
+</div>
+
+</div>
 
 I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_. I'm a really huge fan of Tennis and Motersport.
 

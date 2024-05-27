@@ -1,0 +1,406 @@
+
+
+
+
+  
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="The following page consists of a semi-detailed documentation of how to use anna as your ssg, or for other purposes. It includes instructions for usage of go templates with DDM, and other features"
+        />
+        <title>Anna Documentation</title>
+
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        
+        
+        <link
+            href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="/static/scripts/shuffle.js"></script>
+
+        
+        
+
+        
+        
+
+        
+        
+
+        <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="feed"
+            href="/feed.atom"
+        />
+        <link rel="stylesheet" href="/static/style.css" />
+        
+        <script src="/static/scripts/light.js" defer></script>
+
+        
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "b16ba3a1a9d546b28b8f3dfae89358e1"}'
+        ></script>
+        
+
+        
+        
+        <script>
+            const eventSource = new EventSource("http://localhost:8000/events");
+            eventSource.onmessage = function (event) {
+                location.reload();
+            };
+        </script>
+          
+
+        <script defer>
+            
+            document.addEventListener("DOMContentLoaded", (event) => {
+                var h1Element = document.getElementById("table-of-contents");
+                var ulElement = h1Element.nextElementSibling;
+                h1Element.remove();
+                ulElement.remove();
+            });
+
+
+        </script>
+
+        <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Anna Documentation" />
+        <meta
+            property="og:description"
+            content="The following page consists of a semi-detailed documentation of how to use anna as your ssg, or for other purposes. It includes instructions for usage of go templates with DDM, and other features"
+        />
+        <meta
+            property="og:image"
+            content=""
+        />
+
+        
+        <meta name="format-detection" content="telephone=no" />
+
+        <script defer>
+            hljs.highlightAll();
+            
+        </script>
+
+        
+    </head>
+    
+
+<body>
+
+    <div class="container">
+        
+
+
+
+
+<header>
+  <nav>
+    <div class="navigations">
+      
+      
+      
+      
+      <a class="header-element author" href="/">Aditya Hegde</a>
+
+      
+      
+      
+      
+      
+      <a class="header-element"  href="/clicks.html">Clicks</a>
+      
+      
+      
+      
+      
+      <a class="header-element"  href="/tags.html">Index</a>
+      
+      
+      
+    </div>
+    <div class="theme-toggle-div">
+      <img class="theme-toggle" alt="site logo" id="theme-toggle" class="theme-toggle" src="/static/pfp.jpeg" />
+    </div>
+  </nav>
+  
+</header>
+
+
+            
+
+
+            <pre><code class="language-text">    ___
+   /   |  ____  ____  ____ _
+  / /| | / __ \/ __ \/ __ `/
+ / ___ |/ / / / / / / /_/ /
+/_/  |_/_/ /_/_/ /_/\__,_/
+
+A static site generator in go
+</code></pre>
+<p>Inspired by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/anirudhRowjee/saaru">Saaru</a>, this static site generator aims to take performance to the next level with parallel rendering, live reload and so much more, all in Go.</p>
+<p>Pronounced: <code>/ɐnːɐ/</code> which means rice in Kannada 🍚</p>
+<p>This Project is a part of the ACM PESU-ECC's yearly <a href="https://acmpesuecc.github.io/aiep">AIEP</a> program, and is maintained by <a href="https://github.com/DedLad">Adhesh Athrey</a>, <a href="https://github.com/polarhive">Nathan Paul</a>, <a href="https://github.com/anirudhsudhir">Anirudh Sudhir</a>, and <a href="https://github.com/bwaklog">Aditya Hegde</a></p>
+<hr>
+<h2 id="directory-structure">Directory structure</h2>
+<p>The ssg currently requires the following directory structure</p>
+<pre><code class="language-text">/anna
+├── /cmd
+├── /pkg
+│   ├── /engine
+│   ├── /helpers
+│   └── /parser
+├── /site
+│    ├── /content
+│    │   │   └── /posts
+│    │   │           └── sample.md
+│    │   └── index.md
+│    ├── /layout
+│    │   ├── config.yml (This file is necessary and cannot be omitted)
+│    │   ├── page.html (This file is necessary and cannot be omitted)
+│    │   ├── posts.html (This file is necessary to create a 'Posts' section)
+│    │   └─── /partials
+│    │       └── partials for page
+│    ├── /static
+│    │   ├── /fonts
+│    │   ├── /images
+│    │   ├── plane.jpg
+│    │   ├── /scripts
+│    │   └── style.css
+│    └ /rendered (This directory is created by the ssg)
+└── /test (Stores mock data required to test the SSG)
+    ├── /engine
+    │   ├── /merged_data_test
+    │   ├── /render_engine_generated
+    │   ├── /render_page
+    │   ├── /render_tags
+    │   └── /render_user_defined
+    └── /parser
+        ├── /input
+        ├── /layout
+        └── /parse_md
+</code></pre>
+<h2 id="description-of-the-directory-structure">Description of the directory structure</h2>
+<ul>
+<li>
+<p>All of the site data, including the content, configuration and static files, are stores in site/. The rendered/ directory generated by ssg is also stored in site/.</p>
+</li>
+<li>
+<p>The markdown content for the site is stored in <code>content/</code> it can contain subdirectories as the folder is recursively rendered.</p>
+</li>
+<li>
+<p>Static assets such as images and fonts are stored in <code>static/</code></p>
+</li>
+<li>
+<p>Scripts are stored in the <code>scripts/</code> dir in <code>static/</code></p>
+</li>
+<li>
+<p>The layout of the site is configured using html files in <code>layout/</code></p>
+<ul>
+<li>The <code>config.yml</code> file stores the configuration of the site and includes details such as the baseURL</li>
+<li>The <code>page.html</code> file defines the layout of a basic page of the site</li>
+<li>The <code>posts.html</code> file defines the layout of a page displaying all the posts of the site</li>
+<li>The layout files can be composed of smaller html files which are stored in the <code>partials/</code> folder</li>
+</ul>
+</li>
+</ul>
+<h2 id="building-layouts">Building layouts</h2>
+<p>Each layout file(except <code>posts.html</code> and <code>tags.html</code>) can access any data from the entire ssg</p>
+<p>The URL for the current page can be accessed using <code>{{.PageURL}}</code></p>
+<p>To access the data for a particular page, use Go templating syntax:</p>
+<pre><code class="language-html">{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{$PageData.CompleteURL}}
+</code></pre>
+<p>To access the page data for <code>posts.html</code>, <code>tags.html</code> and partials, set {{$PageData := .TemplateData}}</p>
+<p>All of the following page data fields can be accessed in the above manner:</p>
+<ul>
+<li><code>{{$PageData.CompleteURL}}</code> : Returns the complete url of the given page</li>
+<li><code>{{$PageData.Date}}</code> : Returns the last modified date of the current file</li>
+<li><code>{{$PageData.Frontmatter.[Tagname]}}</code> : Returns the value of the frontmatter tag
+<ul>
+<li>Example: <code>{{$PageData.Frontmatter.Title}}</code> : Returns the value of the title tag</li>
+</ul>
+</li>
+<li><code>{{$PageData.Body}}</code> : Returns the markdown body rendered to HTML</li>
+<li><code>{{$PageData.Layout.[Tagname]}}</code>: Returns the particular configuration detail of the page
+<ul>
+<li>Example: <code>{{$PageData.Layout.Navbar}}</code> : Returns a string slice with the names of all the navbar elements</li>
+</ul>
+</li>
+</ul>
+<p>In addition to page data, the following fields can be accessed:</p>
+<ul>
+<li><code>{{.DeepDataMerge.Tags}}</code> - A map that stores the template of the tag sub-pages for a particular tag url</li>
+<li><code>{{.DeepDataMerge.TagsMap}}</code> - A map that stores a slice of templates of all posts for a particular tag url</li>
+<li><code>{{.DeepDataMerge.LayoutConfig}}</code> - Stores the layout parsed from <code>config.yml</code></li>
+<li><code>{{.DeepDataMerge.Posts}}</code> - Stores a slice of templates of all posts</li>
+<li><code>{{.DeepDataMerge.JSONIndex}}</code> - Stores the JSON index generated for a particular site
+(primarily used for search and graphing of tags)</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ol>
+<li>
+<p>Images: To add images, add it to the 'static/' folder or a subdirectory under it. Use <code>/static/[imagename.format]</code> as the image link format in the markdown files.</p>
+</li>
+<li>
+<p>CSS: CSS can be added in the following ways:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>In an external file in the <code>static/</code> directory and linked to the layout files</p>
+<ul>
+<li>
+<p>To link the stylesheet, use the <code>baseURL</code> along with the relative path</p>
+<p>Example: <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{.Layout.BaseURL}}static/style.css&quot;&gt;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Placed inside <code>&lt;style&gt;&lt;/style&gt;</code> tags in the <code>&lt;head&gt;&lt;/head&gt;</code> of the layout files</p>
+</li>
+<li>
+<p>Inline with the html elements</p>
+</li>
+</ul>
+<ol start="3">
+<li>Frontmatter: Metadata such as the title of the page can be added as frontmatter to the markdown files in the YAML format. Currently, the following tags are supported:</li>
+</ol>
+<ul>
+<li><code>title</code> : The title of the current page</li>
+<li><code>date</code>: The date of the current page</li>
+<li><code>draft</code>: When set to 'true', the current page is not rendered unless the '-d' flag is used</li>
+<li><code>scripts</code>: Stores the page-level scripts to be added</li>
+<li><code>type</code>: Sets the type of the page. Use type 'post' for posts</li>
+<li><code>description</code>: Stores the description of the current post previewed in posts.html</li>
+<li><code>previewimage</code>: Stores the preview image of the current page</li>
+<li><code>tags</code>: Stores the tags of the particular page</li>
+<li><code>authors</code>: Stores (multiple) author/s of a particular page</li>
+</ul>
+<p>(<strong>The above tags are Frontmatter tags</strong>)</p>
+<ol start="4">
+<li>config.yml: This file stores additional information regarding the layout of the site</li>
+</ol>
+<ul>
+<li><code>navbar</code>: Stores the links to be added to the navbar (same name as the markdown files)</li>
+<li><code>baseURL</code>: Stores the base URL of the site</li>
+<li><code>siteTitle</code>: Stores the name of the site</li>
+<li><code>siteScripts</code>: Stores the javascript files to be included with every page</li>
+<li><code>author</code>: Stores the author of the site</li>
+</ul>
+<p>(<strong>The above tags are Layout tags</strong>)</p>
+<h3 id="sample-configyml">Sample <code>config.yml</code></h3>
+<pre><code class="language-yml">navbar:
+  - about
+  - posts
+
+baseURL: http://localhost:8000/
+# Replace this with the actual canonical-url of your site
+# baseURL tells search-engines (SEO), web-crawlers (robots.txt) so people can discover your site on the internet.
+# It's also embeded in your sitemap / atom feed and can be used to change metadata about your site.
+
+siteTitle: anna
+siteScripts:
+author: Anna
+</code></pre>
+<hr>
+<h1 id="using-anna-locally">Using Anna locally</h1>
+<h2 id="installing-from-releases">Installing from releases</h2>
+<pre><code class="language-sh">curl -L https://github.com/acmpesuecc/anna/releases/download/&lt;tag&gt;/&lt;release&gt;.tar.gz &gt; anna.tar.gz
+tar -xvf anna.tar.gz
+./anna
+</code></pre>
+<h2 id="using-homebrew-on-macos">Using homebrew on MacOS</h2>
+<pre><code class="language-sh">brew tap anna-ssg/anna
+brew install anna
+</code></pre>
+<blockquote>
+<p>If you don't have a site dir with the pre-requisite layout template; anna proceeds to fetch the default site dir from our GitHub repository</p>
+</blockquote>
+<h2 id="usage">Usage</h2>
+<pre><code class="language-text">Usage:
+  anna [flags]
+
+Flags:
+  -a, --addr string   ip address to serve rendered content to (default &quot;8000&quot;)
+  -d, --draft         renders draft posts
+  -h, --help          help for anna
+  -l, --layout        validates html layouts
+  -p, --prof          enable profiling
+  -s, --serve         serve the rendered content
+  -v, --version       prints current version number
+  -w, --webconsole    wizard to setup anna
+</code></pre>
+<hr>
+<h2 id="contributing-to-anna">Contributing to Anna</h2>
+<p>Detailed documentation for our SSG can be found: <a href="https://anna-docs.netlify.app/">here</a></p>
+<p>If you have git installed, clone our repository and build against the latest commit</p>
+<pre><code class="language-sh">git clone github.com/acmpesuecc/anna; cd anna
+go build
+</code></pre>
+
+
+
+            
+            <div class="post-info">
+            <p class="post-info-author">2024-04-10 ~ Aditya Hegde</p>
+            </div>
+            
+
+            
+<footer>
+    
+    <div class="footer-text">
+        Rendered with <span style="color: #ff4a6a">&#10084;</span> by
+        <a class="footer-element" href="https://github.com/acmpesuecc/anna"
+            >anna</a
+        >
+        <br />
+        updated on <span id="commit-date">god knows when</span> | <a id="commit-hash" class="footer-element"  href="https://github.com/bwaklog/internethome/">here</a>
+    </div>
+    
+</footer>
+<script>
+    
+    const repoURL = "https://api.github.com/repos/bwaklog/internethome/commits/HEAD"
+
+    fetch(repoURL)
+        .then(response => response.json())
+        .then(data => {
+            const latestCommitHash = data.sha.slice(0, 7);
+
+            const commitHashElement = document.getElementById('commit-hash');
+            commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`
+            commitHashElement.textContent = `${latestCommitHash}`;
+
+            console.log('Latest commit hash:', latestCommitHash);
+
+            const commitDate = data.commit.author.date;
+            const readable_date = new Date(commitDate).toDateString();
+            console.log('Latest commit date:', readable_date);
+            document.getElementById('commit-date').textContent = readable_date;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error)
+        });
+</script>
+
+    </div>
+  </div>
+</body>
+
+</html>
+

@@ -14,11 +14,11 @@
             {{end}}
         </div>
 
-        {{ template "search" .}}
+        <!-- {{ template "search" .}} -->
 
         <!-- <hr /> -->
 
-        <h2 class="heading-plain">Some recent posts </h2>
+        <!-- <h2 class="heading-plain">Some recent posts </h2> -->
 
         <!-- <p>Here you can find all the posts and note heads that are part of this site. All the posts are categorised under tags, using which you can navigate.</p> -->
         <table class="post-table">
@@ -38,21 +38,21 @@
 
         <!-- <hr /> -->
 
-        <h2 class="heading-plain">Curated Notes</h2>
-        <table class="post-table">
-            {{ range .DeepDataMerge.Notes }}
-            {{ if eq .Frontmatter.Head true }}
-            <tr>
-                <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
-                <td class="post-table date">{{.Frontmatter.Date}}</td>
-            </tr>
-            <tr>
-                <td> {{.Frontmatter.Description}}</td>
-                <td></td>
-            </tr>
-            {{ end }}
-            {{ end }}
-        </table>
+        <!-- <h2 class="heading-plain">Curated Notes</h2> -->
+        <!-- <table class="post-table"> -->
+        <!--     {{ range .DeepDataMerge.Notes }} -->
+        <!--     {{ if eq .Frontmatter.Head true }} -->
+        <!--     <tr> -->
+        <!--         <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td> -->
+        <!--         <td class="post-table date">{{.Frontmatter.Date}}</td> -->
+        <!--     </tr> -->
+        <!--     <tr> -->
+        <!--         <td> {{.Frontmatter.Description}}</td> -->
+        <!--         <td></td> -->
+        <!--     </tr> -->
+        <!--     {{ end }} -->
+        <!--     {{ end }} -->
+        <!-- </table> -->
 
         {{template "footer" .}}
     </div>

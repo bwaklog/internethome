@@ -1,0 +1,360 @@
+
+
+
+
+ 
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="The following collection of all notes i&#39;ve made while trying to figure out CRDT, Automerge, how Redis works, what makes it so special and more"
+        />
+        <title>KV Collab and Merging</title>
+
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        
+        
+        <link
+            href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+
+        
+        
+
+        
+        
+
+        <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="feed"
+            href="/feed.atom"
+        />
+        <link rel="stylesheet" href="/static/style.css" />
+        
+        <script src="/static/scripts/light.js" defer></script>
+
+        
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "b16ba3a1a9d546b28b8f3dfae89358e1"}'
+        ></script>
+        
+          
+
+        <script defer>
+            
+            document.querySelectorAll("img").forEach((img) => {
+                img.setAttribute("loading", "lazy");
+            });
+        </script>
+
+        <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="KV Collab and Merging" />
+        <meta
+            property="og:description"
+            content="The following collection of all notes i&#39;ve made while trying to figure out CRDT, Automerge, how Redis works, what makes it so special and more"
+        />
+        <meta
+            property="og:image"
+            content=""
+        />
+
+        
+        <meta name="format-detection" content="telephone=no" />
+
+        <script defer>
+            hljs.highlightAll();
+            hljs.addPlugin(new CopyButtonPlugin());
+        </script>
+
+        <script src="/static/scripts/nav.js"></script>
+    </head>
+    
+
+<body>
+    <div class="container notetype">
+        
+
+
+
+
+<header>
+  <nav>
+    <div class="navigations">
+      
+      
+      
+      
+      <a class="header-element author" href="/">Aditya Hegde</a>
+
+      
+      
+      
+      
+      
+      <a class="header-element"  href="/clicks.html">Clicks</a>
+      
+      
+      
+      
+      
+      <a class="header-element"  href="/tags.html">Index</a>
+      
+      
+      
+    </div>
+    <div class="theme-toggle-div">
+      <img class="theme-toggle" alt="site logo" id="theme-toggle" class="theme-toggle" src="/static/pfp.jpeg" />
+    </div>
+  </nav>
+  
+</header>
+
+
+        
+        <div class="post-info">
+            <h1>KV Collab and Merging</h1>
+            <p class="post-info-author" >
+                2024-04-14
+                
+                ~
+
+                
+                Aditya Hegde
+                
+            </p>
+            
+            
+
+        </div>
+        
+
+        <h1 id="referrals">Referrals</h1>
+<ul>
+<li><a href="https://automerge.org/">Automerge</a> using CRDT implementation</li>
+<li><a href="">Google Docs</a> using the same implementation</li>
+<li><a href="https://webrtc.org/">WebRTC</a> enabling <strong>real time</strong> communication : server less approach. More of a P2P approach</li>
+<li><a href="https://github.com/automerge/mpl">MPL</a> P2P Document synchronisation system for automerge</li>
+<li>Think about <a href="">Web Sockets</a> for client/server communications</li>
+</ul>
+<h1 id="notes">Notes</h1>
+<ul>
+<li><a id="zettel-reference" href="/notes/kv colab/Json like abstraction in Automerge.html">Json like abstraction in Automerge</a> for application data.</li>
+<li><a id="zettel-reference" href="/notes/kv colab/K-V Store implementation.html">K-V Store implementation</a> for the database side of the application</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://raft.github.io/raft.pdf">Raft Paper</a> by <em>Diego Ongaro</em> and <em>John Ousterhout</em> from Stanford University</li>
+<li><a href="https://martin.kleppmann.com/2021/06/04/craft-conf.html">Creation of a Local-First Collaboration software with Automerge</a> by Martin Kleppmann</li>
+<li>Original Paper on <a href="https://lamport.azurewebsites.net/pubs/time-clocks.pdf">Lamport Time Clocks</a></li>
+</ul>
+
+        
+        
+        <hr />
+        <section class="notes">
+            <h5>References in this note</h5>
+            
+            <a class="note-card" href="/notes/kv%20colab/Json%20like%20abstraction%20in%20Automerge.html">
+                <div class="note-card div">
+                    <p>• Json like abstraction in Automerge | 2024-04-14</p>
+                    <p class="note-card desc"></p>
+                </div>
+            </a>
+            
+            <a class="note-card" href="/notes/kv%20colab/K-V%20Store%20implementation.html">
+                <div class="note-card div">
+                    <p>• K-V Store implementation | 2024-04-16</p>
+                    <p class="note-card desc">The following collection of all notes i&#39;ve made while trying to figure out CRDT, Automerge, how Redis works, what makes it so special and more</p>
+                </div>
+            </a>
+            
+        </section>
+        
+
+        
+<footer>
+    
+    <div class="footer-text">
+        Rendered with <span style="color: #ff4a6a">&#10084;</span> by
+        <a class="footer-element" href="https://github.com/acmpesuecc/anna"
+            >anna</a
+        >
+        <br />
+        updated on <span id="commit-date">god knows when</span> | <a id="commit-hash" class="footer-element"  href="https://github.com/bwaklog/internethome/">here</a>
+    </div>
+    
+</footer>
+<script>
+    
+    const repoURL = "https://api.github.com/repos/bwaklog/internethome/commits/HEAD"
+
+    fetch(repoURL)
+        .then(response => response.json())
+        .then(data => {
+            const latestCommitHash = data.sha.slice(0, 7);
+
+            const commitHashElement = document.getElementById('commit-hash');
+            commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`
+            commitHashElement.textContent = `${latestCommitHash}`;
+
+            console.log('Latest commit hash:', latestCommitHash);
+
+            const commitDate = data.commit.author.date;
+            const readable_date = new Date(commitDate).toDateString();
+            console.log('Latest commit date:', readable_date);
+            document.getElementById('commit-date').textContent = readable_date;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error)
+        });
+</script>
+
+    </div>
+    </div>
+    
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var data_cache = null;
+
+        var url = "/static/noteindex.json";
+
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                data_cache = data;
+            })
+            .catch((error) => {
+                console.error(
+                    "There was a problem with the fetch operation:",
+                    error,
+                );
+            })
+
+        document.querySelectorAll('a:not(.post-card):not(.navitem)').forEach(function (anchor) {
+            anchor.addEventListener('mouseover', function (e) {
+                var div = document.createElement('div');
+                div.id = "hoverDiv"
+                div.style.position = 'fixed';
+                div.style.minWidth = '20rem';
+
+                
+                div.style.transition = 'top 0.2s, opacity 0.5s';
+                div.style.opacity = 0;
+                div.style.top = e.clientY - divHeight / 2 + 'px';
+
+                div.style.left = e.clientX + 'px';
+                setTimeout(function () {
+                    div.style.opacity = 1;
+                    div.style.top = e.clientY + 'px';
+                }, 50);
+
+                
+                var divWidth = 200; 
+                var divHeight = 100; 
+
+                div.style.left = e.clientX + 'px';
+                div.style.top = e.clientY + 'px';
+
+                var left = e.clientX;
+                var top = e.clientY + 150;
+
+                
+                if (left + divWidth > window.innerWidth - 200) {
+                    left = window.innerWidth - divWidth - 200;
+                }
+
+                if (top + divHeight > window.innerHeight) {
+                    top = window.innerHeight - divHeight;
+                }
+
+                div.style.left = left + 'px';
+                div.style.top = top + 'px';
+
+                div.style.maxWidth = '200px';
+                div.style.maxHeight = '250px';
+
+
+                for (key in data_cache) {
+                    title = data_cache[key]["Frontmatter"]["Title"];
+                    if (title == anchor.innerHTML) {
+                        
+                        var heading = document.createElement('h4');
+                        var mdBody = document.createElement('p');
+                        var BodyHTML = document.createElement('div');
+                        var fileDate = document.createElement('p');
+                        var filePreviewImage = document.createElement("img")
+
+                        fileDate.className = "date"
+                        filePreviewImage.loading = "lazy"
+
+                        heading.textContent = title;
+                        mdBody.textContent = data_cache[key]["MarkdownBody"];
+                        fileDate.textContent = `Created on ${data_cache[key]["Frontmatter"]["Date"]}`
+                        body = data_cache[key]["Body"]
+                        const src = data_cache[key]["Frontmatter"]["PreviewImage"];
+
+                        if (src != "") {
+                            filePreviewImage.src = src;
+                            filePreviewImage.alt = "Preview Image"
+                            div.appendChild(filePreviewImage)
+                        }
+
+                        div.appendChild(heading);
+                        BodyHTML.innerHTML = data_cache[key]["Body"]; 
+                        div.appendChild(BodyHTML);
+                        div.appendChild(fileDate);
+
+                        document.body.appendChild(div);
+                        
+                    }
+                }
+            });
+
+            anchor.addEventListener('mouseout', function (e) {
+                var hoverDivs = document.querySelectorAll('#hoverDiv');
+                
+                hoverDivs.forEach(function (hoverDiv) {
+                    hoverDiv.remove();
+                });
+            });
+
+            anchor.addEventListener('click', function(e) {
+                var hoverDivs = document.querySelectorAll('#hoverDiv');
+                
+                hoverDivs.forEach(function (hoverDiv) {
+                    hoverDiv.remove();
+                });
+            })
+    });
+
+
+
+
+        
+
+
+    });
+</script>
+
+</body>
+
+</html>
+

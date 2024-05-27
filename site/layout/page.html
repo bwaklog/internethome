@@ -7,6 +7,15 @@
     <div class="container">
         {{template "header" .}}
 
+            {{ if eq $PageData.Frontmatter.Type "post" }}
+            <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
+            <hr />
+            {{ end }}
+
+
+            {{$PageData.Body}}
+
+
             {{if eq $PageData.Frontmatter.Type "post"}}
             <div class="post-info">
                 <p class="post-info-author">
@@ -23,13 +32,12 @@
                     {{ end }}
                 </p>
                 <div class="tags-placeholder">
-                    <p>Related Tags:</p>
+                    <!-- <p>Related Tags:</p> -->
                     {{range $PageData.Frontmatter.Tags}}
                     <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
                     <!-- <a class="post-tag" href="/tags/{{.}}.html">{{.}}</a> -->
                     {{end}}
                 </div>
-                <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
                 {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
                 {{ else }}
                 {{ end }}
@@ -40,8 +48,6 @@
             <p class="post-info-author">{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
             </div>
             {{end}}
-
-            {{$PageData.Body}}
 
             {{template "footer" .}}
     </div>

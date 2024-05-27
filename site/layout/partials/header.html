@@ -9,12 +9,14 @@
   <nav>
     <div class="navigations">
       <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
-      {{ range .DeepDataMerge.LayoutConfig.Navbar }}
+      {{ range $index_no, $map := .DeepDataMerge.LayoutConfig.Navbar }}
+      {{ range $key, $value := $map }}
       {{ if eq . "index" }}
-      <a class="header-element shuffle author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
+      <a class="header-element author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
 
       {{else}}
-      <a class="header-element"  href="/{{.}}.html">{{.}}</a>
+      <a class="header-element"  href="/{{.}}.html">{{ $key }}</a>
+      {{end}}
       {{end}}
       {{end}}
     </div>
