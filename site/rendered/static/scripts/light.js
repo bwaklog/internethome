@@ -4,7 +4,8 @@ function lightScheme() {
     document.documentElement.style.setProperty("--color-heading", "#000000");
     document.documentElement.style.setProperty("--color-text", "#10100ed0");
     document.documentElement.style.setProperty("--color-text-dim", "#58585870");
-    document.documentElement.style.setProperty("--color-background", "#FEFAF6");
+    // document.documentElement.style.setProperty("--color-background", "#FEFAF6");
+    document.documentElement.style.setProperty("--color-background", "#ffffff");
     // document.documentElement.style.setProperty("--color-background", "#fbfaf2");
     // document.documentElement.style.setProperty("--color-background", "hsla(0, 43%, 97%, 1)");
     document.documentElement.style.setProperty(
@@ -29,9 +30,9 @@ function darkScheme() {
     document.documentElement.style.setProperty("--color-text-dim", "#ffffff5a");
     // document.documentElement.style.setProperty("--color-background", "#0f0f0f");
     // document.documentElement.style.setProperty("--color-background", "#0b1215");
-    // document.documentElement.style.setProperty("--color-background", "#0c0c0c");
+    document.documentElement.style.setProperty("--color-background", "#0c0c0c");
     // document.documentElement.style.setProperty("--color-background", "#121616");
-    document.documentElement.style.setProperty("--color-background", "hsla(0, 41%, 2%, 1)");
+    // document.documentElement.style.setProperty("--color-background", "hsla(0, 41%, 2%, 1)");
     document.documentElement.style.setProperty(
         "--color-background-dim",
         "#10100e7a",

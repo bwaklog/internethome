@@ -5,48 +5,28 @@
 		<lastmod>2024-02-24</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//par moi.html</loc>
-		<lastmod>2024-02-24</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//posts/work.html</loc>
-		<lastmod>2024-03-09</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//posts/xkcd-grab-presentation.html</loc>
-		<lastmod>2023-12-09</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//works.html</loc>
-		<lastmod></lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//clicks.html</loc>
-		<lastmod>2024-02-24</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//posts/zettel_impl.html</loc>
-		<lastmod>2024-04-10</lastmod>
+		<loc>https://hegde.live//posts/dist_sys/meerkat.html</loc>
+		<lastmod>2024-04-22</lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//wiki.html</loc>
 		<lastmod>2024-04-17</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/fireside_anna.html</loc>
-		<lastmod>2024-04-04</lastmod>
-	</url>
-	<url>
 		<loc>https://hegde.live//journey.html</loc>
 		<lastmod></lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/dist_sys/meerkat.html</loc>
-		<lastmod>2024-04-22</lastmod>
+		<loc>https://hegde.live//par moi.html</loc>
+		<lastmod>2024-02-24</lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//posts/hello-world.html</loc>
 		<lastmod>2023-12-08</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//posts/work.html</loc>
+		<lastmod>2024-03-09</lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//anna.html</loc>
@@ -55,5 +35,29 @@
 	<url>
 		<loc>https://hegde.live//posts/dist_sys/inginy12.html</loc>
 		<lastmod>2024-04-21</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//posts/xkcd-grab-presentation.html</loc>
+		<lastmod>2023-12-09</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//posts/zettel_impl.html</loc>
+		<lastmod>2024-04-10</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//about.html</loc>
+		<lastmod>2024-02-24</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//clicks.html</loc>
+		<lastmod>2024-02-24</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//posts/fireside_anna.html</loc>
+		<lastmod>2024-04-04</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//works.html</loc>
+		<lastmod></lastmod>
 	</url>
 </urlset>

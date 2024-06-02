@@ -2,12 +2,13 @@ navbar:
   - index: index
   # - anna
   # - works
-  - Clicks: clicks
-  - Index: tags
+  # - Clicks: clicks
+  # - Index: tags
   # - wiki
   # - notes
   # - posts
 baseURL: https://hegde.live/
 siteScripts:
   # - nav.js
+  # - expand.js
 author: Aditya Hegde
