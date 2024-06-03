@@ -11,4 +11,5 @@ baseURL: https://hegde.live/
 siteScripts:
   # - nav.js
   # - expand.js
+  - animation.js
 author: Aditya Hegde
