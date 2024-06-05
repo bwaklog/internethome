@@ -13,7 +13,7 @@ I'm not usually great at these things, but I want to give it a try. So here it g
 
 Hey There! My name is Aditya Hegde and this is my small space on such a vast land of the web. What about me? Well, I'm a [freshman](https://www.urbandictionary.com/define.php?term=College%20Freshman) at PES University. Parts of some cool clubs such as [HSP](https://homebrew.hsp-ec.xyz/) and [ACM](https://acmpesuecc.github.io/) which was my first little family here in college. Besides the stressful parts of it, just the first 6 months alone have shown me a whole new world.
 
-![pic of me](https://i.imgur.com/ppTDKQv.jpg)
+<!--[pic of me](https://i.imgur.com/ppTDKQv.jpg)-->
 
 It's been a whole semester since I've joined college, and I could just go on and on about the number of amazing people I've met. It's like a whole new wave I've never experienced. Been part of one of the coolest mentoring teams, mentored in some amazing workshops, and even had the opportunity to have my presentation on one of my projects.
 

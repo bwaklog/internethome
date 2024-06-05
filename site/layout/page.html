@@ -8,8 +8,27 @@
         {{template "header" .}}
 
             {{ if eq $PageData.Frontmatter.Type "post" }}
+
+            {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
+            {{ else }}
+            <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" />
+            {{end}}
+
             <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
-            <!-- <hr /> -->
+
+            <div class="cite-block">
+                <h6>tldr;</h6>
+                <p>{{ $PageData.Frontmatter.Description }}</p>
+
+                <div id="toc">
+                    <details>
+                        <summary>table of content</summary>
+
+                    </details>
+                </div>
+            </div>
+
+            <hr />
             {{ end }}
 
 

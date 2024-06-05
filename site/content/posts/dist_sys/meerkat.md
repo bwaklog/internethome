@@ -12,6 +12,7 @@ tags:
     - distributed systems
     - networking
     - progress
+previewimage: https://i.imgur.com/LTaopsX.png
 ---
 
 Meerkat is a p2p distributed application to maintain data synchronisation between all nodes using GRPC. Initially part of a hackathon idea proposed (available in [this](https://hegde.live/posts/dist_sys/inginy12) post)

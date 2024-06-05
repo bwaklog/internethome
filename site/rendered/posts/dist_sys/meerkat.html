@@ -26,15 +26,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/static/scripts/shuffle.js"></script>
 
-        
-        
-
-        
-        
-
-        
-        
-
         <link
             rel="alternate"
             type="application/atom+xml"
@@ -68,13 +59,15 @@
         <script defer>
             
             document.addEventListener("DOMContentLoaded", (event) => {
+                var toc = document.querySelector("#toc > details");
+
                 var h1Element = document.getElementById("table-of-contents");
                 var ulElement = h1Element.nextElementSibling;
                 h1Element.remove();
                 ulElement.remove();
+                
+                toc.appendChild(ulElement);
             });
-
-
         </script>
 
         <link rel="icon" type="image/x-icon" href="/static/cl.jpg" />
@@ -86,7 +79,7 @@
         />
         <meta
             property="og:image"
-            content=""
+            content="https://i.imgur.com/LTaopsX.png"
         />
 
         
@@ -135,8 +128,26 @@
 
 
             
-            <h1 class="post-title">Meerkat build log</h1>
+
             
+            <img loading="lazy" class="post-img-cover" src="https://i.imgur.com/LTaopsX.png" />
+            
+
+            <h1 class="post-title">Meerkat build log</h1>
+
+            <div class="cite-block">
+                <h6>tldr;</h6>
+                <p>A p2p data sync system in go</p>
+
+                <div id="toc">
+                    <details>
+                        <summary>table of content</summary>
+
+                    </details>
+                </div>
+            </div>
+
+            <hr />
             
 
 
