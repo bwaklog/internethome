@@ -6,7 +6,7 @@ type: post
 description: A few thoughts off of my mind, my perspective on effort.
 tags:
     - blog
-    - thoughts
+    - inked
 ---
 
 ## Parallax in approach

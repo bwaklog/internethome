@@ -54,12 +54,20 @@
             document.addEventListener("DOMContentLoaded", (event) => {
                 var toc = document.querySelector("#toc > details");
 
-                var h1Element = document.getElementById("table-of-contents");
+              var h1Element = document.getElementById("table-of-contents");
+              try {
                 var ulElement = h1Element.nextElementSibling;
-                h1Element.remove();
+                if (!ulElement) throw new Error("Next sibling of #table-of-contents is not found");                h1Element.remove();
                 ulElement.remove();
                 
                 toc.appendChild(ulElement);
+              } catch (error) {
+                var tocElement = document.getElementById("toc");
+                if (tocElement) {
+                  tocElement.remove();
+                }
+                document.remove(toc);        
+              }
             });
         </script>
 
@@ -144,7 +152,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/fireside_anna.html">Presenting anna at fireside</a></td>
+                    <td><a class="post-card" href="/posts/tech/fireside_anna.html">Presenting anna at fireside</a></td>
                     <td  class="post-table date">2024-04-04</td>
                 </tr>
                 <tr>
@@ -153,7 +161,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/xkcd-grab-presentation.html">My first HSP talk</a></td>
+                    <td><a class="post-card" href="/posts/tech/xkcd-grab-presentation.html">My first HSP talk</a></td>
                     <td  class="post-table date">2023-12-09</td>
                 </tr>
                 <tr>
@@ -162,7 +170,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/zettel_impl.html">Implementing Zettelkasten in Anna</a></td>
+                    <td><a class="post-card" href="/posts/tech/zettel_impl.html">Implementing Zettelkasten in Anna</a></td>
                     <td  class="post-table date">2024-04-10</td>
                 </tr>
                 <tr>

@@ -5,7 +5,12 @@
 <body>
 
     <div class="container">
-        {{template "header" .}}
+            
+            {{ if eq $PageData.Frontmatter.Type "post" }}
+                <!-- <img alt="site logo" id="theme-toggle" class="float" src="/static/pfp.jpeg" /> -->
+            {{else}}
+            {{end}}
+                {{template "header" .}}
 
             {{ if eq $PageData.Frontmatter.Type "post" }}
 
@@ -17,18 +22,20 @@
             <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
 
             <div class="cite-block">
+                {{ if eq (len $PageData.Frontmatter.Description) 0}}
+                {{else}}
                 <h6>tldr;</h6>
                 <p>{{ $PageData.Frontmatter.Description }}</p>
+                <!-- <br><br> -->
+                {{end}}
 
                 <div id="toc">
                     <details>
                         <summary>table of content</summary>
-
                     </details>
                 </div>
             </div>
 
-            <hr />
             {{ end }}
 
 
@@ -63,9 +70,6 @@
 
             </div>
             {{else}}
-            <!-- <div class="post-info">
-            <p class="post-info-author">{{ $PageData.Frontmatter.Date }} ~ {{ .DeepDataMerge.LayoutConfig.Author }}</p>
-            </div> -->
             {{end}}
 
             {{template "footer" .}}

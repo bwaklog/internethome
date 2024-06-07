@@ -61,12 +61,20 @@
             document.addEventListener("DOMContentLoaded", (event) => {
                 var toc = document.querySelector("#toc > details");
 
-                var h1Element = document.getElementById("table-of-contents");
+              var h1Element = document.getElementById("table-of-contents");
+              try {
                 var ulElement = h1Element.nextElementSibling;
-                h1Element.remove();
+                if (!ulElement) throw new Error("Next sibling of #table-of-contents is not found");                h1Element.remove();
                 ulElement.remove();
                 
                 toc.appendChild(ulElement);
+              } catch (error) {
+                var tocElement = document.getElementById("toc");
+                if (tocElement) {
+                  tocElement.remove();
+                }
+                document.remove(toc);        
+              }
             });
         </script>
 
@@ -97,7 +105,10 @@
 <body>
 
     <div class="container">
-        
+            
+            
+            
+                
 
 
 
@@ -195,7 +206,6 @@
 
 
 
-            
             
             
 

@@ -68,31 +68,31 @@ function ThemeSwitch() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.onload = function () {
-    const toggle = document.getElementById("theme-toggle");
-    toggle.onclick = function () {
-      // toggle.style.transition = "transform .5s cubic-bezier(1,0,0,1)";
-      // if (toggle.style.transform === "rotate(1080deg)") {
-      //     toggle.style.transform = "rotate(0deg)";
-      // } else {
-      //     toggle.style.transform = "rotate(1080deg)";
-      // }
-      toggle.style.scale = "scale .5s cubic-bezier(1,0,0,1)";
-      toggle.style.scale = "scale(.95)";
-      toggle.style.scale = "scale(1)";
-      ThemeSwitch();
-    };
-  };
+// document.addEventListener("DOMContentLoaded", () => {
+//   window.onload = function () {
+//     const toggle = document.getElementById("theme-toggle");
+//     toggle.onclick = function () {
+//       // toggle.style.transition = "transform .5s cubic-bezier(1,0,0,1)";
+//       // if (toggle.style.transform === "rotate(1080deg)") {
+//       //     toggle.style.transform = "rotate(0deg)";
+//       // } else {
+//       //     toggle.style.transform = "rotate(1080deg)";
+//       // }
+//       toggle.style.scale = "scale .5s cubic-bezier(1,0,0,1)";
+//       toggle.style.scale = "scale(.95)";
+//       toggle.style.scale = "scale(1)";
+//       ThemeSwitch();
+//     };
+//   };
   // check local storage for theme
-  const theme = localStorage.getItem("theme");
-  // if no theme exists
-  if (!theme) {
-    lightScheme();
-  }
-  if (theme === "light") {
-    lightScheme();
-  } else {
-    darkScheme();
-  }
-});
+//   const theme = localStorage.getItem("theme");
+//   // if no theme exists
+//   if (!theme) {
+//     lightScheme();
+//   }
+//   if (theme === "light") {
+//     lightScheme();
+//   } else {
+//     darkScheme();
+//   }
+// });

@@ -54,12 +54,20 @@
             document.addEventListener("DOMContentLoaded", (event) => {
                 var toc = document.querySelector("#toc > details");
 
-                var h1Element = document.getElementById("table-of-contents");
+              var h1Element = document.getElementById("table-of-contents");
+              try {
                 var ulElement = h1Element.nextElementSibling;
-                h1Element.remove();
+                if (!ulElement) throw new Error("Next sibling of #table-of-contents is not found");                h1Element.remove();
                 ulElement.remove();
                 
                 toc.appendChild(ulElement);
+              } catch (error) {
+                var tocElement = document.getElementById("toc");
+                if (tocElement) {
+                  tocElement.remove();
+                }
+                document.remove(toc);        
+              }
             });
         </script>
 
@@ -135,7 +143,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/hello-world.html">Hello World</a></td>
+                    <td><a class="post-card" href="/posts/inked/hello-world.html">Hello World</a></td>
                     <td  class="post-table date">2023-12-08</td>
                 </tr>
                 <tr>
@@ -144,7 +152,16 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/work.html">Quality of work</a></td>
+                    <td><a class="post-card" href="/posts/inked/motivations.html">Motivations</a></td>
+                    <td  class="post-table date">2024-06-07</td>
+                </tr>
+                <tr>
+                    <td>Tech has come far, and there are some parts which are spoilsports</td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td><a class="post-card" href="/posts/inked/work.html">Quality of work</a></td>
                     <td  class="post-table date">2024-03-09</td>
                 </tr>
                 <tr>
@@ -153,7 +170,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/xkcd-grab-presentation.html">My first HSP talk</a></td>
+                    <td><a class="post-card" href="/posts/tech/xkcd-grab-presentation.html">My first HSP talk</a></td>
                     <td  class="post-table date">2023-12-09</td>
                 </tr>
                 <tr>
@@ -162,7 +179,7 @@
                 </tr>
                 
                 <tr>
-                    <td><a class="post-card" href="/posts/zettel_impl.html">Implementing Zettelkasten in Anna</a></td>
+                    <td><a class="post-card" href="/posts/tech/zettel_impl.html">Implementing Zettelkasten in Anna</a></td>
                     <td  class="post-table date">2024-04-10</td>
                 </tr>
                 <tr>
