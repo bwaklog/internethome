@@ -1,7 +1,7 @@
 ---
 title: Motivations
 type: post
-draft: false
+draft: true
 date: 2024-06-07
 description: Tech has come far, and there are some parts which are spoilsports
 tags: ['blog', 'inked']
