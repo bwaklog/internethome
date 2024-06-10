@@ -5,9 +5,7 @@ draft: false
 type: post
 description: Introductory post to my blog site
 previewimage: https://i.imgur.com/ppTDKQv.jpg
-tags:
-  - blog
-  - inked
+tags: ['blog', 'inked']
 ---
 
 I'm not usually great at these things, but I want to give it a try. So here it goes.

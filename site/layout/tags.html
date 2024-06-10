@@ -22,7 +22,7 @@
                 <td class="post-table date">{{$Post.Frontmatter.Date}}</td>
             </tr>
             <tr>
-                <td>{{$Post.Frontmatter.Description}}</td>
+                <td>{{printf "%.55s..." $Post.Frontmatter.Description}}</td>
                 <td></td>
             </tr>
             {{end}}

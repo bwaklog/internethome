@@ -1,53 +1,40 @@
 /* Creating named values cuz im stupid */
 
-/* @media (prefers-color-scheme: dark) {
-:root {
---color-text: #ffffff;
---color-text-dim: #ffffff7f;
---color-background: #131313;
---color-background-dim: #2a2a2a;
---color-background-low: #2a2a2a7a;
---inline-code-bg: #1d1f21;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-heading: #ffffff;
+        --color-subheading: #a0a0a0;
+        --color-text: #ffffffc0;
+        --color-text-dim: #ffffff5a;
+        --color-text-low: #ffffff19;
+        --color-background: #0b0c0d;
+        --color-background-dim: #10100e7a;
+        --color-background-low: #10100e50;
+        --color-background-contrast: #1a1a1a;
+        --inline-code-bg: #161618;
+    }
 }
-} */
 
-/* og dark theme */
-:root {
-    --color-heading: #ffffff;
-    --color-subheading: #a0a0a0;
-    --color-text: #ffffffc0;
-    --color-text-dim: #ffffff5a;
-    --color-text-low: #ffffff19;
-    /* --color-background: #fffff5; */
-    /*--color-background: #0a0908;*/
-    --color-background: #0b0c0d;
-    --color-background-dim: #10100e7a;
-    --color-background-low: #10100e50;
-    --color-background-contrast: #161618;
-    --inline-code-bg: #1a1a1a;
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-heading: #000000;
+        --color-subheading: #606060;
+        --color-text: #10100ed0;
+        --color-text-dim: #58585870;
+        --color-text-low: #10100e20;
+        --color-background: #ffffff;
+        --color-background-dim: #ffffff7a;
+        --color-background-low: #ffffff50;
+        --color-background-contrast: #161618;
+        --inline-code-bg: #f9f8f9;
+    }
 }
 
 :root {
     --selection-bg: #d1d1d17d;
-
-    /* --color-primary: #ff4a6a;
-    --color-primary-dim: #ff4a6aef;
-    --color-primary-low: #ff4a6a50; */
-
     --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;
-
-    /*--color-primary: #729ab9;*/
-    /*--color-primary-dim: #729ab9ef;*/
-    /*--color-primary-low: #729ab950;*/
-
-    /*--color-primary-dim: #ff4000;*/
-    /*--color-primary-low: #ff4000;*/
-    /**/
-    /*--color-primary: #EE4E4E;*/
-    /*--color-primary-dim: #EE4E4Eef;*/
-    /*--color-primary-low: #EE4E4E50;*/
 }
 
 @font-face {
@@ -84,23 +71,13 @@
 }
 
 @font-face {
-    font-family: Sora;
-    src: url(./fonts/sora/Sora.ttf);
+    font-family: WorkSans;
+    src: url(./fonts/WorkSans/WorkSans.ttf);
 }
 
 @font-face {
-    font-family: SoraItalic;
-    src: url(./fonts/sora/SoraItalic.ttf);
-}
-
-@font-face {
-    font-family: EBGaramond;
-    src: url(./fonts/EBGaramond/EBGaramond.ttf);
-}
-
-@font-face {
-    font-family: EBGaramondItalic;
-    src: url(./fonts/EBGaramond/EBGaramondItalic.ttf);
+    font-family: WorkSansItalic;
+    src: url(./fonts/WorkSans/WorkSansItalic.ttf);
 }
 
 /*::selection {*/
@@ -731,14 +708,14 @@ img {
 }
 
 .post-img-cover {
-    scale: 1.2;
+    /* scale: 1.2; */
     /* crop the top and bottom */
     object-fit: cover;
-    max-height: 300px;
+    /* max-height: 300px; */
     /* border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; */
     border-radius: 0;
-    mask-image: linear-gradient(
+    /* mask-image: linear-gradient(
         180deg,
         var(--color-background) 20%,
         transparent 100%
@@ -747,10 +724,11 @@ img {
         180deg,
         var(--color-background) 20%,
         transparent 100%
-    );
+    ); */
 
-    margin-top: 3rem;
-    margin-bottom: -2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 figure {

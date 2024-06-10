@@ -5,7 +5,7 @@
 <body>
 
     <div class="container">
-            
+
             {{ if eq $PageData.Frontmatter.Type "post" }}
                 <!-- <img alt="site logo" id="theme-toggle" class="float" src="/static/pfp.jpeg" /> -->
             {{else}}
@@ -24,7 +24,7 @@
             <div class="cite-block">
                 {{ if eq (len $PageData.Frontmatter.Description) 0}}
                 {{else}}
-                <h6>tldr;</h6>
+                <h6>tldr</h6>
                 <p>{{ $PageData.Frontmatter.Description }}</p>
                 <!-- <br><br> -->
                 {{end}}

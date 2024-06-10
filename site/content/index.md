@@ -15,6 +15,8 @@ type: page
 
 <a class="page-nav-element"  href="/tags.html">site index</a>
 
+<a class="page-nav-element"  href="/notes.html">inked</a>
+
 <a class="page-nav-element"  href="/cv.html">portfolio</a>
 
 <a class="page-nav-element"  href="/clicks.html">photographs</a>

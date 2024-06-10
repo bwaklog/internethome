@@ -1,7 +1,8 @@
-{{define "head-note" }}
-<!-- If the template for a particular url does not exist(posts.html), setting it to the specific page template data -->
-{{ $PageData := index .DeepDataMerge.Notes .PageURL }} {{if eq $PageData nil }}
-{{ $PageData = .TemplateData }} {{end}}
+
+
+
+
+ 
 
 <!doctype html>
 <html lang="en">
@@ -10,9 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="{{ $PageData.Frontmatter.Description }}"
+            content="A few thoughts off of my mind, my perspective on effort."
         />
-        <title>{{ $PageData.Frontmatter.Title }}</title>
+        <title>Quality of work</title>
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -62,30 +63,19 @@
             }
         </style>
 
-        <!-- Cloudflare Web Analytics -->
+        
         <script
             defer
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon='{"token": "b16ba3a1a9d546b28b8f3dfae89358e1"}'
         ></script>
-        <!-- End Cloudflare Web Analytics --
-
-  <!-- Scripts filled in from plugins -->
-        {{ if $PageData.LiveReload }}
-        <script>
-            const eventSource = new EventSource("http://localhost:8000/events");
-            eventSource.onmessage = function (event) {
-                location.reload();
-            };
-        </script>
-        {{ end }} {{range $PageData.Frontmatter.JSFiles}}
-        <script src="/static/scripts/{{.}}" defer></script>
-        {{end}} {{range .DeepDataMerge.LayoutConfig.SiteScripts}}
-        <script src="/static/scripts/{{.}}" defer></script>
-        {{end}}
+        
+          
+        <script src="/static/scripts/animation.js" defer></script>
+        
 
         <script defer>
-            // add lazy loading to all images
+            
             document.querySelectorAll("img").forEach((img) => {
                 img.setAttribute("loading", "lazy");
             });
@@ -93,18 +83,73 @@
 
         <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{ $PageData.Frontmatter.Title }}" />
+        <meta property="og:title" content="Quality of work" />
         <meta
             property="og:description"
-            content="{{ $PageData.Frontmatter.Description }}"
+            content="A few thoughts off of my mind, my perspective on effort."
         />
         <meta
             property="og:image"
-            content="{{ $PageData.Frontmatter.PreviewImage }}"
+            content=""
         />
 
-        <!-- Thanks to Beau Smith on Stackoverflow -->
+        
         <meta name="format-detection" content="telephone=no" />
     </head>
-    {{end}}
+    
+
+<body>
+    <div class="container notetype">
+        
+
+
+
+
+<header>
+  <nav>
+    <div class="navigations">
+        <div class="nav-image-div">
+          <img alt="site logo" id="theme-toggle" src="/static/pfp.jpeg" />
+        </div>
+        
+        
+        <a class="header-element author" href="/">Aditya Hegde</a>
+        
+      
+      
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </nav>
+  
+</header>
+
+
+        
+        <div class="post-info">
+            <h1>Quality of work</h1>
+        </div>
+        
+
+        <br>
+
+        <p>A few thoughts off of my mind, my perspective on effort. It's something I'm a bit particular about. For me, there is a wall separating work achieved from hard work and work done for the sake of it. A wall that no one can pass through unless you change your approach or perspective of a situation.</p>
+<p>I'm a person who is particular about my job. I tend to put myself down and set unrealistic expectations at times. Now people would say, I'm crazy for it. But, it's that mindset for me that makes me want to do more.</p>
+<p>Every second part of your effort on something counts, it makes a difference. For me, the end result must showcase that effort. You can't spend hours together working on something, only for the end result to be garbage. If it doesn't go in hand with the effort that pooled in.</p>
+<p>Being true to your work is one more thing that is very important. Set your margins high, as not everyone has the same perspective. Don't ever make assumptions about whether the other party is on the same wavelength as you are. Things break down real quick the moment that happens. You never expect it and then it hits you, had in the back. All that effort, gone down the drain, and now you're at square one.</p>
+
+        
+        
+        
+
+    </div>
+    </div>
+</body>
+
 </html>
+
