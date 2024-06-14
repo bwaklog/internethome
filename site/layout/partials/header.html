@@ -1,34 +1,28 @@
-{{define "header"}}
-
-{{ $PageData := index .DeepDataMerge.Templates .PageURL }}
-{{ if eq $PageData nil }}
-  {{ $PageData = .TemplateData }}
-{{ end }}
+{{define "header"}} {{ $PageData := index .DeepDataMerge.Templates .PageURL }}
+{{ if eq $PageData nil }} {{ $PageData = .TemplateData }} {{ end }}
 
 <header>
-  <nav>
-    <div class="navigations">
-        <div class="nav-image-div">
-          <img alt="site logo" id="theme-toggle" src="/static/pfp.jpeg" />
-        </div>
-        <!-- if it is "index" page -->
-        {{if eq $PageData.CompleteURL "index.html" }}
-        {{else}}
-        <a class="header-element author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>
-        {{end}}
-      <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
-      {{ range $index_no, $map := .DeepDataMerge.LayoutConfig.Navbar }}
-      {{ range $key, $value := $map }}
-      {{ if eq . "index" }}
-      <!-- <a class="header-element author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a> -->
+    <nav>
+        <div class="navigations">
+            <div class="nav-image-div">
+                <img alt="site logo" id="theme-toggle" src="/static/pfp.jpeg" />
+            </div>
+            <!-- if it is "index" page -->
+            {{if eq $PageData.CompleteURL "index.html" }} {{else}}
+            <a class="header-element author" href="/"
+                >{{ $.DeepDataMerge.LayoutConfig.Author }}</a
+            >
+            {{end}}
+            <!--img class="profile-image" alt="profile image" src="/static/me.jpeg" /-->
+            {{ range $index_no, $map := .DeepDataMerge.LayoutConfig.Navbar }} {{
+            range $key, $value := $map }} {{ if eq . "index" }}
+            <!-- <a class="header-element author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a> -->
 
-      {{else}}
-      <a class="header-element"  href="/{{.}}.html">{{ $key }}</a>
-      {{end}}
-      {{end}}
-      {{end}}
-    </div>
-  </nav>
-  <!-- {{template "search" .}} -->
+            {{else}}
+            <a class="header-element" href="/{{.}}.html">{{ $key }}</a>
+            {{end}} {{end}} {{end}}
+        </div>
+    </nav>
+    <!-- {{template "search" .}} -->
 </header>
 {{end}}
