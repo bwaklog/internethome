@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://hegde.live//posts/tech/zettel_impl.html</loc>
+		<lastmod>2024-04-10</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//about.html</loc>
+		<lastmod>2024-02-24</lastmod>
+	</url>
+	<url>
+		<loc>https://hegde.live//index.html</loc>
+		<lastmod>2024-02-24</lastmod>
+	</url>
+	<url>
 		<loc>https://hegde.live//journey.html</loc>
 		<lastmod></lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//wiki.html</loc>
-		<lastmod>2024-04-17</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//about.html</loc>
+		<loc>https://hegde.live//par moi.html</loc>
 		<lastmod>2024-02-24</lastmod>
 	</url>
 	<url>
@@ -17,32 +25,32 @@
 		<lastmod>2024-03-09</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/tech/zettel_impl.html</loc>
-		<lastmod>2024-04-10</lastmod>
+		<loc>https://hegde.live//posts/tech/fireside_anna.html</loc>
+		<lastmod>2024-04-04</lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//anna.html</loc>
 		<lastmod>2024-04-10</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//index.html</loc>
-		<lastmod>2024-02-24</lastmod>
+		<loc>https://hegde.live//posts/inked/hello-world.html</loc>
+		<lastmod>2023-12-08</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//par moi.html</loc>
-		<lastmod>2024-02-24</lastmod>
+		<loc>https://hegde.live//works.html</loc>
+		<lastmod></lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//posts/dist_sys/inginy12.html</loc>
 		<lastmod>2024-04-21</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/tech/fireside_anna.html</loc>
-		<lastmod>2024-04-04</lastmod>
+		<loc>https://hegde.live//posts/inked/motivations.html</loc>
+		<lastmod>2024-06-07</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/tech/xkcd-grab-presentation.html</loc>
-		<lastmod>2023-12-09</lastmod>
+		<loc>https://hegde.live//posts/tech/dotfiles.html</loc>
+		<lastmod>2024-06-10</lastmod>
 	</url>
 	<url>
 		<loc>https://hegde.live//clicks.html</loc>
@@ -57,19 +65,11 @@
 		<lastmod>2024-04-22</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/inked/hello-world.html</loc>
-		<lastmod>2023-12-08</lastmod>
+		<loc>https://hegde.live//posts/tech/xkcd-grab-presentation.html</loc>
+		<lastmod>2023-12-09</lastmod>
 	</url>
 	<url>
-		<loc>https://hegde.live//posts/inked/motivations.html</loc>
-		<lastmod>2024-06-07</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//posts/tech/dotfiles.html</loc>
-		<lastmod>2024-06-10</lastmod>
-	</url>
-	<url>
-		<loc>https://hegde.live//works.html</loc>
-		<lastmod></lastmod>
+		<loc>https://hegde.live//wiki.html</loc>
+		<lastmod>2024-04-17</lastmod>
 	</url>
 </urlset>

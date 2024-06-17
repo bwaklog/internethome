@@ -31,16 +31,16 @@
 } */
 
 :root {
-    --color-heading: #000000;
-    --color-subheading: #606060;
-    --color-text: #10100ed0;
-    --color-text-dim: #58585870;
-    --color-text-low: #10100e20;
-    --color-background: #ffffff;
-    --color-background-dim: #ffffff7a;
-    --color-background-low: #ffffff50;
-    --color-background-contrast: #161618;
-    --inline-code-bg: #f9f8f9;
+    --color-heading: #ffffff;
+    --color-subheading: #a0a0a0;
+    --color-text: #ffffffc0;
+    --color-text-dim: #ffffff5a;
+    --color-text-low: #ffffff19;
+    --color-background: #0b0c0d;
+    --color-background-dim: #10100e7a;
+    --color-background-low: #10100e50;
+    --color-background-contrast: #1a1a1a;
+    --inline-code-bg: #161618;
 }
 
 :root {
@@ -207,7 +207,7 @@ body {
     padding: 1rem;
     padding-top: 0.4;
 
-    /* margin-top: 3rem; */
+    margin-top: 3rem;
     margin-bottom: 3rem;
     flex: 0;
     /* background-color: var(--color-background); */
@@ -366,11 +366,11 @@ ul ul {
 }
 
 #theme-toggle {
-    border-radius: 100px;
+    /* border-radius: 100px; */
 
     /*min-width: 35px;*/
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
 
     cursor: pointer;
     margin: 0;
@@ -379,6 +379,7 @@ ul ul {
     cursor: cell;
     -webkit-user-select: none;
     -moz-user-select: none;
+    border-radius: 0;
 }
 
 .float {

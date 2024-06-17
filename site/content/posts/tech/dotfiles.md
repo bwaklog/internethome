@@ -11,6 +11,8 @@ I've never had my self working on solely the terminal before. It would be only a
 
 At first, yes these things were a bit intriguing, but once you leave the learning curve, everything just falls in place. You can find my dotfiles [here](https://github.com/bwaklog/dots)
 
+![My Desk](https://i.imgur.com/miFjoRG.jpg)
+
 ## Text Editor
 
 This is something that keeps changing once in a while, I like trying new stuff out there. But I always find myself getting back to [neovim](https://neovim.io/). While it took a while to get past that learning curve, I find it quite easy to use, and the motions are something I cant live without.

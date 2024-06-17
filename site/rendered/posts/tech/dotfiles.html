@@ -58,6 +58,13 @@
         
 
         
+        
+        <script>
+            const eventSource = new EventSource("http://localhost:8000/events");
+            eventSource.onmessage = function (event) {
+                location.reload();
+            };
+        </script>
           
         <script src="/static/scripts/animation.js" defer></script>
         
@@ -126,7 +133,7 @@
     <nav>
         <div class="navigations">
             <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/pfp.jpeg" />
+                <img alt="site logo" id="theme-toggle" src="/static/log.png" />
             </div>
             
             
@@ -134,9 +141,7 @@
                 >Aditya Hegde</a
             >
             
-            
               
-            
 
               
         </div>
@@ -182,6 +187,9 @@
 </ul>
 <p>I've never had my self working on solely the terminal before. It would be only a few occasions when the GUI alternative was simply frustrating to use. I've since forced myself to try and venture more, and now I simply can't work without them. I have even lost count for the number of times i've used vim motions accidentally.</p>
 <p>At first, yes these things were a bit intriguing, but once you leave the learning curve, everything just falls in place. You can find my dotfiles <a href="https://github.com/bwaklog/dots">here</a></p>
+<figure>
+<img src="https://i.imgur.com/miFjoRG.jpg" alt="My Desk">
+</figure>
 <h2 id="text-editor">Text Editor <a class="anchor" href="#text-editor">#</a></h2>
 <p>This is something that keeps changing once in a while, I like trying new stuff out there. But I always find myself getting back to <a href="https://neovim.io/">neovim</a>. While it took a while to get past that learning curve, I find it quite easy to use, and the motions are something I cant live without.</p>
 <p><a href="https://zed.dev">Zed</a> is another editor I always find myself on. It supports vim motions out of the box, and the editor itself just insanely fast. And can't go without mentioning the amazing collaboration tool that it offers for free. Been trying emacs recently, and all i've experienced is frustration. It just has everything, and is a pain to use at times.</p>
@@ -237,7 +245,7 @@
 <footer>
     
     <div class="footer-text">
-        Rendered with <span style="color: #ff4a6a">&#10084;</span> by
+        Rendered with <span style="color: #fc4949">&#10084;</span> by
         <a class="footer-element" href="https://github.com/acmpesuecc/anna"
             >anna</a
         >

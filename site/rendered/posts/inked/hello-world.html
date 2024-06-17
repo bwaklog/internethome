@@ -58,6 +58,13 @@
         
 
         
+        
+        <script>
+            const eventSource = new EventSource("http://localhost:8000/events");
+            eventSource.onmessage = function (event) {
+                location.reload();
+            };
+        </script>
           
         <script src="/static/scripts/animation.js" defer></script>
         
@@ -126,7 +133,7 @@
     <nav>
         <div class="navigations">
             <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/pfp.jpeg" />
+                <img alt="site logo" id="theme-toggle" src="/static/log.png" />
             </div>
             
             
@@ -134,9 +141,7 @@
                 >Aditya Hegde</a
             >
             
-            
               
-            
 
               
         </div>
@@ -211,7 +216,7 @@
 <footer>
     
     <div class="footer-text">
-        Rendered with <span style="color: #ff4a6a">&#10084;</span> by
+        Rendered with <span style="color: #fc4949">&#10084;</span> by
         <a class="footer-element" href="https://github.com/acmpesuecc/anna"
             >anna</a
         >
