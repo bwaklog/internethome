@@ -34,6 +34,10 @@
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
+            rel="stylesheet"
+            href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
+        />
+        <link
             href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
             rel="stylesheet"
             type="text/css"
@@ -112,7 +116,7 @@
 
         <script defer>
             hljs.highlightAll();
-            
+            hljs.addPlugin(new CopyButtonPlugin());
         </script>
 
         
@@ -132,7 +136,7 @@
     <nav>
         <div class="navigations">
             <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/log.png" />
+                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
             </div>
             
             

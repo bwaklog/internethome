@@ -21,20 +21,21 @@
 
             <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
 
-            <div class="cite-block">
-                {{ if eq (len $PageData.Frontmatter.Description) 0}}
+            <!-- <p class="post-description">{{ $PageData.Frontmatter.Description }}</p > -->
+            <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p >
+
+            <!-- <div class="cite-block"> -->
+                <!-- {{ if eq (len $PageData.Frontmatter.Description) 0}}
                 {{else}}
                 <h6>tldr</h6>
-                <p>{{ $PageData.Frontmatter.Description }}</p>
-                <!-- <br><br> -->
-                {{end}}
+                {{end}} -->
 
-                <div id="toc">
+                <!-- <div id="toc">
                     <details>
                         <summary>table of content</summary>
                     </details>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
 
             {{ end }}
 

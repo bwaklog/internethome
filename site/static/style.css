@@ -1,5 +1,4 @@
 /* Creating named values cuz im stupid */
-/*
 @media (prefers-color-scheme: dark) {
     :root {
         --color-heading: #ffffff;
@@ -28,19 +27,6 @@
         --color-background-contrast: #161618;
         --inline-code-bg: #f9f8f9;
     }
-} */
-
-:root {
-    --color-heading: #ffffff;
-    --color-subheading: #a0a0a0;
-    --color-text: #ffffffc0;
-    --color-text-dim: #ffffff5a;
-    --color-text-low: #ffffff19;
-    --color-background: #0b0c0d;
-    --color-background-dim: #10100e7a;
-    --color-background-low: #10100e50;
-    --color-background-contrast: #1a1a1a;
-    --inline-code-bg: #161618;
 }
 
 :root {
@@ -81,6 +67,16 @@
     font-feature-settings:
         "liga" 1,
         "calt" 1;
+}
+
+@font-face {
+    font-family: AzeretMono;
+    src: url(./fonts/mono/AzeretMono-Variable.ttf);
+}
+
+@font-face {
+    font-family: AzeretMonoItalic;
+    src: url(./fonts/mono/AzeretMonoItalic-Variable.ttf);
 }
 
 @font-face {
@@ -366,11 +362,8 @@ ul ul {
 }
 
 #theme-toggle {
-    /* border-radius: 100px; */
-
-    /*min-width: 35px;*/
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
 
     cursor: pointer;
     margin: 0;
@@ -379,7 +372,7 @@ ul ul {
     cursor: cell;
     -webkit-user-select: none;
     -moz-user-select: none;
-    border-radius: 0;
+    border-radius: 100px;
 }
 
 .float {
@@ -466,8 +459,30 @@ h1 {
 .post-title {
     padding-bottom: 0.5rem;
     /* border-bottom: 1px solid var(--color-text-dim); */
-    font-size: 1.8rem;
+    font-family: AzeretMono, monospace;
+    font-weight: 300;
+    text-align: center;
+    font-size: 2.8rem;
     margin-top: 1.5rem;
+}
+
+.post-author {
+    width: 100%;
+    text-align: center;
+    font-family: AzeretMonoItalic, monospace;
+    font-weight: 200;
+    font-size: 1rem;
+    padding-top: 0.2rem;
+}
+
+.post-description {
+    width: 100%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+    font-size: 0.95rem;
+    text-align: center;
 }
 
 h2 {
@@ -652,9 +667,10 @@ a {
 }
 
 .page-nav-element {
-    font-size: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
 
-    padding: 0.4rem;
+    /* padding: 0.4rem; */
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
 
@@ -666,13 +682,19 @@ a {
     font-family: InterItalic, sans-serif;
     border: 1px solid transparent;
 
+    color: var(--color-text-low);
+
     &:hover {
         transition:
             background 300ms cubic-bezier(1, 0, 0, 1),
             border-color 300ms cubic-bezier(1, 0, 0, 1),
-            font-family 300ms cubic-bezier(1, 0, 0, 1);
-        background: var(--inline-code-bg);
-        border: 1px solid var(--color-text-low);
+            font-family 300ms cubic-bezier(1, 0, 0, 1),
+            color 300ms cubic-bezier(1, 0, 0, 1);
+        /* background: var(--inline-code-bg); */
+        /* border: 1px solid var(--color-text-low); */
+
+        color: var(--color-text);
+
         /* cursor: none; */
     }
 }
@@ -1123,8 +1145,8 @@ pre code.hljs {
     font-feature-settings: "liga" on;
     line-height: 1.3;
     font-size: 0.9rem;
-    /* padding-top: 1rem; */
-    /* padding-bottom: 1rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     /* padding: 0.5rem; */
 }
 
@@ -1216,6 +1238,7 @@ blockquote {
 
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
+    box-shadow: 0px 1px 0 var(--color-text-low);
 
     /* prevent text from overflow out of screen */
     overflow-wrap: break-word;
@@ -1229,6 +1252,7 @@ blockquote {
     padding: 0.9rem;
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
+    box-shadow: 0px 1px 0 var(--color-text-low);
 
     border-radius: 8px;
 
@@ -1243,7 +1267,7 @@ blockquote {
 }
 
 #toc {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 #hoverDiv {

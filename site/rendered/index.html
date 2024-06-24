@@ -34,6 +34,10 @@
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
+            rel="stylesheet"
+            href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
+        />
+        <link
             href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
             rel="stylesheet"
             type="text/css"
@@ -112,7 +116,7 @@
 
         <script defer>
             hljs.highlightAll();
-            
+            hljs.addPlugin(new CopyButtonPlugin());
         </script>
 
         
@@ -132,7 +136,7 @@
     <nav>
         <div class="navigations">
             <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/log.png" />
+                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
             </div>
             
              
@@ -152,29 +156,17 @@
 <h6 id="undergrad-developer-designer">Undergrad, Developer, Designer</h6>
 <div class="page-nav">
 <p><a class="page-nav-element"  href="/tags.html">site index</a></p>
-<p><a class="page-nav-element"  href="/notes.html">inked</a></p>
 <p><a class="page-nav-element"  href="/cv.html">portfolio</a></p>
 <p><a class="page-nav-element"  href="/clicks.html">photographs</a></p>
 <p><a class="page-nav-element"  href="/about.html">about</a></p>
 </div>
-<blockquote>
-<h6 id="-pinned-posts">📌 Pinned Posts</h6>
-<ul>
-<li><a href="/posts/fireside_anna.html">Presenting Anna at Fireside</a></li>
-<li><a href="/posts/dist_sys/inginy12.html">Taking a few messy leaps in a hackathon</a></li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<p>Want to reach out?</p>
-</blockquote>
-<p>Mail me at <a href="mailto:aditya.mh@outlook.com">aditya.mh@outlook.com</a> 📩</p>
-<br />
-<p>Link to my <a href="/cv.pdf">Résumé</a> 🔗</p>
-<br />
-<p>Socials: <a href="https://www.linkedin.com/in/adityamhegde/">LinkedIn</a>, <a href="https://www.instagram.com/adi.hegdee/">Instagram</a>, <a href="https://twitter.com/bwaklog">Twitter</a>, <a href="https://be.net/bwaklog">Béhance</a></p>
-<br />
-<!--iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2qgXrzJsry4KgYoJCpuaul?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe-->
+<!--
+> ###### 📌 Pinned Posts
+>
+>- [Presenting Anna at Fireside](/posts/fireside_anna.html)
+>- [Taking a few messy leaps in a hackathon](/posts/dist_sys/inginy12.html)
+
+-->
 
 
 
