@@ -13,7 +13,7 @@ type: page
 
 <div class="page-nav">
 
-<a class="page-nav-element"  href="/tags.html">site index</a>
+<a class="page-nav-element"  href="/tags.html">index</a>
 
 <a class="page-nav-element"  href="/cv.html">portfolio</a>
 

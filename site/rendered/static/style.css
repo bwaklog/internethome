@@ -69,7 +69,7 @@
         "calt" 1;
 }
 
-@font-face {
+/* @font-face {
     font-family: AzeretMono;
     src: url(./fonts/mono/AzeretMono-Variable.ttf);
 }
@@ -77,9 +77,9 @@
 @font-face {
     font-family: AzeretMonoItalic;
     src: url(./fonts/mono/AzeretMonoItalic-Variable.ttf);
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: WorkSans;
     src: url(./fonts/WorkSans/WorkSans.ttf);
 }
@@ -87,11 +87,21 @@
 @font-face {
     font-family: WorkSansItalic;
     src: url(./fonts/WorkSans/WorkSansItalic.ttf);
+} */
+
+/* @font-face {
+    font-family: Iosevka;
+    src: url(./fonts/mono/IosevkaPragmataPro.ttf);
+} */
+
+@font-face {
+    font-family: Courier;
+    src: url(./fonts/Courier/Courier.ttf);
 }
 
 @font-face {
-    font-family: Iosevka;
-    src: url(./fonts/mono/IosevkaPragmataPro.ttf);
+    font-family: CourierItalic;
+    src: url(./fonts/Courier/CourierItalic.ttf);
 }
 
 ::selection {
@@ -262,8 +272,9 @@ nav {
     margin-bottom: 1.2rem;
 
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
     & > p {
         margin: 0;
@@ -459,7 +470,7 @@ h1 {
 .post-title {
     padding-bottom: 0.5rem;
     /* border-bottom: 1px solid var(--color-text-dim); */
-    font-family: AzeretMono, monospace;
+    font-family: Courier, monospace;
     font-weight: 300;
     text-align: center;
     font-size: 2.8rem;
@@ -469,7 +480,7 @@ h1 {
 .post-author {
     width: 100%;
     text-align: center;
-    font-family: AzeretMonoItalic, monospace;
+    font-family: CourierItalic, monospace;
     font-weight: 200;
     font-size: 1rem;
     padding-top: 0.2rem;
@@ -584,8 +595,8 @@ header + h1 {
     margin-bottom: 0;
     padding: 0;
     /* width for one word */
-    font-family: WorkSans, monospace;
-    font-size: 0.95rem;
+    font-family: Courier, monospace;
+    font-size: 1rem;
 }
 
 form-container {
@@ -667,7 +678,7 @@ a {
 }
 
 .page-nav-element {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
 
     /* padding: 0.4rem; */
@@ -679,10 +690,14 @@ a {
     user-select: none;
     -webkit-user-select: none;
 
-    font-family: InterItalic, sans-serif;
+    font-family: CourierItalic, InterItalic, sans-serif;
     border: 1px solid transparent;
 
-    color: var(--color-text-low);
+    color: var(--color-text-dim);
+    /* background: var(--color-background-dim); */
+    border: 1px solid var(--color-background);
+
+    padding: 0.3rem;
 
     &:hover {
         transition:
@@ -690,10 +705,10 @@ a {
             border-color 300ms cubic-bezier(1, 0, 0, 1),
             font-family 300ms cubic-bezier(1, 0, 0, 1),
             color 300ms cubic-bezier(1, 0, 0, 1);
-        /* background: var(--inline-code-bg); */
-        /* border: 1px solid var(--color-text-low); */
+        background: var(--inline-code-bg);
+        border: 1px solid var(--color-text-low);
 
-        color: var(--color-text);
+        color: var(--color-heading);
 
         /* cursor: none; */
     }
@@ -879,8 +894,24 @@ details {
     }
 }
 
+sumamry {
+    color: var(--color-heading);
+    font-weight: 500;
+    opacity: 1;
+    font-size: 1.5rem;
+}
+
 details > img {
     width: 70%;
+}
+
+details {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+details::marker {
+    content: none;
 }
 
 .all-tags,
@@ -1126,7 +1157,7 @@ body:has(.container.notetype) {
 }
 
 pre code {
-    font-family: Iosevka, monospace;
+    font-family: Courier, monospace;
     /* background: ; */
     overflow-x: scroll;
     scrollbar-width: none;
@@ -1140,7 +1171,7 @@ pre > code {
 }
 
 pre code.hljs {
-    font-family: Iosevka, monospace;
+    font-family: Courier, monospace;
     font-variant-ligatures: common-ligatures;
     font-feature-settings: "liga" on;
     line-height: 1.3;
@@ -1165,7 +1196,7 @@ h2 > code,
 h3 > code,
 h4 > code,
 a > code {
-    font-family: Iosevka, monospace;
+    font-family: Courier, monospace;
     color: var(--color-heading);
     background-color: var(--inline-code-bg);
     border: 1px solid var(--color-text-low);
@@ -1215,7 +1246,7 @@ a > code {
 
 blockquote {
     & > *:not(h1, h2, h3, h4, h5, h6) {
-        font-family: InterItalic, sans-serif;
+        font-family: CourierItalic, sans-serif;
         font-size: 0.9rem;
         font-weight: 350;
         padding-top: 0.3rem;
@@ -1256,7 +1287,7 @@ blockquote {
 
     border-radius: 8px;
 
-    font-family: monospace;
+    font-family: Courier, monospace;
 
     & > p {
         margin: 0;

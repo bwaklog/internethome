@@ -5,8 +5,10 @@ description: Photodump
 previewimage: https://i.imgur.com/KUet9BN.jpg
 type: page
 ---
-##### /dev/random
-###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
+
+<details>
+
+<summary>/dev/random</summary>
 
 <div class="image-grid">
 
@@ -35,10 +37,12 @@ type: page
 
 </div>
 
----
+</details>
 
-##### /college
-###### Camera: Canon Rebel, iPhone 12 & Canon Powershot
+
+<details>
+
+<summary>/college</summary>
 
 <div class="image-grid">
 
@@ -70,10 +74,12 @@ type: page
 
 </div>
 
----
+</details>
 
-##### Pondicherry 2022
-###### Camera: Canon Rebel EOS
+
+<details>
+
+<summary>Pondicherry 2022</summary>
 
 <div class="image-grid">
 
@@ -94,3 +100,5 @@ type: page
 ![Railway Station](https://i.imgur.com/GJIXTg4.jpg)
 
 </div>
+
+</details>
