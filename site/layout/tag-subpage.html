@@ -12,6 +12,14 @@
             <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
+                    <p>[{{.Frontmatter.Date}}] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
+                    <br />
+                {{end}}
+            </table>
+
+                <!-- <table class="post-table">
+                {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
+                {{ range $TagSet }}
                 <tr>
                     <td><a class="post-card" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
                     <td  class="post-table date">{{.Frontmatter.Date}}</td>
@@ -20,7 +28,7 @@
                     <td>{{.Frontmatter.Description}}</td>
                     <td></td>
                 </tr>
-                {{end}}
+                {{end}} -->
             </table>
             {{template "footer" .}}
     </div>

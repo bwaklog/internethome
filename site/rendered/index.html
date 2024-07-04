@@ -16,21 +16,7 @@
         <title>Aditya Hegde</title>
 
         
-        <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script>
+        
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -62,13 +48,6 @@
         
 
         
-        
-        <script>
-            const eventSource = new EventSource("http://localhost:8000/events");
-            eventSource.onmessage = function (event) {
-                location.reload();
-            };
-        </script>
           
         <script src="/static/scripts/animation.js" defer></script>
         
@@ -135,13 +114,18 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
             
-             
+            
+            
+            
               
-
+            <a class="header-element" href="/tags.html">index</a>
+                
+            <a class="header-element" href="/clicks.html">clicks</a>
+                
+            <a class="header-element" href="/about.html">about</a>
+                
+            <a class="header-element" href="/cv.pdf">cv</a>
               
         </div>
     </nav>
@@ -149,24 +133,54 @@
 </header>
 
 
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); 
+  if (currentPage.includes(elementSrc)) {
+    
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
+
+
             
 
 
             <h1 id="aditya-hegde">Aditya Hegde</h1>
 <h6 id="undergrad-developer-designer">Undergrad, Developer, Designer</h6>
-<div class="page-nav">
-<p><a class="page-nav-element"  href="/tags.html">index</a></p>
-<p><a class="page-nav-element"  href="/cv.html">portfolio</a></p>
-<p><a class="page-nav-element"  href="/clicks.html">photographs</a></p>
-<p><a class="page-nav-element"  href="/about.html">about</a></p>
-</div>
+<!--div class="page-nav">
+
+<a class="page-nav-element"  href="/tags.html">index</a>
+
+<a class="page-nav-element"  href="/cv.html">portfolio</a>
+
+<a class="page-nav-element"  href="/clicks.html">photographs</a>
+
+<a class="page-nav-element"  href="/about.html">about</a>
+
+</div-->
 <!--
 > ###### 📌 Pinned Posts
 >
 >- [Presenting Anna at Fireside](/posts/fireside_anna.html)
 >- [Taking a few messy leaps in a hackathon](/posts/dist_sys/inginy12.html)
 
+![Ooty scenic view from tea estates - 21st June](https://i.imgur.com/4gBSJHi.jpg)
 -->
+<p>Pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like <a href="https://homebrew.hsp-ec.xyz/about/">HSP</a> and <a href="https://acmpesuecc.github.io">ACM</a> here at my uni and part of both the <em>Mentoring</em> and <em>Design</em> team. Currently learning distributed systems and networking concepts. Working in the <a href="https://quanad.pes.edu/">quanad summer lab</a> at PESU.</p>
+<figure>
+<img src="https://i.imgur.com/YZdXa7A.jpg" alt="Picture with my team during Fireside Talk">
+<figcaption><p>Fireside Talk 2024</p></figcaption>
+</figure>
 
 
 

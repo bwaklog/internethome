@@ -13,9 +13,8 @@
             <a class="post-tag" href="/tags/{{ . }}.html"><code>{{.}}</code></a>
             {{end}}
         </div>
-
+        <!--
         <table class="post-table">
-        <!-- <div class="posts"> -->
             {{range $index, $Post := .DeepDataMerge.Posts}}
             <tr>
                 <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></td>
@@ -26,7 +25,13 @@
                 <td></td>
             </tr>
             {{end}}
-        <!-- </div> -->
+        </table> -->
+
+        <table class="post-table">
+            {{range $index, $Post := .DeepDataMerge.Posts}}
+                <p>[{{$Post.Frontmatter.Date}}] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></p>
+                <br />
+            {{end}}
         </table>
 
         <!-- <hr /> -->

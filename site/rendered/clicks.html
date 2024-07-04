@@ -16,21 +16,7 @@
         <title>Snapshots</title>
 
         
-        <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script>
+        
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -62,13 +48,6 @@
         
 
         
-        
-        <script>
-            const eventSource = new EventSource("http://localhost:8000/events");
-            eventSource.onmessage = function (event) {
-                location.reload();
-            };
-        </script>
           
         <script src="/static/scripts/animation.js" defer></script>
         
@@ -135,22 +114,44 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
             
             
-            <a class="header-element author" href="/"
-                >Aditya Hegde</a
-            >
+            
+            <a class="header-element-author" href="/">adiheg</a>
+                
             
               
-
+            <a class="header-element" href="/tags.html">index</a>
+                
+            <a class="header-element" href="/clicks.html">clicks</a>
+                
+            <a class="header-element" href="/about.html">about</a>
+                
+            <a class="header-element" href="/cv.pdf">cv</a>
               
         </div>
     </nav>
     
 </header>
+
+
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); 
+  if (currentPage.includes(elementSrc)) {
+    
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
 
 
             
@@ -193,30 +194,14 @@
 <details>
 <summary>Pondicherry 2022</summary>
 <div class="image-grid">
-<figure>
-<img src="https://i.imgur.com/EdVqF3s.jpg" alt="Pondi costal drive">
-</figure>
-<figure>
-<img src="https://i.imgur.com/K5RGcQI.jpg" alt="Pondi costal view">
-</figure>
-<figure>
-<img src="https://i.imgur.com/KUet9BN.jpg" alt="Hillside drive">
-</figure>
-<figure>
-<img src="https://i.imgur.com/h5S0i45.jpg" alt="Peaky hills">
-</figure>
-<figure>
-<img src="https://i.imgur.com/cgACPjM.jpg" alt="Bay of bengal from a window with some trees">
-</figure>
-<figure>
-<img src="https://i.imgur.com/rwB61P4.jpg" alt="Bay of bengal from a window">
-</figure>
-<figure>
-<img src="https://i.imgur.com/NTrFuRn.jpg" alt="More hills in tamil nadu">
-</figure>
-<figure>
-<img src="https://i.imgur.com/GJIXTg4.jpg" alt="Railway Station">
-</figure>
+<img alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
+<img loading="lazy" alt="Pondi costal view" src="https://i.imgur.com/K5RGcQI.jpg">
+<img loading="lazy" alt="Hillside drive" src="https://i.imgur.com/KUet9BN.jpg">
+<img loading="lazy" alt="Peaky hills" src="https://i.imgur.com/h5S0i45.jpg">
+<img loading="lazy" alt="Bay of bengal from a window with some trees" src="https://i.imgur.com/cgACPjM.jpg">
+<img loading="lazy" alt="Bay of bengal from a window" src="https://i.imgur.com/rwB61P4.jpg">
+<img loading="lazy" alt="More hills in tamil nadu" src="https://i.imgur.com/NTrFuRn.jpg">
+<img loading="lazy" alt="Railway Station" src="https://i.imgur.com/GJIXTg4.jpg">
 </div>
 </details>
 

@@ -11,26 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Tech has come far, and there are some parts which are spoilsports"
+            content=""
         />
-        <title>Motivations</title>
+        <title>Lunch with a Pigeon</title>
 
         
-        <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script>
+        
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -62,13 +48,6 @@
         
 
         
-        
-        <script>
-            const eventSource = new EventSource("http://localhost:8000/events");
-            eventSource.onmessage = function (event) {
-                location.reload();
-            };
-        </script>
           
         <script src="/static/scripts/animation.js" defer></script>
         
@@ -101,10 +80,10 @@
 
         <link rel="icon" type="image/x-icon" href="/static/cl.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Motivations" />
+        <meta property="og:title" content="Lunch with a Pigeon" />
         <meta
             property="og:description"
-            content="Tech has come far, and there are some parts which are spoilsports"
+            content=""
         />
         <meta
             property="og:image"
@@ -136,17 +115,20 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
             
             
-            <a class="header-element author" href="/"
-                >Aditya Hegde</a
-            >
+            
+            <a class="header-element-author" href="/">adiheg</a>
+                
             
               
-
+            <a class="header-element" href="/tags.html">index</a>
+                
+            <a class="header-element" href="/clicks.html">clicks</a>
+                
+            <a class="header-element" href="/about.html">about</a>
+                
+            <a class="header-element" href="/cv.pdf">cv</a>
               
         </div>
     </nav>
@@ -154,12 +136,31 @@
 </header>
 
 
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); 
+  if (currentPage.includes(elementSrc)) {
+    
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
+
+
             
 
             
             
 
-            <h1 class="post-title">Motivations</h1>
+            <h1 class="post-title">Lunch with a Pigeon</h1>
 
             
             <p class="post-author">by Aditya Hegde</p >
@@ -173,15 +174,20 @@
             
 
 
-            <p>My mother came up to me and asked about an app that virtually <em>pins</em> tasks to the Lock Screen of her phone. Well tons of them exist, but then the problem arises once again...the good old subscription plan.</p>
-<p>I find the current state of apps pretty <em>stinky</em>. While there are so many available, I just can't find myself affording anything. Well it's understandable, we rely on S3 servers that in time are tremendously expensive and devs cant just live off of this. This led to the rise of the <em>subscription based models</em> which is not really cheap. That aside, there are few apps, which provide the minimum functionality, that checks every box of requirements and yet has a monstrous price.</p>
+            <p><em>JUL 2024</em></p>
+<blockquote>
+<p>You aren't allowed to learn who you want aspire to become. Sometimes &quot;experience&quot; is more important even if that means to loose site of yourself</p>
+</blockquote>
+<p>I'm writing this while sitting all alone in a deserted lab. Where i'm supposed to be interning and simulating some claims made by a paper. And i'm lost. I've taken this up only because I missed out on other chances for internships, and I'm afraid I won't get another shot at them either. And here I am sitting in this lab, and am not able to figure out a single thing. I don't have a grasp of this depth of knowledge in physics. I don't have a clue of what I'm doing</p>
+<p>And now, i'm just in a lab and doing unproductive work. And why, well i'm told its for &quot;experience&quot; to add in that resume. Now I would be eating my own words if this is some internship that I wanted. But it isn't. I want to learn so many things, and I have just discovered something i'm interested in, but at the same time i've missed out on something to fill up in my resume. And out of guilt, i've ended up in a lab...a physics lab.</p>
+<p>It's probably the 100th time i've evaluated what i'm missing out when I sit here. I don't get to expand my knowledge in the field that concerns me. Instead i'm tied down to a chair and doing something else. While I could have taken my summer at my own pace and covered everything, I've lost the luxury of social interaction and doing what I want. And it's getting frustrating. I'm not getting a benefit for myself, and I feel like i'm letting others down.</p>
 
 
 
             
             <div class="post-info">
                 <p class="post-info-author">
-                    2024-06-07
+                    2024-07-04
                     ~
                     
                         Aditya Hegde

@@ -11,7 +11,7 @@ type: page
 ###### Undergrad, Developer, Designer
 
 
-<div class="page-nav">
+<!--div class="page-nav">
 
 <a class="page-nav-element"  href="/tags.html">index</a>
 
@@ -21,7 +21,7 @@ type: page
 
 <a class="page-nav-element"  href="/about.html">about</a>
 
-</div>
+</div-->
 
 <!--
 > ###### 📌 Pinned Posts
@@ -29,4 +29,10 @@ type: page
 >- [Presenting Anna at Fireside](/posts/fireside_anna.html)
 >- [Taking a few messy leaps in a hackathon](/posts/dist_sys/inginy12.html)
 
+![Ooty scenic view from tea estates - 21st June](https://i.imgur.com/4gBSJHi.jpg)
 -->
+
+Pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team. Currently learning distributed systems and networking concepts. Working in the [quanad summer lab](https://quanad.pes.edu/) at PESU.
+
+![Picture with my team during Fireside Talk](https://i.imgur.com/YZdXa7A.jpg)
+Fireside Talk 2024

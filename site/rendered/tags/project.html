@@ -16,21 +16,7 @@
         <title></title>
 
         
-        <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script>
+        
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -124,22 +110,44 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
             
             
-            <a class="header-element author" href="/"
-                >Aditya Hegde</a
-            >
+            
+            <a class="header-element-author" href="/">adiheg</a>
+                
             
               
-
+            <a class="header-element" href="/tags.html">index</a>
+                
+            <a class="header-element" href="/clicks.html">clicks</a>
+                
+            <a class="header-element" href="/about.html">about</a>
+                
+            <a class="header-element" href="/cv.pdf">cv</a>
               
         </div>
     </nav>
     
 </header>
+
+
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); 
+  if (currentPage.includes(elementSrc)) {
+    
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
 
 
             <h1 class="post-title">Site Index</h1>
@@ -148,14 +156,11 @@
             <table class="post-table">
                 
                 
-                <tr>
-                    <td><a class="post-card" href="/anna.html">Anna Documentation</a></td>
-                    <td  class="post-table date">2024-04-10</td>
-                </tr>
-                <tr>
-                    <td>The following page consists of a semi-detailed documentation of how to use anna as your ssg, or for other purposes. It includes instructions for usage of go templates with DDM, and other features</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-04-10] <a class="post-card-heading" href="/anna.html">Anna Documentation</a></p>
+                    <br />
+                
+            </table>
+
                 
             </table>
             

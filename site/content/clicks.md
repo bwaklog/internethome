@@ -83,21 +83,21 @@ type: page
 
 <div class="image-grid">
 
-![Pondi costal drive](https://i.imgur.com/EdVqF3s.jpg)
+<img alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
 
-![Pondi costal view](https://i.imgur.com/K5RGcQI.jpg)
+<img loading="lazy" alt="Pondi costal view" src="https://i.imgur.com/K5RGcQI.jpg">
 
-![Hillside drive](https://i.imgur.com/KUet9BN.jpg)
+<img loading="lazy" alt="Hillside drive" src="https://i.imgur.com/KUet9BN.jpg">
 
-![Peaky hills](https://i.imgur.com/h5S0i45.jpg)
+<img loading="lazy" alt="Peaky hills" src="https://i.imgur.com/h5S0i45.jpg">
 
-![Bay of bengal from a window with some trees](https://i.imgur.com/cgACPjM.jpg)
+<img loading="lazy" alt="Bay of bengal from a window with some trees" src="https://i.imgur.com/cgACPjM.jpg">
 
-![Bay of bengal from a window](https://i.imgur.com/rwB61P4.jpg)
+<img loading="lazy" alt="Bay of bengal from a window" src="https://i.imgur.com/rwB61P4.jpg">
 
-![More hills in tamil nadu](https://i.imgur.com/NTrFuRn.jpg)
+<img loading="lazy" alt="More hills in tamil nadu" src="https://i.imgur.com/NTrFuRn.jpg">
 
-![Railway Station](https://i.imgur.com/GJIXTg4.jpg)
+<img loading="lazy" alt="Railway Station" src="https://i.imgur.com/GJIXTg4.jpg">
 
 </div>
 

@@ -16,21 +16,7 @@
         <title></title>
 
         
-        <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script>
+        
 
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
@@ -124,22 +110,44 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
-                <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
             
             
-            <a class="header-element author" href="/"
-                >Aditya Hegde</a
-            >
+            
+            <a class="header-element-author" href="/">adiheg</a>
+                
             
               
-
+            <a class="header-element" href="/tags.html">index</a>
+                
+            <a class="header-element" href="/clicks.html">clicks</a>
+                
+            <a class="header-element" href="/about.html">about</a>
+                
+            <a class="header-element" href="/cv.pdf">cv</a>
               
         </div>
     </nav>
     
 </header>
+
+
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); 
+  if (currentPage.includes(elementSrc)) {
+    
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
 
 
             <h1 class="post-title">Site Index</h1>
@@ -148,59 +156,26 @@
             <table class="post-table">
                 
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/dist_sys/inginy12.html">Taking a few messy leaps in a hackathon</a></td>
-                    <td  class="post-table date">2024-04-21</td>
-                </tr>
-                <tr>
-                    <td>Learnings from failure from Ingenius 12.0</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-04-21] <a class="post-card-heading" href="/posts/dist_sys/inginy12.html">Taking a few messy leaps in a hackathon</a></p>
+                    <br />
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/dist_sys/meerkat.html">Meerkat build log</a></td>
-                    <td  class="post-table date">2024-04-22</td>
-                </tr>
-                <tr>
-                    <td>A p2p data sync system in go</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-04-22] <a class="post-card-heading" href="/posts/dist_sys/meerkat.html">Meerkat build log</a></p>
+                    <br />
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/tech/dotfiles.html">Techstack</a></td>
-                    <td  class="post-table date">2024-06-10</td>
-                </tr>
-                <tr>
-                    <td>Here are some things I cant live without on my system.</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-06-10] <a class="post-card-heading" href="/posts/tech/dotfiles.html">Techstack</a></p>
+                    <br />
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/tech/fireside_anna.html">Presenting anna at fireside</a></td>
-                    <td  class="post-table date">2024-04-04</td>
-                </tr>
-                <tr>
-                    <td>Presentation part of my teams fireside talk on our SSG - Anna</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-04-04] <a class="post-card-heading" href="/posts/tech/fireside_anna.html">Presenting anna at fireside</a></p>
+                    <br />
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/tech/xkcd-grab-presentation.html">My first HSP talk</a></td>
-                    <td  class="post-table date">2023-12-09</td>
-                </tr>
-                <tr>
-                    <td>HSP Project 2023 presentation</td>
-                    <td></td>
-                </tr>
+                    <p>[2023-12-09] <a class="post-card-heading" href="/posts/tech/xkcd-grab-presentation.html">My first HSP talk</a></p>
+                    <br />
                 
-                <tr>
-                    <td><a class="post-card" href="/posts/tech/zettel_impl.html">Implementing Zettelkasten in Anna</a></td>
-                    <td  class="post-table date">2024-04-10</td>
-                </tr>
-                <tr>
-                    <td>POC of backlink and DDM implementation in Anna</td>
-                    <td></td>
-                </tr>
+                    <p>[2024-04-10] <a class="post-card-heading" href="/posts/tech/zettel_impl.html">Implementing Zettelkasten in Anna</a></p>
+                    <br />
+                
+            </table>
+
                 
             </table>
             

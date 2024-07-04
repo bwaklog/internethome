@@ -1,9 +1,12 @@
 navbar:
-  - index: index
+  # - index: index.html
+  - index: tags.html
+  - clicks: clicks.html
+  - about: about.html
+  - cv: cv.pdf
   # - anna
   # - works
   # - Clicks: clicks
-  # - Index: tags
   # - wiki
   # - notes
   # - posts

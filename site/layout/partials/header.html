@@ -4,23 +4,44 @@
 <header>
     <nav>
         <div class="navigations">
-            <div class="nav-image-div">
+            <!-- <div class="nav-image-div">
                 <img alt="site logo" id="theme-toggle" src="/static/me.jpeg" />
-            </div>
+            </div> -->
             <!-- if it is "index" page -->
-            {{if eq $PageData.CompleteURL "index.html" }} {{else}}
-            <a class="header-element author" href="/"
-                >{{ $.DeepDataMerge.LayoutConfig.Author }}</a
-            >
+            {{if eq $PageData.CompleteURL "index.html" }}
+            {{else}}
+            <a class="header-element-author" href="/">adiheg</a>
+                <!-- >{{ $.DeepDataMerge.LayoutConfig.Author }}</a -->
             {{end}}
             {{ range $index_no, $map := .DeepDataMerge.LayoutConfig.Navbar }} {{
             range $key, $value := $map }} {{ if eq . "index" }}
 
             {{else}}
-            <a class="header-element" href="/{{.}}.html">{{ $key }}</a>
+            <a class="header-element" href="/{{.}}">{{ $key }}</a>
             {{end}} {{end}} {{end}}
         </div>
     </nav>
     <!-- {{template "search" .}} -->
 </header>
+
+<!-- <div>
+    {{template "search" .}}
+</div> -->
+
+<script>
+const currentPage = window.location.pathname;
+const headerElements = document.querySelectorAll('.header-element');
+
+headerElements.forEach((element) => {
+  const elementSrc = element.getAttribute('href'); // get src attribute of each element
+  if (currentPage.includes(elementSrc)) {
+    // element.classList.add('active'); // add "active" class to the matching element
+    console.log(currentPage, elementSrc);
+    element.style.color = "var(--color-heading)";
+    element.style.fontWeight = "600";
+    console.log(currentPage, elementSrc);
+  }
+});
+</script>
+
 {{end}}
