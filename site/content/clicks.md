@@ -6,6 +6,8 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
 type: page
 ---
 
+## Gallery
+
 <details>
 
 <summary>/dev/random</summary>
@@ -78,12 +80,60 @@ type: page
 
 
 <details>
+<summary>/talks</summary>
 
-<summary>Pondicherry 2022</summary>
+<details>
+
+<summary>/fireside2024</summary>
 
 <div class="image-grid">
 
-<img alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
+<img loading="lazy" alt="anna presentation - 1" src="https://i.imgur.com/PTP2P6m.jpg">
+
+<img loading="lazy" alt="anna presentation - 2" src="https://i.imgur.com/gyTGc2a.jpg">
+
+<img loading="lazy" alt="anna presentation - 3" src="https://i.imgur.com/rANre38.jpg">
+
+<img loading="lazy" alt="anna presentation - 4" src="https://i.imgur.com/ouqWgET.jpg">
+
+</div>
+
+</details>
+
+</details>
+
+
+<details>
+
+<summary>/trips</summary>
+
+<details>
+<summary>/ooty 2024</summary>
+
+<div class="image-grid">
+
+<img loading="lazy" alt="tea estate views before low clowds" src="https://i.imgur.com/esHZCKk.jpg" />
+
+<img loading="lazy" alt="tea estate view after with low clowds" src="https://i.imgur.com/PQOp4Ts.jpg" />
+
+<img loading="lazy" alt="insane view from the road to dolphin nose point" src="https://i.imgur.com/CYXkEXn.jpg" />
+
+<img loading="lazy" alt="another hilly tea estate" src="https://i.imgur.com/cwhlIVu.jpg" />
+
+<img loading="lazy" alt="dolphin nose point" src="https://i.imgur.com/MCV8Hsx.jpg">
+
+</div>
+
+</details>
+
+
+<details>
+
+<summary>   /pondicherry 2022</summary>
+
+<div class="image-grid">
+
+<img loading="lazy" alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
 
 <img loading="lazy" alt="Pondi costal view" src="https://i.imgur.com/K5RGcQI.jpg">
 
@@ -100,5 +150,7 @@ type: page
 <img loading="lazy" alt="Railway Station" src="https://i.imgur.com/GJIXTg4.jpg">
 
 </div>
+
+</details>
 
 </details>

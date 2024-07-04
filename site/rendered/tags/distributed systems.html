@@ -49,6 +49,8 @@
 
         
           
+        <script src="/static/scripts/search-blur.js" defer></script>
+        
         <script src="/static/scripts/animation.js" defer></script>
         
 
@@ -103,7 +105,7 @@
     
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
          
 
 
@@ -114,9 +116,8 @@
             
             
             <a class="header-element-author" href="/">adiheg</a>
-                
             
-              
+               
             <a class="header-element" href="/tags.html">index</a>
                 
             <a class="header-element" href="/clicks.html">clicks</a>
@@ -125,31 +126,126 @@
                 
             <a class="header-element" href="/cv.pdf">cv</a>
               
+
+            <div id="search-toggle" class="search-closed">
+                
+                <p>search</p>
+            </div>
         </div>
     </nav>
     
 </header>
 
+<div id="search-header">
+    
+<form class="siteSearch" id="searchSite">
+  <input type="text" placeholder="Search Post or Page" id="searchSiteInput" name="searchSite" required autocomplete="off" />
+</form>
+<div id="site_search_result"></div>
+<script>
+  var resultDiv = document.getElementById("site_search_result");
+  document
+    .getElementById("searchSite")
+    .addEventListener("keyup", function (e) {
+      e.preventDefault();
+      const searchValue =
+        document.getElementById("searchSiteInput").value;
 
+      const url = "/static/index.json";
+
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          resultDiv.innerHTML = "";
+          found = 0;
+          if (searchValue != "") {
+            for (key in data) {
+              found += 1;
+              title =
+                data[key]["Frontmatter"]["Title"].toLowerCase();
+              if (title.includes(searchValue.toLowerCase())) {
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                
+
+                
+
+                var tags_placeholder = document.createElement('div');
+                tags_placeholder.className = "tags-placeholder";
+
+                var post_title = data[key]["Frontmatter"]["Title"];
+                var post_description = data[key]["Frontmatter"]["Description"];
+                var post_date = data[key]["Frontmatter"]["Date"];
+
+                resultDiv.innerHTML += `
+                <a class="page-card" href="/${data[key]["CompleteURL"]}">
+                  <div>
+                    ${post_title ? `<h3>${post_title}</h3>` : ''}
+                    ${post_description ? `<p>${post_description}</p>` : ''}
+                    ${post_date ? `<p>${post_date}</p>` : ''}
+                  </div>
+                </a>
+                `
+
+              }
+            }
+
+          } else {
+            document.getElementById("site_search_result").innerHTML = "";
+          }
+        })
+        .catch((error) => {
+          
+          console.error(
+            "There was a problem with the fetch operation:",
+
+            error,
+          );
+        });
+    });
+
+</script>
+
+</div>
+<audio id="chime" src="/static/sound/beep.mp3" type="audio/mp3"></audio>
 
 <script>
-const currentPage = window.location.pathname;
-const headerElements = document.querySelectorAll('.header-element');
+    const currentPage = window.location.pathname;
+    const headerElements = document.querySelectorAll(".header-element");
 
-headerElements.forEach((element) => {
-  const elementSrc = element.getAttribute('href'); 
-  if (currentPage.includes(elementSrc)) {
-    
-    console.log(currentPage, elementSrc);
-    element.style.color = "var(--color-heading)";
-    element.style.fontWeight = "600";
-    console.log(currentPage, elementSrc);
-  }
-});
+    headerElements.forEach((element) => {
+        const elementSrc = element.getAttribute("href"); 
+        if (currentPage.includes(elementSrc)) {
+            
+            console.log(currentPage, elementSrc);
+            element.style.color = "var(--color-heading)";
+            element.style.fontWeight = "600";
+            console.log(currentPage, elementSrc);
+        }
+    });
 </script>
 
 
 
+            <div id="container-zoom" class="container-zoom">
             <h1 class="post-title">Site Index</h1>
             <h3>Posts tagged <code>distributed systems</code> </h3>
 
@@ -201,7 +297,8 @@ headerElements.forEach((element) => {
         });
 </script>
 
-    </div>
+            </div>
+    </div >
 </body>
 
 </html>

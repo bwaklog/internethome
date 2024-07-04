@@ -34,5 +34,11 @@ type: page
 
 Pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team. Currently learning distributed systems and networking concepts. Working in the [quanad summer lab](https://quanad.pes.edu/) at PESU.
 
+<div class="cite-block">
+
+`CMD-K` search navigation now supported
+
+</div>
+
 ![Picture with my team during Fireside Talk](https://i.imgur.com/YZdXa7A.jpg)
 Fireside Talk 2024

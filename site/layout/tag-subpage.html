@@ -3,9 +3,10 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         {{template "header" .}}
 
+            <div id="container-zoom" class="container-zoom">
             <h1 class="post-title">Site Index</h1>
             <h3>Posts tagged <code>{{ $PageData.Frontmatter.Title }}</code> </h3>
 
@@ -31,7 +32,8 @@
                 {{end}} -->
             </table>
             {{template "footer" .}}
-    </div>
+            </div>
+    </div >
 </body>
 
 </html>

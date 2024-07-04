@@ -3,9 +3,10 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         {{template "header" .}}
 
+            <div id="container-zoom" class="container-zoom">
             <h1>Posts</h1>
             <!-- <table class="post-table">
                 {{range $index, $Post := .DeepDataMerge.Posts}}
@@ -27,6 +28,7 @@
             </table>
 
             {{template "footer" .}}
+            </div>
     </div>
 </body>
 

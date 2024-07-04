@@ -1,4 +1,4 @@
-const paragraphs = document.querySelectorAll(".container > *");
+const paragraphs = document.querySelectorAll(".container-zoom > *");
 
 paragraphs.forEach((paragraph, index) => {
   paragraph.style.animationDelay = `${index * 0.03}s`;

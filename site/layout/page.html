@@ -4,7 +4,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id="container">
 
             {{ if eq $PageData.Frontmatter.Type "post" }}
                 <!-- <img alt="site logo" id="theme-toggle" class="float" src="/static/pfp.jpeg" /> -->
@@ -12,6 +12,7 @@
             {{end}}
                 {{template "header" .}}
 
+            <div id="container-zoom" class="container-zoom">
             {{ if eq $PageData.Frontmatter.Type "post" }}
 
             {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
@@ -74,7 +75,8 @@
             {{end}}
 
             {{template "footer" .}}
-    </div>
+            </div>
+    </div >
   </div>
 </body>
 

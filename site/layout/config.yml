@@ -12,7 +12,8 @@ navbar:
   # - posts
 baseURL: https://hegde.live/
 siteScripts:
+    - search-blur.js
+    - animation.js
   # - nav.js
   # - expand.js
-  - animation.js
 author: Aditya Hegde
