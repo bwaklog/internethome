@@ -33,7 +33,7 @@ I love exploring challenging problems, its what keeps me working.
 
 🏫 Currently pursuing my bachelors degree in CSE at PES Uni. Also a part of clubs like [HSP](https://homebrew.hsp-ec.xyz/about/) and [ACM](https://acmpesuecc.github.io) here at my uni and part of both the _Mentoring_ and _Design_ team.
 
-I'm really interested in working with system level, databases, networking concepts and growing fondly of _quantum physics_. I'm a really huge fan of Tennis and Motersport.
+I'm really interested in working with system level, databases, networking concepts. I'm a really huge fan of Tennis and Motersport.
 
 Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on a few projects in go and trying to get my way around rust. Working on the `MIT 6.5640 lab` for distributed systems.
 

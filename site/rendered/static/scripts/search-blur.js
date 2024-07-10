@@ -11,6 +11,7 @@ search_toggle.addEventListener("click", function () {
 
         search_header.style.zIndex = "900";
         search_header.style.backdropFilter = "blur(20px)";
+        search_header.style.webkitBackdropFilter = "blur(20px)"
         bodyElements.style.scale = "0.9";
 
         searchInput.style.zIndex = "9999";
@@ -44,6 +45,7 @@ document.addEventListener("keydown", function (event) {
 
             search_header.style.zIndex = "900";
             search_header.style.backdropFilter = "blur(20px)";
+            search_header.style.webkitBackdropFilter = "blur(20px)"
             bodyElements.style.scale = "0.9";
 
             searchInput.style.zIndex = "9999";

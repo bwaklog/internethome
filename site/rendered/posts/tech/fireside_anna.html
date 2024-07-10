@@ -242,7 +242,7 @@
             
             console.log(currentPage, elementSrc);
             element.style.color = "var(--color-heading)";
-            element.style.fontWeight = "600";
+            element.style.fontWeight = "450";
             console.log(currentPage, elementSrc);
         }
     });
@@ -632,32 +632,42 @@ by category.</p>
             >anna</a
         >
         <br />
-        updated on <span id="commit-date">god knows when</span> | <a id="commit-hash" class="footer-element"  href="https://github.com/bwaklog/internethome/">here</a>
+        updated on <span id="commit-date">god knows when</span> |
+        <a
+            id="commit-hash"
+            class="footer-element"
+            href="https://github.com/bwaklog/internethome/"
+            >here</a
+        >
     </div>
     
 </footer>
+
+
+
 <script>
     
-    const repoURL = "https://api.github.com/repos/bwaklog/internethome/commits/HEAD"
+    const repoURL =
+        "https://api.github.com/repos/bwaklog/internethome/commits/HEAD";
 
     fetch(repoURL)
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
             const latestCommitHash = data.sha.slice(0, 7);
 
-            const commitHashElement = document.getElementById('commit-hash');
-            commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`
+            const commitHashElement = document.getElementById("commit-hash");
+            commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`;
             commitHashElement.textContent = `${latestCommitHash}`;
 
-            console.log('Latest commit hash:', latestCommitHash);
+            console.log("Latest commit hash:", latestCommitHash);
 
             const commitDate = data.commit.author.date;
             const readable_date = new Date(commitDate).toDateString();
-            console.log('Latest commit date:', readable_date);
-            document.getElementById('commit-date').textContent = readable_date;
+            console.log("Latest commit date:", readable_date);
+            document.getElementById("commit-date").textContent = readable_date;
         })
-        .catch(error => {
-            console.error('Error fetching data:', error)
+        .catch((error) => {
+            console.error("Error fetching data:", error);
         });
 </script>
 

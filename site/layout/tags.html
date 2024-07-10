@@ -30,7 +30,7 @@
 
         <table class="post-table">
             {{range $index, $Post := .DeepDataMerge.Posts}}
-                <p>[{{$Post.Frontmatter.Date}}] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></p>
+                <p>[<span class="post-date">{{$Post.Frontmatter.Date}}</span >] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></p>
                 <br />
             {{end}}
         </table>
@@ -57,7 +57,19 @@
         </div>
     </div >
 </body>
+<script>
+const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+const postDates = document.querySelectorAll('span.post-date');
+
+postDates.forEach((element) => {
+  const commitDate = element.textContent;
+  const date = new Date(commitDate);
+  const monthIndex = date.getUTCMonth(); // 0-11
+  const monthName = month_names_short[monthIndex]; // adjust for zero-based index
+  element.textContent = `${monthName} ${date.getFullYear()}`;
+});
+</script>
 </html>
 
 {{ end}}
