@@ -1,0 +1,91 @@
+/* Creating named values cuz im stupid */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-heading: #ffffff;
+        --color-subheading: #a0a0a0;
+        --color-text: #ffffffc0;
+        --color-text-dim: #ffffff5a;
+        --color-text-low: #ffffff19;
+        --color-background: #0b0c0d;
+        /* --color-background: #000; */
+        --color-background-dim: #10100e7a;
+        --color-background-low: #10100e50;
+        --color-background-contrast: #1a1a1a;
+        --inline-code-bg: #161618;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-heading: #000000;
+        --color-subheading: #606060;
+        /* --color-text: #10100ed0; */
+        --color-text: #10100e;
+        --color-text-dim: #58585870;
+        --color-text-low: #10100e20;
+        /* --color-background: #ffffff;
+        --color-background-dim: #ffffff7a;
+        --color-background-low: #ffffff50; */
+        --color-background: #F7EFE5;
+        --color-background-dim: #F7EFE57a;
+        --color-background-low: #F7EFE550;
+        --color-background-contrast: #161618;
+        /* --inline-code-bg: #f9f8f9; */
+        --inline-code-bg: #F8EDE3;
+    }
+}
+
+:root {
+    --selection-bg: #d1d1d17d;
+    --color-primary: #fc4949;
+    --color-primary-dim: #fc4949ef;
+    --color-primary-low: #fc494950;
+
+    --style-border-radius: 6px;
+    --style-border-radius-hover: 6px;
+    --style-hover-scale: 1.005;
+    --style-container-width: 35rem;
+
+    --style-body-font: 1.1rem;
+    --style-body-font-mobile: 1.05rem;
+
+    --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@font-face{
+    font-family: FiraCode;
+    src: url(/static/fonts/mono/FiraCode.ttf);
+}
+
+@font-face {
+    font-family: EBGaramond;
+    src: url(/static/fonts/serif/EBGaramond.ttf);
+}
+
+@font-face {
+    font-family: EBGaramondItalic;
+    src: url(/static/fonts/serif/EBGaramondItalic.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(/static/fonts/others/Inter.ttf);
+    font-feature-settings:
+        "liga" 1,
+        "calt" 1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: Inter;
+    }
+}
+
+@font-face {
+    font-family: InterItalic;
+    src: url(/static/fonts/others/InterItalic.ttf);
+    font-feature-settings:
+        "liga" 1,
+        "calt" 1;
+}

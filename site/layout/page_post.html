@@ -1,0 +1,53 @@
+{{ define "post_layout" }}
+{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{ template "head" .}}
+
+<body>
+
+    <div class="container" id="container">
+
+            {{template "header" .}}
+
+            <div id="container-zoom" class="container-zoom">
+
+
+            <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
+
+            <!-- <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p > -->
+
+            <p class="post-author"><span class="post-date">{{$PageData.Frontmatter.Date}}</span> •
+            {{range $PageData.Frontmatter.Tags}}
+            <span><a href="/tags/{{.}}.html">{{.}}</a></span>
+            {{end}}
+            </p>
+
+            {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
+            {{ else }}
+            <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" />
+            {{end}}
+
+            {{ $PageData.Body }}
+
+            </div>
+
+            <script>
+            const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            const postDates = document.querySelectorAll('span.post-date');
+
+            postDates.forEach((element) => {
+              const commitDate = element.textContent;
+              const date = new Date(commitDate);
+              const monthIndex = date.getUTCMonth(); // 0-11
+              const monthName = month_names_short[monthIndex]; // adjust for zero-based index
+              element.textContent = `${monthName} ${date.getFullYear()}`;
+            });
+            </script>
+    </div>
+    {{template "footer" .}}
+  </div>
+</body>
+
+</html>
+
+{{ end}}

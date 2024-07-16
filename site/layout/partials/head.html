@@ -32,7 +32,7 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             requestAnimationFrame(raf);
         </script> -->
 
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <link
             rel="stylesheet"
             href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
@@ -41,7 +41,8 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
             rel="stylesheet"
             type="text/css"
-        />
+        /> -->
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/static/scripts/shuffle.js"></script>
 
@@ -75,32 +76,6 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <script src="/static/scripts/{{.}}" defer></script>
         {{end}}
 
-        <script defer>
-            // add lazy loading to all images
-            document.addEventListener("DOMContentLoaded", (event) => {
-                var toc = document.querySelector("#toc > details");
-
-                var h1Element = document.getElementById("table-of-contents");
-                try {
-                    var ulElement = h1Element.nextElementSibling;
-                    if (!ulElement)
-                        throw new Error(
-                            "Next sibling of #table-of-contents is not found",
-                        );
-                    h1Element.remove();
-                    ulElement.remove();
-                    // append ulElement to toc
-                    toc.appendChild(ulElement);
-                } catch (error) {
-                    var tocElement = document.getElementById("toc");
-                    if (tocElement) {
-                        tocElement.remove();
-                    }
-                    document.remove(toc);
-                }
-            });
-        </script>
-
         <link rel="icon" type="image/x-icon" href="/static/cl.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ $PageData.Frontmatter.Title }}" />
@@ -117,8 +92,7 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <meta name="format-detection" content="telephone=no" />
 
         <script defer>
-            hljs.highlightAll();
-            hljs.addPlugin(new CopyButtonPlugin());
+
         </script>
 
         <!-- <script src="/static/scripts/nav.js"></script> -->

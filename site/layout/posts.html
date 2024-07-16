@@ -8,18 +8,7 @@
 
             <div id="container-zoom" class="container-zoom">
             <h1>Posts</h1>
-            <!-- <table class="post-table">
-                {{range $index, $Post := .DeepDataMerge.Posts}}
-                <tr>
-                    <td><a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></td>
-                    <td  class="post-table date">{{$Post.Frontmatter.Date}}</td>
-                </tr>
-                <tr>
-                    <td>{{$Post.Frontmatter.Description}}</td>
-                    <td></td>
-                </tr>
-                {{end}}
-            </table> -->
+
             <table class="post-table">
                 {{range $index, $Post := .DeepDataMerge.Posts}}
                     <p>[{{$Post.Frontmatter.Date}}] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a></p>
@@ -27,9 +16,9 @@
                 {{end}}
             </table>
 
-            {{template "footer" .}}
             </div>
     </div>
+    {{template "footer" .}}
 </body>
 
 </html>

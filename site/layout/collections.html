@@ -1,20 +1,10 @@
-{{ define "all-tags"}}
+{{ define "all-collections"}}
 {{$PageData := .TemplateData}}
 {{ template "head" .}}
 
 <body>
-    <div class="container" id="container">
+    <div class="container">
         {{template "header" .}}
-
-        <div id="container-zoom" class="container-zoom">
-        <h1>Site Index</h1>
-
-        <div class="all-tags">
-            {{ range .TagNames }}
-            <a class="post-tag" href="/tags/{{ . }}.html"><code>{{.}}</code></a>
-            {{end}}
-        </div>
-
 
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
             <!-- <h3>Collection {{$Collection}}</h3> -->
@@ -44,12 +34,13 @@
             {{ end }}
         {{end}}
 
+    </div>
 
 
-        </div>
-    </div >
     {{template "footer" .}}
+
 </body>
+
 <script>
 const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -63,6 +54,8 @@ postDates.forEach((element) => {
   element.textContent = `${monthName} ${date.getFullYear()}`;
 });
 </script>
+
+
 </html>
 
 {{ end}}

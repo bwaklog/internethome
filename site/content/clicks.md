@@ -3,7 +3,7 @@ date: 2024-02-24
 title: Snapshots
 description: Photodump
 previewimage: https://i.imgur.com/KUet9BN.jpg
-type: page
+layout: page
 ---
 
 ## Gallery
@@ -12,7 +12,7 @@ type: page
 
 <summary>/dev/random</summary>
 
-<div class="image-grid">
+<div class="image-grid" id="images">
 
 <img loading="lazy" alt="Food menu" src="https://i.imgur.com/ejDRsdi.jpg">
 
@@ -28,7 +28,6 @@ type: page
 
 <img loading="lazy" alt="Black and white rocks" src="https://i.imgur.com/sMMx1f0.jpg">
 
-
 <img loading="lazy" alt="Keychron K2 V2" src="https://i.imgur.com/NVUKPKO.jpg">
 
 <img loading="lazy" alt="Cannon Rebel struggles" src="https://i.imgur.com/r1W9ohZ.jpg">
@@ -41,16 +40,11 @@ type: page
 
 </details>
 
-
 <details>
 
 <summary>/college</summary>
 
-<div class="image-grid">
-
-<!--[Shot down wall](https://i.imgur.com/4aCMwYW.jpg)-->
-
-<!--[Window through the fort](https://i.imgur.com/A7OPUuM.jpg)-->
+<div class="image-grid" id="image-grid">
 
 <img loading="lazy" alt="Ghat descent on west cost" src="https://i.imgur.com/agAwA6L.jpg">
 
@@ -86,7 +80,7 @@ type: page
 
 <summary>/fireside2024</summary>
 
-<div class="image-grid">
+<div class="image-grid" id="image-grid">
 
 <img loading="lazy" alt="anna presentation - 1" src="https://i.imgur.com/PTP2P6m.jpg">
 
@@ -110,7 +104,7 @@ type: page
 <details>
 <summary>/ooty 2024</summary>
 
-<div class="image-grid">
+<div class="image-grid" id="image-grid">
 
 <img loading="lazy" alt="tea estate views before low clowds" src="https://i.imgur.com/esHZCKk.jpg" />
 
@@ -129,9 +123,9 @@ type: page
 
 <details>
 
-<summary>   /pondicherry 2022</summary>
+<summary>/pondicherry 2022</summary>
 
-<div class="image-grid">
+<div class="image-grid" id="image-grid">
 
 <img loading="lazy" alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
 

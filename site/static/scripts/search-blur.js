@@ -10,9 +10,9 @@ search_toggle.addEventListener("click", function () {
         console.log("opening menu");
 
         search_header.style.zIndex = "900";
-        search_header.style.backdropFilter = "blur(20px)";
-        search_header.style.webkitBackdropFilter = "blur(20px)"
-        bodyElements.style.scale = "0.9";
+        search_header.style.backdropFilter = "blur(15px)";
+        search_header.style.webkitBackdropFilter = "blur(15px)"
+        bodyElements.style.scale = "0.95";
 
         searchInput.style.zIndex = "9999";
         searchInput.style.opacity = "1";

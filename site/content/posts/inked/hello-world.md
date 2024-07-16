@@ -2,7 +2,8 @@
 date: 2023-12-08
 title: Hello World
 draft: false
-type: post
+collections: [inked]
+layout: post_layout
 description: Introductory post to my blog site
 previewimage: https://i.imgur.com/ppTDKQv.jpg
 tags: ['blog', 'inked']
