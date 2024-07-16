@@ -1,6 +1,37 @@
 {{define "footer"}}
+
 <footer>
-    <!--img class="footer-image" src="/static/favicon.png" /-->
+    <a href="https://x.com/bwaklog">aditya hegde</a>
+    <p><span id="local-time"></span></p>
+</footer>
+
+<script>
+function updateClock() {
+    // Create a new Date object for the current time
+    const now = new Date();
+
+    // Get the time string in HH-MM-SS format for Kolkata time zone
+    const options = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Kolkata'
+    };
+    const timeString = now.toLocaleString('en-GB', options).replace(/:/g, ':');
+
+    // Display the time
+    document.getElementById('local-time').textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script>
+
+<!--footer>
     <div class="footer-text">
         Rendered with <span style="color: #fc4949">&#10084;</span> by
         <a class="footer-element" href="https://github.com/acmpesuecc/anna"
@@ -15,8 +46,7 @@
             >here</a
         >
     </div>
-    <!-- <em>Amh</em> -->
-</footer>
+</footer-->
 
 <!-- <div>
     <p>Press <code>􀆔 K</code> to open search</p>

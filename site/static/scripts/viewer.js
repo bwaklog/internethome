@@ -3241,3 +3241,6 @@
   return Viewer;
 
 }));
+
+
+const gallery = new Viewer(document.getElementById("images"), {transition : false});

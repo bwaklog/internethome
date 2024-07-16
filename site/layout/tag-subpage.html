@@ -13,28 +13,36 @@
             <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
-                    <p>[{{.Frontmatter.Date}}] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
-                    <br />
+                    <div class="cite-block">
+                        <p><span class="post-date">{{.Frontmatter.Date}}</span > · <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
+                        {{ if eq (len .Frontmatter.Description) 0}}
+                        {{else}}
+                        <br />
+                        <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
+                        {{end}}
+                    </div>
                 {{end}}
             </table>
 
-                <!-- <table class="post-table">
-                {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
-                {{ range $TagSet }}
-                <tr>
-                    <td><a class="post-card" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></td>
-                    <td  class="post-table date">{{.Frontmatter.Date}}</td>
-                </tr>
-                <tr>
-                    <td>{{.Frontmatter.Description}}</td>
-                    <td></td>
-                </tr>
-                {{end}} -->
             </table>
-            {{template "footer" .}}
             </div>
     </div >
+    {{template "footer" .}}
 </body>
+
+<script>
+const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const postDates = document.querySelectorAll('span.post-date');
+
+postDates.forEach((element) => {
+  const commitDate = element.textContent;
+  const date = new Date(commitDate);
+  const monthIndex = date.getUTCMonth(); // 0-11
+  const monthName = month_names_short[monthIndex]; // adjust for zero-based index
+  element.textContent = `${monthName} ${date.getFullYear()}`;
+});
+</script>
 
 </html>
 

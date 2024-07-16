@@ -1,7 +1,7 @@
 ---
 title: cv
 description: My portfolio ~ Aditya Hegde
-type: page
+layout: page
 ---
 
 ## Education
@@ -12,7 +12,7 @@ type: page
 
 ###### 2023 - Present
 
-- CGPA: 9.32/10
+- CGPA: 9.035//10
 - Perusing B.Tech in Computer Science Engineering
 - Awarded CNR-Rao Scholarship for Chemistry Cycle
 

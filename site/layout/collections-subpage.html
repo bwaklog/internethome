@@ -1,0 +1,32 @@
+{{ define "collection-subpage"}}
+{{$PageData := index .DeepDataMerge.Collections .PageURL}}
+{{ template "head" .}}
+
+<body>
+
+        <div class="container">
+            {{template "header" .}}
+
+                <div class="post-table">
+                {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+                {{range $CollectionSet }}
+
+                <p>[<span class="post-date">{{.Frontmatter.Date}}</span >] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
+                <br />
+                <!-- <a class="post-card" href="/{{.CompleteURL}}">
+                        <h2 class="post-card-title">{{.Frontmatter.Title}}</h2>
+                        <p class="post-card-description">{{.Frontmatter.Description}}</p>
+                        <p class="post-card-date">{{.Frontmatter.Date}}</p>
+                </a> -->
+
+                {{end}}
+                </div>
+
+
+        </div>
+        {{template "footer" .}}
+
+</body>
+</html>
+
+{{ end }}

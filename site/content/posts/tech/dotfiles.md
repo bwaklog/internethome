@@ -2,7 +2,8 @@
 title: Techstack
 date: 2024-06-10
 draft: false
-type: post
+collections: [tech]
+layout: post_layout
 description: Here are some things I cant live without on my system.
 tags: ['blog', 'tech']
 ---

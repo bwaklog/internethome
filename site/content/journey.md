@@ -1,6 +1,6 @@
 ---
 title: Journey
-type: page
+layout: page
 ---
 
 # Timeline

@@ -1,7 +1,8 @@
 ---
 title: Lunch with a Pigeon
 date: 2024-07-04
-type: post
+collections: [inked]
+layout: post_layout
 tags:
   - blog
   - inked

@@ -8,26 +8,7 @@ type: page
 
 # Hey! I'm Hegde 🌊
 
-<figure>
-<img loading="lazy" alt="Image of me as a kid" src="/static/me.jpeg">
-<figcaption>28th October 2008 | Canon PowerShot SD630</figcaption>
-</figure>
-
-<!--div class="container-flex">
-<div class="container-flex col">
-<img loading="lazy" style="width: 200px; height: auto;" alt="Image of me as a kid" src="/static/cl.jpg">
-</div>
-
-<div>
-
-
-</div>
-
-</div-->
-
-Welcome to my home on the internet 🌊
-
-<br />
+Welcome to my home on the internet
 
 I love exploring challenging problems, its what keeps me working.
 
@@ -36,6 +17,11 @@ I love exploring challenging problems, its what keeps me working.
 I'm really interested in working with system level, databases, networking concepts. I'm a really huge fan of Tennis and Motersport.
 
 Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on a few projects in go and trying to get my way around rust. Working on the `MIT 6.5640 lab` for distributed systems.
+
+<figure>
+<img loading="lazy" alt="Image of me as a kid" src="https://i.imgur.com/baBL4wG.jpg">
+<!--figcaption>28th October 2008 | Canon PowerShot SD630</figcaption-->
+</figure>
 
 ## Projects i've worked on
 
@@ -68,8 +54,8 @@ Socials: [LinkedIn](https://www.linkedin.com/in/adityamhegde/), [Instagram](http
 
  <div class="cite-block">
 
- ###### inspirations
+###### inspirations
 
- The design on this site derives its inspiration from these amazing people [rowjee.com](https://rowjee.com), [nelson.co](https://nelson.co), [icyphox.sh](https://icyphox.sh)
+The design on this site derives its inspiration from these amazing people [rowjee.com](https://rowjee.com), [nelson.co](https://nelson.co), [icyphox.sh](https://icyphox.sh)
 
  </div>

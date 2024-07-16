@@ -6,77 +6,16 @@
 
     <div class="container" id="container">
 
-            {{ if eq $PageData.Frontmatter.Type "post" }}
-                <!-- <img alt="site logo" id="theme-toggle" class="float" src="/static/pfp.jpeg" /> -->
-            {{else}}
-            {{end}}
-                {{template "header" .}}
+            {{template "header" .}}
 
             <div id="container-zoom" class="container-zoom">
-            {{ if eq $PageData.Frontmatter.Type "post" }}
 
-            {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
-            {{ else }}
-            <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" />
-            {{end}}
-
-            <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
-
-            <!-- <p class="post-description">{{ $PageData.Frontmatter.Description }}</p > -->
-            <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p >
-
-            <!-- <div class="cite-block"> -->
-                <!-- {{ if eq (len $PageData.Frontmatter.Description) 0}}
-                {{else}}
-                <h6>tldr</h6>
-                {{end}} -->
-
-                <!-- <div id="toc">
-                    <details>
-                        <summary>table of content</summary>
-                    </details>
-                </div> -->
-            <!-- </div> -->
-
-            {{ end }}
-
-
-            {{$PageData.Body}}
-
-
-            {{if eq $PageData.Frontmatter.Type "post"}}
-            <div class="post-info">
-                <p class="post-info-author">
-                    {{$PageData.Frontmatter.Date}}
-                    ~
-                    {{ if eq (len $PageData.Frontmatter.Authors) 0 }}
-                        {{$.DeepDataMerge.LayoutConfig.Author}}
-                    {{ else }}
-
-                    {{range $PageData.Frontmatter.Authors }}
-                        {{ . }},
-                    {{ end }}
-
-                    {{ end }}
-                </p>
-                <div class="tags-placeholder">
-                    <!-- <p>Related Tags:</p> -->
-                    {{range $PageData.Frontmatter.Tags}}
-                    <a class="post-tag" href="/tags/{{.}}.html"><code>{{.}}</code></a>
-                    <!-- <a class="post-tag" href="/tags/{{.}}.html">{{.}}</a> -->
-                    {{end}}
-                </div>
-                {{ if eq (len $PageData.Frontmatter.Tags) 0 }}
-                {{ else }}
-                {{ end }}
+            {{ $PageData.Body }}
 
             </div>
-            {{else}}
-            {{end}}
 
-            {{template "footer" .}}
-            </div>
-    </div >
+    </div>
+    {{template "footer" .}}
   </div>
 </body>
 
