@@ -153,7 +153,7 @@ footer {
 
     font-family: FiraCode, monospace;
     font-size: 0.95rem;
-    font-weight: 450;
+    /* font-weight: 450; */
     align-self: center;
 
     /*border-top: 1px dotted var(--color-text-dim);*/
