@@ -8,7 +8,7 @@ layout: page
 
 # Aditya Hegde
 
-###### Undergrad, Developer, Designer
+###### CS Undergrad
 
 I am a student currently pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Enthusiast for systems and backend projects.
 

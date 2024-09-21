@@ -44,12 +44,17 @@
     --style-border-radius: 6px;
     --style-border-radius-hover: 6px;
     --style-hover-scale: 1.005;
-    --style-container-width: 42rem;
+    --style-container-width: 40rem;
 
     --style-body-font: 1.1rem;
     --style-body-font-mobile: 1.05rem;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@font-face {
+    font-family: IosevkaPragmataPro;
+    src: url(/static/fonts/mono/IosevkaPragmataPro.ttf);
 }
 
 @font-face{
@@ -61,6 +66,7 @@
     font-family: EBGaramond;
     src: url(/static/fonts/serif/EBGaramond.ttf);
 }
+
 
 @font-face {
     font-family: EBGaramondItalic;

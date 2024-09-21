@@ -45,6 +45,8 @@ updateClock();
             href="https://github.com/bwaklog/internethome/"
             >here</a
         >
+        <br>
+        <span id="commit-message">here</span>
     </div>
 </footer>
 
@@ -63,15 +65,15 @@ updateClock();
             const latestCommitHash = data.sha.slice(0, 7);
 
             const commitHashElement = document.getElementById("commit-hash");
+            const commitMessageElement =
+                document.getElementById("commit-message");
             commitHashElement.href = `https://github.com/bwaklog/internethome/tree/${latestCommitHash}`;
             commitHashElement.textContent = `${latestCommitHash}`;
-
-            console.log("Latest commit hash:", latestCommitHash);
-
             const commitDate = data.commit.author.date;
             const readable_date = new Date(commitDate).toDateString();
-            console.log("Latest commit date:", readable_date);
             document.getElementById("commit-date").textContent = readable_date;
+            commitMessageElement.textContent = data.commit.message;
+            // console.log(data.commit);
         })
         .catch((error) => {
             console.error("Error fetching data:", error);

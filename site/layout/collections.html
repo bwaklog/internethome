@@ -23,14 +23,14 @@
             {{ end }}
 
             {{ range $RelatedPages }}
-                <div class="cite-block">
-                    <p><span class="post-date">{{.Frontmatter.Date}}</span > · <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
+                <a class="cite-block" href="/{{ .CompleteURL }}">
+                    <p><span class="post-date">{{.Frontmatter.Date}}</span > · <p class="post-card-heading" >{{.Frontmatter.Title}}</p></p>
                     {{ if eq (len .Frontmatter.Description) 0}}
                     {{else}}
                     <br />
                     <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
                     {{end}}
-                </div>
+                </a>
             {{ end }}
         {{end}}
 

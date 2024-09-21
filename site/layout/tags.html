@@ -32,16 +32,17 @@
             <h2>{{$Collection}}</h2>
             {{ end }}
 
+            <div class="post-block-container">
             {{ range $RelatedPages }}
-                <div class="cite-block">
-                    <p><span class="post-date">{{.Frontmatter.Date}}</span > · <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
+                <a class="post-block" href="/{{.CompleteURL}}">
+                    <div><span class="post-date">{{.Frontmatter.Date}}</span > · <span class="post-card-heading">{{.Frontmatter.Title}}</span></div>
                     {{ if eq (len .Frontmatter.Description) 0}}
                     {{else}}
-                    <br />
                     <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
                     {{end}}
-                </div>
+                </a>
             {{ end }}
+            </div>
         {{end}}
 
 

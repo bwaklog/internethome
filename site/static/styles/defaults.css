@@ -9,14 +9,20 @@ html {
 i,
 em {
     font-family:
-    /* EBGaramondItalic, */
-    InterItalic, serif-serif;
-    font-style: normal;
+        IosevkaPragmataPro,
+        FiraCode,
+        /* EBGaramondItalic, */ InterItalic,
+        serif-serif;
+    /* font-style: normal; */
+    font-style: italic;
 }
 
 body {
     font-family:
         /* EBGaramond, */
+        IosevkaPragmataPro,
+        FiraCode,
+        monospace,
         Inter,
         system-ui,
         -apple-system,
@@ -102,6 +108,9 @@ header {
 
     top: 0;
     margin-bottom: 2rem;
+
+    font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, system-ui,
+        sans-serif;
 }
 
 nav {
@@ -110,27 +119,19 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    /* backdrop-filter: blur(10px) brightness(0.8); */
-    /* -webkit-backdrop-filter: blur(10px); */
-    /* background-color: var(--color-background-low); */
-
-    /* filter: drop-shadow(0 0 1px var(--color-text-dim)); */
-
-    /* padding: .8rem; */
     border-radius: 2rem;
 
     /*font spacing*/
     letter-spacing: 0.5px;
 
     position: relative;
-    /* z-index: 20; */
     top: 0;
-    /* margin-top: .6rem; */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
 
-    font-family: Inter, system-ui, sans-serif;
+    font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, system-ui,
+        sans-serif;
     transition: width 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
@@ -151,7 +152,7 @@ footer {
 
     bottom: 0;
 
-    font-family: FiraCode, monospace;
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     font-size: 0.95rem;
     /* font-weight: 450; */
     align-self: center;
@@ -223,13 +224,14 @@ h5,
 h6 {
     margin: 0;
     padding: 0;
-    font-weight: 450;
+    font-weight: 950;
     text-align: left;
     word-break: break-word;
 
     color: var(--color-heading);
     /* color: var(--color-primary); */
-    font-family: Inter, system-ui, sans-serif;
+    font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, system-ui,
+        sans-serif;
 
     line-height: 1.3;
     /* font-family: NewsreaderItalic, serif; */
@@ -247,6 +249,9 @@ h1 {
     /* font-size: 1.3rem; */
     /* font-size: 1.3rem; */
     margin-top: 2.2rem;
+    /* &::before {
+        content: "#";
+    } */
 }
 
 h2 {
@@ -257,6 +262,9 @@ h2 {
     margin-top: 1.7rem;
 
     margin-top: 2rem;
+    /* &::before {
+        content: "##";
+    } */
 }
 
 h3 {
@@ -292,6 +300,9 @@ h5,
 h6 {
     font-weight: 550;
     font-family:
+        IosevkaPragmataPro,
+        FiraCode,
+        monospace,
         Inter,
         system-ui,
         -apple-system,
@@ -317,7 +328,7 @@ a {
 
     &:not(.header-element):not(.header-element-author):not(.footer-element):not(
             .post-tag
-        ):not(.page-nav-element):not(.page-card):not(.link) {
+        ):not(.page-nav-element):not(.page-card):not(.link):not(.post-block) {
         padding-bottom: 0.1rem;
 
         &:hover {
@@ -327,7 +338,8 @@ a {
     }
 }
 
-a:has(code), a > code {
+a:has(code),
+a > code {
     transition: color 150ms ease-in-out;
     &:hover {
         color: var(--color-primary);
@@ -437,6 +449,7 @@ details {
 sumamry {
     color: var(--color-heading);
     font-weight: 500;
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     opacity: 1;
     font-size: 1.5rem;
 }
@@ -454,6 +467,7 @@ details > img {
 }
 
 details {
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -467,7 +481,7 @@ details::marker {
 }
 
 pre code {
-    font-family: FiraCode, monospace;
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     /* background: ; */
     overflow-x: scroll;
     scrollbar-width: none;
@@ -481,7 +495,7 @@ pre > code {
 }
 
 pre code.hljs {
-    font-family: FiraCode, monospace;
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     font-variant-ligatures: common-ligatures;
     font-feature-settings: "liga" on;
     line-height: 1.3;
@@ -501,7 +515,7 @@ h3 > code,
 h4 > code,
 a > code {
     /* font-family: Courier, monospace; */
-    font-family: FiraCode, monospace;
+    font-family: IosevkaPragmataPro, FiraCode, monospace;
     color: var(--color-heading);
     background-color: var(--inline-code-bg);
     border: 1px solid var(--color-text-low);
@@ -517,7 +531,7 @@ a > code {
 
 blockquote {
     & > *:not(h1, h2, h3, h4, h5, h6) {
-        font-family: CourierItalic, sans-serif;
+        font-family: IosevkaPragmataPro, monospace, CourierItalic, sans-serif;
         font-size: 1rem;
         font-weight: 350;
         padding-top: 0.3rem;
@@ -545,6 +559,43 @@ blockquote {
     /* prevent text from overflow out of screen */
     overflow-wrap: break-word;
     word-wrap: break-word;
+
+    transition:
+        border-radius 0.3s ease-in-out,
+        scale 0.3s ease-in-out;
+
+    &:hover {
+        border-radius: var(--style-border-radius-hover);
+        scale: var(--style-hover-scale);
+    }
+}
+
+.post-block-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 1.2rem;
+}
+
+.post-block {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & > p {
+        margin: 0;
+        padding: 0;
+    }
+
+    padding: 0.9rem;
+    background-color: var(--inline-code-bg);
+    border: 1.2px solid var(--color-text-low);
+    box-shadow: 0px 1px 0 var(--color-text-low);
+
+    border-radius: var(--style-border-radius);
+    font-size: 0.9rem;
 
     transition:
         border-radius 0.3s ease-in-out,
