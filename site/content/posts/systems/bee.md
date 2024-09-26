@@ -1,7 +1,7 @@
 ---
 title: (devlog) Building systems in rust
 description: Raft + KV's!
-collections: [dist_sys]
+collections: [systems]
 layout: post_layout
 draft: false
 date: 2024-09-26

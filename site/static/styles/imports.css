@@ -26,17 +26,33 @@
         /* --color-background: #ffffff;
         --color-background-dim: #ffffff7a;
         --color-background-low: #ffffff50; */
-        --color-background: #F7EFE5;
-        --color-background-dim: #F7EFE57a;
-        --color-background-low: #F7EFE550;
+        --color-background: #f7efe5;
+        --color-background-dim: #f7efe57a;
+        --color-background-low: #f7efe550;
         --color-background-contrast: #161618;
         /* --inline-code-bg: #f9f8f9; */
-        --inline-code-bg: #F8EDE3;
+        --inline-code-bg: #f8ede3;
     }
 }
 
 :root {
+    --color-heading: #000000;
+    --color-subheading: #606060;
+    /* --color-text: #10100ed0; */
+    --color-text: #10100e;
+    --color-text-dim: #58585870;
+    --color-text-low: #10100e20;
+    /* --color-background: #ffffff;
+        --color-background-dim: #ffffff7a;
+        --color-background-low: #ffffff50; */
+    --color-background: #f7efe5;
+    --color-background-dim: #f7efe57a;
+    --color-background-low: #f7efe550;
+    --color-background-contrast: #161618;
+    /* --inline-code-bg: #f9f8f9; */
+    --inline-code-bg: #f8ede3;
     --selection-bg: #d1d1d17d;
+
     --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;
@@ -44,9 +60,10 @@
     --style-border-radius: 6px;
     --style-border-radius-hover: 6px;
     --style-hover-scale: 1.005;
-    --style-container-width: 40rem;
+    --style-container-width: 43rem;
 
-    --style-body-font: 1.1rem;
+    /* --style-body-font: 1.1rem; */
+    --style-body-font: 0.94rem;
     --style-body-font-mobile: 1.05rem;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -57,7 +74,7 @@
     src: url(/static/fonts/mono/IosevkaPragmataPro.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: FiraCode;
     src: url(/static/fonts/mono/FiraCode.ttf);
 }
@@ -66,7 +83,6 @@
     font-family: EBGaramond;
     src: url(/static/fonts/serif/EBGaramond.ttf);
 }
-
 
 @font-face {
     font-family: EBGaramondItalic;

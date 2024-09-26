@@ -9,20 +9,20 @@ html {
 i,
 em {
     font-family:
-        IosevkaPragmataPro,
-        FiraCode,
+        /* IosevkaPragmataPro,
+        FiraCode, */
         /* EBGaramondItalic, */ InterItalic,
         serif-serif;
     /* font-style: normal; */
-    font-style: italic;
+    font-style: normal;
 }
 
 body {
     font-family:
         /* EBGaramond, */
-        IosevkaPragmataPro,
+        /* IosevkaPragmataPro,
         FiraCode,
-        monospace,
+        monospace, */
         Inter,
         system-ui,
         -apple-system,
@@ -109,7 +109,7 @@ header {
     top: 0;
     margin-bottom: 2rem;
 
-    font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, system-ui,
+    font-family: Inter, system-ui,
         sans-serif;
 }
 

@@ -18,8 +18,8 @@
 
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
             <!-- <h3>Collection {{$Collection}}</h3> -->
-            {{ if eq $Collection "collections/dist_sys.html" }}
-            <h2>Distributed Systems</h2>
+            {{ if eq $Collection "collections/systems.html" }}
+            <h2>Systems</h2>
             {{ else if eq $Collection "collections/inked.html" }}
             <h2>Inked</h2>
             {{ else if eq $Collection "collections/post.html" }}
