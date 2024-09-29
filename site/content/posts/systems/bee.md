@@ -33,6 +33,18 @@ Genesis, started of with a go implementation but...want to try rust for no reaso
 
 Making this public, I'm to ashamed of what i have written
 
+### SEP 30
+
+- Implemented an abstraction over [yaml_rust2](https://docs.rs/yaml-rust2/latest/yaml_rust2/) crate for parsing `config.yml` during startups
+- Plans for [messagepack](https://msgpack.org/) for persistence of states, i.e. for raft that would include data like `current term`, node `votedFor` and the `log[]` of committed changes
+- Writing tests for raft from scratch will be complicated. Plus, need to decide if I should be just using simple `TCPListeners`  and _move bytes around_ or try out [Tonic](https://github.com/hyperium/tonic) for gRPC
+
+```sh
+Benchmark 1: ./target/release/bee
+  Time (mean ± σ):       1.4 ms ±   0.0 ms    [User: 0.6 ms, System: 0.5 ms]
+  Range (min … max):     1.3 ms …   1.7 ms    904 runs
+```
+
 ---
 
 ## Links
