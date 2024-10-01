@@ -59,8 +59,8 @@
 
     --style-border-radius: 6px;
     --style-border-radius-hover: 6px;
-    --style-hover-scale: 1.005;
-    --style-container-width: 43rem;
+    --style-hover-scale: 1;
+    --style-container-width: 35rem;
 
     /* --style-body-font: 1.1rem; */
     --style-body-font: 0.94rem;

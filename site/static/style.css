@@ -1,6 +1,7 @@
 /* @import url('/static/viewer.css'); */
-@import url("/static/styles/black-metal.css");
-/* @import url("/static/styles/rose-pine.css"); */
+/* @import url("/static/styles/black-metal.css"); */
+/* @import url("/static/styles/solarized-light.css"); */
+@import url('https://unpkg.com/highlight.js@11.10.0/styles/base16/nord.css');
 @import url("/static/styles/imports.css");
 @import url("/static/styles/defaults.css");
 
@@ -158,10 +159,10 @@
     padding-bottom: 0.5rem;
     /* border-bottom: 1px solid var(--color-text-dim); */
     font-family:
+        EBGaramond,
         IosevkaPragmataPro,
         FiraCode,
         monospace,
-        EBGaramond,
         Inter,
         /* EBGaramond,  */ sans-serif;
     font-weight: 550;
@@ -574,7 +575,7 @@ a:not(.plain):not(.tag):not(.post-tag):not(.note-card):not(
 }
 
 .post-card-description {
-    font-family: IosevkaPragmataPro, FiraCode, monospace;
+    /* font-family: IosevkaPragmataPro, FiraCode, monospace; */
     font-size: 0.8rem;
 }
 
