@@ -7,7 +7,7 @@ layout: post_layout
 tags:
   - blog
   - inked
-draft: true
+draft: false
 ---
 
 *JUL 2024*
