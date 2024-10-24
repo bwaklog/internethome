@@ -6,6 +6,10 @@ html {
     background-color: var(--color-background);
 }
 
+strong, b {
+    font-weight: 570;
+}
+
 i,
 em {
     font-family:
@@ -241,6 +245,13 @@ h6 {
         .anchor {
             opacity: 1;
         }
+    }
+
+    /* if is italic */
+
+    & > i, & > em {
+        font-family: EbGaramondItalic, sans-serif;
+        font-style: normal;
     }
 }
 
@@ -532,8 +543,8 @@ a > code {
 
 blockquote {
     & > *:not(h1, h2, h3, h4, h5, h6) {
-        font-family: EBGaramondItalic, monospace, CourierItalic, sans-serif;
-        font-size: 1.2rem;
+        font-family: Inter, CourierItalic, sans-serif;
+        font-size: 0.9rem;
         font-weight: 350;
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
@@ -550,12 +561,12 @@ blockquote {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    /* border-radius: var(--style-border-radius); */
+    border-radius: var(--style-border-radius);
     color: var(--color-heading);
 
-    /* background-color: var(--inline-code-bg); */
-    /* border: 1.2px solid var(--color-text-low); */
-    border-left: 4px solid var(--color-primary);
+    background-color: var(--inline-code-bg);
+    border: 1.2px solid var(--color-text-low);
+    /* border-left: 1.2px solid var(--color-primary); */
     /* box-shadow: 0px 1px 0 var(--color-text-low); */
 
     /* prevent text from overflow out of screen */
@@ -594,7 +605,7 @@ blockquote {
     padding: 0.9rem;
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
-    box-shadow: 0px 1px 0 var(--color-text-low);
+    /* box-shadow: 0px 1px 0 var(--color-text-low); */
 
     border-radius: var(--style-border-radius);
     font-size: 0.9rem;
@@ -616,7 +627,7 @@ blockquote {
     padding: 0.9rem;
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
-    box-shadow: 0px 1px 0 var(--color-text-low);
+    /* box-shadow: 0px 1px 0 var(--color-text-low); */
 
     border-radius: var(--style-border-radius);
 

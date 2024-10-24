@@ -36,10 +36,6 @@
             {{ range $RelatedPages }}
                 <a class="post-block" href="/{{.CompleteURL}}">
                     <div><span class="post-date">{{.Frontmatter.Date}}</span > · <span class="post-card-heading">{{.Frontmatter.Title}}</span></div>
-                    {{ if eq (len .Frontmatter.Description) 0}}
-                    {{else}}
-                    <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
-                    {{end}}
                 </a>
             {{ end }}
             </div>
