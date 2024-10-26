@@ -6,10 +6,10 @@
         --color-text: #ffffffc0;
         --color-text-dim: #ffffff5a;
         --color-text-low: #ffffff19;
-        --color-background: #100F0F;
+        --color-background: #0b0c0d;
         /* --color-background: #000; */
-        --color-background-dim: #1C1B1A7a;
-        --color-background-low: #1C1B1A50;
+        --color-background-dim: #10100e7a;
+        --color-background-low: #10100e50;
         --color-background-contrast: #1a1a1a;
         --inline-code-bg: #161618;
     }
@@ -24,36 +24,38 @@
         --color-text-dim: #58585870;
         --color-text-low: #10100e20;
         /* --color-background: #ffffff;
-            --color-background-dim: #ffffff7a;
-            --color-background-low: #ffffff50; */
-        --color-background: #FFFCF0;
-        --color-background-dim: #FFFCF07a;
-        --color-background-low: #FFFCF050;
+        --color-background-dim: #ffffff7a;
+        --color-background-low: #ffffff50; */
+        --color-background: #f7efe5;
+        --color-background-dim: #f7efe57a;
+        --color-background-low: #f7efe550;
         --color-background-contrast: #161618;
         /* --inline-code-bg: #f9f8f9; */
-        --inline-code-bg: #F2F0E5;
-        --selection-bg: #d1d1d17d;
+        --inline-code-bg: #f8ede3;
     }
 }
 
 :root {
     --color-heading: #000000;
+    --color-subheading: #606060;
+    /* --color-text: #10100ed0; */
     --color-text: #10100e;
     --color-text-dim: #58585870;
     --color-text-low: #10100e20;
-    --color-background: #FFFCF0;
-    --color-background-dim: #FFFCF07a;
-    --color-background-low: #FFFCF050;
+    /* --color-background: #ffffff;
+        --color-background-dim: #ffffff7a;
+        --color-background-low: #ffffff50; */
+    --color-background: #f7efe5;
+    --color-background-dim: #f7efe57a;
+    --color-background-low: #f7efe550;
     --color-background-contrast: #161618;
-    --inline-code-bg: #F2F0E5;
+    /* --inline-code-bg: #f9f8f9; */
+    --inline-code-bg: #f8ede3;
     --selection-bg: #d1d1d17d;
 
-    /* --color-primary: #fc4949;
+    --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
-    --color-primary-low: #fc494950; */
-    --color-primary: #D14D41;
-    --color-primary-dim: #D14D41ef;
-    --color-primary-low: #D14D4150;
+    --color-primary-low: #fc494950;
 
     --style-border-radius: 6px;
     --style-border-radius-hover: 6px;
