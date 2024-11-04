@@ -158,28 +158,28 @@
 .post-title {
     padding-bottom: 0.5rem;
     /* border-bottom: 1px solid var(--color-text-dim); */
-    font-family:
+    /* font-family:
         EBGaramond,
         IosevkaPragmataPro,
         FiraCode,
         monospace,
-        Inter,
+        Inter, */
         /* EBGaramond,  */ sans-serif;
-    font-weight: 550;
+    font-weight: inherit;
     font-size: 2rem;
     margin-top: 1.5rem;
 }
 
 .post-author {
     width: 100%;
-    font-family: IosevkaPragmataPro, FiraCode, monospace;
+    /* font-family: IosevkaPragmataPro, FiraCode, monospace; */
     font-weight: 350;
     font-size: 0.9em;
     padding-top: 0.2rem;
 }
 
 .post-description {
-    font-family: FiraCode, monospace;
+    /* font-family: FiraCode, monospace; */
     width: 100%;
     margin-top: 0rem;
     margin-bottom: 0rem;
@@ -202,7 +202,7 @@
         font-size: 0.95rem;
         /* margin-left: .5rem; */
         /*font-family: LibreCaslonCondensed, NewsreaderItalic, serif;*/
-        font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, sans-serif;
+        /* font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, sans-serif; */
         font-weight: 450;
         word-wrap: break-word;
         color: var(--color-text);
@@ -312,7 +312,7 @@ form-container {
     color: var(--color-text-dim);
     border: 1px solid var(--color-background);
 
-    font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, sans-serif;
+    /* font-family: IosevkaPragmataPro, FiraCode, monospace, Inter, sans-serif; */
 
     padding: 0.3rem;
 

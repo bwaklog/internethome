@@ -1,17 +1,16 @@
 /* Creating named values cuz im stupid */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-heading: #ffffff;
+        --color-heading: #cecdc4;
         --color-subheading: #a0a0a0;
-        --color-text: #ffffffc0;
-        --color-text-dim: #ffffff5a;
-        --color-text-low: #ffffff19;
-        --color-background: #0b0c0d;
-        /* --color-background: #000; */
-        --color-background-dim: #10100e7a;
-        --color-background-low: #10100e50;
+        --color-text: #cecdc4;
+        --color-text-dim: #878580;
+        --color-text-low: #575653;
+        --color-background: #100f0f;
+        --color-background-dim: #100f0f7a;
+        --color-background-low: #100f0f50;
         --color-background-contrast: #1a1a1a;
-        --inline-code-bg: #161618;
+        --inline-code-bg: #1c1b1a;
     }
 }
 
@@ -19,46 +18,25 @@
     :root {
         --color-heading: #000000;
         --color-subheading: #606060;
-        /* --color-text: #10100ed0; */
-        --color-text: #10100e;
-        --color-text-dim: #58585870;
-        --color-text-low: #10100e20;
-        /* --color-background: #ffffff;
-        --color-background-dim: #ffffff7a;
-        --color-background-low: #ffffff50; */
-        --color-background: #f7efe5;
-        --color-background-dim: #f7efe57a;
-        --color-background-low: #f7efe550;
+        --color-text: #100f0f;
+        --color-text-dim: #100f0f70;
+        --color-text-low: #100f0f20;
+        --color-background: #fffcf1;
+        --color-background-dim: #fffcf17a;
+        --color-background-low: #fffcf150;
         --color-background-contrast: #161618;
-        /* --inline-code-bg: #f9f8f9; */
-        --inline-code-bg: #f8ede3;
+        --inline-code-bg: #f2f0e6;
+        --selection-bg: #d1d1d17d;
     }
 }
 
 :root {
-    --color-heading: #000000;
-    --color-subheading: #606060;
-    /* --color-text: #10100ed0; */
-    --color-text: #10100e;
-    --color-text-dim: #58585870;
-    --color-text-low: #10100e20;
-    /* --color-background: #ffffff;
-        --color-background-dim: #ffffff7a;
-        --color-background-low: #ffffff50; */
-    --color-background: #f7efe5;
-    --color-background-dim: #f7efe57a;
-    --color-background-low: #f7efe550;
-    --color-background-contrast: #161618;
-    /* --inline-code-bg: #f9f8f9; */
-    --inline-code-bg: #f8ede3;
-    --selection-bg: #d1d1d17d;
-
     --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;
 
-    --style-border-radius: 6px;
-    --style-border-radius-hover: 6px;
+    --style-border-radius: 4px;
+    --style-border-radius-hover: 4px;
     --style-hover-scale: 1;
     --style-container-width: 35rem;
 

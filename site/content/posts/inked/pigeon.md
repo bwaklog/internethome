@@ -7,10 +7,8 @@ layout: post_layout
 tags:
   - blog
   - inked
-draft: false
+draft: true
 ---
-
-*JUL 2024*
 
 >You aren't allowed to learn who you want aspire to become. Sometimes "experience" is more important even if that means to loose site of yourself
 

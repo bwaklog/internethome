@@ -66,8 +66,6 @@ layout: page
 
 <img loading="lazy" alt="Project expo presentation" src="https://i.imgur.com/JjjO75w.png">
 
-<img loading="lazy" alt="BeReal inside another" src="https://i.imgur.com/5HPnfMy.jpg">
-
 </div>
 
 </details>
