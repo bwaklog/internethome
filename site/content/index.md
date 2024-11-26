@@ -6,7 +6,7 @@ previewimage: /static/me.jpeg
 layout: page
 ---
 
-# Aditya Hegde
+<h1 style="font-family: Whisper; font-size: 2rem">Aditya Hegde</h1>
 
 ###### CS Undergrad
 

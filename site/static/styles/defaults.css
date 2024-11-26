@@ -9,6 +9,7 @@ html {
 i,
 em {
     font-family:
+        EBGaramondItalic,
         /* IosevkaPragmataPro,
         FiraCode, */
         /* EBGaramondItalic, */ InterItalic,
@@ -19,7 +20,7 @@ em {
 
 body {
     font-family:
-        /* EBGaramond, */
+        EBGaramond,
         /* IosevkaPragmataPro,
         FiraCode,
         monospace, */
