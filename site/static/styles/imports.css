@@ -40,9 +40,9 @@
     --style-hover-scale: 1;
     --style-container-width: 35rem;
 
-     --style-body-font: 1.2rem; 
+     --style-body-font: 1.2rem;
     /*--style-body-font: 0.94rem;*/
-    --style-body-font-mobile: 1.05rem;
+    --style-body-font-mobile: 1.2rem;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

@@ -6,9 +6,13 @@ previewimage: /static/me.jpeg
 layout: page
 ---
 
-<h1 style="font-family: Whisper; font-size: 2rem">Aditya Hegde</h1>
-
-###### CS Undergrad
+<div>
+    <img style="unset;width: 100px; height: 100px; border-radius: 100px; margin-bottom: -1.8rem; margin-top: 1.8rem;" src="https://avatars.githubusercontent.com/u/91192289?v=4"/>
+    <div>
+        <h1 style="font-family: Whisper; font-size: 2rem; text-align: center;">Aditya Hegde</h1>
+        <h6 style="text-align: center;">CS Undergrad</h6>
+    </div>
+</div>
 
 I am a student currently pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Enthusiast for systems and backend projects.
 
