@@ -20,14 +20,14 @@
             <!-- <h3>Collection {{$Collection}}</h3> -->
             {{ if eq $Collection "collections/systems.html" }}
             <h2>Systems</h2>
+            {{ else if eq $Collection "collections/tech.html" }}
+            <h2>Tech</h2>
             {{ else if eq $Collection "collections/inked.html" }}
             <h2>Inked</h2>
             {{ else if eq $Collection "collections/post.html" }}
             <h2>Posts</h2>
             {{ else if eq $Collection "collections/talks.html" }}
             <h2>Talks</h2>
-            {{ else if eq $Collection "collections/tech.html" }}
-            <h2>Tech</h2>
             {{ else }}
             <h2>{{$Collection}}</h2>
             {{ end }}

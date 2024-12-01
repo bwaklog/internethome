@@ -9,6 +9,15 @@
     margin-left: 1rem;
 }
 
+mjx-container {
+    font-size: 1.0rem;
+}
+
+
+.MathJax {
+    font-size: 1.2rem;
+}
+
 .container {
     /* border: 0.1em solid var(--color-text-dim); */
     /* border-radius: .1em; */

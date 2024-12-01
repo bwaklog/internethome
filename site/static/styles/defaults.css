@@ -557,7 +557,7 @@ blockquote {
 
     color: var(--color-heading);
 
-    /* border-left: 4px solid var(--color-primary); */
+    /*border-left: 4px solid var(--color-primary); */
 
     /* prevent text from overflow out of screen */
     overflow-wrap: break-word;
@@ -628,8 +628,13 @@ blockquote {
         padding: 0;
     }
 
-    /* font-size: 0.8rem; */
-    font-size: 0.9rem;
+    & > *:not(h1, h2, h3, h4, h5, h6) {
+        font-family: FiraCode, monospace, CourierItalic, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 350;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
 
     transition:
         border-radius 0.3s ease-in-out,

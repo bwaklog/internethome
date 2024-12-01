@@ -46,6 +46,32 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="/static/scripts/shuffle.js"></script>
 
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [
+                        ["$", "$"],
+                        ["\\(", "\\)"],
+                    ],
+                },
+            };
+        </script>
+        <script
+            type="text/javascript"
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        ></script>
+
+        <script defer>
+            document.addEventListener("DOMContentLoaded", () => {
+                const mathJaxElements = document.querySelectorAll(".MathJax");
+                mathJaxElements.forEach(element => {
+                    element.style.fontSize = "1.25em";
+                });
+            });
+        </script>
+
         <link
             rel="alternate"
             type="application/atom+xml"
@@ -91,9 +117,7 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <!-- Thanks to Beau Smith on Stackoverflow -->
         <meta name="format-detection" content="telephone=no" />
 
-        <script defer>
-
-        </script>
+        <script defer></script>
 
         <!-- <script src="/static/scripts/nav.js"></script> -->
     </head>
