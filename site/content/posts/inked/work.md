@@ -2,7 +2,7 @@
 date: 2024-03-09
 title: Quality of work
 draft: false
-collections: [inked]
+collections: [inked, 2024]
 layout: post_layout
 description: A few thoughts off of my mind, my perspective on effort.
 tags: ['blog', 'inked']

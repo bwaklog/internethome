@@ -1,7 +1,7 @@
 ---
 title: Meerkat build log
 description: A p2p data sync system in go
-collections: [systems]
+collections: [systems, 2024]
 layout: post_layout
 draft: false
 date: 2024-04-22
@@ -10,7 +10,7 @@ tags:
     - tech
     - log
     - go
-    - distributed systems
+    - distributed
     - networking
     - progress
 previewimage: https://i.imgur.com/LTaopsX.png

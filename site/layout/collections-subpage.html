@@ -7,21 +7,21 @@
         <div class="container">
             {{template "header" .}}
 
-                <div class="post-table">
+
+            <br />
+            <div id="container-zoom" class="container-zoom">
                 {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
                 {{range $CollectionSet }}
 
-                <p>[<span class="post-date">{{.Frontmatter.Date}}</span >] <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
-                <br />
-                <!-- <a class="post-card" href="/{{.CompleteURL}}">
-                        <h2 class="post-card-title">{{.Frontmatter.Title}}</h2>
-                        <p class="post-card-description">{{.Frontmatter.Description}}</p>
-                        <p class="post-card-date">{{.Frontmatter.Date}}</p>
-                </a> -->
+                <table class="post-table">
+                    <tr>
+                        <td>{{.Frontmatter.Date}}</td>
+                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                    </tr>
+                </table>
 
                 {{end}}
-                </div>
-
+            </div>
 
         </div>
         {{template "footer" .}}

@@ -2,7 +2,7 @@
 title: Taking a few messy leaps in a hackathon
 description: Learnings from failure from Ingenius 12.0
 date: 2024-04-21
-collections: [systems]
+collections: [systems, 2024]
 layout: post_layout
 tags:
   - blog

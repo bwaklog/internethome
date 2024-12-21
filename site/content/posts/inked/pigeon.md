@@ -1,7 +1,7 @@
 ---
 title: Lunch with a Pigeon
 date: 2024-07-04
-collections: [inked]
+collections: [inked, 2024]
 previewimage: "/static/images/pigeon.jpg"
 layout: post_layout
 tags:

@@ -2,7 +2,7 @@
 date: 2023-12-09
 title: My first HSP talk
 draft: false
-collections: [tech, talks]
+collections: [tech, talks, 2023]
 layout: post_layout
 description:  HSP Project 2023 presentation
 tags:

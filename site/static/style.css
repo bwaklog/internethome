@@ -343,7 +343,7 @@ form-container {
 
 a:not(.plain):not(.tag):not(.post-tag):not(.note-card):not(
         .page-nav-element
-    ):not(.page-card):not(.post-block):not(a:has(code))::after,
+    ):not(.page-card):not(.post-block-title):not(.post-block):not(a:has(code))::after,
 .link::after,
 .footer-element::after {
     content: "↗";
@@ -667,18 +667,6 @@ body:has(.container.notetype) {
     /* border-radius: 4px; */
 }
 
-.post-table {
-    width: 100%;
-    /* width of first col of post-table */
-    color: var(--color-text-dim);
-    margin-top: 2rem;
-
-    .post-table.date {
-        color: var(--color-text);
-        font-family: InterItalic, sans-serif;
-        font-size: 0.9rem;
-    }
-}
 
 #toc {
     /* margin-top: 1rem; */

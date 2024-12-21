@@ -15,10 +15,13 @@
             {{end}}
         </div>
 
+        <div class="cite-block">
+            <p>Browse by <a href="/collections">collections</a></p>
+        </div>
 
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
             <!-- <h3>Collection {{$Collection}}</h3> -->
-            {{ if eq $Collection "collections/systems.html" }}
+            <!-- {{ if eq $Collection "collections/systems.html" }}
             <h2>Systems</h2>
             {{ else if eq $Collection "collections/tech.html" }}
             <h2>Tech</h2>
@@ -30,19 +33,41 @@
             <h2>Talks</h2>
             {{ else }}
             <h2>{{$Collection}}</h2>
-            {{ end }}
+            {{ end }} -->
 
-            <div class="post-block-container">
-            {{ range $RelatedPages }}
-                <a class="post-block" href="/{{.CompleteURL}}">
-                    <div><span class="post-date">{{.Frontmatter.Date}}</span > · <span class="post-card-heading">{{.Frontmatter.Title}}</span></div>
-                    {{ if eq (len .Frontmatter.Description) 0}}
-                    {{else}}
-                    <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
-                    {{end}}
-                </a>
-            {{ end }}
-            </div>
+            {{ if eq $Collection "collections/2025.html" }}
+                <h2>2025</h2>
+                {{ range $RelatedPages }}
+                    <table class="post-table">
+                        <tr>
+                            <td>{{.Frontmatter.Date}}</td>
+                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                        </tr>
+                    </table>
+                {{ end }}
+            {{ else if eq $Collection "collections/2024.html" }}
+                <h2>2024</h2>
+                {{ range $RelatedPages }}
+                    <table class="post-table">
+                        <tr>
+                            <td>{{.Frontmatter.Date}}</td>
+                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                        </tr>
+                    </table>
+                {{ end }}
+            {{ else if eq $Collection "collections/2023.html" }}
+                <h2>2023</h2>
+                {{ range $RelatedPages }}
+                    <table class="post-table">
+                        <tr>
+                            <td>{{.Frontmatter.Date}}</td>
+                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                        </tr>
+                    </table>
+                {{ end }}
+            {{else}}
+            {{end}}
+
         {{end}}
 
 
@@ -51,7 +76,7 @@
     </div >
     {{template "footer" .}}
 </body>
-<script>
+<!-- <script>
 const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const postDates = document.querySelectorAll('span.post-date');
@@ -63,7 +88,7 @@ postDates.forEach((element) => {
   const monthName = month_names_short[monthIndex]; // adjust for zero-based index
   element.textContent = `${monthName} ${date.getFullYear()}`;
 });
-</script>
+</script> -->
 </html>
 
 {{ end}}

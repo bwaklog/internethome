@@ -1,6 +1,6 @@
 ---
 title: FossTalk 24
-collections: [talks]
+collections: [talks, 2024]
 layout: post_layout
 date: 2024-03-23
 draft: false

@@ -5,34 +5,42 @@
 <body>
     <div class="container">
         {{template "header" .}}
+        <div class="container-zoom">
+
+        <h1>Collections</h1>
 
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
             <!-- <h3>Collection {{$Collection}}</h3> -->
-            {{ if eq $Collection "collections/dist_sys.html" }}
-            <h2>Distributed Systems</h2>
+            <ul>
+            {{ if eq $Collection "collections/systems.html" }}
+            <li><a class="post-block-title" href="{{$Collection}}">Systems</a></li>
             {{ else if eq $Collection "collections/inked.html" }}
-            <h2>Inked</h2>
+            <li><a class="post-block-title" href="{{$Collection}}">Inked</a></li>
+            {{ else if eq $Collection "collections/2024.html" }}
+            <li><a class="post-block-title" href="{{$Collection}}">2024</a></li>
+            {{ else if eq $Collection "collections/2023.html" }}
+            <li><a class="post-block-title" href="{{$Collection}}">2023</a></li>
             {{ else if eq $Collection "collections/post.html" }}
-            <h2>Posts</h2>
+            <li><a class="post-block-title" href="{{$Collection}}">Posts</a></li>
             {{ else if eq $Collection "collections/talks.html" }}
-            <h2>Talks</h2>
+            <li><a class="post-block-title" href="{{$Collection}}">Talks</a></li>
             {{ else if eq $Collection "collections/tech.html" }}
-            <h2>Tech</h2>
+            <li><a class="post-block-title" href="{{$Collection}}">Tech</a></li>
             {{ else }}
-            <h2>{{$Collection}}</h2>
+            <li><a class="post-block-title" href="{{$Collection}}">{{$Collection}}</a></li>
             {{ end }}
+            </ul>
 
-            {{ range $RelatedPages }}
-                <a class="cite-block" href="/{{ .CompleteURL }}">
-                    <p><span class="post-date">{{.Frontmatter.Date}}</span > · <p class="post-card-heading" >{{.Frontmatter.Title}}</p></p>
-                    {{ if eq (len .Frontmatter.Description) 0}}
-                    {{else}}
-                    <br />
-                    <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
-                    {{end}}
-                </a>
-            {{ end }}
+            <!-- {{ range $RelatedPages }}
+                <table class="post-table">
+                    <tr>
+                        <td>{{.Frontmatter.Date}}</td>
+                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                    </tr>
+                </table>
+            {{ end }} -->
         {{end}}
+        </div>
 
     </div>
 

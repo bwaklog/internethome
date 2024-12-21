@@ -2,7 +2,7 @@
 title: Notes from Goland Bangalore 75
 date: 2024-04-13
 draft: false
-collections: [talks]
+collections: [talks, 2024]
 layout: post_layout
 tags:
   - go

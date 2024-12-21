@@ -1,6 +1,6 @@
 ---
 title: Motivations
-collections: [inked]
+collections: [inked, 2024]
 layout: post_layout
 draft: true
 date: 2024-06-07

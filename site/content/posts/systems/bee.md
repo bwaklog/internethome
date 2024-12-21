@@ -3,6 +3,7 @@ title: Building systems in rust
 description: A _small_ blog on building raft in rust as a generic consensus layer and a KV store to use it for consensus.
 collections:
   - systems
+  - 2024
 layout: post_layout
 draft: false
 date: 2024-12-21
@@ -184,7 +185,7 @@ Now lets have a look of what we can do on the server side for an incoming TCP re
 ```rust
 if stream.read_buf(&mut buf).is_ok() {
     let req: RequestPattern<T> = bincode::deserialize(&buf).unwrap();
-    
+
     match req {
         RequestPattern::PingRPC(req) => {
         	/* handle resp back here */
@@ -256,7 +257,7 @@ Now there isn't really a proper testing solution for this _yet_, but the cluster
 
 ### Reason for the previous undefined behaviour
 
-The volatile state on server did not hold a separate timer for heartbeats. Each randomised interval for a `election_timeout` was from the range $[1, 8]$. The main `tick()` method for the raft state kept sleeping for a different randomised time in the range $[1, 8]$, a stupid mistake on my side which made the leader node wait for probably a longer amount of time than what was required. 
+The volatile state on server did not hold a separate timer for heartbeats. Each randomised interval for a `election_timeout` was from the range $[1, 8]$. The main `tick()` method for the raft state kept sleeping for a different randomised time in the range $[1, 8]$, a stupid mistake on my side which made the leader node wait for probably a longer amount of time than what was required.
 
 Hence follower nodes that slept for a shorter duration are highly likely to have not recieved a heartbeat from the leader node which force them to move to a candidate state.  $t_{\text{heartbeat}} << t_{\text{election timeout}}$. I still need to pick a proper ratio to separate out these times which is currently split as $[1, 4)$ for $t_{\text{heartbeat}}$ and $[4, 8]$ for $t_{\text{election timeout}}$ which does cause some issues. The [MIT 6.5840 Spring 2024](https://pdos.csail.mit.edu/6.824/) labs do specify a proportion of $1:20 :: t_{\text{heartbeat}}:t_{\text{election timeout}}$, which i haven't really chosen for the time being. If the max duration for an election timeout were to be $10s$ that would make the max duration for a heartbeat $0.5s$ ish...
 
@@ -270,8 +271,8 @@ Another minor mistake was not resetting the `election_timeout` timer and `reciev
 
 With most of this out of the way, I can start giving some time to working on the KV layer of this project. I want to focus on the internals of databases, so thats a small diversion I don't want to take for the time being. Besides that, I do need a working client to append to this raft log, so the KV will require some changes.
 
-The next challenge lies in defining a proper message delivery system for committed raft entries. How do I deliver an entry to the application once consensus has been reached. 
+The next challenge lies in defining a proper message delivery system for committed raft entries. How do I deliver an entry to the application once consensus has been reached.
 
-The goal of this is to have the consensus layer function as a asynchronous worker thread on a server that acts as a middleman for applying updates to state of an application. 
+The goal of this is to have the consensus layer function as a asynchronous worker thread on a server that acts as a middleman for applying updates to state of an application.
 
 When tries to change state of an application, it is first passed onto the consensus layer, so it is the responsibility of the consensus layer to pass this down once it has finished its task of replication as we don't want the KV to waste time in polling through the log of raft entries and find which of the log entries are _freshly_ committed and can apply it to the state of its application. Such a system needs to work asynchronously in the background

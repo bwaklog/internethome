@@ -1,7 +1,7 @@
 ---
 title: Presenting anna at fireside
 date: 2024-04-04
-collections: [tech]
+collections: [tech, 2024]
 layout: post_layout
 draft: false
 description:

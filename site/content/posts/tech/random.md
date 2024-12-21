@@ -2,7 +2,7 @@
 title: Random Number Generation
 date: 2024-12-01
 tags: ['RNG', 'notes', 'tech']
-collections: [tech]
+collections: [tech, 2024]
 draft: false
 layout: post_layout
 description: Notes while figuring out different RNG's

@@ -13,14 +13,12 @@
             <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
-                    <div class="cite-block">
-                        <p><span class="post-date">{{.Frontmatter.Date}}</span > · <a class="post-card-heading" href="/{{ .CompleteURL }}">{{.Frontmatter.Title}}</a></p>
-                        {{ if eq (len .Frontmatter.Description) 0}}
-                        {{else}}
-                        <br />
-                        <p class="post-card-description">{{printf "%.50s" .Frontmatter.Description}}...</p>
-                        {{end}}
-                    </div>
+                    <table class="post-table">
+                        <tr>
+                            <td>{{.Frontmatter.Date}}</td>
+                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                        </tr>
+                    </table>
                 {{end}}
             </table>
 
@@ -31,17 +29,17 @@
 </body>
 
 <script>
-const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const postDates = document.querySelectorAll('span.post-date');
+// const postDates = document.querySelectorAll('span.post-date');
 
-postDates.forEach((element) => {
-  const commitDate = element.textContent;
-  const date = new Date(commitDate);
-  const monthIndex = date.getUTCMonth(); // 0-11
-  const monthName = month_names_short[monthIndex]; // adjust for zero-based index
-  element.textContent = `${monthName} ${date.getFullYear()}`;
-});
+// postDates.forEach((element) => {
+//   const commitDate = element.textContent;
+//   const date = new Date(commitDate);
+//   const monthIndex = date.getUTCMonth(); // 0-11
+//   const monthName = month_names_short[monthIndex]; // adjust for zero-based index
+//   element.textContent = `${monthName} ${date.getFullYear()}`;
+// });
 </script>
 
 </html>

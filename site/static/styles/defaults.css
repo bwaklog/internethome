@@ -332,7 +332,7 @@ a {
 
     &:not(.header-element):not(.header-element-author):not(.footer-element):not(
             .post-tag
-        ):not(.page-nav-element):not(.page-card):not(.link):not(.post-block) {
+        ):not(.page-nav-element):not(.page-card):not(.link):not(.post-block):not(.post-block-title) {
         padding-bottom: 0.1rem;
 
         &:hover {
@@ -581,6 +581,25 @@ blockquote {
     margin-top: 1.2rem;
 }
 
+.post-table {
+    text-align: left;
+
+    & > tbody > tr > td {
+        font-size: 1.075rem;
+        text-align: left;
+    }
+}
+
+.post-table > tbody > tr > td:nth-child(1) {
+    color: var(--color-text-dim);
+    width: 100px;
+    margin-left: 50px;
+}
+
+.post-table > tbody > tr > td:nth-child(2) {
+    text-align: left;
+}
+
 .post-block {
     /* width: 100%; */
     display: flex;
@@ -592,13 +611,14 @@ blockquote {
         padding: 0;
     }
 
+
     padding: 0.9rem;
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
     /* box-shadow: 0px 1px 0 var(--color-text-low); */
 
     border-radius: var(--style-border-radius);
-    font-size: 0.9rem;
+    font-size: 0.90rem;
 
     transition:
         border-radius 0.3s ease-in-out,
@@ -614,7 +634,7 @@ blockquote {
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
 
-    padding: 0.9rem;
+    padding: 0.5rem;
     background-color: var(--inline-code-bg);
     border: 1.2px solid var(--color-text-low);
     /* box-shadow: 0px 1px 0 var(--color-text-low); */

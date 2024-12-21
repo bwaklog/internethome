@@ -6,7 +6,7 @@ authors:
     - Anirudh Sudhir
 date: 2024-04-10
 draft: false
-collections: [tech]
+collections: [tech, 2024]
 layout: post_layout
 tags:
     - blog

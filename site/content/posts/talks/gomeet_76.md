@@ -2,7 +2,7 @@
 title: Goland Bangalore 76
 date: 2024-07-06
 draft: false
-collections: [talks]
+collections: [talks, 2024]
 layout: post_layout
 tags: [go, tech, talk, WIP]
 description: Post on the experience of presenting at a language meetup for the first time
