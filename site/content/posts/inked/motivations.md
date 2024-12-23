@@ -1,6 +1,5 @@
 ---
 title: Motivations
-collections: [inked, 2024]
 layout: post_layout
 draft: true
 date: 2024-06-07
@@ -8,6 +7,9 @@ description: Tech has come far, and there are some parts which are spoilsports
 tags:
   - blog
   - inked
+collections:
+  - inked
+  - "2024"
 ---
 
 My mother came up to me and asked about an app that virtually *pins* tasks to the Lock Screen of her phone. Well tons of them exist, but then the problem arises once again...the good old subscription plan.

@@ -1,11 +1,16 @@
 ---
 title: Random Number Generation
 date: 2024-12-01
-tags: ['RNG', 'notes', 'tech']
-collections: [tech, 2024]
+tags:
+  - RNG
+  - notes
+  - tech
 draft: false
 layout: post_layout
 description: Notes while figuring out different RNG's
+collections:
+  - tech
+  - "2024"
 ---
 
 Some info dump while I try to figure out random number generations. No TOC for this page, but here is a `tree -L1`

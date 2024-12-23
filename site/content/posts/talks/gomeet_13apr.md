@@ -2,7 +2,6 @@
 title: Notes from Goland Bangalore 75
 date: 2024-04-13
 draft: false
-collections: [talks, 2024]
 layout: post_layout
 tags:
   - go
@@ -10,6 +9,9 @@ tags:
   - profiling
   - WIP
 description: Sharing a few notes from the Go Blore meetup on 13th April 2024. The speakers covered a few points on profiling in go, hands on demonstrations on it, dependency injection and a talk on how to use go with android.
+collections:
+  - "2024"
+  - talks
 ---
 
 This post contains a few notes from the Go Blore meetup on 13th April 2024. The speakers covered a few points on profiling in go, hands on demonstrations on it, dependency injection and a talk on how to use go with android.

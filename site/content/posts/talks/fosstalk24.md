@@ -1,10 +1,14 @@
 ---
 title: FossTalk 24
-collections: [talks, 2024]
 layout: post_layout
 date: 2024-03-23
 draft: false
-tags: [hsp, WIP]
+tags:
+  - hsp
+  - WIP
+collections:
+  - tech
+  - "2024"
 ---
 
 > Few snippets from HSP's first FOSS Talk 24 credit [Nathan](https://polarhive.net)

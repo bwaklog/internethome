@@ -2,17 +2,19 @@
 title: Implementing Zettelkasten in Anna
 description: POC of backlink and DDM implementation in Anna
 authors:
-    - Aditya Hegde
-    - Anirudh Sudhir
+  - Aditya Hegde
+  - Anirudh Sudhir
 date: 2024-04-10
 draft: false
-collections: [tech, 2024]
 layout: post_layout
 tags:
-    - blog
-    - tech
-    - aiep
-    - WIP
+  - blog
+  - tech
+  - aiep
+  - WIP
+collections:
+  - tech
+  - "2024"
 ---
 
 # Proof of concept

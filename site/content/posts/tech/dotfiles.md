@@ -2,10 +2,14 @@
 title: Techstack
 date: 2024-06-10
 draft: false
-collections: [tech, 2024]
 layout: post_layout
 description: Here are some things I cant live without on my system.
-tags: ['blog', 'tech']
+tags:
+  - blog
+  - tech
+collections:
+  - tech
+  - "2024"
 ---
 
 I've never had my self working on solely the terminal before. It would be only a few occasions when the GUI alternative was simply frustrating to use. I've since forced myself to try and venture more, and now I simply can't work without them. I have even lost count for the number of times i've used vim motions accidentally.

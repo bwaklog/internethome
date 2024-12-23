@@ -2,11 +2,15 @@
 date: 2023-12-08
 title: Hello World
 draft: false
-collections: [inked, 2023]
 layout: post_layout
 description: Introductory post to my blog site
 previewimage: https://i.imgur.com/ppTDKQv.jpg
-tags: ['blog', 'inked']
+tags:
+  - blog
+  - inked
+collections:
+  - inked
+  - "2023"
 ---
 
 I'm not usually great at these things, but I want to give it a try. So here it goes.

@@ -1,13 +1,15 @@
 ---
 title: Lunch with a Pigeon
 date: 2024-07-04
-collections: [inked, 2024]
-previewimage: "/static/images/pigeon.jpg"
+previewimage: /static/images/pigeon.jpg
 layout: post_layout
 tags:
   - blog
   - inked
 draft: true
+collections:
+  - inked
+  - "2024"
 ---
 
 >You aren't allowed to learn who you want aspire to become. Sometimes "experience" is more important even if that means to loose site of yourself

@@ -1,11 +1,9 @@
 ---
 title: Presenting anna at fireside
 date: 2024-04-04
-collections: [tech, 2024]
 layout: post_layout
 draft: false
-description:
-  Presentation part of my teams fireside talk on our SSG - Anna
+description: Presentation part of my teams fireside talk on our SSG - Anna
 tags:
   - acm
   - hsp
@@ -18,6 +16,10 @@ authors:
   - Aditya
   - Nathan
   - Anirudh
+coll: 
+collections:
+  - tech
+  - "2024"
 ---
 
 There are several amazing SSGs out there, like [Hugo](https://gohugo.io/) and

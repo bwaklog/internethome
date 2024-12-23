@@ -2,9 +2,8 @@
 date: 2023-12-09
 title: My first HSP talk
 draft: false
-collections: [tech, talks, 2023]
 layout: post_layout
-description:  HSP Project 2023 presentation
+description: HSP Project 2023 presentation
 tags:
   - hsp
   - python
@@ -13,6 +12,10 @@ tags:
   - blog
   - tech
 previewimage: /static/images/expo.webp
+collections:
+  - talks
+  - tech
+  - "2023"
 ---
 
 I recently got the opportunity to take part in the project expo hosted by the club HSP part of PESU ECity campus. As part of this expo, I presented one of my on going projects [xkcd-grab](http://github.com/bwaklog/xkcd-grab) in-front of an amazing crowd. So lets get to the actual part of the blog, what this presentation was all about.

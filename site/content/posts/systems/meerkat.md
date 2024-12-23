@@ -1,19 +1,21 @@
 ---
 title: Meerkat build log
 description: A p2p data sync system in go
-collections: [systems, 2024]
 layout: post_layout
 draft: false
 date: 2024-04-22
 tags:
-    - WIP
-    - tech
-    - log
-    - go
-    - distributed
-    - networking
-    - progress
+  - WIP
+  - tech
+  - log
+  - go
+  - distributed
+  - networking
+  - progress
 previewimage: https://i.imgur.com/LTaopsX.png
+collections:
+  - systems
+  - "2024"
 ---
 
 Meerkat is a p2p distributed application to maintain data synchronisation between all nodes using GRPC. Initially part of a hackathon idea proposed (available in [this](https://hegde.live/posts/dist_sys/inginy12) post)

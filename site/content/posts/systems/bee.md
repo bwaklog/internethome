@@ -1,9 +1,6 @@
 ---
 title: Building systems in rust
 description: A _small_ blog on building raft in rust as a generic consensus layer and a KV store to use it for consensus.
-collections:
-  - systems
-  - 2024
 layout: post_layout
 draft: false
 date: 2024-12-21
@@ -15,6 +12,9 @@ tags:
   - systems
   - distributed
 previewimage: https://imgs.xkcd.com/comics/network.png
+collections:
+  - systems
+  - "2024"
 ---
 > blog updated 21/10/2024
 ## A much needed Introduction to this Blog
@@ -239,7 +239,7 @@ And for anything that I missed out, here is the long commit message that I mostl
 
 ---
 
-## 21/12/24 Almost There
+## 21/12/2024 Almost There
 
 ```text
 commit 462a4be4
@@ -276,3 +276,53 @@ The next challenge lies in defining a proper message delivery system for committ
 The goal of this is to have the consensus layer function as a asynchronous worker thread on a server that acts as a middleman for applying updates to state of an application.
 
 When tries to change state of an application, it is first passed onto the consensus layer, so it is the responsibility of the consensus layer to pass this down once it has finished its task of replication as we don't want the KV to waste time in polling through the log of raft entries and find which of the log entries are _freshly_ committed and can apply it to the state of its application. Such a system needs to work asynchronously in the background
+
+## 24/12/2024 1:30am
+
+Small update before heading into a Christmas vacation. Partially got log replication to work, no leader commits have been implemented. So what do I mean by partially? I have not fully tested this yet, this is just a very early commit so I don't loose my progress. 
+
+![Partially working log replication](https://i.imgur.com/Cz2mLRO.jpeg)
+You might want to zoom into that image for a better look. 
+
+In the above image, the third horizontal pane is the only leader in the cluster which has taken set operations in the order `set foo baz`, `set foo bar`, `set apple red`. Do note that there is no current compaction RPC
+
+> WIP: Insert some hand drawn images here explaining replication
+
+The mistake that I made was that I have been following the concept of the base index of being 1 only in some places, because of this mismatch of logic, lots of things went wrong. While basic replication works, I still haven't tested out replication in leadership changes in a cluster. Ironically have lesser time to work on this during a vacation than my endsems 😵‍💫
+
+Whats wrong currently? So a node is able to continue replication even after re-election. But the problem comes when a node disconnects from a cluster. As persistence is somewhat broken at the time being and since a leader expects that all the logs are up to date, a node starting back after a crash will have a completely empty set of logs. What is to be done is, incase if a node rejects an entry, we need to decrease the `next_index` on the leaders side and keep retrying until we can successfully replicate the log.
+
+> If AppendEntries fails because of log inconsistency: decrement nextIndex and retry (§5.3)
+
+## 24/12/2024 8:20pm
+
+Clocking in just before my break, and finally have some good log replication. Took a few minutes to change all the indices to be logically based off with index 1. Don't fully like what i've written but i'll focus on optimizing this later.
+
+![Log replication with fixed indices](https://i.imgur.com/NI2gmWB.jpeg)
+Log replication commit [ce3fc164](https://github.com/bwaklog/quaso/commit/ce3fc164f08aee7ce997aee1a66e00de22cb6506)
+
+In the above image:
+- Cluster elects node $32$ as the leader for term $1$. Client sends the following commands `set foo bar` right before the server is manually stopped and restarted
+- Cluster elects node $64$ as its leader for term $2$. Client sends `set bar baz` which is replicated. The server is stopped and restarted
+- Cluster elects $32$ for term 3 after which the client sends `set baz foo`
+
+```text
+commit ce3fc164f08aee7ce997aee1a66e00de22cb6506 (HEAD -> main, origin/main)
+Author: bwaklog <aditya.mh@outlook.com>
+Date:   Tue Dec 24 20:27:07 2024 +0530
+
+    feat: Log replication
+
+    Pending
+    - log replication when client has to rewrite over conflicting logs
+    - write leader commit logic
+    - handle a delivery callback to update the underlying state
+```
+
+## 24/12/2024 11:07pm
+
+Finally can wrap a part of this up. Persistence is working (commit [837db316](https://github.com/bwaklog/quaso/commit/837db316a1b79146bbdce87480eb3e2e05920ea5)), so is log replication and leader election. Whats left is leader commits which should not be hard. The tricky part remaining is the deliver function callbacks. Good wrap up before Christmas eve 🎄
+
+<div class="vide-container">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
