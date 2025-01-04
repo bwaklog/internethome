@@ -326,3 +326,17 @@ Finally can wrap a part of this up. Persistence is working (commit [837db316](ht
 <div class="vide-container">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+---
+## 04/01/2025
+
+```text
+commit 6a123051e70c2e3c58bc2d30ee8a72b7c2713cd1
+Author: bwaklog <aditya.mh@outlook.com>
+Date:   Sat Jan 4 13:15:35 2025 +0530
+
+    feat(wip): Leader Commits
+```
+
+Also fixed state persistence where I was initially persisting the entire log length to the disk
+
