@@ -340,3 +340,44 @@ Date:   Sat Jan 4 13:15:35 2025 +0530
 
 Also fixed state persistence where I was initially persisting the entire log length to the disk
 
+## 08/01/2025
+
+```text
+commit 3b26e5487cabe65290d25630cba5257e0a2ada95
+Author: bwaklog <aditya.mh@outlook.com>
+Date:   Wed Jan 8 21:37:54 2025 +0530
+
+    feat: Message delivery to underlying application
+```
+
+This required a bit on how the key value store functions, which needed a change to work with multiple background tasks and also with how the ownership model worked. The solution was basically threads and `tokio::select!` is super helpful.
+
+What is needed is:
+- Raft needs to "deliver" messages of a newly committed log to the underlying state
+
+![delivery mechanism](https://i.imgur.com/mHvYLpj.png)
+
+- A separate channel to handle message delivery from incoming clients. This isnt really a decision on how the raft struct is architecture, but does have some influence on how it can be used
+
+Now on the kv store side, not really optimized but here is a simple switch between a client and raft channel
+
+```rust
+pub async fn generic_handler_interface(&mut self) {
+	let deliver_rx = Arc::clone(&self.deliver_rx);
+	let mut deliver_rx = deliver_rx.lock().await;
+
+	let client_rx = Arc::clone(&self.client_rx);
+	let mut client_rx = client_rx.lock().await;
+
+	loop {
+		tokio::select! {
+			Some(client_message) = client_rx.recv() => {
+				self.handle_client(client_message).await;
+			}
+			Some(raft_message) = deliver_rx.recv() => {
+				self.apply(raft_message).await;
+			}
+		}
+	}
+}
+```
