@@ -8,6 +8,8 @@ layout: page
 
 ## Gallery
 
+> 📸 Am a bit lazy to put up a lot of pics here, so here is my [unsplash](https://unsplash.com/@adihegde), might update this page in a while. Currently using a Cannon EOS Rebel XSi
+
 <details>
 
 <summary>/dev/random</summary>
@@ -70,7 +72,6 @@ layout: page
 
 </details>
 
-
 <details>
 <summary>/talks</summary>
 
@@ -94,7 +95,6 @@ layout: page
 
 </details>
 
-
 <details>
 
 <summary>/trips</summary>
@@ -117,7 +117,6 @@ layout: page
 </div>
 
 </details>
-
 
 <details>
 

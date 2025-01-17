@@ -9,7 +9,7 @@ html {
 i,
 em {
     font-family:
-        EBGaramondItalic,
+        /*EBGaramondItalic,*/
         /* IosevkaPragmataPro,
         FiraCode, */
         /* EBGaramondItalic, */ InterItalic,
@@ -20,7 +20,7 @@ em {
 
 body {
     font-family:
-        EBGaramond,
+        /*EBGaramond,*/
         /* IosevkaPragmataPro,
         FiraCode,
         monospace, */
@@ -585,7 +585,7 @@ blockquote {
     text-align: left;
 
     & > tbody > tr > td {
-        font-size: 1.075rem;
+        /*font-size: 1.075rem;*/
         text-align: left;
     }
 }
