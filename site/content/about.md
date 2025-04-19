@@ -25,11 +25,15 @@ Currently reasearching on _Databases_ and _Distributed Systems_ 🕗. Working on
 
 ## Projects i've worked on
 
--   Building [meerkat](https://github.com/bwaklog/meerkat) which forms a p2p distributed data synchronisation between nodes to serve as a foundation for future distributed projects.
+- [mu-bonda](https://github.com/foobaruwu/mu-bonda)(group project with [Adhesh](https://github.com/DedLad)) - a kernel space KV store made for RPi5 boards
+- [Parsley](https://github.com/bwaklog/parsley.py) - a small, wip, SQlite3 db file page parser
+- [Forklift](https://github.com/bwaklog/forklift)(WIP) - a simple buffer pool manager
+- [Quaso](https://github.com/bwaklog/quaso) - a Raft Layer Library Implementation in rust to maintain consensus over a generic log.
+- Building [meerkat](https://github.com/bwaklog/meerkat) which forms a p2p distributed data synchronisation between nodes to serve as a foundation for future distributed projects.
 -   Working on [anna](https://github.com/acmpesuecc/anna), a blazingly fast ssg written in go
 -   [Net Nest](https://github.com/bwaklog/pleasebekind) providing a ML model for hate speech analysis for social media filters
 -   [xkcd grab](https://github.com/bwaklog/xkcd-grab) being a unique xkcd cli application with fuzzy matching, web scraping and using local LLM to summaries comic snippets from images alone
--   [yake](https://github.com/bwaklog/yake) a minimal programming language written in C, making users perform arithmetic and printing operations with pointers
+-   [yake](https://github.com/bwaklog/yake) a esoteric programming language written in C, making users perform arithmetic and printing operations with pointers
 
 You can find my work stashed in my repositories at [github/bwaklog](https://github.com/bwaklog).
 
