@@ -9,7 +9,6 @@
 
 
             <br />
-            <div id="container-zoom" class="container-zoom">
                 {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
                 {{range $CollectionSet }}
 
@@ -21,7 +20,6 @@
                 </table>
 
                 {{end}}
-            </div>
 
         </div>
         {{template "footer" .}}

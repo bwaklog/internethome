@@ -14,7 +14,7 @@
         }
     ],
     "baseURL": "https://hegde.live/",
-    "siteScripts": ["animation.js", "highlight.js"],
+    "siteScripts": ["highlight.js"],
     "author": "Aditya Hegde",
     "collectionLayouts": {
         "collections/posts.html": "posts-layout"

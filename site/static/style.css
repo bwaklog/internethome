@@ -39,6 +39,13 @@ mjx-container {
         margin 0.3s ease-in-out,
         width 0.3s ease-in-out,
         height 0.3s ease-in-out;
+
+    animation:
+        slidein 0.8s var(--animation-bezier) forwards,
+        blurin 0.4s ease-in-out forwards;
+    -webkit-animation:
+        slidein 0.8s var(--animation-bezier) forwards,
+        blurin 0.4s ease-in-out forwards;
 }
 
 .container-zoom {

@@ -6,7 +6,6 @@
     <div class="container" id="container">
         {{template "header" .}}
 
-            <div id="container-zoom" class="container-zoom">
             <h1 class="post-title">Site Index</h1>
             <h3>Posts tagged <code>{{ $PageData.Frontmatter.Title }}</code> </h3>
 
@@ -22,8 +21,6 @@
                 {{end}}
             </table>
 
-            </table>
-            </div>
     </div >
     {{template "footer" .}}
 </body>
