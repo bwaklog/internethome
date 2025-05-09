@@ -381,3 +381,56 @@ pub async fn generic_handler_interface(&mut self) {
 	}
 }
 ```
+
+## Wrapping Up
+
+The changes made were now to accommodate the previously mentioned generic handler on the KV store side which selects between a TCP client request or a message delivery via the deliver receiver. The raft state holds the transmitter and keeps pushing down this channel whenever a new log index is committed
+
+```rust
+if min_match_index > current_commit {
+    for i in current_commit..min_match_index.0 {
+      let deliver_tx = self.deliver_tx.lock().await;
+       let _ = deliver_tx
+					       .send(state.persistent_state.log[i].clone());
+    }
+
+    state.volatile_state.commited_index = min_match_index
+			    .clone()
+			    .to_owned();
+}
+```
+
+The `min_match_index` here refers to the largest log index on all peers/followers till which, all previous log indexes are _acknowledged_ and ready to be committed. If larger, the state machine delivers _via_ the channel all the messages from the previous _commit index_ on the leader up-to the _match index_. Once all delivered the commit index shifts updates itself. 
+
+The same logic goes for a follower receiving `AppendEntriesRequest`. The followers must ensure that it discards log entries when its current log length has a mismatch with a verified leaders log length and extend its log by extending its log with the new logs part of the leader request. If the leader’s commit index has shifted ahead of the followers commit index, the follower delivers each leader committed message (which was un delivered on the followers side) to the underlying application.
+
+![](https://raw.githubusercontent.com/bwaklog/quaso/refs/heads/main/resources/docker_cluster.png)
+
+> **QOL**
+> 
+> To make testing and getting a cluster up easier, all I’ve managed to move the binary to a docker image and run the raft cluster as a network of containers. Another size optimization I’ve learnt as of lately for docker images is having a multistage build bringing the image down to 54MB
+> 
+> ```text
+> docker pull bwaklog/quaso:latest
+> docker run \
+>		--rm -it \
+>		--network bridge \
+>		--privileged \
+>		bwaklog/quaso:latest
+> ```
+
+---
+
+# *References*
+
+> Repository: [bwaklog/quaso](https://github.com/bwaklog/quaso)
+
+- In Search of an Understandable Consensus Algorithm
+(Extended Version): [paper link](https://raft.github.io/raft.pdf)
+- Phil Eaton’s raft implementation [github](https://github.com/eatonphil/raft-rs)
+
+<div class="cite-block">
+
+I’d also like to thank [@anirudhrowjee](https://github.com/anirudhrowjee) and [@anirudhsudhir](https://github.com/anirudhsudhir) who i’ve been in discussions with during this implementation
+
+</div>
