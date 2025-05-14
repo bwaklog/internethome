@@ -6,7 +6,7 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
 layout: page
 ---
 
-## Gallery
+# Gallery
 
 > 📸 Am a bit lazy to put up a lot of pics here, so here is my [unsplash](https://unsplash.com/@adihegde), might update this page in a while. Currently using a Cannon EOS Rebel XSi (no idea about the lens) and a Sony a6700 with a Sony E PZ G 18-105 mm F4 G Lens
 

@@ -15,6 +15,7 @@ previewimage: https://imgs.xkcd.com/comics/network.png
 collections:
   - systems
   - "2024"
+  - "2025"
 ---
 > blog updated 21/10/2024
 ## A much needed Introduction to this Blog
@@ -279,10 +280,10 @@ When tries to change state of an application, it is first passed onto the consen
 
 ## 24/12/2024 1:30am
 
-Small update before heading into a Christmas vacation. Partially got log replication to work, no leader commits have been implemented. So what do I mean by partially? I have not fully tested this yet, this is just a very early commit so I don't loose my progress. 
+Small update before heading into a Christmas vacation. Partially got log replication to work, no leader commits have been implemented. So what do I mean by partially? I have not fully tested this yet, this is just a very early commit so I don't loose my progress.
 
 ![Partially working log replication](https://i.imgur.com/Cz2mLRO.jpeg)
-You might want to zoom into that image for a better look. 
+You might want to zoom into that image for a better look.
 
 In the above image, the third horizontal pane is the only leader in the cluster which has taken set operations in the order `set foo baz`, `set foo bar`, `set apple red`. Do note that there is no current compaction RPC
 
@@ -323,9 +324,11 @@ Date:   Tue Dec 24 20:27:07 2024 +0530
 
 Finally can wrap a part of this up. Persistence is working (commit [837db316](https://github.com/bwaklog/quaso/commit/837db316a1b79146bbdce87480eb3e2e05920ea5)), so is log replication and leader election. Whats left is leader commits which should not be hard. The tricky part remaining is the deliver function callbacks. Good wrap up before Christmas eve 🎄
 
-<div class="vide-container">
+Here is a small demo i've uploaded: [link](https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G)
+
+<!-- <div class="vide-container">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ---
 ## 04/01/2025
@@ -400,28 +403,28 @@ if min_match_index > current_commit {
 }
 ```
 
-The `min_match_index` here refers to the largest log index on all peers/followers till which, all previous log indexes are _acknowledged_ and ready to be committed. If larger, the state machine delivers _via_ the channel all the messages from the previous _commit index_ on the leader up-to the _match index_. Once all delivered the commit index shifts updates itself. 
+The `min_match_index` here refers to the largest log index on all peers/followers till which, all previous log indexes are _acknowledged_ and ready to be committed. If larger, the state machine delivers _via_ the channel all the messages from the previous _commit index_ on the leader up-to the _match index_. Once all delivered the commit index shifts updates itself.
 
 The same logic goes for a follower receiving `AppendEntriesRequest`. The followers must ensure that it discards log entries when its current log length has a mismatch with a verified leaders log length and extend its log by extending its log with the new logs part of the leader request. If the leader’s commit index has shifted ahead of the followers commit index, the follower delivers each leader committed message (which was un delivered on the followers side) to the underlying application.
 
 ![](https://raw.githubusercontent.com/bwaklog/quaso/refs/heads/main/resources/docker_cluster.png)
 
-> **QOL**
-> 
-> To make testing and getting a cluster up easier, all I’ve managed to move the binary to a docker image and run the raft cluster as a network of containers. Another size optimization I’ve learnt as of lately for docker images is having a multistage build bringing the image down to 54MB
-> 
-> ```text
-> docker pull bwaklog/quaso:latest
-> docker run \
->		--rm -it \
->		--network bridge \
->		--privileged \
->		bwaklog/quaso:latest
-> ```
+**QOL**
+
+To make testing and getting a cluster up easier, all I’ve managed to move the binary to a docker image and run the raft cluster as a network of containers. Another size optimization I’ve learnt as of lately for docker images is having a multistage build bringing the image down to 54MB
+
+```text
+docker pull bwaklog/quaso:latest
+docker run \
+	--rm -it \
+	--network bridge \
+	--privileged \
+	bwaklog/quaso:latest
+```
 
 ---
 
-# *References*
+## *References*
 
 > Repository: [bwaklog/quaso](https://github.com/bwaklog/quaso)
 

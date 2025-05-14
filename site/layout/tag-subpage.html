@@ -7,7 +7,7 @@
         {{template "header" .}}
 
             <h1 class="post-title">Site Index</h1>
-            <h3>Posts tagged <code>{{ $PageData.Frontmatter.Title }}</code> </h3>
+            <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }} </h2>
 
             <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}

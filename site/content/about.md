@@ -6,9 +6,9 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
-# Hey! I'm Hegde 🌊
+# About
 
-Welcome to my home on the internet
+Hey! I'm Aditya Hegde! Welcome to my home on the internet
 
 I love exploring challenging problems, its what keeps me working.
 

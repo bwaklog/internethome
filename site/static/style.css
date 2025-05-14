@@ -2,7 +2,7 @@
 /* @import url("/static/styles/black-metal.css"); */
 /* @import url("/static/styles/solarized-light.css"); */
 /* @import url('https://unpkg.com/highlight.js@11.10.0/styles/base16/nord.css'); */
-@import url('https://unpkg.com/highlight.js@11.10.0/styles/base16/ros-pine.min.css');
+@import url("https://unpkg.com/highlight.js@11.10.0/styles/base16/ros-pine.min.css");
 @import url("/static/styles/imports.css");
 @import url("/static/styles/defaults.css");
 
@@ -11,9 +11,8 @@
 }
 
 mjx-container {
-    font-size: 1.0rem;
+    font-size: 1rem;
 }
-
 
 .MathJax {
     font-size: 1.2rem;
@@ -174,17 +173,88 @@ mjx-container {
 
 .post-title {
     padding-bottom: 0.5rem;
-    /* border-bottom: 1px solid var(--color-text-dim); */
-    /* font-family:
-        EBGaramond,
-        IosevkaPragmataPro,
-        FiraCode,
-        monospace,
-        Inter, */
-        /* EBGaramond,  */ sans-serif;
     font-weight: inherit;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-top: 1.5rem;
+}
+
+.collection-block-title,
+.tag-block-title {
+    display: inline-block;
+
+    font-family: LibreCaslonCondensedItalic, sans-serif;
+    font-weight: inherit;
+
+    margin: 0;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+.collection-block-title {
+    font-size: 2rem;
+    margin-inline: 0.25rem;
+}
+
+.tag-block-title {
+    font-size: 1rem;
+    margin-inline: 0.25rem;
+}
+
+p:has(.collection-block-title) {
+    height: 1rem;
+    line-height: 1.7;
+}
+
+p:has(.tag-block-title) {
+    height: 1rem;
+    line-height: 2.3;
+}
+
+p:has(.collection-block-title) {
+    all: unset;
+    padding: 0;
+
+    & > a {
+        padding-top: 1rem;
+        padding-bottom: 0.7rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+
+        margin-bottom: 0.25rem;
+        margin-inline: 2.5px;
+
+        background-color: var(--color-primary);
+    }
+}
+
+p:has(.tag-block-title) {
+    padding: 0;
+
+    line-height: 1rem;
+
+    & > a {
+        padding-top: 0.2rem;
+        padding-bottom: 0.4rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+
+        margin-bottom: 0.25rem;
+        margin-inline: 2.5px;
+
+        background-color: var(--color-primary);
+    }
+}
+.collection-category-span,
+.tag-category-span {
+    background-color: var(--color-primary);
+    color: black;
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-inline: 0.5rem;
+
+    margin: 0rem;
+    margin-bottom: 1rem;
 }
 
 .post-author {
@@ -350,7 +420,9 @@ form-container {
 
 a:not(.plain):not(.tag):not(.post-tag):not(.note-card):not(
         .page-nav-element
-    ):not(.page-card):not(.post-block-title):not(.post-block):not(a:has(code))::after,
+    ):not(.page-card):not(.post-block-title):not(.post-block):not(
+        a:has(code)
+    ):not(.collection-block-title):not(.tag-block-title)::after,
 .link::after,
 .footer-element::after {
     content: "↗";
@@ -674,7 +746,6 @@ body:has(.container.notetype) {
     /* border-radius: 4px; */
 }
 
-
 #toc {
     /* margin-top: 1rem; */
 }
@@ -827,6 +898,23 @@ body:has(.container.notetype) {
     .img-small > img {
         margin-left: 0;
     }
+
+    blockquote {
+        /* font-size: 0.9rem; */
+        /* padding-top: 0.2rem; */
+        /* padding-bottom: 0.2rem; */
+        /* margin-bottom: 0.5rem; */
+
+        padding-inline: 10%;
+    }
+
+    .cite-block {
+        padding-inline: 10%;
+    }
+
+    pre code.hljs {
+        padding-inline: 10%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -843,6 +931,16 @@ body:has(.container.notetype) {
         /* padding-top: 0.2rem; */
         /* padding-bottom: 0.2rem; */
         margin-bottom: 0.5rem;
+
+        padding-inline: 5%;
+    }
+
+    .cite-block {
+        padding-inline: 5%;
+    }
+
+    pre code.hljs {
+        padding-inline: 5%;
     }
 
     #hoverDiv {

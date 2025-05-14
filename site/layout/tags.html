@@ -8,6 +8,7 @@
 
         <h1>Site Index</h1>
 
+        <!-- previously a div that had post-tag -->
         <div class="all-tags">
             {{ range .TagNames }}
             <a class="post-tag" href="/tags/{{ . }}.html"><code>{{.}}</code></a>
@@ -15,59 +16,54 @@
         </div>
 
         <div class="cite-block">
-            <p>Browse by <a href="/collections">collections</a></p>
+            <p>Browse by <a href="/collections.html">collections</a></p>
         </div>
 
+        <h2>2025</h2>
+        <table class="post-table">
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
-            <!-- <h3>Collection {{$Collection}}</h3> -->
-            <!-- {{ if eq $Collection "collections/systems.html" }}
-            <h2>Systems</h2>
-            {{ else if eq $Collection "collections/tech.html" }}
-            <h2>Tech</h2>
-            {{ else if eq $Collection "collections/inked.html" }}
-            <h2>Inked</h2>
-            {{ else if eq $Collection "collections/post.html" }}
-            <h2>Posts</h2>
-            {{ else if eq $Collection "collections/talks.html" }}
-            <h2>Talks</h2>
-            {{ else }}
-            <h2>{{$Collection}}</h2>
-            {{ end }} -->
-
             {{ if eq $Collection "collections/2025.html" }}
-                <h2>2025</h2>
                 {{ range $RelatedPages }}
-                    <table class="post-table">
-                        <tr>
-                            <td>{{.Frontmatter.Date}}</td>
-                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                        </tr>
-                    </table>
-                {{ end }}
-            {{ else if eq $Collection "collections/2024.html" }}
-                <h2>2024</h2>
-                {{ range $RelatedPages }}
-                    <table class="post-table">
-                        <tr>
-                            <td>{{.Frontmatter.Date}}</td>
-                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                        </tr>
-                    </table>
-                {{ end }}
-            {{ else if eq $Collection "collections/2023.html" }}
-                <h2>2023</h2>
-                {{ range $RelatedPages }}
-                    <table class="post-table">
-                        <tr>
-                            <td>{{.Frontmatter.Date}}</td>
-                            <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                        </tr>
-                    </table>
+                    <tr class="post-table-entry">
+                        <td>{{.Frontmatter.Date}}</td>
+                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                    </tr>
                 {{ end }}
             {{else}}
             {{end}}
-
         {{end}}
+        </table>
+
+        <h2>2024</h2>
+        <table class="post-table">
+        {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
+            {{ if eq $Collection "collections/2024.html" }}
+                {{ range $RelatedPages }}
+                    <tr class="post-table-entry">
+                        <td>{{.Frontmatter.Date}}</td>
+                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                    </tr>
+                {{ end }}
+            {{else}}
+            {{end}}
+        {{end}}
+        </table>
+
+
+        <h2>2023</h2>
+        <table class="post-table">
+        {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
+            {{ if eq $Collection "collections/2023.html" }}
+                {{ range $RelatedPages }}
+                    <tr class="post-table-entry">
+                        <td>{{.Frontmatter.Date}}</td>
+                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                    </tr>
+                {{ end }}
+            {{else}}
+            {{end}}
+        {{end}}
+        </table>
 
     </div >
     {{template "footer" .}}

@@ -1,12 +1,11 @@
 /* Creating named values cuz im stupid */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-heading: #cecdc4;
         --color-subheading: #a0a0a0;
         --color-text: #cecdc4;
         --color-text-dim: #878580;
         --color-text-low: #575653;
-        /* --color-background: #100f0f; */
         --color-background: #100a0a;
         --color-background-dim: #100f0f7a;
         --color-background-low: #100f0f50;
@@ -30,22 +29,21 @@
         --inline-code-bg: #f2f0e6;
         --selection-bg: #d1d1d17d;
     }
-}
+} */
 
 :root {
+    --color-heading: #000000;
+    --color-subheading: #606060;
+    --color-text: #100f0f;
+    --color-text-dim: #100f0f70;
+    --color-text-low: #100f0f20;
+    --color-background: #fffcf1;
+    --color-background-dim: #fffcf17a;
+    --color-background-low: #fffcf150;
+    --color-background-contrast: #161618;
+    --inline-code-bg: #f2f0e6;
+    --selection-bg: #d1d1d17d;
 
-    /* --color-heading: #000000; */
-    /* --color-subheading: #606060; */
-    /* --color-text: #100f0f; */
-    /* --color-text-dim: #100f0f70; */
-    /* --color-text-low: #100f0f20; */
-    /* --color-background: #fffcf1; */
-    /* --color-background-dim: #fffcf17a; */
-    /* --color-background-low: #fffcf150; */
-    /* --color-background-contrast: #161618; */
-    /* --inline-code-bg: #f2f0e6; */
-    /* --selection-bg: #d1d1d17d; */
-    /**/
     --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;
@@ -55,13 +53,12 @@
     --style-hover-scale: 1;
     --style-container-width: 35rem;
 
-     /*--style-body-font: 1.2rem;*/
+    /*--style-body-font: 1.2rem;*/
     --style-body-font: 0.94rem;
-    --style-body-font-mobile: 1.2rem;
+    --style-body-font-mobile: 1rem;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 
 @font-face {
     font-family: IosevkaPragmataPro;
@@ -86,6 +83,16 @@
 @font-face {
     font-family: Whisper;
     src: url(/static/fonts/serif/Whisper.ttf);
+}
+
+@font-face {
+    font-family: LibreCaslonCondensed;
+    src: url(/static/fonts/serif/LibreCaslonCondensed.ttf);
+}
+
+@font-face {
+    font-family: LibreCaslonCondensedItalic;
+    src: url(/static/fonts/serif/LibreCaslonCondensedItalic.ttf);
 }
 
 @font-face {
