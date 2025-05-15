@@ -1,5 +1,5 @@
 /* Creating named values cuz im stupid */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --color-heading: #cecdc4;
         --color-subheading: #a0a0a0;
@@ -29,10 +29,10 @@
         --inline-code-bg: #f2f0e6;
         --selection-bg: #d1d1d17d;
     }
-} */
+}
 
 :root {
-    --color-heading: #000000;
+    /* --color-heading: #000000;
     --color-subheading: #606060;
     --color-text: #100f0f;
     --color-text-dim: #100f0f70;
@@ -43,7 +43,7 @@
     --color-background-contrast: #161618;
     --inline-code-bg: #f2f0e6;
     --selection-bg: #d1d1d17d;
-
+ */
     --color-primary: #fc4949;
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;

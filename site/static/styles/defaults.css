@@ -606,14 +606,19 @@ blockquote {
         border-radius 0.3s ease-in-out,
         scale 0.3s ease-in-out;
 
-    & > * > *,
-    & > * {
-        color: black;
-    }
-
     &:hover {
         /* border-radius: var(--style-border-radius-hover); */
         /* scale: var(--style-hover-scale); */
+    }
+
+    & > pre code {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    & > pre code.hljs {
+        padding: 0.5rem;
+        border-radius: var(--style-border-radius);
     }
 }
 
@@ -650,7 +655,7 @@ blockquote {
 }
 
 .post-table-entry {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s var(--animation-bezier);
 
     & > td:nth-child(1) {
         padding-left: 5px;
@@ -727,11 +732,6 @@ blockquote {
         font-weight: 400;
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
-    }
-
-    & > * > *,
-    & > * {
-        color: black;
     }
 
     margin-left: calc(-50vw + 50%); /* pull out of container */

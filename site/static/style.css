@@ -2,9 +2,17 @@
 /* @import url("/static/styles/black-metal.css"); */
 /* @import url("/static/styles/solarized-light.css"); */
 /* @import url('https://unpkg.com/highlight.js@11.10.0/styles/base16/nord.css'); */
-@import url("https://unpkg.com/highlight.js@11.10.0/styles/base16/ros-pine.min.css");
+/* @import url("https://unpkg.com/highlight.js@11.10.0/styles/base16/ros-pine.min.css"); */
 @import url("/static/styles/imports.css");
 @import url("/static/styles/defaults.css");
+
+@media (prefers-color-scheme: dark) {
+    @import url("https://unpkg.com/highlight.js@11.10.0/styles/base16/gruvbox-dark-hard.css");
+}
+
+@media (prefers-color-scheme: light) {
+    @import url("https://unpkg.com/highlight.js@11.10.0/styles/base16/gruvbox-light-hard.css");
+}
 
 .indent {
     margin-left: 1rem;
