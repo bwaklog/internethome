@@ -8,30 +8,30 @@
 
         <h1>Collections</h1>
 
-        <p>
+        <table class="post-table">
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
-            <!-- <h3>Collection {{$Collection}}</h3> -->
-            <!-- <ul> -->
-            {{ if eq $Collection "collections/systems.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">Systems</a>
-            {{ else if eq $Collection "collections/inked.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">Inked</a>
-            {{ else if eq $Collection "collections/2025.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">2025</a>
-            {{ else if eq $Collection "collections/2024.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">2024</a>
-            {{ else if eq $Collection "collections/2023.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">2023</a>
-            {{ else if eq $Collection "collections/post.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">Posts</a>
-            {{ else if eq $Collection "collections/talks.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">Talks</a>
-            {{ else if eq $Collection "collections/tech.html" }}
-            <a class="collection-block-title" href="{{$Collection}}">Tech</a>
-            {{ else }}
-            <a class="collection-block-title" href="{{$Collection}}">{{$Collection}}</a>
-            {{ end }}
-            <!-- </ul> -->
+            <tr class="post-table-entry">
+                <td>{{ len $RelatedPages }} posts</td>
+                {{ if eq $Collection "collections/systems.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">Systems</a></td>
+                {{ else if eq $Collection "collections/inked.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">Inked</a></td>
+                {{ else if eq $Collection "collections/2025.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">2025</a></td>
+                {{ else if eq $Collection "collections/2024.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">2024</a></td>
+                {{ else if eq $Collection "collections/2023.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">2023</a></td>
+                {{ else if eq $Collection "collections/post.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">Posts</a></td>
+                {{ else if eq $Collection "collections/talks.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">Talks</a></td>
+                {{ else if eq $Collection "collections/tech.html" }}
+                <td><a class="post-block-title" href="{{$Collection}}">Tech</a></td>
+                {{ else }}
+                <td><a class="post-block-title" href="{{$Collection}}">Uncategorised</a></td>
+                {{ end }}
+            </tr>
 
             <!-- {{ range $RelatedPages }}
                 <table class="post-table">
@@ -42,7 +42,7 @@
                 </table>
             {{ end }} -->
         {{end}}
-        </p>
+        </table>
 
     </div>
 

@@ -1,22 +1,22 @@
 {
-    "navbar": [
-        {
-            "index": "tags.html"
-        },
-        {
-            "clicks": "clicks.html"
-        },
-        {
-            "about": "about.html"
-        },
-        {
-            "cv": "cv.pdf"
-        }
-    ],
-    "baseURL": "https://hegde.live/",
-    "siteScripts": ["highlight.js"],
-    "author": "Aditya Hegde",
-    "collectionLayouts": {
-        "collections/posts.html": "posts-layout"
+  "navbar": [
+    {
+      "index": "tags.html"
+    },
+    {
+      "clicks": "clicks.html"
+    },
+    {
+      "about": "about.html"
+    },
+    {
+      "cv": "cv.pdf"
     }
+  ],
+  "baseURL": "https://adiheg.netlify.app/",
+  "siteScripts": ["highlight.js"],
+  "author": "Aditya Hegde",
+  "collectionLayouts": {
+    "collections/posts.html": "posts-layout"
+  }
 }

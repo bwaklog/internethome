@@ -326,6 +326,9 @@ Finally can wrap a part of this up. Persistence is working (commit [837db316](ht
 
 Here is a small demo i've uploaded: [link](https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G)
 
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yZ80jvBqrOI?si=gEDy32E4O2iQKinI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <!-- <div class="vide-container">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/yZ80jvBqrOI?si=FifsrEaxUxIVB-1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
@@ -421,6 +424,8 @@ docker run \
 	--privileged \
 	bwaklog/quaso:latest
 ```
+
+<a class="asciinema-link" href="https://asciinema.org/a/AQz82DGPB25kypSBCjw3JT3dG" target="_blank"><img src="https://asciinema.org/a/AQz82DGPB25kypSBCjw3JT3dG.svg" /></a>
 
 ---
 

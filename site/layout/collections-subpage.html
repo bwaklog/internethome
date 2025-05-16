@@ -8,20 +8,22 @@
             {{template "header" .}}
 
             <h1 class="post-title">Site Index</h1>
-            <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2>
+            <!-- <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2> -->
+            <blockquote>
+                <p>Collection {{ $PageData.Frontmatter.Title }}</p>
+            </blockquote>
 
-            <br />
-                {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
-                {{range $CollectionSet }}
+            {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+            {{range $CollectionSet }}
 
-                <table class="post-table">
-                    <tr>
-                        <td>{{.Frontmatter.Date}}</td>
-                        <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                    </tr>
-                </table>
+            <table class="post-table">
+                <tr class="post-table-entry">
+                    <td>{{.Frontmatter.Date}}</td>
+                    <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
+                </tr>
+            </table>
 
-                {{end}}
+            {{end}}
 
         </div>
         {{template "footer" .}}

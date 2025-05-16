@@ -6,10 +6,17 @@
         --color-text: #cecdc4;
         --color-text-dim: #878580;
         --color-text-low: #575653;
-        --color-background: #100a0a;
+
+        /* --color-background: #100a0a;
         --color-background-dim: #100f0f7a;
         --color-background-low: #100f0f50;
-        --color-background-contrast: #1a1a1a;
+        --color-background-contrast: #1a1a1a; */
+
+        --color-background: #2b2525;
+        --color-background-dim: #2b25257a;
+        --color-background-low: #2b252550;
+        --color-background-contrast: #211c1d;
+
         --inline-code-bg: #1c1b1a;
         --selection-bg: #a0a0a0;
     }
@@ -51,11 +58,12 @@
     --style-border-radius: 4px;
     --style-border-radius-hover: 4px;
     --style-hover-scale: 1;
-    --style-container-width: 35rem;
+    /* --style-container-width: 35rem; */
+    --style-container-width: 40rem;
 
-    /*--style-body-font: 1.2rem;*/
-    --style-body-font: 0.94rem;
-    --style-body-font-mobile: 1rem;
+    --style-body-font: 1.2rem;
+    /* --style-body-font: 0.94rem; */
+    --style-body-font-mobile: 1.2rem;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -65,9 +73,14 @@
     src: url(/static/fonts/mono/IosevkaPragmataPro.ttf);
 }
 
-@font-face {
+/* @font-face {
     font-family: FiraCode;
     src: url(/static/fonts/mono/FiraCode.ttf);
+} */
+
+@font-face {
+    font-family: JuliaMono;
+    src: url(/static/fonts/mono/JuliaMono.ttf);
 }
 
 @font-face {
@@ -93,6 +106,36 @@
 @font-face {
     font-family: LibreCaslonCondensedItalic;
     src: url(/static/fonts/serif/LibreCaslonCondensedItalic.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-Light;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Light.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-LightItalic;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-Regular;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Regular.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-Italic;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Italic.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-Semibold;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Semibold.ttf);
+}
+
+@font-face {
+    font-family: PerfectlyNineties-SemiboldItalic;
+    src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-SemiboldItalic.ttf);
 }
 
 @font-face {

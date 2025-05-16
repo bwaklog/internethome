@@ -7,13 +7,16 @@
         {{template "header" .}}
 
             <h1 class="post-title">Site Index</h1>
-            <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }} </h2>
+            <!-- <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }} </h2> -->
+            <blockquote>
+                <p>Posts tagged {{ $PageData.Frontmatter.Title }}</p>
+            </blockquote>
 
             <table class="post-table">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
                     <table class="post-table">
-                        <tr>
+                        <tr class="post-table-entry">
                             <td>{{.Frontmatter.Date}}</td>
                             <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
                         </tr>
