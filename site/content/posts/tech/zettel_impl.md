@@ -13,6 +13,7 @@ tags:
   - aiep
   - WIP
 collections:
+  - post
   - tech
   - "2024"
 ---

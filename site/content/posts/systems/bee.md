@@ -13,6 +13,7 @@ tags:
   - distributed
 previewimage: https://imgs.xkcd.com/comics/network.png
 collections:
+  - post
   - systems
   - "2024"
   - "2025"

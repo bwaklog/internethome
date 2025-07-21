@@ -11,6 +11,7 @@ tags:
   - networking
 draft: false
 collections:
+  - post
   - systems
   - "2024"
 ---

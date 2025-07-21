@@ -16,8 +16,9 @@ authors:
   - Aditya
   - Nathan
   - Anirudh
-coll: 
+coll:
 collections:
+  - post
   - tech
   - "2024"
 ---

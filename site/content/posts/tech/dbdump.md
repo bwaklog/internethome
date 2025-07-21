@@ -9,6 +9,7 @@ tags:
   - databases
   - WIP
 collections:
+  - post
   - tech
   - "2024"
 ---

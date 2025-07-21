@@ -8,6 +8,7 @@ tags:
   - blog
   - inked
 collections:
+  - post
   - inked
   - "2024"
 ---

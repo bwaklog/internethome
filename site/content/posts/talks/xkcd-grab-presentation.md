@@ -13,6 +13,7 @@ tags:
   - tech
 previewimage: /static/images/expo.webp
 collections:
+  - post
   - talks
   - tech
   - "2023"

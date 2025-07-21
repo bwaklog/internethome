@@ -10,6 +10,7 @@ tags:
   - WIP
 description: Sharing a few notes from the Go Blore meetup on 13th April 2024. The speakers covered a few points on profiling in go, hands on demonstrations on it, dependency injection and a talk on how to use go with android.
 collections:
+  - post
   - "2024"
   - talks
 ---

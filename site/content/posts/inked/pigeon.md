@@ -8,6 +8,7 @@ tags:
   - inked
 draft: true
 collections:
+  - post
   - inked
   - "2024"
 ---

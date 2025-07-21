@@ -14,7 +14,7 @@ layout: page
     </div>
 </div>
 
-I am a student currently pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Enthusiast for systems and backend projects.
+Research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). Pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Interested in distributed systems, databases...anything systems.
 
 <div class="cite-block">
 

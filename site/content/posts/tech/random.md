@@ -9,6 +9,7 @@ draft: false
 layout: post_layout
 description: Notes while figuring out different RNG's
 collections:
+  - post
   - tech
   - "2024"
 ---

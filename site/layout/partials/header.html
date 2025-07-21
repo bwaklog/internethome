@@ -5,7 +5,7 @@
     <nav>
         <div class="navigations">
             {{if eq $PageData.CompleteURL "index.html" }} {{else}}
-            <a class="header-element-author" href="/">adiheg</a>
+            <a class="header-element-author" href="/">home</a>
             <!-- >{{ $.DeepDataMerge.LayoutConfig.Author }}</a -->
             {{end}} {{ range $index_no, $map :=
             .DeepDataMerge.LayoutConfig.Navbar }} {{ range $key, $value := $map

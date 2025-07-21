@@ -7,6 +7,7 @@ tags:
   - hsp
   - WIP
 collections:
+  - post
   - tech
   - "2024"
 ---

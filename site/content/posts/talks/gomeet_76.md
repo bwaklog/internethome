@@ -10,6 +10,7 @@ tags:
   - WIP
 description: Post on the experience of presenting at a language meetup for the first time
 collections:
+  - post
   - talks
   - "2024"
 ---

@@ -14,6 +14,7 @@ tags:
   - progress
 previewimage: https://i.imgur.com/LTaopsX.png
 collections:
+  - post
   - systems
   - "2024"
 ---

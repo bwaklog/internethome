@@ -68,7 +68,7 @@ body {
 
     margin-top: 0%;
 
-    font-weight: 300;
+    font-weight: 380;
     /* font-size: 0.95rem; */
     font-size: var(--style-body-font);
     transition:
@@ -355,7 +355,7 @@ a {
             .post-tag
         ):not(.page-nav-element):not(.page-card):not(.link):not(
             .post-block
-        ):not(.post-block-title):not(.collection-block-title):not(
+        ):not(.post-list-title):not(.post-list-description):not(.collection-block-title):not(
             .tag-block-title
         ) {
         padding-bottom: 0.1rem;
@@ -519,8 +519,8 @@ pre code {
     /* scrollbar-width: none; */
     /* border-radius: var(--style-border-radius); */
 
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    /* margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%); */
 }
 
 pre > code {
@@ -538,7 +538,7 @@ pre code.hljs {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    padding-inline: 40%;
+    /* padding-inline: 40%; */
     /* padding: 0.5rem; */
 }
 
@@ -587,11 +587,11 @@ blockquote {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    margin-left: calc(-50vw + 50%); /* pull out of container */
-    margin-right: calc(-50vw + 50%);
+    /* margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%); */
 
-    padding-left: 40%;
-    padding-right: 40%;
+    /* padding-left: 40%;
+    padding-right: 40%; */
 
     box-sizing: border-box;
 
@@ -627,99 +627,35 @@ blockquote {
     }
 }
 
-.post-block-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.post-list-element {
+    list-style-type: none;
 
-    margin-top: 1.2rem;
-}
+    margin-bottom: 10px;
 
-.post-table {
-    text-align: left;
-    border-collapse: collapse;
-
-    width: 100%;
-
-    & > tbody > tr > td {
-        /*font-size: 1.075rem;*/
-        text-align: left;
-        margin: 0;
-        padding: 0;
-    }
-
-    & > tbody > tr {
-        border-radius: 500px;
+    & > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-.post-table > tbody > tr > td:nth-child(1) {
+.post-list-title {
+    color: var(--color-text);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.post-list-description {
     color: var(--color-text-dim);
-    width: 100px;
-    margin-left: 50px;
+    padding: 0;
+    margin: 0;
 }
 
-.post-table > tbody > tr > td:nth-child(2) {
-    text-align: left;
-    padding-left: 10px;
-}
-
-.post-table-entry {
-    /* transition: all 0.3s var(--animation-bezier); */
-    transition: all 0.3s cubic-bezier(0, 0.68, 0.99, 0.58);
-    margin-bottom: 0.25rem;
-
-    & > td,
-    & > td > a {
-        font-weight: 300;
-        /* font-size: 1.1rem; */
-    }
-
-    & > td:nth-child(1) {
-        padding-left: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    & > td:nth-child(2) {
-        padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    &:hover {
-        background-color: var(--inline-code-bg);
-        border-radius: 20px;
-    }
-}
-
-.post-block {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    & > p {
-        margin: 0;
-        padding: 0;
-    }
-
-    padding: 0.9rem;
-    background-color: var(--inline-code-bg);
-    /* border: 1.2px solid var(--color-text-low); */
-    /* box-shadow: 0px 1px 0 var(--color-text-low); */
-
-    border-radius: var(--style-border-radius);
-    font-size: 0.9rem;
-
-    transition:
-        border-radius 0.3s ease-in-out,
-        scale 0.3s ease-in-out;
-
-    &:hover {
-        border-radius: var(--style-border-radius-hover);
-        scale: var(--style-hover-scale);
-    }
+.post-list-date {
+    color: var(--color-text-dim);
+    min-width: 100px;
+    margin-left: 10px;
 }
 
 .cite-block {
@@ -752,11 +688,11 @@ blockquote {
         padding-bottom: 0.3rem;
     }
 
-    margin-left: calc(-50vw + 50%); /* pull out of container */
+    /* margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
 
     padding-left: 40%;
-    padding-right: 40%;
+    padding-right: 40%; */
 
     box-sizing: border-box;
 

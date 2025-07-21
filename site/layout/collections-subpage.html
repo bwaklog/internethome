@@ -7,23 +7,38 @@
         <div class="container">
             {{template "header" .}}
 
+            {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+
+            {{ if eq .PageURL "collections/post.html"}}
+
+            <br />
+
+            {{ else }}
             <h1 class="post-title">Site Index</h1>
             <!-- <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2> -->
             <blockquote>
                 <p>Collection {{ $PageData.Frontmatter.Title }}</p>
             </blockquote>
+            {{ end }}
 
-            {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+
+
+            <!-- <table class="post-tatableble"> -->
+            <ul style="margin-left: 0px;">
             {{range $CollectionSet }}
-
-            <table class="post-table">
-                <tr class="post-table-entry">
-                    <td>{{.Frontmatter.Date}}</td>
-                    <td><a class="post-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                </tr>
-            </table>
-
+            <li class="post-list-element">
+                <div>
+                    <div>
+                        <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
+                        <br/>
+                        <p class="post-list-description">{{.Frontmatter.Description}}</p>
+                    </div>
+                    <div class="post-list-date">{{.Frontmatter.Date}}</div>
+                </div>
+            </li>
             {{end}}
+            </ul>
+            <!-- </table> -->
 
         </div>
         {{template "footer" .}}
