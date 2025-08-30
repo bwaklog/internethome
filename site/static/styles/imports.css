@@ -7,9 +7,14 @@
         --color-text-dim: #878580;
         --color-text-low: #575653;
 
-        --color-background: #100f0f;
+        /*--color-background: #100f0f;
         --color-background-dim: #100f0f7a;
         --color-background-low: #100f0f50;
+        --color-background-contrast: #1a1a1a;*/
+
+        --color-background: #000000;
+        --color-background-dim: #0a0a0a7a;
+        --color-background-low: #0a0a0a50;
         --color-background-contrast: #1a1a1a;
 
         /* --color-background: #2b2525;
@@ -69,38 +74,13 @@
 }
 
 @font-face {
-    font-family: IosevkaPragmataPro;
-    src: url(/static/fonts/mono/IosevkaPragmataPro.ttf);
-}
-
-/* @font-face {
-    font-family: FiraCode;
-    src: url(/static/fonts/mono/FiraCode.ttf);
-} */
-
-@font-face {
     font-family: JuliaMono;
     src: url(/static/fonts/mono/JuliaMono.ttf);
 }
 
 @font-face {
-    font-family: EBGaramond;
-    src: url(/static/fonts/serif/EBGaramond.ttf);
-}
-
-@font-face {
-    font-family: EBGaramondItalic;
-    src: url(/static/fonts/serif/EBGaramondItalic.ttf);
-}
-
-@font-face {
     font-family: Whisper;
     src: url(/static/fonts/serif/Whisper.ttf);
-}
-
-@font-face {
-    font-family: LibreCaslonCondensed;
-    src: url(/static/fonts/serif/LibreCaslonCondensed.ttf);
 }
 
 @font-face {
