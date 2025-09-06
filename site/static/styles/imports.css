@@ -76,51 +76,61 @@
 @font-face {
     font-family: JuliaMono;
     src: url(/static/fonts/mono/JuliaMono.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Whisper;
     src: url(/static/fonts/serif/Whisper.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: LibreCaslonCondensedItalic;
     src: url(/static/fonts/serif/LibreCaslonCondensedItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-Light;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Light.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-LightItalic;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-LightItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-Regular;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-Italic;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Italic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-Semibold;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-Semibold.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: PerfectlyNineties-SemiboldItalic;
     src: url(/static/fonts/serif/PerfectlyNineties/PerfectlyNineties-SemiboldItalic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Inter;
     src: url(/static/fonts/others/Inter.ttf);
+    font-display: swap;
     font-feature-settings:
         "liga" 1,
         "calt" 1;
@@ -136,6 +146,7 @@
 @font-face {
     font-family: InterItalic;
     src: url(/static/fonts/others/InterItalic.ttf);
+    font-display: swap;
     font-feature-settings:
         "liga" 1,
         "calt" 1;
