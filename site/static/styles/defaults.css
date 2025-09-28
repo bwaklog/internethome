@@ -269,7 +269,7 @@ header+h1 {
     margin-top: 0.5rem;
 }
 
-a {
+a:not(.post-tag) {
     color: var(--color-text);
     text-decoration: underline;
     text-underline-offset: 3px;

@@ -6,13 +6,13 @@ previewimage: /static/me.jpeg
 layout: page
 ---
 
-<div>
-    <img style="unset;width: 100px; height: 100px; border-radius: 100px; margin-bottom: -1.8rem; margin-top: 1.8rem;" src="https://avatars.githubusercontent.com/u/91192289?v=4"/>
-    <div>
-        <h1 style="font-family: Whisper; font-size: 2rem; text-align: center;">Aditya Hegde</h1>
-        <!--h6 style="text-align: center;">CS Undergrad</h6-->
-    </div>
+<div style="display: inline-flex; align-items: center; gap: 1rem; padding-top: 1.8rem; padding-bottom: 0rem;">
+    <img style="width: auto; height: 3rem; border-radius: 100%;" src="https://github.com/bwaklog.png" alt="Aditya Hegde profile picture" />
+    <h1 style="font-size: 2rem; margin: 0;">Aditya Hegde</h1>
 </div>
+
+![Clouds in bengaluru, taken by me](https://images.unsplash.com/photo-1758894239860-e96e4dc65007?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
 
 Research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). Pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Interested in distributed systems, databases...anything systems.
 

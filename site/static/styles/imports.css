@@ -38,8 +38,8 @@
     --color-primary-dim: #fc4949ef;
     --color-primary-low: #fc494950;
 
-    --style-border-radius: 4px;
-    --style-border-radius-hover: 4px;
+    --style-border-radius: 0px;
+    --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
     --style-container-width: 40rem;
 

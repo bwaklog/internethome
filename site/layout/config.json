@@ -1,10 +1,10 @@
 {
   "navbar": [
     {
-      "tags": "tags.html"
+      "posts": "collections/post.html"
     },
     {
-      "posts": "collections/post.html"
+      "tags": "tags.html"
     },
     {
       "clicks": "clicks.html"

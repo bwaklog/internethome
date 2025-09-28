@@ -1,9 +1,9 @@
 ---
 title: Studying db hexdumps
-date: 2024-06-10
+date: 2025-04-16
 description: This is a post on dissecting the structure of database files (sqlite3) and seeing how data is stored under the hood
 layout: post_layout
-draft: true
+draft: false
 tags:
   - tech
   - databases
@@ -11,17 +11,7 @@ tags:
 collections:
   - post
   - tech
-  - "2024"
+  - "2025"
 ---
 
-## Sqlite Architecture
-
-TODO
-
-## Looking at DB File Formats
-
-TODO
-
----
-
-TODO
+This post is WIP. Based on my repo [parsley.py](https://github.com/bwaklog/parsley.py)

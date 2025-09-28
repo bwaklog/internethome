@@ -72,6 +72,20 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             });
         </script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const images = document.querySelectorAll('img');
+
+                images.forEach(function (img) {
+                    img.style.cursor = 'pointer';
+
+                    img.addEventListener('click', function () {
+                        window.open(img.src, '_blank');
+                    });
+                });
+            });
+        </script>
+
         <link
             rel="alternate"
             type="application/atom+xml"
