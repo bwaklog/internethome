@@ -393,7 +393,7 @@ form-container {
 
 a:not(.plain):not(.tag):not(.post-tag):not(.note-card):not(
         .page-nav-element
-    ):not(.page-card):not(.post-list-title):not(.post-block):not(
+    ):not(.page-card):not(.post-block):not(
         a:has(code)
     ):not(.collection-block-title):not(.post-list-description):not(.tag-block-title):not(
         .asciinema-link

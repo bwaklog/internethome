@@ -16,7 +16,7 @@
       "cv": "cv.pdf"
     }
   ],
-  "baseURL": "https://adiheg.netlify.app/",
+  "baseURL": "https://adihegde.com/",
   "siteScripts": ["highlight.js"],
   "author": "Aditya Hegde",
   "collectionLayouts": {

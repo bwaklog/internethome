@@ -74,15 +74,16 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const images = document.querySelectorAll('img');
+            const images = document.querySelectorAll('img');
 
-                images.forEach(function (img) {
-                    img.style.cursor = 'pointer';
+            images.forEach(function (img) {
+                img.style.userSelect = 'none'; // Disable text selection
+                img.style.cursor = 'default'; // Set cursor to default
 
-                    img.addEventListener('click', function () {
-                        window.open(img.src, '_blank');
-                    });
+                img.addEventListener('click', function () {
+                window.open(img.src, '_blank');
                 });
+            });
             });
         </script>
 

@@ -5,7 +5,7 @@
     <nav>
         <div class="navigations">
             {{if eq $PageData.CompleteURL "index.html" }} {{else}}
-            <a class="header-element-author" href="/">home</a>
+            <a class="header-element-author" href="/">アディ</a>
             <!-- >{{ $.DeepDataMerge.LayoutConfig.Author }}</a -->
             {{end}} {{ range $index_no, $map :=
             .DeepDataMerge.LayoutConfig.Navbar }} {{ range $key, $value := $map
@@ -39,8 +39,8 @@ href="https://webneko.net">Neko</a></h1> -->
         if (currentPage.includes(elementSrc)) {
             // element.classList.add('active'); // add "active" class to the matching element
             console.log(currentPage, elementSrc);
-            element.style.color = "var(--color-heading)";
-            element.style.fontWeight = "450";
+            // element.style.color = "var(--color-heading)";
+            element.style.fontWeight = "600";
             console.log(currentPage, elementSrc);
         }
     });

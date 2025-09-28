@@ -3,6 +3,7 @@ title: I purchased a new camera
 description: Got my "first" camera. I am really into this hobby of mine
 date: 2025-04-21
 layout: post_layout
+previewimage: https://images.adihegde.com/posts/sonya6700.JPG
 tags:
   - blog
   - photography

@@ -6,6 +6,10 @@ previewimage: /static/me.jpeg
 type: page
 ---
 
+<br/>
+
+> 🚧 this page under maintenance 
+
 # About
 
 Hey! I'm Aditya Hegde! Welcome to my home on the internet

@@ -3,6 +3,7 @@ title: Pes Innovation Lab
 description: My 8 week long Summer 2025 internship
 date: 2025-06-09
 layout: post_layout
+previewimage: https://images.adihegde.com/posts/labfrns.JPG
 tags:
   - blog
   - inked

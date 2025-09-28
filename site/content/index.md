@@ -1,6 +1,6 @@
 ---
 date: 2024-02-24
-title: Aditya Hegde
+title: Aditya Hegde アディ
 description: My Internet Home
 previewimage: /static/me.jpeg
 layout: page
@@ -14,7 +14,7 @@ layout: page
 ![Clouds in bengaluru, taken by me](https://images.unsplash.com/photo-1758894239860-e96e4dc65007?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 
-Research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). Pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Interested in distributed systems, databases...anything systems.
+Prev. research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). Core Team Lead of a club in my college called [HSP](https://hsp-ec.xyz). Pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Interested in distributed systems, databases...anything systems.
 
 <div class="cite-block">
 

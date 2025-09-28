@@ -23,7 +23,7 @@
 
             {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
             {{ else }}
-            <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" />
+            <!-- <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" /> -->
             {{end}}
 
             {{ $PageData.Body }}
