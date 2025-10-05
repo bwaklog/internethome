@@ -292,7 +292,7 @@ a:not(.post-tag) {
             background-color: var(--selection-bg);
             color: #000;
 
-            font-weight: bolder;
+            /* font-weight: bolder; */
         }
     }
 }
