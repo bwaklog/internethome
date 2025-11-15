@@ -11,7 +11,10 @@ layout: page
     <h1 style="font-size: 2rem; margin: 0;">Aditya Hegde</h1>
 </div>
 
-![Clouds in bengaluru, taken by me](https://images.unsplash.com/photo-1758894239860-e96e4dc65007?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<!--![Clouds in bengaluru, taken by me](https://images.unsplash.com/photo-1758894239860-e96e4dc65007?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)-->
+
+![Vintage at Mels Drive In, Universal Studios Singapore](https://images.adihegde.com/camera/singapore/aditya-hegde-7HwnXgoLYuM-unsplash.jpg)
+Vintage at Mels Drive In, Universal Studios Singapore
 
 
 Prev. research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). Core Team Lead of a club in my college called [HSP](https://hsp-ec.xyz). Pursuing my bachelors degree in CSE at [PESU](https://pes.edu). Interested in distributed systems, databases...anything systems.
