@@ -1,12 +1,12 @@
 {{define "header"}} {{ $PageData := index .DeepDataMerge.Templates .PageURL }}
 {{ if eq $PageData nil }} {{ $PageData = .TemplateData }} {{ end }}
 
+<!--<a class="header-element-author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>-->
 <header>
     <nav>
         <div class="navigations">
             {{if eq $PageData.CompleteURL "index.html" }} {{else}}
-            <a class="header-element-author" href="/">アディ</a>
-            <!-- >{{ $.DeepDataMerge.LayoutConfig.Author }}</a -->
+            <a class="header-element-author" href="/">adi h</a>
             {{end}} {{ range $index_no, $map :=
             .DeepDataMerge.LayoutConfig.Navbar }} {{ range $key, $value := $map
             }} {{ if eq . "index" }} {{else}}

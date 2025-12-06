@@ -6,10 +6,12 @@ previewimage: /static/me.jpeg
 layout: page
 ---
 
-<div style="display: inline-flex; align-items: center; gap: 1rem; padding-top: 1.8rem; padding-bottom: 0rem;">
+<!--<div style="display: inline-flex; align-items: center; gap: 1rem; padding-top: 1.8rem; padding-bottom: 0rem;">
     <img style="width: auto; height: 3rem; border-radius: 100%;" src="https://github.com/bwaklog.png" alt="Aditya Hegde profile picture" />
     <h1 style="font-size: 2rem; margin: 0;">Aditya Hegde</h1>
-</div>
+</div>-->
+
+# Aditya Hegde
 
 <!--![Clouds in bengaluru, taken by me](https://images.unsplash.com/photo-1758894239860-e96e4dc65007?q=80&w=3821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)-->
 

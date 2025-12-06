@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+/*@media (max-width: 900px) {
     .navigations {
         font-size: 0.9rem;
     }
@@ -27,7 +27,7 @@
     .img-small > img {
         margin-left: 0;
     }
-}
+}*/
 
 @media (max-width: 600px) {
     body {
