@@ -12,7 +12,9 @@ layout: page
 
 <!-- # Gallery -->
 
-> 📸 Am a bit lazy to put up a lot of pics here, so here is my [unsplash](https://unsplash.com/@adihegde), might update this page in a while. Currently using a Cannon EOS Rebel XSi (no idea about the lens) and a Sony a6700 with a Sony E PZ G 18-105 mm F4 G Lens
+> Camera gear: Cannon EOS Rebel XSi (no idea about the lens) and Sony a6700 with a Sony E PZ G 18-105 mm F4 G Lens
+>
+> Click on any image for the _high resolution version_. You can find my other stills on [unsplash](https://unsplash.com/@adihegde)
 
 <div class="image-grid" id="image-grid">
 </div>
@@ -67,7 +69,7 @@ layout: page
   }
 
   /**
-   * Create an image element with progressive lazy loading
+   * Create an image element with lazy loading
    * @param {Object} urlPair - { lowRes, highRes }
    * @returns {HTMLElement} - image wrapper div
    */
@@ -77,29 +79,12 @@ layout: page
     wrapper.className = 'image-item';
 
     const img = document.createElement('img');
-    img.src = lowRes; // load low-res first
+    img.src = lowRes; // only load low-res
     img.alt = 'Gallery image';
-    img.loading = 'lazy'; // native lazy loading
+    img.loading = 'lazy'; // native lazy loading - loads as user scrolls
     img.decoding = 'async';
-    img.className = 'image-loading'; // optional: add class for blur effect
 
-    // Load high-res image and swap when ready
-    const highResImg = new Image();
-    highResImg.onload = function() {
-      img.src = highRes;
-      img.className = 'image-loaded';
-    };
-    highResImg.onerror = function() {
-      console.warn('Failed to load high-res image:', highRes);
-      // Keep low-res version on error
-    };
-    
-    // Start loading high-res once low-res is in viewport (triggered by lazy loading)
-    img.addEventListener('load', function() {
-      highResImg.src = highRes;
-    }, { once: true });
-
-    // Click handler opens full high-res image
+    // Click handler opens full high-res image (no preloading)
     img.addEventListener('click', function() {
       window.open(highRes, '_blank');
     });
@@ -163,11 +148,16 @@ layout: page
     populateGrid(config.sources);
   }
 
-  // Run when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  // Defer initialization until after page fully loads (including CSS, fonts, etc)
+  // This prevents images from blocking initial page render
+  if (document.readyState === 'complete') {
+    // Page already loaded
+    setTimeout(init, 100); // small delay to ensure smooth render
   } else {
-    init();
+    // Wait for full page load
+    window.addEventListener('load', function() {
+      setTimeout(init, 100);
+    });
   }
 })();
 </script>

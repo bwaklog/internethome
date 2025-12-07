@@ -161,7 +161,7 @@ footer {
         -apple-system,
         serif; */
     font-weight: 250;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     align-self: center;
 
     color: var(--color-text-dim);

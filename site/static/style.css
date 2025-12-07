@@ -842,7 +842,7 @@ body:has(.container.notetype) {
     }
 
     blockquote {
-        font-size: 0.9rem;
+        /*font-size: calc(var(--style-body-font) - 4px);*/
         margin-bottom: 0.5rem;
     }
 
