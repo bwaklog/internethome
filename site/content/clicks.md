@@ -6,146 +6,168 @@ previewimage: https://i.imgur.com/KUet9BN.jpg
 layout: page
 ---
 
-<br/>
+<!-- <br/> -->
 
-> 🚧 this page under maintenance 
+<!-- > 🚧 this page under maintenance  -->
 
-# Gallery
+<!-- # Gallery -->
 
 > 📸 Am a bit lazy to put up a lot of pics here, so here is my [unsplash](https://unsplash.com/@adihegde), might update this page in a while. Currently using a Cannon EOS Rebel XSi (no idea about the lens) and a Sony a6700 with a Sony E PZ G 18-105 mm F4 G Lens
 
-<details>
-
-<summary>/dev/random</summary>
-
-<div class="image-grid" id="images">
-
-<img loading="lazy" alt="Food menu" src="https://i.imgur.com/ejDRsdi.jpg">
-
-<img loading="lazy" alt="Another laptop shot" src="https://i.imgur.com/BqWCGqP.jpg">
-
-<img loading="lazy" alt="IKEA directions" src="https://i.imgur.com/553LQoC.jpg">
-
-<img loading="lazy" alt="IKEA Price sign" src="https://i.imgur.com/PukycFJ.jpg">
-
-<img loading="lazy" alt="IKEA Storage Space and a crane" src="https://i.imgur.com/RpA1Tbf.jpg">
-
-<img loading="lazy" alt="Keychron in some nice lighting" src="https://i.imgur.com/mroJJik.jpg">
-
-<img loading="lazy" alt="Black and white rocks" src="https://i.imgur.com/sMMx1f0.jpg">
-
-<img loading="lazy" alt="Keychron K2 V2" src="https://i.imgur.com/NVUKPKO.jpg">
-
-<img loading="lazy" alt="Cannon Rebel struggles" src="https://i.imgur.com/r1W9ohZ.jpg">
-
-<img loading="lazy" alt="Pondicherry Villa" src="https://i.imgur.com/Pu176PH.jpg">
-
-<img loading="lazy" alt="Ikea Bengaluru storage" src="https://i.imgur.com/HZ3hHs0.jpg">
-
-</div>
-
-</details>
-
-<details>
-
-<summary>/college</summary>
-
 <div class="image-grid" id="image-grid">
-
-<img loading="lazy" alt="Ghat descent on west cost" src="https://i.imgur.com/agAwA6L.jpg">
-
-<img loading="lazy" alt="Hole in the Wall in Kormangala is a vibe!" src="https://i.imgur.com/zLDGtul.jpg">
-
-<img loading="lazy" alt="Vidhan Soudha, which ive surprisingly never even after spending my whole life here" src="https://i.imgur.com/ohigp5U.jpg">
-
-<img loading="lazy" alt="Frist go meetup in bangalore with Sudhir and Nathan" src="https://i.imgur.com/G0JYhn1.jpg">
-
-<img loading="lazy" alt="Blurry snap from foss talk" src="https://i.imgur.com/7OAa8tn.jpg">
-
-<img loading="lazy" alt="First hackathon - hacknite" src="https://i.imgur.com/Yg3di6k.jpg">
-
-<img loading="lazy" alt="Foss talk with friends" src="https://i.imgur.com/WGTr4Wq.jpg">
-
-<img loading="lazy" alt="The sexy mall" src="https://i.imgur.com/UbeGLEd.jpg">
-
-<img loading="lazy" alt="The sexy mall with a tree" src="https://i.imgur.com/W4cJO40.jpg">
-
-<img loading="lazy" alt="Project expo presentation" src="https://i.imgur.com/JjjO75w.png">
-
 </div>
 
-</details>
+<script>
+(function() {
+  'use strict';
 
-<details>
-<summary>/talks</summary>
+  const GRID_ID = 'image-grid';
+  const CONFIG_URL = '/static/images.json';
 
-<details>
+  /**
+   * Fetch images.json with caching enabled
+   */
+  async function fetchConfig() {
+    try {
+      const response = await fetch(CONFIG_URL, {
+        cache: 'default', // use browser cache
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      return await response.json();
+    } catch (err) {
+      console.error('Failed to load images config:', err);
+      return null;
+    }
+  }
 
-<summary>/fireside2024</summary>
+  /**
+   * Generate image URLs from a source config
+   * @param {Object} source - { baseUrl, prefix, range: [start, end], extension?: string }
+   * @returns {Array<Object>} - array of { lowRes, highRes } URL pairs
+   */
+  function generateImageUrls(source) {
+    const { baseUrl, prefix, range, extension = '.jpg' } = source;
+    if (!baseUrl || !prefix || !Array.isArray(range) || range.length !== 2) {
+      console.warn('Invalid source config:', source);
+      return [];
+    }
 
-<div class="image-grid" id="image-grid">
+    const [start, end] = range;
+    const urls = [];
+    for (let i = start; i <= end; i++) {
+      urls.push({
+        lowRes: `${baseUrl}/small/${prefix}-${i}_small${extension}`,
+        highRes: `${baseUrl}/${prefix}-${i}${extension}`
+      });
+    }
+    return urls;
+  }
 
-<img loading="lazy" alt="anna presentation - 1" src="https://i.imgur.com/PTP2P6m.jpg">
+  /**
+   * Create an image element with progressive lazy loading
+   * @param {Object} urlPair - { lowRes, highRes }
+   * @returns {HTMLElement} - image wrapper div
+   */
+  function createImageElement(urlPair) {
+    const { lowRes, highRes } = urlPair;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'image-item';
 
-<img loading="lazy" alt="anna presentation - 2" src="https://i.imgur.com/gyTGc2a.jpg">
+    const img = document.createElement('img');
+    img.src = lowRes; // load low-res first
+    img.alt = 'Gallery image';
+    img.loading = 'lazy'; // native lazy loading
+    img.decoding = 'async';
+    img.className = 'image-loading'; // optional: add class for blur effect
 
-<img loading="lazy" alt="anna presentation - 3" src="https://i.imgur.com/rANre38.jpg">
+    // Load high-res image and swap when ready
+    const highResImg = new Image();
+    highResImg.onload = function() {
+      img.src = highRes;
+      img.className = 'image-loaded';
+    };
+    highResImg.onerror = function() {
+      console.warn('Failed to load high-res image:', highRes);
+      // Keep low-res version on error
+    };
+    
+    // Start loading high-res once low-res is in viewport (triggered by lazy loading)
+    img.addEventListener('load', function() {
+      highResImg.src = highRes;
+    }, { once: true });
 
-<img loading="lazy" alt="anna presentation - 4" src="https://i.imgur.com/ouqWgET.jpg">
+    // Click handler opens full high-res image
+    img.addEventListener('click', function() {
+      window.open(highRes, '_blank');
+    });
 
-</div>
+    // Error handling for low-res
+    img.addEventListener('error', function() {
+      console.warn('Failed to load image:', lowRes);
+      wrapper.style.display = 'none';
+    });
 
-</details>
+    wrapper.appendChild(img);
+    return wrapper;
+  }
 
-</details>
+  /**
+   * Populate the grid with images
+   * @param {Array<Object>} sources - array of source configs
+   */
+  function populateGrid(sources) {
+    const grid = document.getElementById(GRID_ID);
+    if (!grid) {
+      console.error(`Element with id="${GRID_ID}" not found`);
+      return;
+    }
 
-<details>
+    // Clear existing content
+    grid.innerHTML = '';
 
-<summary>/trips</summary>
+    // Generate all image URLs from all sources
+    const allUrls = [];
+    sources.forEach(source => {
+      const urls = generateImageUrls(source);
+      allUrls.push(...urls);
+    });
 
-<details>
-<summary>/ooty 2024</summary>
+    if (allUrls.length === 0) {
+      grid.innerHTML = '<p>No images configured</p>';
+      return;
+    }
 
-<div class="image-grid" id="image-grid">
+    // Create and append image elements
+    const fragment = document.createDocumentFragment();
+    allUrls.forEach(url => {
+      fragment.appendChild(createImageElement(url));
+    });
+    grid.appendChild(fragment);
 
-<img loading="lazy" alt="tea estate views before low clowds" src="https://i.imgur.com/esHZCKk.jpg" />
+    console.log(`Loaded ${allUrls.length} images into grid`);
+  }
 
-<img loading="lazy" alt="tea estate view after with low clowds" src="https://i.imgur.com/PQOp4Ts.jpg" />
+  /**
+   * Initialize the gallery
+   */
+  async function init() {
+    const config = await fetchConfig();
+    if (!config || !Array.isArray(config.sources)) {
+      console.error('Invalid or missing sources in config');
+      return;
+    }
 
-<img loading="lazy" alt="insane view from the road to dolphin nose point" src="https://i.imgur.com/CYXkEXn.jpg" />
+    populateGrid(config.sources);
+  }
 
-<img loading="lazy" alt="another hilly tea estate" src="https://i.imgur.com/cwhlIVu.jpg" />
-
-<img loading="lazy" alt="dolphin nose point" src="https://i.imgur.com/MCV8Hsx.jpg">
-
-</div>
-
-</details>
-
-<details>
-
-<summary>/pondicherry 2022</summary>
-
-<div class="image-grid" id="image-grid">
-
-<img loading="lazy" alt="Pondi costal drive" src="https://i.imgur.com/EdVqF3s.jpg">
-
-<img loading="lazy" alt="Pondi costal view" src="https://i.imgur.com/K5RGcQI.jpg">
-
-<img loading="lazy" alt="Hillside drive" src="https://i.imgur.com/KUet9BN.jpg">
-
-<img loading="lazy" alt="Peaky hills" src="https://i.imgur.com/h5S0i45.jpg">
-
-<img loading="lazy" alt="Bay of bengal from a window with some trees" src="https://i.imgur.com/cgACPjM.jpg">
-
-<img loading="lazy" alt="Bay of bengal from a window" src="https://i.imgur.com/rwB61P4.jpg">
-
-<img loading="lazy" alt="More hills in tamil nadu" src="https://i.imgur.com/NTrFuRn.jpg">
-
-<img loading="lazy" alt="Railway Station" src="https://i.imgur.com/GJIXTg4.jpg">
-
-</div>
-
-</details>
-
-</details>
+  // Run when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

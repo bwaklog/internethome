@@ -1,0 +1,10 @@
+{
+  "sources": [
+    {
+      "baseUrl": "https://images.adihegde.com/camera/CannonXSi",
+      "prefix": "SIN",
+      "range": [1, 69],
+      "extension": ".JPG"
+    }
+  ]
+}
