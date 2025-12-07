@@ -696,22 +696,25 @@ body:has(.container.notetype) {
 }
 
 .image-grid {
-    margin: 1rem 0 0rem 0;
+    /* margin: 1rem 0 0rem 0; */
     column-count: 2;
     column-gap: 0.5rem;
 }
 
 .image-grid > * {
+    display: inline-block;
     width: 100%;
-    /* margin-bottom: 0.5rem; */
-    display: block;
-    border-radius: var(--style-border-radius);
-    overflow: hidden;
+    break-inside: avoid;
 }
 
-.image-grid > img {
+.image-grid > * > img {
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    display: block;
+    margin: 0;
+    border-radius: var(--style-border-radius);
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 
