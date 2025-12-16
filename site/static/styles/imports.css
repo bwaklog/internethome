@@ -34,13 +34,13 @@
 
 @font-face {
     font-family: "EbGaramond";
-    src: url(/static/fonts/serif/EbGaramond/EbGaramond.ttf);
+    src: url(/static/fonts/serif/EbGaramond/EBGaramond.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: "EbGaramondItalic";
-    src: url(/static/fonts/serif/EbGaramond/EbGaramond-Italic.ttf);
+    src: url(/static/fonts/serif/EbGaramond/EBGaramond-Italic.ttf);
     font-display: swap;
 }
 

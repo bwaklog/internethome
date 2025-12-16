@@ -66,14 +66,6 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
         <link rel="stylesheet" href="/static/style.css" />
 
-        <!-- Cloudflare Web Analytics -->
-        <script
-            defer
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "b16ba3a1a9d546b28b8f3dfae89358e1"}'
-        ></script>
-        <!-- End Cloudflare Web Analytics -->
-
         <!-- Scripts filled in from plugins -->
         {{ if $PageData.LiveReload }}
         <script>
