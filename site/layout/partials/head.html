@@ -15,37 +15,6 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         />
         <title>{{ $PageData.Frontmatter.Title }}</title>
 
-        <!-- smooth scroll -->
-        <!-- <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
-        <script>
-            const lenis = new Lenis();
-
-            lenis.on("scroll", (e) => {
-                console.log(e);
-            });
-
-            function raf(time) {
-                lenis.raf(time);
-                requestAnimationFrame(raf);
-            }
-
-            requestAnimationFrame(raf);
-        </script> -->
-
-        <!-- <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
-        />
-        <link
-            href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css"
-            rel="stylesheet"
-            type="text/css"
-        /> -->
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="/static/scripts/shuffle.js"></script>
-
         <script>
             MathJax = {
                 tex: {
@@ -95,18 +64,6 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             href="/feed.atom"
         />
 
-        <!--<link
-            rel="stylesheet"
-            href="https://unpkg.com/highlight.js@11.10.0/styles/base16/gruvbox-dark-hard.css"
-            media="(prefers-color-scheme: dark)"
-        />
-
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/highlight.js@11.10.0/styles/base16/gruvbox-light-hard.css"
-            media="(prefers-color-scheme: light)"
-        />-->
-
         <link rel="stylesheet" href="/static/style.css" />
 
         <!-- Cloudflare Web Analytics -->
@@ -148,8 +105,6 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <meta name="format-detection" content="telephone=no" />
 
         <script defer></script>
-
-        <!-- <script src="/static/scripts/nav.js"></script> -->
     </head>
     {{end}}
 </html>
