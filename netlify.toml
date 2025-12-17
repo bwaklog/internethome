@@ -1,9 +1,0 @@
-[build]
-base = "/"
-command = "./install.sh"
-publish = "site/rendered"
-
-[[redirects]]
-from = "/*"
-to = "/404.html"
-status = 404

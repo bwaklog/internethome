@@ -4,6 +4,12 @@
     font-family: "EbGaramond", sans-serif;
 }
 
+i,
+em {
+    font-family: "EbGaramondItalic";
+    font-style: normal;
+}
+
 body {
     margin: 1rem auto;
     max-width: 650px;
@@ -48,6 +54,37 @@ h4,
 h5,
 h6 {
     font-family: Inter, sans-serif;
+    font-weight: 350;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Inter, sans-serif;
+    font-weight: 350;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+h1>i,
+h1>em,
+h2>i,
+h2>em,
+h3>i,
+h3>em,
+h4>i,
+h4>em,
+h5>i,
+h5>em,
+h6>i,
+h6>em {
+    font-family: InterItalic, sans-serif;
+    font-style: normal;
     font-weight: 350;
     color: var(--color-primary);
     line-height: 1.2;
