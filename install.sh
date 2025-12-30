@@ -29,7 +29,6 @@ curl -L "https://github.com/anna-ssg/anna/releases/download/$RELEASE/$ANNA_TGZ" 
 tar -xzf anna.tar.gz
 chmod +x anna
 
-# Inject commit info directly into footer.html
 COMMIT_HASH=$(git rev-parse --short HEAD 2>/dev/null || echo "local")
 COMMIT_FULL_HASH=$(git rev-parse HEAD 2>/dev/null || echo "local")
 COMMIT_DATE=$(git log -1 --format=%cd --date=format:'%a %b %d %Y' 2>/dev/null || date '+%a %b %d %Y')

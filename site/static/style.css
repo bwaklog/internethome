@@ -10,12 +10,17 @@ em {
     font-style: normal;
 }
 
+strong,
+b {
+    font-weight: 600;
+}
+
 body {
     margin: 1rem auto;
     max-width: 650px;
     line-height: 1.6;
     font-size: var(--style-body-font);
-    font-weight: 450;
+    font-weight: 400;
     color: #444;
     padding: 0 10px
 }
