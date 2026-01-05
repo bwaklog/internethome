@@ -4,12 +4,8 @@ title: Aditya Hegde アディ
 description: My Internet Home
 previewimage: /static/me.jpeg
 layout: page
+scripts: ["lastfm.js"]
 ---
-
-<!--<div style="display: inline-flex; align-items: center; gap: 1rem; padding-top: 1.8rem; padding-bottom: 0rem;">
-    <img style="width: auto; height: 3rem; border-radius: 100%;" src="https://github.com/bwaklog.png" alt="Aditya Hegde profile picture" />
-    <h1 style="font-size: 2rem; margin: 0;">Aditya Hegde</h1>
-</div>-->
 
 # Aditya Hegde
 
@@ -26,6 +22,8 @@ Prev. research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) 
 Quick links: [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [Unsplash](https://unsplash.com/adihegde)
 
 </div>
+
+<div id="lastfm" aria-live="polite">Trying to fetch what i'm listening to 🤘</div>
 
 
 <!-- ![Singapore Marina Bay Overpass](https://images.unsplash.com/photo-1739971532189-f683e22f57cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) -->
