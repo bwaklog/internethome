@@ -32,6 +32,14 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
         ></script>
 
+        <link 
+            rel="stylesheet" 
+            href="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css" 
+        />
+        <script src="https://unpkg.com/@antonz/codapi@0.20.0/dist/settings.js"></script>
+        <codapi-settings url="http://localhost:1313/v1">
+        </codapi-settings>
+
         <script defer>
             document.addEventListener("DOMContentLoaded", () => {
                 const mathJaxElements = document.querySelectorAll(".MathJax");

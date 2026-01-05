@@ -14,7 +14,7 @@
     }
   ],
   "baseURL": "https://adihegde.com/",
-  "siteScripts": ["highlight.js"],
+  "siteScripts": [],
   "author": "Aditya Hegde",
   "collectionLayouts": {
     "collections/posts.html": "posts-layout"
