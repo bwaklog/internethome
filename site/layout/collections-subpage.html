@@ -25,23 +25,58 @@
 
             <!-- <table class="post-tatableble"> -->
             <ul style="margin-left: 0px;">
-            {{range $CollectionSet }}
+            {{range $index, $CollectionItem := $CollectionSet }}
+            {{if gt $index 0}}<hr />{{end}}
             <li class="post-list-element">
                 <div>
                     <div>
-                        <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
+                        <a class="post-list-title" href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
                         <br/>
-                        <p class="post-list-description">{{.Frontmatter.Description}}</p>
+                        <p class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
                     </div>
-                    <div class="post-list-date">{{.Frontmatter.Date}}</div>
+                    <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>
                 </div>
+                <div class="post-body-truncated">{{ printf "%.500s" $CollectionItem.Body }}</div>
+                <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a>
             </li>
             {{end}}
             </ul>
             <!-- </table> -->
 
         </div>
+
         {{template "footer" .}}
+
+        <script>
+            document.querySelectorAll('.post-body-truncated').forEach(element => {
+                const rawHTML = element.innerHTML;
+                
+                // Decode HTML entities
+                const textarea = document.createElement('textarea');
+                textarea.innerHTML = rawHTML;
+                let decodedHTML = textarea.value;
+                
+                // Check if content was truncated by looking for incomplete tags
+                const hadBrokenTag = /<([a-z]+)([^>]*)$/i.test(decodedHTML);
+                
+                // Fix broken closing tags at the end (remove incomplete tags)
+                decodedHTML = decodedHTML.replace(/<([a-z]+)([^>]*)$/i, '');
+                
+                // Add ... if content was truncated
+                if (hadBrokenTag) {
+                    if (decodedHTML.endsWith('</p>')) {
+                        decodedHTML = decodedHTML.replace(/<\/p>$/, '...</p>');
+                    } else {
+                        decodedHTML += '...';
+                    }
+                }
+                
+                // Set the innerHTML with the fixed, decoded HTML
+                element.innerHTML = decodedHTML;
+                element.style.display = 'block';
+                element.style.width = '100%';
+            });
+        </script>
 
 </body>
 </html>

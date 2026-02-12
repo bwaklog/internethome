@@ -2,7 +2,7 @@
 title: FossTalk 24
 layout: post_layout
 date: 2024-03-23
-draft: false
+draft: true
 tags:
   - hsp
   - WIP
