@@ -103,10 +103,10 @@ h6 > em {
 
 a {
     color: var(--color-text);
-    text-decoration: none;
+    text-decoration: underline;
     /*font-family: var(--body-italic-font-family);*/
-    /*text-underline-offset: 4px;*/
-    background-color: var(--inline-code-bg);
+    text-underline-offset: 4px;
+    /*background-color: var(--inline-code-bg);*/
 
     &:visited {
         color: inherit;
@@ -120,19 +120,25 @@ nav > .navigations > .header-element-author {
     font-weight: 500;
 }
 
+/* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
 .image-grid {
-    /* margin: 1rem 0 0rem 0; */
     column-count: 2;
     column-gap: 0.5rem;
 }
 
-.image-grid > * {
-    display: inline-block;
-    width: 100%;
+/* Keep items intact within a column (prevents awkward splits) */
+.image-item {
     break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin: 0 0 0.5rem 0;
 }
 
-.image-grid > * > img {
+/* Legacy: if old markup still emits .image-column wrappers, neutralize them */
+.image-column {
+    display: contents;
+}
+
+.image-item img {
     width: 100%;
     height: auto;
     display: block;
@@ -363,10 +369,13 @@ a > code {
     font-weight: 400;
 }
 
-
-
 /* Mobile */
 @media (max-width: 640px) {
+    /* Single column gallery on mobile */
+    .image-grid {
+        column-count: 1;
+    }
+
     #lastfm .lastfm-row {
         padding: 0.5rem 0.45rem;
     }

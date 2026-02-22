@@ -4,81 +4,95 @@
 
 <body>
 
-        <div class="container">
-            {{template "header" .}}
+    <div class="container">
+        {{template "header" .}}
 
-            {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+        {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
 
-            {{ if eq .PageURL "collections/post.html"}}
+        {{ if eq .PageURL "collections/post.html"}}
 
-            <br />
+        <br />
 
-            {{ else }}
-            <h1 class="post-title">Site Index</h1>
-            <!-- <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2> -->
-            <blockquote>
-                <p>Collection {{ $PageData.Frontmatter.Title }}</p>
-            </blockquote>
-            {{ end }}
+        {{ else }}
+        <h1 class="post-title">Site Index</h1>
+        <!-- <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2> -->
+        <blockquote>
+            <p>Collection {{ $PageData.Frontmatter.Title }}</p>
+        </blockquote>
+        {{ end }}
 
 
 
-            <!-- <table class="post-tatableble"> -->
-            <ul style="margin-left: 0px;">
+        <!-- <table class="post-tatableble"> -->
+        <ul style="margin-left: 0px;">
             {{range $index, $CollectionItem := $CollectionSet }}
-            {{if gt $index 0}}<hr />{{end}}
+            {{if gt $index 0}}
+            <hr />{{end}}
             <li class="post-list-element">
                 <div>
                     <div>
-                        <a class="post-list-title" href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
-                        <br/>
+                        <a class="post-list-title"
+                            href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
+                        <br />
                         <p class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
                     </div>
                     <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>
                 </div>
-                <div class="post-body-truncated">{{ printf "%.500s" $CollectionItem.Body }}</div>
+                <div class="post-body-truncated" {{ if gt (len $CollectionItem.Body) 500 }}data-truncated="true"{{ end }}>{{ printf "%.500s" $CollectionItem.Body }}</div>
                 <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a>
             </li>
             {{end}}
-            </ul>
-            <!-- </table> -->
+        </ul>
+        <!-- </table> -->
 
-        </div>
+    </div>
 
-        {{template "footer" .}}
+    {{template "footer" .}}
 
-        <script>
-            document.querySelectorAll('.post-body-truncated').forEach(element => {
-                const rawHTML = element.innerHTML;
-                
-                // Decode HTML entities
-                const textarea = document.createElement('textarea');
-                textarea.innerHTML = rawHTML;
-                let decodedHTML = textarea.value;
-                
-                // Check if content was truncated by looking for incomplete tags
-                const hadBrokenTag = /<([a-z]+)([^>]*)$/i.test(decodedHTML);
-                
-                // Fix broken closing tags at the end (remove incomplete tags)
-                decodedHTML = decodedHTML.replace(/<([a-z]+)([^>]*)$/i, '');
-                
-                // Add ... if content was truncated
-                if (hadBrokenTag) {
-                    if (decodedHTML.endsWith('</p>')) {
-                        decodedHTML = decodedHTML.replace(/<\/p>$/, '...</p>');
-                    } else {
-                        decodedHTML += '...';
+    <script>
+        document.querySelectorAll('.post-body-truncated').forEach(element => {
+            const rawHTML = element.innerHTML;
+
+            // Decode HTML entities
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = rawHTML;
+            let decodedHTML = textarea.value;
+
+            // Use DOMParser to fix any broken/incomplete HTML from truncation
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(decodedHTML, 'text/html');
+
+            // If the content was truncated, find the last text node and append "..."
+            if (element.dataset.truncated === 'true') {
+                const walker = document.createTreeWalker(
+                    doc.body,
+                    NodeFilter.SHOW_TEXT,
+                    {
+                        acceptNode: (node) =>
+                            node.textContent.trim()
+                                ? NodeFilter.FILTER_ACCEPT
+                                : NodeFilter.FILTER_SKIP
                     }
+                );
+
+                let lastTextNode = null;
+                while (walker.nextNode()) {
+                    lastTextNode = walker.currentNode;
                 }
-                
-                // Set the innerHTML with the fixed, decoded HTML
-                element.innerHTML = decodedHTML;
-                element.style.display = 'block';
-                element.style.width = '100%';
-            });
-        </script>
+
+                if (lastTextNode) {
+                    lastTextNode.textContent = lastTextNode.textContent.trimEnd() + '...';
+                }
+            }
+
+            element.innerHTML = doc.body.innerHTML;
+            element.style.display = 'block';
+            element.style.width = '100%';
+        });
+    </script>
 
 </body>
+
 </html>
 
 {{ end }}
