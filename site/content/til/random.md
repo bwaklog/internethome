@@ -9,9 +9,7 @@ draft: false
 layout: post_layout
 description: Notes while figuring out different RNG's
 collections:
-  - post
-  - tech
-  - "2024"
+  - til
 ---
 
 Some info dump while I try to figure out random number generations. No TOC for this page, but here is a `tree -L1`
