@@ -1,5 +1,37 @@
 @import url("/static/styles/imports.css");
 
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-text: #100f0f;
+        --color-text-dim: #343331;
+        --color-text-low: #b7b5ac;
+
+        --color-background: #fffcf0;
+        --color-background-dim: #f2f0e5;
+        --color-background-low: #e6e4d9;
+        --color-background-contrast: #1c1b1a;
+
+        --inline-code-bg: #f2f0e5;
+        --selection-bg: rgba(187, 220, 206, 0.3);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #FFFCF0;
+        --color-text-dim: #CECDC3;
+        --color-text-low: #575653;
+
+        --color-background: #100f0f;
+        --color-background-dim: #1c1b1a;
+        --color-background-low: #343331;
+        --color-background-contrast: #fffcf0;
+
+        --inline-code-bg: #1c1b1a;
+        --selection-bg: rgba(30, 95, 91, 0.3);
+    }
+}
+
 :root {
     /*font-family: "EbGaramond", sans-serif;*/
     font-family: var(--body-font-family);
@@ -109,7 +141,7 @@ a {
     /*background-color: var(--inline-code-bg);*/
 
     &:visited {
-        color: inherit;
+        color: var(--color-text);
         text-decoration: none;
     }
 }

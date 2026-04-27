@@ -27,19 +27,18 @@
         <ul style="margin-left: 0px;">
             {{range $index, $CollectionItem := $CollectionSet }}
             {{if gt $index 0}}
-            <hr />{{end}}
+            {{end}}
             <li class="post-list-element">
                 <div>
                     <div>
                         <a class="post-list-title"
                             href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
-                        <br />
                         <p class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
                     </div>
                     <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>
                 </div>
-                <div class="post-body-truncated" {{ if gt (len $CollectionItem.Body) 500 }}data-truncated="true"{{ end }}>{{ printf "%.500s" $CollectionItem.Body }}</div>
-                <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a>
+                <!-- <div class="post-body-truncated" {{ if gt (len $CollectionItem.Body) 500 }}data-truncated="true"{{ end }}>{{ printf "%.500s" $CollectionItem.Body }}</div>
+                <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a> -->
             </li>
             {{end}}
         </ul>
@@ -49,7 +48,7 @@
 
     {{template "footer" .}}
 
-    <script>
+    <!-- <script>
         document.querySelectorAll('.post-body-truncated').forEach(element => {
             const rawHTML = element.innerHTML;
 
@@ -89,7 +88,7 @@
             element.style.display = 'block';
             element.style.width = '100%';
         });
-    </script>
+    </script> -->
 
 </body>
 

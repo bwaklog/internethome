@@ -20,7 +20,7 @@
     .then((r) => r.json())
     .then((data) => {
       const tracks = data?.result?.recenttracks?.track || [];
-      const top5 = tracks.slice(0, 10);
+      const top5 = tracks.slice(0, 5);
 
       const container = document.createElement("div");
 

@@ -44,7 +44,14 @@
     --body-italic-font-family: Georgia, serif;
     --heading-font-family: Georgia, serif;
     --heading-italic-font-family: Georgia, serif;
+
+    /* --body-font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif; */
+    /* --body-italic-font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif; */
+    /* --heading-font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif; */
+    /* --heading-italic-font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif; */
+
     --mono-font-family: monospace;
+
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
