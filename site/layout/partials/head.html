@@ -15,6 +15,12 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         />
         <title>{{ $PageData.Frontmatter.Title }}</title>
 
+        <script
+            src="//instant.page/5.2.0"
+            type="module"
+            integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"
+        ></script>
+
         <script>
             MathJax = {
                 tex: {
@@ -32,13 +38,12 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
         ></script>
 
-        <link 
-            rel="stylesheet" 
-            href="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css" 
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css"
         />
         <script src="https://unpkg.com/@antonz/codapi@0.20.0/dist/settings.js"></script>
-        <codapi-settings url="http://localhost:1313/v1">
-        </codapi-settings>
+        <codapi-settings url="http://localhost:1313/v1"> </codapi-settings>
 
         <script defer>
             document.addEventListener("DOMContentLoaded", () => {
@@ -50,20 +55,19 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         </script>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('img');
+            document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll("img");
 
-            images.forEach(function (img) {
-                img.style.userSelect = 'none'; // Disable text selection
-                img.style.cursor = 'default'; // Set cursor to default
+                images.forEach(function (img) {
+                    img.style.userSelect = "none"; // Disable text selection
+                    img.style.cursor = "default"; // Set cursor to default
 
-                img.addEventListener('click', function () {
-                window.open(img.src, '_blank');
+                    img.addEventListener("click", function () {
+                        window.open(img.src, "_blank");
+                    });
                 });
             });
-            });
         </script>
-
 
         <link
             rel="alternate"
@@ -104,7 +108,155 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <!-- Thanks to Beau Smith on Stackoverflow -->
         <meta name="format-detection" content="telephone=no" />
 
-        <script defer></script>
+        <script>
+            (function () {
+                const connection =
+                    navigator.connection ||
+                    navigator.mozConnection ||
+                    navigator.webkitConnection;
+
+                const shouldPrefetch = () => {
+                    if (!connection) {
+                        return true;
+                    }
+                    if (connection.saveData) {
+                        return false;
+                    }
+                    const type = connection.effectiveType || "";
+                    return !type.includes("2g");
+                };
+
+                const supportsPrefetch = (() => {
+                    try {
+                        const link = document.createElement("link");
+                        return (
+                            link.relList &&
+                            link.relList.supports &&
+                            link.relList.supports("prefetch")
+                        );
+                    } catch (error) {
+                        return false;
+                    }
+                })();
+
+                const prefetched = new Set();
+
+                const normalizeUrl = (href) => {
+                    try {
+                        const url = new URL(href, window.location.href);
+                        if (url.origin !== window.location.origin) {
+                            return null;
+                        }
+                        url.hash = "";
+                        return url.href;
+                    } catch (error) {
+                        return null;
+                    }
+                };
+
+                const prefetchUrl = (url) => {
+                    if (!url || prefetched.has(url) || !shouldPrefetch()) {
+                        return;
+                    }
+                    if (url === window.location.href) {
+                        return;
+                    }
+                    prefetched.add(url);
+
+                    if (supportsPrefetch) {
+                        const link = document.createElement("link");
+                        link.rel = "prefetch";
+                        link.as = "document";
+                        link.href = url;
+                        link.crossOrigin = "anonymous";
+                        document.head.appendChild(link);
+                        return;
+                    }
+
+                    fetch(url, {
+                        credentials: "same-origin",
+                        cache: "force-cache",
+                    }).catch(() => {});
+                };
+
+                const isEligibleLink = (link) => {
+                    if (!link || !link.href) {
+                        return false;
+                    }
+                    if (link.hasAttribute("data-no-prefetch")) {
+                        return false;
+                    }
+                    if (link.hasAttribute("download")) {
+                        return false;
+                    }
+                    const rel = link.getAttribute("rel") || "";
+                    if (rel.includes("nofollow")) {
+                        return false;
+                    }
+                    const href = link.getAttribute("href") || "";
+                    if (
+                        href.startsWith("#") ||
+                        href.startsWith("mailto:") ||
+                        href.startsWith("tel:")
+                    ) {
+                        return false;
+                    }
+                    if (link.target === "_blank") {
+                        return false;
+                    }
+                    return true;
+                };
+
+                const onIdle =
+                    window.requestIdleCallback ||
+                    function (cb) {
+                        return setTimeout(function () {
+                            cb({ timeRemaining: () => 0 });
+                        }, 200);
+                    };
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    if (!shouldPrefetch()) {
+                        return;
+                    }
+
+                    const links = Array.from(
+                        document.querySelectorAll("a[href]"),
+                    ).filter(isEligibleLink);
+
+                    if ("IntersectionObserver" in window) {
+                        const observer = new IntersectionObserver(
+                            (entries, observerInstance) => {
+                                entries.forEach((entry) => {
+                                    if (!entry.isIntersecting) {
+                                        return;
+                                    }
+                                    const url = normalizeUrl(entry.target.href);
+                                    prefetchUrl(url);
+                                    observerInstance.unobserve(entry.target);
+                                });
+                            },
+                            { rootMargin: "200px" },
+                        );
+
+                        links.forEach((link) => observer.observe(link));
+                    }
+
+                    onIdle(function () {
+                        const navLinks = Array.from(
+                            document.querySelectorAll(
+                                "header a[href], .navigations a[href]",
+                            ),
+                        ).filter(isEligibleLink);
+
+                        navLinks.forEach((link) => {
+                            const url = normalizeUrl(link.href);
+                            prefetchUrl(url);
+                        });
+                    });
+                });
+            })();
+        </script>
     </head>
     {{end}}
 </html>
