@@ -15,6 +15,23 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         />
         <title>{{ $PageData.Frontmatter.Title }}</title>
 
+        <script type="speculationrules">
+            {
+                "prerender": [
+                    {
+                        "where": { "href_matches": "/*" },
+                        "eagerness": "moderate"
+                    }
+                ],
+                "prefetch": [
+                    {
+                        "where": { "href_matches": "/*" },
+                        "eagerness": "conservative"
+                    }
+                ]
+            }
+        </script>
+
         <script
             src="//instant.page/5.2.0"
             type="module"

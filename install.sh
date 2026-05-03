@@ -11,12 +11,12 @@ if [ "$CF_PAGES" = "1" ]; then
 
     case "$ARCH" in
         x86_64|amd64)
-            ANNA_TGZ="anna_Linux_x86_64.tar.gz"   
+            ANNA_TGZ="anna_Linux_x86_64.tar.gz"
             ;;
         arm64|aarch64)
-            ANNA_TGZ="anna_Linux_arm64.tar.gz"   
+            ANNA_TGZ="anna_Linux_arm64.tar.gz"
             ;;
-        *) 
+        *)
             echo "Unsupported arch: $ARCH" >&2
             exit 1
             ;;
@@ -58,8 +58,12 @@ if [ "$CF_PAGES" = "1" ]; then
         echo "Error: $RENDER_DIR does not exist" >&2
         exit 1
     fi
+
+    if [ -f "./site/_headers" ]; then
+        cp "./site/_headers" "$RENDER_DIR/_headers"
+        echo "Copied _headers into $RENDER_DIR"
+    fi
 else
     echo "INFO: not in CF env, serving locally"
     anna -s
 fi
-
