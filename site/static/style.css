@@ -18,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-text: #FFFCF0;
-        --color-text-dim: #CECDC3;
+        --color-text: #fffcf0;
+        --color-text-dim: #cecdc3;
         --color-text-low: #575653;
 
         --color-background: #100f0f;
@@ -107,7 +107,7 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font-family);
-    font-weight: 500;
+    font-weight: 550;
     color: var(--color-text);
     line-height: 1.2;
     font-size: var(--style-heading-font);

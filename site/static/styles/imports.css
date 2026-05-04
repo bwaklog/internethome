@@ -34,11 +34,11 @@
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 36rem;
+    --style-container-width: 46rem;
 
-    --style-body-font: 1rem;
-    --style-heading-font: 1.55rem;
-    --style-body-font-mobile: 1rem;
+    --style-body-font: 1.15rem;
+    --style-heading-font: 1.75rem;
+    --style-body-font-mobile: 1.05rem;
 
     --body-font-family: Iowan Old Style, Georgia, serif;
     --body-italic-font-family: Iowan Old Style, Georgia, serif;
