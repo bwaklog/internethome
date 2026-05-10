@@ -426,7 +426,7 @@ docker run \
 	bwaklog/quaso:latest
 ```
 
-<a class="asciinema-link" href="https://asciinema.org/a/AQz82DGPB25kypSBCjw3JT3dG" target="_blank"><img src="https://asciinema.org/a/AQz82DGPB25kypSBCjw3JT3dG.svg" /></a>
+<script src="https://asciinema.org/a/AQz82DGPB25kypSBCjw3JT3dG.js" id="asciicast-AQz82DGPB25kypSBCjw3JT3dG" async="true"></script>
 
 ---
 

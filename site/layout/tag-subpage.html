@@ -16,10 +16,9 @@
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
                 <li class="post-list-element">
-                    <div>
+                    <div class="post-list-row">
                         <div>
                             <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                            <br/>
                             <p class="post-list-description">{{.Frontmatter.Description}}</p>
                         </div>
                         <div class="post-list-date">{{.Frontmatter.Date}}</div>

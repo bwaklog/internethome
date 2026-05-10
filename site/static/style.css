@@ -53,23 +53,45 @@ b {
     font-weight: 550;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: var(--style-container-width);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
     line-height: 1.6;
     font-size: var(--style-body-font);
     font-weight: 400;
     color: var(--color-text-dim);
     background-color: var(--color-background);
-    padding: 0 20px;
+    padding: 1rem 20px;
+}
+
+.container {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+footer {
+    margin-top: auto;
+    font-size: calc(var(--style-body-font) - 0.15rem);
+    opacity: 0.5;
 }
 
 figure {
     margin: 0;
 
-    & > figcaption > * {
+    & > figcaption > *,
+    & > figcaption > small > a {
         color: var(--color-text-low);
         font-family: var(--body-italic-font-family);
+        text-decoration: none;
         font-style: italic;
         margin: 0;
     }
@@ -113,6 +135,10 @@ h6 {
     font-size: var(--style-heading-font);
 }
 
+hr {
+    opacity: 0.5;
+}
+
 h1 > i,
 h1 > em,
 h2 > i,
@@ -149,6 +175,7 @@ a {
 nav > .navigations > .header-element,
 nav > .navigations > .header-element-author {
     font-size: 1.1rem;
+    text-decoration: none;
     font-weight: 500;
 }
 
@@ -183,13 +210,27 @@ nav > .navigations > .header-element-author {
 .post-list-element {
     list-style-type: none;
 
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
 
     & > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 1rem;
+        row-gap: 0rem;
+        align-items: start;
     }
+}
+
+.post-list-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1rem;
+    row-gap: 0rem;
+    align-items: start;
+}
+
+.post-list-element > div > div {
+    min-width: 0;
 }
 
 .post-body-preview {
@@ -212,7 +253,9 @@ ul:has(.post-list-element) {
 
 .post-list-element > div > div > .post-list-title {
     color: var(--color-text);
-    font-weight: 480;
+    text-decoration: none;
+    font-family: var(--heading-font-family);
+    font-weight: 550;
 }
 
 .post-list-description {
@@ -225,6 +268,25 @@ ul:has(.post-list-element) {
     color: var(--color-text-dim);
     min-width: 100px;
     margin-left: 10px;
+    white-space: nowrap;
+    justify-self: end;
+}
+
+@media (max-width: 640px) {
+    .post-list-element > div,
+    .post-list-row {
+        grid-template-columns: 1fr;
+        row-gap: 0;
+    }
+
+    .post-list-date {
+        min-width: 0;
+        margin-left: 0;
+        margin-top: 0.05rem;
+        white-space: normal;
+        justify-self: start;
+        line-height: 1.3;
+    }
 }
 
 iframe {

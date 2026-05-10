@@ -25,10 +25,9 @@
             {{ if eq $Collection "collections/2025.html" }}
                 {{ range $RelatedPages }}
                     <li class="post-list-element">
-                        <div>
+                        <div class="post-list-row">
                             <div>
                                 <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                                <br/>
                                 <p class="post-list-description">{{.Frontmatter.Description}}</p>
                             </div>
                             <div class="post-list-date">{{.Frontmatter.Date}}</div>
@@ -46,10 +45,9 @@
             {{ if eq $Collection "collections/2024.html" }}
                 {{ range $RelatedPages }}
                 <li class="post-list-element">
-                    <div>
+                    <div class="post-list-row">
                         <div>
                             <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                            <br/>
                             <p class="post-list-description">{{.Frontmatter.Description}}</p>
                         </div>
                         <div class="post-list-date">{{.Frontmatter.Date}}</div>
@@ -67,10 +65,9 @@
             {{ if eq $Collection "collections/2023.html" }}
                 {{ range $RelatedPages }}
                 <li class="post-list-element">
-                    <div>
+                    <div class="post-list-row">
                         <div>
                             <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                            <br/>
                             <p class="post-list-description">{{.Frontmatter.Description}}</p>
                         </div>
                         <div class="post-list-date">{{.Frontmatter.Date}}</div>

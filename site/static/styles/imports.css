@@ -34,14 +34,21 @@
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 46rem;
+    --style-container-width: 45rem;
 
-    --style-body-font: 1.15rem;
+    --style-body-font: 1.1rem;
     --style-heading-font: 1.75rem;
     --style-body-font-mobile: 1.05rem;
 
     --body-font-family: Iowan Old Style, Georgia, serif;
     --body-italic-font-family: Iowan Old Style, Georgia, serif;
+
+    /*--body-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --body-italic-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;*/
     --heading-font-family: Iowan Old Style, Georgia, serif;
     --heading-italic-font-family: Iowan Old Style, Georgia, serif;
 
