@@ -4,7 +4,7 @@ title: Aditya Hegde アディ
 description: My Internet Home
 previewimage: /static/me.jpeg
 layout: page
-scripts: ["lastfm.js", "life-bg.js"]
+scripts: ["lastfm.js"]
 ---
 
 # Aditya Hegde

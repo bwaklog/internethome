@@ -1,22 +1,22 @@
 @import url("/static/styles/imports.css");
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-text: #100f0f;
-        --color-text-dim: #343331;
-        --color-text-low: #b7b5ac;
+/*@media (prefers-color-scheme: light) {*/
+:root {
+    --color-text: #100f0f;
+    --color-text-dim: #343331;
+    --color-text-low: #b7b5ac;
 
-        --color-background: #fffcf0;
-        --color-background-dim: #f2f0e5;
-        --color-background-low: #e6e4d9;
-        --color-background-contrast: #1c1b1a;
+    --color-background: #fffcf0;
+    --color-background-dim: #f2f0e5;
+    --color-background-low: #e6e4d9;
+    --color-background-contrast: #1c1b1a;
 
-        --inline-code-bg: #f2f0e5;
-        --selection-bg: rgba(187, 220, 206, 0.3);
-    }
+    --inline-code-bg: #f2f0e5;
+    --selection-bg: rgba(187, 220, 206, 0.3);
 }
+/*}*/
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     :root {
         --color-text: #fffcf0;
         --color-text-dim: #cecdc3;
@@ -30,7 +30,7 @@
         --inline-code-bg: #1c1b1a;
         --selection-bg: rgba(30, 95, 91, 0.3);
     }
-}
+}*/
 
 :root {
     /*font-family: "EbGaramond", sans-serif;*/
