@@ -5,7 +5,7 @@ tags:
   - RNG
   - notes
   - tech
-draft: false
+draft: true
 layout: post_layout
 description: Notes while figuring out different RNG's
 collections:
