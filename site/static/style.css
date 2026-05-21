@@ -209,11 +209,15 @@ ul {
     column-gap: 0.5rem;
 }
 
+.image-grid > figure > img {
+    margin-bottom: 0;
+}
+
 /* Keep items intact within a column (prevents awkward splits) */
 .image-item {
     break-inside: avoid;
     -webkit-column-break-inside: avoid;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0 0;
 }
 
 /* Legacy: if old markup still emits .image-column wrappers, neutralize them */
@@ -416,9 +420,9 @@ pre code strong {
 
 @media (max-width: 850px) {
     pre {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
@@ -571,6 +575,18 @@ a > code {
 /* Mobile */
 @media (max-width: 640px) {
     /* Single column gallery on mobile */
+    img {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    /*.image-item img {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }*/
+
     .image-grid {
         column-count: 1;
     }
