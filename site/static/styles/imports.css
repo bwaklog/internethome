@@ -1,47 +1,35 @@
 /*@media (prefers-color-scheme: light) {*/
 :root {
-    --color-text: #000000;
-    --color-text-dim: #1a1a1a;
-    --color-text-low: #1a1a1a90;
+    --color-text: #333343;
+    --color-text-dim: #3c3c51;
+    --color-text-low: #51525a50;
 
-    --color-background: #fafafa;
-    --color-background-dim: #fafafa7a;
+    --color-background: #ffffff;
+    --color-background-dim: #ffffff7a;
     --color-background-low: #ffffff50;
-    --color-background-contrast: #161618;
+    --color-background-contrast: #1c1b1a;
+    /*--color-background: #fffcf0;
+    --color-background-dim: #f2f0e5;
+    --color-background-low: #e6e4d9;
+    --color-background-contrast: #1c1b1a;*/
 
-    --inline-code-bg: #f2efeb;
-    --selection-bg: #d1d1d17d;
-}
-/*}*/
+    /*--inline-code-bg: #f3f2f0;*/
+    --inline-code-bg: #efeff1;
+    --anchor-text: #395a84;
+    /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
-/*@media (prefers-color-scheme: dark) {
-    :root {
-        --color-text: #fafafa;
-        --color-text-dim: #fafafaca;
-        --color-text-low: #ffffff50;
-
-        --color-background: #000000;
-        --color-background-dim: #1a1a1a;
-        --color-background-low: #1a1a1a90;
-        --color-background-contrast: #161618;
-
-        --inline-code-bg: #1a1a1a;
-        --selection-bg: #d1d1d17d;
-    }
-}*/
-
-:root {
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 45rem;
+    --style-container-width: 42rem;
+    --style-code-block-width-multiplier: 1.2;
 
-    --style-body-font: 1.1rem;
-    --style-heading-font: 1.75rem;
+    --style-body-font: 1rem;
+    --style-heading-font: 1.65rem;
     --style-body-font-mobile: 1.05rem;
 
-    --body-font-family: Iowan Old Style, Georgia, serif;
-    --body-italic-font-family: Iowan Old Style, Georgia, serif;
+    --body-font-family: Georgia, serif;
+    --body-italic-font-family: Georgia, serif;
 
     /*--body-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
@@ -49,8 +37,8 @@
     --body-italic-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
         Helvetica, Arial, sans-serif;*/
-    --heading-font-family: Iowan Old Style, Georgia, serif;
-    --heading-italic-font-family: Iowan Old Style, Georgia, serif;
+    --heading-font-family: Georgia, serif;
+    --heading-italic-font-family: Georgia, serif;
 
     /*--body-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,

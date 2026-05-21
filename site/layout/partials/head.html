@@ -55,8 +55,17 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             rel="stylesheet"
             href="https://unpkg.com/@antonz/codapi@0.20.0/dist/snippet.css"
         />
-        <script src="https://unpkg.com/@antonz/codapi@0.20.0/dist/settings.js"></script>
-        <codapi-settings url="http://localhost:1313/v1"> </codapi-settings>
+        <!--<script src="https://unpkg.com/@antonz/codapi@0.20.0/dist/settings.js"></script>-->
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/default.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+
+        <script>
+            hljs.highlightAll();
+        </script>
 
         <script defer>
             document.addEventListener("DOMContentLoaded", () => {
@@ -77,6 +86,23 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
                     img.addEventListener("click", function () {
                         window.open(img.src, "_blank");
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const codeBlocks = document.querySelectorAll("pre code");
+                codeBlocks.forEach(function (codeBlock) {
+                    codeBlock.addEventListener("click", function (event) {
+                        if (event.detail === 3) {
+                            const range = document.createRange();
+                            range.selectNodeContents(codeBlock);
+                            const selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
                     });
                 });
             });
@@ -107,7 +133,7 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         <script src="/static/scripts/{{.}}" defer></script>
         {{end}}
 
-        <link rel="icon" type="image/x-icon" href="/static/cl.jpg" />
+        <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ $PageData.Frontmatter.Title }}" />
         <meta

@@ -11,15 +11,14 @@
             <!-- <div id="container-zoom" class="container-zoom"> -->
 
 
+            <p class="post-date">{{$PageData.Frontmatter.Date}}</p>
             <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
 
-            <!-- <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p > -->
+             <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p >
 
-            <p class="post-author"><span class="post-date">{{$PageData.Frontmatter.Date}}</span> •
             {{range $PageData.Frontmatter.Tags}}
-            <span><a href="/tags/{{.}}.html">{{.}}</a></span>
+            <a href="/tags/{{.}}.html" class="post-tag"><code style="font-size: 0.9rem;">{{.}}</code></a>
             {{end}}
-            </p>
 
             {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
             {{ else }}
