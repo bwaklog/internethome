@@ -1,6 +1,6 @@
 ---
 date: 2024-02-24
-title: Aditya Hegde
+title: About
 description: My Internet Home
 previewimage: /static/me.jpeg
 type: page

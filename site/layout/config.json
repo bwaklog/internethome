@@ -17,9 +17,12 @@
     },
     {
       "cv": "cv.pdf"
+    },
+    {
+      "rss": "feed.xml"
     }
   ],
-  "baseURL": "https://adihegde.com/",
+  "baseURL": "https://adihegde.com",
   "siteScripts": [],
   "author": "Aditya Hegde",
   "collectionLayouts": {
