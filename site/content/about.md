@@ -2,6 +2,7 @@
 date: 2024-02-24
 title: About
 description: My Internet Home
+draft: true
 previewimage: /static/me.jpeg
 type: page
 ---
@@ -54,11 +55,7 @@ You can find all the indexes of this site at the [tags](/tags.html). Its a porta
 
 You can reach me out at [aditya.mh@outlook.com](mailto:aditya.mh@outlook.com) 📩
 
-<br />
-
 Link to my [Résumé](/cv.pdf) 🔗
-
-<br />
 
 Socials: [LinkedIn](https://www.linkedin.com/in/adityamhegde/), [Instagram](https://www.instagram.com/adi.hegdee/), [Twitter](https://twitter.com/bwaklog), [Béhance](https://be.net/bwaklog)
 
@@ -67,8 +64,7 @@ Socials: [LinkedIn](https://www.linkedin.com/in/adityamhegde/), [Instagram](http
 
  <div class="cite-block">
 
-###### inspirations
+### inspirations
 
-The design on this site derives its inspiration from these amazing people [rowjee.com](https://rowjee.com), [nelson.co](https://nelson.co), [icyphox.sh](https://icyphox.sh)
 
  </div>

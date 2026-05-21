@@ -25,7 +25,7 @@
       const container = document.createElement("div");
 
       const header = document.createElement("p");
-      header.style.marginBottom = "1rem";
+      header.style.marginBottom = "0.5rem";
       header.style.marginTop = "0";
       header.innerHTML =
         'Recent scrobbles (<a href="https://www.last.fm/user/bwaklog" target="_blank" rel="noopener">lastfm</a>)';
