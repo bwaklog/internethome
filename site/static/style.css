@@ -199,6 +199,10 @@ nav > .navigations > .header-element-author {
     font-weight: 500;
 }
 
+ul {
+    padding-left: 20px;
+}
+
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
 .image-grid {
     column-count: 2;
