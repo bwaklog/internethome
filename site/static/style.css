@@ -377,7 +377,7 @@ pre {
 
 pre code {
     overflow-x: auto;
-    font-family: JuliaMono, monospace;
+    font-family: var(--mono-font-family);
     font-variant-ligatures: common-ligatures;
     font-feature-settings: "liga" on;
     background-color: var(--inline-code-bg);
@@ -394,6 +394,24 @@ pre > code {
     border: 1px solid var(--color-text-low);
     text-indent: 0;
     white-space: pre;
+}
+
+pre code b,
+pre code strong {
+    font-weight: 400;
+}
+
+[class*="hljs-"] {
+    font-weight: 550;
+}
+
+/* Override for specific hljs elements that shouldn't be bold */
+.hljs-string,
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-comment {
+    font-weight: 400;
 }
 
 @media (max-width: 850px) {
