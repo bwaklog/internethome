@@ -19,7 +19,10 @@
       "cv": "cv.pdf"
     },
     {
-      "rss": "feed.xml"
+      "linkstash": "linkstash.html"
+    },
+    {
+      "RSS": "feed.xml"
     }
   ],
   "baseURL": "https://adihegde.com",
