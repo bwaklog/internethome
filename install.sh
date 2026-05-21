@@ -39,11 +39,13 @@ COMMIT_FULL_HASH=$(git rev-parse HEAD 2>/dev/null || echo "local")
 COMMIT_DATE=$(git log -1 --format=%cd --date=format:'%a %b %d %Y' 2>/dev/null || date '+%a %b %d %Y')
 COMMIT_MESSAGE=$(git log -1 --format=%s 2>/dev/null || echo "Local build")
 
-sed -i.bak \
-    -e "s|<a id=\"commit-hash\" class=\"footer-element\" href=\"[^\"]*\">[^<]*</a>|<a id=\"commit-hash\" class=\"footer-element\" href=\"https://github.com/bwaklog/internethome/tree/${COMMIT_FULL_HASH}\">${COMMIT_HASH}</a>|" \
-    -e "s|<span id=\"commit-date\">[^<]*</span>|<span id=\"commit-date\">${COMMIT_DATE}</span>|" \
-    -e "s|<span id=\"commit-message\">[^<]*</span>|<span id=\"commit-message\">${COMMIT_MESSAGE}</span>|" \
-    site/layout/partials/footer.html
+# Use Perl for cross-platform compatible text replacement
+perl -i -pe "
+    s|href=\"https://github.com/bwaklog/internethome/tree/[a-f0-9]*\"|href=\"https://github.com/bwaklog/internethome/tree/${COMMIT_FULL_HASH}\"|g;
+    s|>[a-f0-9]{7}</a|>${COMMIT_HASH}</a|g;
+    s|<span id=\"commit-date\">[^<]*</span>|<span id=\"commit-date\">${COMMIT_DATE}</span>|g;
+    s|<span id=\"commit-message\">[^<]*</span>|<span id=\"commit-message\">${COMMIT_MESSAGE}</span>|g;
+" site/layout/partials/footer.html
 
 if [ "$CF_PAGES" = "1" ]; then
     echo "INFO: in CF env, only building"
