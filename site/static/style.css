@@ -128,6 +128,15 @@ img {
     object-position: center center;
 }
 
+#dither-banner {
+    display: block;
+    width: 100%;
+    height: calc((100vw * 9 / 16) - 80px);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    background: var(--color-background);
+}
+
 blockquote {
     margin: 0.5rem 0 0.5rem;
     padding: 0.05rem 1.2rem 0.05rem;
@@ -147,7 +156,7 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font-family);
-    font-weight: 450;
+    font-weight: 550;
     color: var(--color-text);
     line-height: 1.2;
     font-size: var(--style-heading-font);
@@ -195,7 +204,7 @@ nav > .navigations > .header-element-author {
     font-size: 1.1rem;
     text-decoration: none;
     color: var(--color-text);
-    padding-right: 0.3rem;
+    padding-right: 0.2rem;
     font-weight: 500;
 }
 

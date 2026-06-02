@@ -4,9 +4,9 @@
     --color-text-dim: #3c3c51;
     --color-text-low: #51525a50;
 
-    --color-background: #ffffff;
-    --color-background-dim: #ffffff7a;
-    --color-background-low: #ffffff50;
+    --color-background: #fbfaf9;
+    --color-background-dim: #fbfaf97a;
+    --color-background-low: #fbfaf950;
     --color-background-contrast: #1c1b1a;
     /*--color-background: #fffcf0;
     --color-background-dim: #f2f0e5;
@@ -14,7 +14,7 @@
     --color-background-contrast: #1c1b1a;*/
 
     /*--inline-code-bg: #f3f2f0;*/
-    --inline-code-bg: #efeff1;
+    --inline-code-bg: #f0efed;
     --anchor-text: #395a84;
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
@@ -24,23 +24,16 @@
     --style-container-width: 42rem;
     --style-code-block-width-multiplier: 1.2;
 
-    --style-body-font: 1rem;
+    --style-body-font: 1.15rem;
     --style-heading-font: 1.65rem;
-    --style-body-font-mobile: 1.05rem;
+    --style-body-font-mobile: 1.15rem;
 
-    --body-font-family: Georgia, serif;
+    /* --body-font-family: Georgia, serif;
     --body-italic-font-family: Georgia, serif;
-
-    /*--body-font-family:
-        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --body-italic-font-family:
-        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;*/
     --heading-font-family: Georgia, serif;
-    --heading-italic-font-family: Georgia, serif;
+    --heading-italic-font-family: Georgia, serif; */
 
-    /*--body-font-family:
+    --body-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
         Helvetica, Arial, sans-serif;
     --body-italic-font-family:
@@ -51,7 +44,7 @@
         Helvetica, Arial, sans-serif;
     --heading-italic-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;*/
+        Helvetica, Arial, sans-serif;
 
     --mono-font-family: FiraCode, monospace;
 
