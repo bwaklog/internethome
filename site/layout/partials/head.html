@@ -13,6 +13,8 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
             name="description"
             content="{{ $PageData.Frontmatter.Description }}"
         />
+        <meta name="fediverse:creator" content="@bwaklog@mastodon.social">
+
         <title>{{ $PageData.Frontmatter.Title }}</title>
 
         <script type="speculationrules">
@@ -33,6 +35,8 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
         </script>
 
         <script src="/static/scripts/instant.page.js" type="module"></script>
+
+        <link rel="me" href="https://mastodon.social/@bwaklog">
 
         <script>
             MathJax = {
