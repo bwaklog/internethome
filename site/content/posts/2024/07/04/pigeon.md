@@ -6,7 +6,7 @@ layout: post_layout
 tags:
   - blog
   - inked
-draft: false
+draft: true
 collections:
   - post
   - inked

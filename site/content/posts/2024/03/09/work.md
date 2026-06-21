@@ -1,7 +1,7 @@
 ---
 date: 2024-03-09
 title: Quality of work
-draft: false
+draft: true
 layout: post_layout
 description: A few thoughts off of my mind, my perspective on effort.
 tags:

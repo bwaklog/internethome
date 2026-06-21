@@ -85,7 +85,7 @@ body {
 }
 
 footer {
-    margin-top: auto;
+    margin-top: 1em;
     font-size: calc(var(--style-body-font) - 0.2rem);
     opacity: 0.5;
     position: relative;
