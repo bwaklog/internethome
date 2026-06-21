@@ -1,33 +1,24 @@
 {
   "navbar": [
-    {
-      "posts": "collections/post.html"
-    },
-    {
-      "tags": "tags.html"
-    },
-    {
-      "til": "collections/til.html"
-    },
-    {
-      "clicks": "clicks.html"
-    },
-    {
-      "talks": "presentations.html"
-    },
-    {
-      "cv": "cv.pdf"
-    },
-    {
-      "wiki": "wiki.html"
-    },
-    {
-      "RSS": "feed.xml"
-    }
+    {"posts": "collections/post.html"},
+    {"tags": "tags.html"},
+    {"til": "collections/til.html"},
+    {"clicks": "clicks.html"},
+    {"talks": "presentations.html"},
+    {"cv": "cv.pdf"},
+    {"wiki": "wiki.html"},
+    {"atom": "feed.xml"}
   ],
   "baseURL": "https://adihegde.com",
   "siteScripts": [],
-  "author": "Aditya Hegde",
+  "siteTitle": "adihegde",
+  "author": "mail@adihegde.com (Aditya Hegde)",
+  "copyright": "Personal blog © 2024 by Aditya Hegde is licensed under CC BY-NC-SA 4.0",
+  "socials": {
+    "github": "https://github.com/bwaklog",
+    "twitter": "https://twitter.com/bwaklog",
+    "email": "mail@adihegde.com"
+  },
   "collectionLayouts": {
     "collections/posts.html": "posts-layout"
   }
