@@ -7,7 +7,7 @@ CF_PAGES="${CF_PAGES:-0}"
 if [ "$CF_PAGES" = "1" ]; then
     echo "INFO: in CF env, installing anna for arch"
     ARCH="${ARCH_OVERRIDE:-$(uname -m)}"
-    RELEASE="4.0.0-rc-1"
+    RELEASE="v4.0.0-rc-4"
 
     case "$ARCH" in
         x86_64|amd64)
