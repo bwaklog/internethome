@@ -20,7 +20,7 @@ Ended the week by meeting up with my friends during the Bengaluru systems meet-u
 
 Work is great so far, spent the last week meeting up with the entire team in the 6 monthly team meet up (no one comes on site to work since covid). Besides my main tasks at work, during breaks I spend some time just going through some hidden confluence documents on some of their architectures and other things in general. Have definitely exploited the mini snacks counter in my floor so far. In a way, the office being empty gives a nice environment to get work done. 
 
-I’ve been spoilt by good coffee. Essentially went from having coffee for the sake of _staying awake_ and now purely for the taste of it. All began when my stole a good cup of americano my sister got for breakfast @ The Old House, now I’m pretty much beyond the point of no return. Have only had my coffee black since the start of 2026.
+I’ve been spoilt by good coffee. Essentially went from having coffee for the sake of _staying awake_ and now purely for the taste of it. All began when I stole a good cup of americano from my sister @ The Old House, now I’m pretty much beyond the point of no return. Have only had my coffee black since the start of 2026.
 
 ![](https://images.adihegde.com/blogs/inked-1/coffee.jpeg)
 The americano that started it all
