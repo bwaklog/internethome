@@ -8,7 +8,7 @@ scripts: []
 ---
 
 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(2.5 * var(--style-body-font));">
-  <img loading="lazy" src="https://codeberg.org/bwaklog.png" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp">
+  <img loading="lazy" src="https://github.com/bwaklog.png" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp">
   <h1 style="margin: 0; overflow-wrap: break-word; word-break: break-word;">Aditya Hegde</h1>
 </div>
 

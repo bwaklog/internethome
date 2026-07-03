@@ -156,7 +156,7 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font-family);
-    font-weight: 550;
+    font-weight: 450;
     color: var(--color-text);
     line-height: 1.2;
     font-size: var(--style-heading-font);
@@ -181,7 +181,7 @@ h6 > em {
     /*font-family: InterItalic, sans-serif;*/
     font-family: var(--heading-italic-font-family);
     font-style: italic;
-    font-weight: 350;
+    font-weight: 450;
     color: var(--color-primary);
     line-height: 1.2;
 }
@@ -486,7 +486,8 @@ a > code {
     padding-bottom: 62.5%;
     /* 16:10 */
     height: 0;
-    margin-bottom: 1rem;
+    margin-top: -0.9rem;
+    margin-bottom: 2rem;
 }
 
 .video-container-1610 iframe {
@@ -503,7 +504,8 @@ a > code {
     padding-bottom: 56.25%;
     /* 16:9 */
     height: 0;
-    margin-bottom: 1rem;
+    margin-top: -0.9rem;
+    margin-bottom: 2rem;
 }
 
 .video-container iframe {

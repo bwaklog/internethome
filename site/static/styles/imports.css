@@ -24,9 +24,9 @@
     --style-container-width: 42rem;
     --style-code-block-width-multiplier: 1.2;
 
-    --style-body-font: 1.15rem;
-    --style-heading-font: 1.65rem;
-    --style-body-font-mobile: 1.15rem;
+    --style-body-font: 1rem;
+    --style-heading-font: 1.45rem;
+    --style-body-font-mobile: 1rem;
 
     /* --body-font-family: Georgia, serif;
     --body-italic-font-family: Georgia, serif;
