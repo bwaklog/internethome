@@ -1,4 +1,103 @@
-@import url("/static/styles/imports.css");
+/*@media (prefers-color-scheme: light) {*/
+:root {
+    --color-text: #333343;
+    --color-text-dim: #3c3c51;
+    --color-text-low: #51525a50;
+
+    --color-background: #fbfaf9;
+    --color-background-dim: #fbfaf97a;
+    --color-background-low: #fbfaf950;
+    --color-background-contrast: #1c1b1a;
+    /*--color-background: #fffcf0;
+    --color-background-dim: #f2f0e5;
+    --color-background-low: #e6e4d9;
+    --color-background-contrast: #1c1b1a;*/
+
+    /*--inline-code-bg: #f3f2f0;*/
+    --inline-code-bg: #f0efed;
+    --anchor-text: #395a84;
+    /*--selection-bg: rgba(187, 220, 206, 0.3);*/
+
+    --style-border-radius: 0px;
+    --style-border-radius-hover: 0px;
+    --style-hover-scale: 1;
+    --style-container-width: 42rem;
+    --style-code-block-width-multiplier: 1.2;
+
+    --style-body-font: 1rem;
+    --style-heading-font: 1.45rem;
+    --style-body-font-mobile: 1rem;
+
+    /* --body-font-family: Georgia, serif;
+    --body-italic-font-family: Georgia, serif;
+    --heading-font-family: Georgia, serif;
+    --heading-italic-font-family: Georgia, serif; */
+
+    --body-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --body-italic-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --heading-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --heading-italic-font-family:
+        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+
+    --mono-font-family: FiraCode, monospace;
+
+    --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(/static/fonts/mono/FiraCode.ttf);
+    font-display: swap;
+}
+
+/* @font-face { */
+/*     font-family: JuliaMono; */
+/*     src: url(/static/fonts/mono/JuliaMono.ttf); */
+/*     font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*     font-family: EbGaramond; */
+/*     src: url(/static/fonts/serif/EbGaramond/EBGaramond.ttf); */
+/*     font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*     font-family: EbGaramondItalic; */
+/*     src: url(/static/fonts/serif/EbGaramond/EBGaramond-Italic.ttf); */
+/*     font-display: swap; */
+/* } */
+/**/
+/* @font-face { */
+/*     font-family: Inter; */
+/*     src: url(/static/fonts/others/Inter.ttf); */
+/*     font-display: swap; */
+/*     font-feature-settings: */
+/*         "liga" 1, */
+/*         "calt" 1; */
+/* } */
+/**/
+/* @supports (font-variation-settings: normal) { */
+/*     :root { */
+/*         font-family: Inter; */
+/*     } */
+/* } */
+/**/
+/* @font-face { */
+/*     font-family: InterItalic; */
+/*     src: url(/static/fonts/others/InterItalic.ttf); */
+/*     font-display: swap; */
+/*     font-feature-settings: */
+/*         "liga" 1, */
+/*         "calt" 1; */
+/* } */
 
 /*@media (prefers-color-scheme: light) {*/
 /*}*/
@@ -46,7 +145,7 @@ b {
     box-sizing: border-box;
 }
 
-html {
+html, body {
     background-color: var(--color-background);
 }
 
@@ -61,7 +160,6 @@ body {
     font-size: var(--style-body-font);
     font-weight: 400;
     color: var(--color-text-dim);
-    background-color: transparent;
     padding: 1rem 20px;
 }
 
