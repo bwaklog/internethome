@@ -12,7 +12,7 @@ scripts: []
   <h1 style="margin: 0; overflow-wrap: break-word; word-break: break-word;">Aditya Hegde</h1>
 </div>
 
-Hello world! I'm Aditya Hegde. Currently interning at [Akamai](https://www.akamai.com/). Prev. research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) (prev. Microsoft Innovation Lab). 
+Hello world! I'm Aditya Hegde. Previosuly worked at [Akamai](https://www.akamai.com/) as a summer intern in the ghost-dev team. Was previously a research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) and currently am a member of the lab since 2025.
 
 Currently pursuing my bachelors degree in CSE at [PESU](https://pes.edu). I have a fond interest in building systems and storage. Outside of my work, I spend my time _trying_ to play the Guitar, am a "hobby photographer" and love rock and coffee. 
 
