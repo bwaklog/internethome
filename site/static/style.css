@@ -206,7 +206,8 @@ figure {
 
     & > figcaption > *,
     & > figcaption > small > a {
-        color: var(--color-text-low);
+        color: var(--color-text-dim);
+        opacity: 0.8;
         font-family: var(--body-italic-font-family);
         text-decoration: none;
         font-style: italic;
@@ -309,6 +310,8 @@ nav > .navigations > .header-element-author {
 
 ul {
     padding-left: 20px;
+    margin-top: -10px;
+    top: -10px;
 }
 
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
