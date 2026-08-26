@@ -136,7 +136,7 @@ em {
 
 strong,
 b {
-    font-weight: 550;
+    font-weight: 600;
 }
 
 *,
@@ -158,9 +158,10 @@ body {
     position: relative;
     line-height: 1.6;
     font-size: var(--style-body-font);
-    font-weight: 400;
+    font-weight: 450;
     color: var(--color-text-dim);
     padding: 1rem 20px;
+    text-align: justify;
 }
 
 #life-canvas {
@@ -185,7 +186,7 @@ body {
 footer {
     margin-top: 1em;
     font-size: calc(var(--style-body-font) - 0.2rem);
-    opacity: 0.5;
+    opacity: 0.9;
     position: relative;
     z-index: 1;
 }
