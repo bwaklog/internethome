@@ -7,12 +7,14 @@ layout: page
 scripts: []
 ---
 
-<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(2.5 * var(--style-body-font));">
-  <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp">
-  <h1 style="margin: 0; overflow-wrap: break-word; word-break: break-word;">Aditya Hegde</h1>
-</div>
+<!-- <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(2.5 * var(--style-body-font));"> -->
+<!--   <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp"> -->
+<!--   <h1 style="margin: 0; overflow-wrap: break-word; word-break: break-word;">Aditya Hegde</h1> -->
+<!-- </div> -->
 
-Hello world! I'm Aditya Hegde. Previosuly worked at [Akamai](https://www.akamai.com/) as a summer intern in the ghost-dev team. Was previously a research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) and currently am a member of the lab since 2025.
+# Aditya Hegde
+
+Hello world! I'm Aditya Hegde. Previosuly worked at [Akamai](https://www.akamai.com/) as a summer intern in the GHost blr development team. Was previously a research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) and currently am a member of the lab since 2025.
 
 Currently pursuing my bachelors degree in CSE at [PESU](https://pes.edu). I have a fond interest in building systems and storage. Outside of my work, I spend my time _trying_ to play the Guitar, am a "hobby photographer" and love rock and coffee. 
 
