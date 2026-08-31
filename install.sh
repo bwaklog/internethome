@@ -39,13 +39,15 @@ COMMIT_FULL_HASH=$(git rev-parse HEAD 2>/dev/null || echo "local")
 COMMIT_DATE=$(git log -1 --format=%cd --date=format:'%a %b %d %Y' 2>/dev/null || date '+%a %b %d %Y')
 COMMIT_MESSAGE=$(git log -1 --format=%s 2>/dev/null || echo "Local build")
 
-# Use Perl for cross-platform compatible text replacement
-perl -i -pe "
-    s|href=\"https://github.com/bwaklog/internethome/tree/[a-f0-9]*\"|href=\"https://github.com/bwaklog/internethome/tree/${COMMIT_FULL_HASH}\"|g;
-    s|>[a-f0-9]{7}</a|>${COMMIT_HASH}</a|g;
-    s|<span id=\"commit-date\">[^<]*</span>|<span id=\"commit-date\">${COMMIT_DATE}</span>|g;
-    s|<span id=\"commit-message\">[^<]*</span>|<span id=\"commit-message\">${COMMIT_MESSAGE}</span>|g;
-" site/layout/partials/footer.html
+export COMMIT_HASH COMMIT_FULL_HASH COMMIT_DATE COMMIT_MESSAGE
+
+# Replace the actual placeholder tokens in the footer template.
+perl -0pi -e '
+    s{https://github\.com/bwaklog/internethome/tree/[0-9a-f]+}{https://github.com/bwaklog/internethome/tree/$ENV{COMMIT_FULL_HASH}}g;
+    s/\{commit_hash\}/$ENV{COMMIT_HASH}/g;
+    s/\{commit_date\}/$ENV{COMMIT_DATE}/g;
+    s/\{commit_message\}/$ENV{COMMIT_MESSAGE}/g;
+' site/layout/partials/footer.html
 
 if [ "$CF_PAGES" = "1" ]; then
     echo "INFO: in CF env, only building"
