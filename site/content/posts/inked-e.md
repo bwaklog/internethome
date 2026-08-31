@@ -1,5 +1,5 @@
 ---
-title: Inked 0xE
+title: First income
 date: 2026-07-04
 previewimage: https://images.adihegde.com/blogs/inked-1/loaf.jpg
 layout: post_layout

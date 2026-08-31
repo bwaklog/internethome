@@ -1,5 +1,5 @@
 ---
-title: Inked 0x43
+title: First Milestones
 date: 2026-08-26
 # previewimage: https://images.adihegde.com/blogs/inked-1/loaf.jpg
 layout: post_layout

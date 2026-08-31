@@ -1,5 +1,5 @@
 ---
-title: Inked 0x1
+title: Genesis & Coffee
 date: 2026-06-20
 previewimage: https://images.adihegde.com/blogs/inked-1/loaf.jpg
 layout: post_layout

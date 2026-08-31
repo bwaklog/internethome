@@ -1,10 +1,10 @@
 /*@media (prefers-color-scheme: light) {*/
 :root {
-    --color-text: #333343;
-    --color-text-dim: #3c3c51;
+    --color-text: #000000;
+    --color-text-dim: #1a1a1a;
     --color-text-low: #51525a50;
 
-    --color-background: #fbfaf9;
+    --color-background: #ffffff;
     --color-background-dim: #fbfaf97a;
     --color-background-low: #fbfaf950;
     --color-background-contrast: #1c1b1a;
@@ -14,7 +14,7 @@
     --color-background-contrast: #1c1b1a;*/
 
     /*--inline-code-bg: #f3f2f0;*/
-    --inline-code-bg: #f0efed;
+    --inline-code-bg: #ececec;
     --anchor-text: #395a84;
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
@@ -161,7 +161,6 @@ body {
     font-weight: 450;
     color: var(--color-text-dim);
     padding: 1rem 20px;
-    text-align: justify;
 }
 
 #life-canvas {
@@ -310,8 +309,6 @@ nav > .navigations > .header-element-author {
 
 ul {
     padding-left: 20px;
-    margin-top: -10px;
-    top: -10px;
 }
 
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
