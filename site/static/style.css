@@ -7,7 +7,9 @@
     --color-background-dim: #fbfaf97a;
 
     --inline-code-bg: #ececec;
+    /* --anchor-text: #395a84; */
     --anchor-text: #1b46d9;
+    --anchor-text-hover: #1b46d9;
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
     --style-border-radius: 0px;
@@ -90,7 +92,7 @@ body {
     position: relative;
     line-height: 1.6;
     font-size: var(--style-body-font);
-    font-weight: 450;
+    font-weight: 400;
     color: var(--color-text-dim);
     padding: 1rem 20px;
 }
@@ -223,10 +225,14 @@ a {
     /*font-family: var(--body-italic-font-family);*/
     text-underline-offset: 4px;
     /*background-color: var(--inline-code-bg);*/
+    transition: color 0.3s var(--animation-bezier);
 
     &:visited {
         color: var(--anchor-text);
-        text-decoration: none;
+    }
+
+    &:hover {
+        color: var(--anchor-text-hover);
     }
 }
 
