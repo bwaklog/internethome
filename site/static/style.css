@@ -1,15 +1,34 @@
-/*@media (prefers-color-scheme: light) {*/
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-text: #000000;
+        --color-text-dim: #1a1a1a;
+
+        --color-background: #ffffff;
+        --color-background-dim: #fbfaf97a;
+
+        --inline-code-bg: #ececec;
+        /* --anchor-text: #395a84; */
+        --anchor-text: #1b46d9;
+        --anchor-text-hover: #1b46d9;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #ffffff;
+        --color-text-dim: #cecdc4;
+
+        --color-background: #100f0f;
+        --color-background-dim: #1e1e1e;
+
+        --inline-code-bg: #666666;
+        /* --anchor-text: #395a84; */
+        --anchor-text: #4a99e9;
+        --anchor-text-hover: #4a99e9;
+    }
+}
 :root {
-    --color-text: #000000;
-    --color-text-dim: #1a1a1a;
 
-    --color-background: #ffffff;
-    --color-background-dim: #fbfaf97a;
-
-    --inline-code-bg: #ececec;
-    /* --anchor-text: #395a84; */
-    --anchor-text: #1b46d9;
-    --anchor-text-hover: #1b46d9;
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
     --style-border-radius: 0px;
@@ -26,6 +45,7 @@
     /* --body-italic-font-family: Georgia, serif; */
     /* --heading-font-family: Georgia, serif; */
     /* --heading-italic-font-family: Georgia, serif; */
+    --blockquote-font-family: Georgia, serif;
 
     --body-font-family:
         -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
@@ -173,8 +193,9 @@ img {
 blockquote {
     margin: 0.5rem 0 0.5rem;
     padding: 0.05rem 1.2rem 0.05rem;
-    background-color: var(--inline-code-bg);
-    font-family: var(--body-italic-font-family);
+    /* background-color: var(--inline-code-bg); */
+    border-left: 2px solid var(--inline-code-bg);
+    font-family: var(--blockquote-font-family);
     font-style: italic;
 
     & > * {

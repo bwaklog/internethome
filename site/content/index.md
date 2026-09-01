@@ -27,8 +27,8 @@ This site came about after my frustrations of maintaining a simple webpage witho
 
 This site has a bunch of semi-organised [posts](/collections/post.html) that I try writing once in a while and TIL's (huge inspiration from Simon Willson's TIL page at [til.simonwillison.net](https://til.simonwillison.net/)), where I will be dumping links and other side notes that I take while learning and when I attend talks.
 
-Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [Unsplash](https://unsplash.com/adihegde), [𝕏](https://x.com/bwaklog) or mail me at [mail@adihegde.com](mailto:mail@adihegde.com)
+Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [Unsplash](https://unsplash.com/adihegde), [𝕏](https://x.com/bwaklog) or feel free drop an email at [mail@adihegde.com](mailto:mail@adihegde.com)
 
 <!-- <div id="lastfm" aria-live="polite">Trying to fetch what i'm listening to 🤘</div> -->
 
-> The design on this site derives its inspiration from these folks: [eatonphil.com](https://eatonphil.com), [matklad.github.io](https://matklad.github.io),[polarhive.net](https://polarhive.net), [rowjee.com](https://rowjee.com), [icyphox.sh](https://icyphox.sh)
+> The design on this site derives its inspiration from these folks: [eatonphil.com](https://eatonphil.com), [matklad.github.io](https://matklad.github.io), [polarhive.net](https://polarhive.net), [rowjee.com](https://rowjee.com), [icyphox.sh](https://icyphox.sh)

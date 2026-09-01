@@ -42,6 +42,8 @@ I’ve had a lot of learnings while running HSP last year and passive ones while
 
 But for a small reality check, none of this work if the people driving it aren’t on board for the same reason as you are and the people steering the community fail to take time out for it as well, which is how all of these current ones work. Can’t expect a community to run itself with a push, there has to be some sort of constant effort to keep it running.
 
-<p style="margin-bottom: 2px;"><i>“Oh ye seekers after perpetual motion, how many vain chimeras have you pursued? Go and take your place with the alchemists.” </i></p>
+<blockquote>
+<p style="margin-bottom: 2px;">“Oh ye seekers after perpetual motion, how many vain chimeras have you pursued? Go and take your place with the alchemists.”</p>
 
 <p style="text-align: right; margin-top: 2px;">~ Leonardo da Vinci, 1494</p>
+</blockquote>
