@@ -33,7 +33,13 @@
                     <div>
                         <a class="post-list-title"
                             href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
+                        {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
+                        <blockquote>
+                        {{ end }}
                         <p class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
+                        {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
+                        </blockquote>
+                        {{ end }}
                     </div>
                     <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>
                 </div>

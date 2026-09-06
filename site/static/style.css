@@ -8,8 +8,22 @@
 
         --inline-code-bg: #ececec;
         /* --anchor-text: #395a84; */
-        --anchor-text: #1b46d9;
-        --anchor-text-hover: #1b46d9;
+        --anchor-text: #bf616a;
+        --anchor-text-hover: #bf616a;
+
+        /* Highlighting */
+        --hl-type: #0086B3;
+        --hl-tag: #000080;
+        --hl-title-func: #990000;
+        --hl-title-class: #445588;
+        --hl-comment: #008000;
+        --hl-meta: #3c5d5d;
+        --hl-number: #009999;
+        --hl-string: #d14;
+        --hl-output: #2156a5;
+        --hl-subst: rgba(0, 0, 0, .9);
+        --hl-symbol: #008080;
+        --hl-line: #ffc;
     }
 }
 
@@ -18,13 +32,27 @@
         --color-text: #deded4;
         --color-text-dim: #cecdc4;
 
-        --color-background: #030303;
+        --color-background: #100f0f;
         --color-background-dim: #1e1e1e;
 
         --inline-code-bg: #1c1b1a;
         /* --anchor-text: #395a84; */
-        --anchor-text: #4a99e9;
-        --anchor-text-hover: #4a99e9;
+        --anchor-text: #cc8188;
+        --anchor-text-hover: #cc8188;
+
+        /* Highlighting */
+        --hl-type: #0086B3;
+        --hl-tag: #000080;
+        --hl-title-func: #e55353;
+        --hl-title-class: #445588;
+        --hl-comment: rgb(94, 164, 94);
+        --hl-meta: #3c5d5d;
+        --hl-number: #009999;
+        --hl-string: rgb(236, 63, 106);
+        --hl-output: #2156a5;
+        --hl-subst: rgba(0, 0, 0, .9);
+        --hl-symbol: #008080;
+        --hl-line: #ffc;
     }
 }
 :root {
@@ -34,41 +62,41 @@
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 60ch;
-    --style-code-block-width-multiplier: 1.2;
+    --style-container-width: 80ch;
+    --style-code-block-overflow: 6ch;
 
     --style-body-font: 1.30rem;
     --style-heading-font: 1.45rem;
+    --h1-fs: 1.8rem;
+    --h2-fs: 1.5rem;
+    --h3-fs: 1.4rem;
+    --h4-fs: 1.35rem;
+    --h5-fs: 1.35rem;
+    --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    --body-font-family: "EB Garamond", Georgia, serif;
-    --body-italic-font-family: "EB Garamond", Georgia, serif;
+    /* --body-font-family: "EB Garamond", Georgia, serif; */
+    /* --body-italic-font-family: "EB Garamond", Georgia, serif; */
     /* --heading-font-family: "EB Garamond",Georgia, serif; */
     /* --heading-italic-font-family: "EB Garamond", Georgia, serif; */
     --blockquote-font-family: "EB Garamond", Georgia, serif;
 
-    /* --body-font-family: */
-    /*     -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --body-italic-font-family: */
-    /*     -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
+    --body-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --body-italic-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
     --heading-font-family:
-        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
         Helvetica, Arial, sans-serif;
     --heading-italic-font-family:
-        -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
         Helvetica, Arial, sans-serif;
 
-    --mono-font-family: FiraCode, monospace;
+    --mono-font-family: "JetBrains Mono", monospace;
 
     --animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@font-face {
-    font-family: FiraCode;
-    src: url(/static/fonts/mono/FiraCode.ttf);
-    font-display: swap;
 }
 
 :root {
@@ -119,7 +147,7 @@ body {
     --line-height: 1.7rem;
     color: var(--color-text-dim);
     padding: 1rem 20px;
-    text-align: justify;
+    /* text-align: justify; */
     hyphens: auto;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -146,8 +174,9 @@ body {
 
 footer {
     margin-top: 1em;
-    font-size: calc(var(--style-body-font) - 0.6rem);
+    font-size: calc(var(--style-body-font) - 0.4rem);
     line-height: unset;
+    --line-height: 1.1rem;
     opacity: 0.9;
     position: relative;
     z-index: 1;
@@ -202,13 +231,14 @@ img {
 blockquote {
     margin: 0.5rem 0 0.5rem;
     padding: 0.05rem 1.2rem 0.05rem;
-    background-color: var(--inline-code-bg);
-    /* border-left: 2px solid var(--inline-code-bg); */
+    border-left: 2px solid var(--anchor-text);
     font-family: var(--blockquote-font-family);
-    font-style: italic;
 
-    & > * {
+    & > *,
+    & > * > *,
+    & > * > * > * {
         color: var(--color-text);
+        font-family: inherit;
     }
 }
 
@@ -222,7 +252,6 @@ h6 {
     font-weight: 450;
     color: var(--color-text);
     line-height: 1.2;
-    font-size: var(--style-heading-font);
 }
 
 hr {
@@ -378,6 +407,7 @@ ul:has(.post-list-element) {
     color: var(--color-text);
     /*text-decoration: none;*/
     font-family: var(--heading-font-family);
+    font-weight: 500;
     font-size: calc(var(--style-heading-font) - 0.3rem);
 }
 
@@ -432,30 +462,6 @@ iframe {
     height: auto;
 }
 
-pre {
-    width: calc(
-        var(--style-container-width) * var(--style-code-block-width-multiplier)
-    );
-    margin-left: calc(
-        (
-                var(--style-container-width) *
-                    var(--style-code-block-width-multiplier) -
-                    var(--style-container-width)
-            ) /
-            -2
-    );
-    margin-right: calc(
-        (
-                var(--style-container-width) *
-                    var(--style-code-block-width-multiplier) -
-                    var(--style-container-width)
-            ) /
-            -2
-    );
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 pre code {
     overflow-x: auto;
     font-family: var(--mono-font-family);
@@ -468,13 +474,16 @@ pre code {
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-inline: 10px;
 }
 
 pre > code {
     display: block;
-    border: 1px solid var(--color-text-dim);
+    /* border: 1px solid var(--color-text-dim); */
     text-indent: 0;
     white-space: pre;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 pre code b,
@@ -484,15 +493,6 @@ pre code strong {
 
 [class*="hljs-"] {
     font-weight: 550;
-}
-
-/* Override for specific hljs elements that shouldn't be bold */
-.hljs-string,
-.hljs-number,
-.hljs-literal,
-.hljs-symbol,
-.hljs-comment {
-    font-weight: 400;
 }
 
 @media (max-width: 850px) {
@@ -511,20 +511,84 @@ pre code strong {
 }
 
 pre code.hljs {
-    background-color: #ffffff;
+    background-color: var(--color-background);
 }
 
-/* pre code.hljs {
-    font-family: JuliaMono, monospace;
-    font-variant-ligatures: common-ligatures;
-    font-feature-settings: "liga" on;
-    background-color: var(--inline-code-bg);
-    line-height: 1.3;
-    font-size: 0.95rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-inline: 1rem;
-} */
+.hljs-ln {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.hljs-ln td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hljs-ln-numbers {
+    color: var(--color-text-dim);
+    opacity: 0.5;
+    border-right: 1px solid var(--color-text-dim);
+    padding: 0 1rem 0 0.25rem !important;
+    text-align: right;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 1%;
+}
+
+.hljs-ln-code {
+    padding-left: 1rem !important;
+}
+
+/* Highlighting */
+
+.hljs-keyword,
+.hljs-literal {
+  color: var(--color-text);
+  font-weight: bold;
+}
+.hljs-type {
+  color: var(--hl-type);
+}
+.hljs-tag {
+  color: var(--hl-tag);
+}
+.hljs-title.function_ {
+  color: var(--hl-title-func);
+  font-weight: bold;
+}
+.hljs-title.class_ {
+  color: var(--hl-title-class);
+  font-weight: bold;
+}
+.hljs-comment {
+  color: var(--hl-comment);
+  font-style: italic;
+}
+.hljs-built_in,
+.hljs-meta {
+  color: var(--hl-meta);
+  font-weight: bold;
+}
+.hljs-number {
+  color: var(--hl-number);
+}
+.hljs-string {
+  color: var(--hl-string);
+}
+.hljs-output {
+  color: var(--hl-output);
+}
+.hljs-subst {
+  color: var(--hl-subst);
+}
+.hljs-attr,
+.hljs-symbol {
+  color: var(--hl-symbol);
+}
+.hljs-line {
+  background-color: var(--hl-line);
+}
 
 p > code,
 li > code,

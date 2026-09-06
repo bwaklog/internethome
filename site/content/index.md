@@ -31,4 +31,4 @@ Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.
 
 <!-- <div id="lastfm" aria-live="polite">Trying to fetch what i'm listening to 🤘</div> -->
 
-> The design on this site derives its inspiration from these folks: [eatonphil.com](https://eatonphil.com), [matklad.github.io](https://matklad.github.io), [polarhive.net](https://polarhive.net), [rowjee.com](https://rowjee.com), [icyphox.sh](https://icyphox.sh)
+> The design on this site derives its inspiration from these folks: [transactional.blog](https://transactional.blog/), [eatonphil.com](https://eatonphil.com), [matklad.github.io](https://matklad.github.io), [polarhive.net](https://polarhive.net), [rowjee.com](https://rowjee.com), [icyphox.sh](https://icyphox.sh)

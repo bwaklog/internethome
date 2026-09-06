@@ -63,7 +63,8 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
         <script>
             (function () {
@@ -71,22 +72,35 @@ $PageData nil }} {{ $PageData = .TemplateData }} {{end}}
                     "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/default.min.css";
                 const highlightJsSrc =
                     "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js";
+                const lineNumbersJsSrc =
+                    "https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js";
 
                 const loadHighlight = () => {
                     if (!document.querySelector("pre code")) {
                         return;
                     }
 
-                    const stylesheet = document.createElement("link");
-                    stylesheet.rel = "stylesheet";
-                    stylesheet.href = highlightCssHref;
-                    document.head.appendChild(stylesheet);
+                    // const stylesheet = document.createElement("link");
+                    // stylesheet.rel = "stylesheet";
+                    // stylesheet.href = highlightCssHref;
+                    // document.head.appendChild(stylesheet);
 
                     const script = document.createElement("script");
                     script.src = highlightJsSrc;
                     script.onload = () => {
                         if (window.hljs) {
                             window.hljs.highlightAll();
+
+                            const lineNumbersScript = document.createElement("script");
+                            lineNumbersScript.src = lineNumbersJsSrc;
+                            lineNumbersScript.onload = () => {
+                                document
+                                    .querySelectorAll("pre code")
+                                    .forEach((codeBlock) => {
+                                        window.hljs.lineNumbersBlock(codeBlock);
+                                    });
+                            };
+                            document.head.appendChild(lineNumbersScript);
                         }
                     };
                     document.head.appendChild(script);

@@ -1,11 +1,8 @@
 {
   "navbar": [
     {"posts": "collections/post.html"},
-    {"tags": "tags.html"},
     {"til": "collections/til.html"},
-    {"clicks": "clicks.html"},
     {"talks": "presentations.html"},
-    {"cv": "cv.pdf"},
     {"wiki": "wiki.html"},
     {"atom": "feed.xml"}
   ],
