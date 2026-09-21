@@ -11,14 +11,8 @@
 
         {{ if eq .PageURL "collections/post.html"}}
 
-        <br />
-
         {{ else }}
-        <h1 class="post-title">Site Index</h1>
-        <!-- <h2 class="collection-category-span">Collection {{ $PageData.Frontmatter.Title }} </h2> -->
-        <blockquote>
-            <p>Collection {{ $PageData.Frontmatter.Title }}</p>
-        </blockquote>
+        <h3>Collection <b>{{ $PageData.Frontmatter.Title }}</b></h3>
         {{ end }}
 
 
@@ -34,11 +28,9 @@
                         <a class="post-list-title"
                             href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
                         {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
-                        <blockquote>
                         {{ end }}
-                        <p class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
+                        <p style="opacity: 0.65;" class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
                         {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
-                        </blockquote>
                         {{ end }}
                     </div>
                     <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>

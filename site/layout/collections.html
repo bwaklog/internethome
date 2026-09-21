@@ -6,7 +6,7 @@
     <div class="container">
         {{template "header" .}}
 
-        <h1>Collections</h1>
+        <h3>Collections available on site</h3>
 
         <table class="post-table">
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}

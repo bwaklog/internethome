@@ -219,6 +219,12 @@ img {
     object-position: center center;
 }
 
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 #dither-banner {
     display: block;
     width: 100%;
@@ -292,6 +298,10 @@ a {
     &:hover {
         color: var(--anchor-text-hover);
     }
+}
+
+nav {
+    margin-bottom: 1rem;
 }
 
 nav > .navigations > .header-element,
