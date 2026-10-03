@@ -62,7 +62,7 @@
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 80ch;
+    --style-container-width: 60ch;
     --style-code-block-overflow: 6ch;
 
     --style-body-font: 1.30rem;
@@ -75,24 +75,24 @@
     --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    /* --body-font-family: "EB Garamond", Georgia, serif; */
-    /* --body-italic-font-family: "EB Garamond", Georgia, serif; */
-    /* --heading-font-family: "EB Garamond",Georgia, serif; */
-    /* --heading-italic-font-family: "EB Garamond", Georgia, serif; */
+    --body-font-family: "Crimson Pro", "EB Garamond", Georgia, serif;
+    --body-italic-font-family:"Crimson Pro", "EB Garamond", Georgia, serif;
+    --heading-font-family: "Crimson Pro", "EB Garamond",Georgia, serif;
+    --heading-italic-font-family: "Crimson Pro", "EB Garamond", Georgia, serif;
     --blockquote-font-family: "EB Garamond", Georgia, serif;
 
-    --body-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --body-italic-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --heading-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --heading-italic-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
+    /* --body-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --body-italic-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --heading-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --heading-italic-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
 
     --mono-font-family: "JetBrains Mono", monospace;
 
@@ -138,7 +138,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-weight: 400;
+    font-weight: 350;
     /* font-size: var(--style-body-font); */
     font-family: var(--body-font-family);
     font-size-adjust: ex-height 0.53;
