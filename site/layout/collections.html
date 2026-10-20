@@ -8,62 +8,44 @@
 
         <h3>Collections available on site</h3>
 
-        <table class="post-table">
+        <ul class="post-list">
         {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }}
-            <tr class="post-table-entry">
-                <td>{{ len $RelatedPages }} posts</td>
-                {{ if eq $Collection "collections/systems.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">Systems</a></td>
-                {{ else if eq $Collection "collections/inked.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">Inked</a></td>
-                {{ else if eq $Collection "collections/2025.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">2025</a></td>
-                {{ else if eq $Collection "collections/2024.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">2024</a></td>
-                {{ else if eq $Collection "collections/2023.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">2023</a></td>
-                {{ else if eq $Collection "collections/post.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">Posts</a></td>
-                {{ else if eq $Collection "collections/talks.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">Talks</a></td>
-                {{ else if eq $Collection "collections/tech.html" }}
-                <td><a class="post-block-title" href="{{$Collection}}">Tech</a></td>
-                {{ else }}
-                <td><a class="post-block-title" href="{{$Collection}}">Uncategorised</a></td>
-                {{ end }}
-            </tr>
-
-            <!-- {{ range $RelatedPages }}
-                <table class="post-table">
-                    <tr>
-                        <td>{{.Frontmatter.Date}}</td>
-                        <td><a class="collection-block-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a></td>
-                    </tr>
-                </table>
-            {{ end }} -->
+            <li class="post-list-element">
+                <p>
+                    <span style="opacity: 0.7;">{{ len $RelatedPages }} posts</span>
+                    {{ if eq $Collection "collections/systems.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Systems</a>
+                    {{ else if eq $Collection "collections/inked.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Inked</a>
+                    {{ else if eq $Collection "collections/2026.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">2026</a>
+                    {{ else if eq $Collection "collections/2025.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">2025</a>
+                    {{ else if eq $Collection "collections/2024.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">2024</a>
+                    {{ else if eq $Collection "collections/2023.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">2023</a>
+                    {{ else if eq $Collection "collections/post.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Posts</a>
+                    {{ else if eq $Collection "collections/talks.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Talks</a>
+                    {{ else if eq $Collection "collections/tech.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Tech</a>
+                    {{ else if eq $Collection "collections/til.html" }}
+                    <a class="post-list-title" href="{{$Collection}}">Today I Learnt (TIL)</a>
+                    {{ else }}
+                    <a class="post-list-title" href="{{$Collection}}">Uncategorised</a>
+                    {{ end }}
+                </p>
+            </li>
         {{end}}
-        </table>
+        </ul>
 
     </div>
 
     {{template "footer" .}}
 
 </body>
-
-<script>
-const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-const postDates = document.querySelectorAll('span.post-date');
-
-postDates.forEach((element) => {
-  const commitDate = element.textContent;
-  const date = new Date(commitDate);
-  const monthIndex = date.getUTCMonth(); // 0-11
-  const monthName = month_names_short[monthIndex]; // adjust for zero-based index
-  element.textContent = `${monthName} ${date.getFullYear()}`;
-});
-</script>
-
 
 </html>
 

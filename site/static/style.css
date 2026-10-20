@@ -62,10 +62,10 @@
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 60ch;
+    --style-container-width: 80ch;
     --style-code-block-overflow: 6ch;
 
-    --style-body-font: 1.30rem;
+    --style-body-font: 1.10rem;
     --style-heading-font: 1.45rem;
     --h1-fs: 1.8rem;
     --h2-fs: 1.5rem;
@@ -75,24 +75,27 @@
     --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    --body-font-family: "Crimson Pro", "EB Garamond", Georgia, serif;
-    --body-italic-font-family:"Crimson Pro", "EB Garamond", Georgia, serif;
-    --heading-font-family: "Crimson Pro", "EB Garamond",Georgia, serif;
-    --heading-italic-font-family: "Crimson Pro", "EB Garamond", Georgia, serif;
-    --blockquote-font-family: "EB Garamond", Georgia, serif;
+    /* --body-font-family: "EB Garamond", Georgia, serif; */
+    /* --body-italic-font-family: "EB Garamond", Georgia, serif; */
+    /* --heading-font-family: "Crimson Pro", "EB Garamond",Georgia, serif; */
+    /* --heading-italic-font-family: "Crimson Pro", "EB Garamond", Georgia, serif; */
+    /* --blockquote-font-family: "EB Garamond", Georgia, serif; */
 
-    /* --body-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --body-italic-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --heading-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --heading-italic-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
+    --body-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --body-italic-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --heading-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --heading-italic-font-family:
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
+    --blockquote-font-family: 
+        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
+        Helvetica, Arial, sans-serif;
 
     --mono-font-family: "JetBrains Mono", monospace;
 
@@ -138,8 +141,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-weight: 350;
-    /* font-size: var(--style-body-font); */
+    font-weight: 400;
+    font-size: var(--style-body-font);
     font-family: var(--body-font-family);
     font-size-adjust: ex-height 0.53;
     -webkit-text-size-adjust: 100%;
@@ -174,10 +177,10 @@ body {
 
 footer {
     margin-top: 1em;
-    font-size: calc(var(--style-body-font) - 0.4rem);
+    /* font-size: calc(var(--style-body-font) - 0.4rem); */
     line-height: unset;
     --line-height: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.5;
     position: relative;
     z-index: 1;
 }
@@ -237,8 +240,15 @@ svg {
 blockquote {
     margin: 0.5rem 0 0.5rem;
     padding: 0.05rem 1.2rem 0.05rem;
-    border-left: 2px solid var(--anchor-text);
+    /* border-left: 2px solid var(--anchor-text); */
+    background: color-mix(in srgb, var(--inline-code-bg) 75%, transparent);
     font-family: var(--blockquote-font-family);
+
+    font-size: var(--style-body-font);
+    font-size-adjust: ex-height 0.53;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.7rem;
+    --line-height: 1.7rem;
 
     & > *,
     & > * > *,
@@ -258,6 +268,10 @@ h6 {
     font-weight: 450;
     color: var(--color-text);
     line-height: 1.2;
+
+    &>* {
+        font-size: inherit;
+    }
 }
 
 hr {
@@ -288,7 +302,7 @@ a {
     color: var(--anchor-text);
     text-decoration: underline;
     /*font-family: var(--body-italic-font-family);*/
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
     /*background-color: var(--inline-code-bg);*/
 
     &:visited {
@@ -316,6 +330,7 @@ nav > .navigations > .header-element-author {
 
 ul {
     padding-left: 20px;
+    list-style-type: circle;
 }
 
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
@@ -371,28 +386,10 @@ ul {
 
 .post-list-element {
     list-style-type: none;
-
-    margin-bottom: 0.8rem;
-
-    & > div {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        column-gap: 1rem;
-        row-gap: 0rem;
-        align-items: start;
+    & > p {
+        margin: 0;
     }
-}
-
-.post-list-row {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    column-gap: 1rem;
-    row-gap: 0rem;
-    align-items: start;
-}
-
-.post-list-element > div > div {
-    min-width: 0;
+    margin-bottom: 0.5rem;
 }
 
 .post-body-preview {
@@ -413,42 +410,41 @@ ul:has(.post-list-element) {
     margin: 0;
 }
 
-.post-list-element > div > div > .post-list-title {
+.post-list-title,
+.post-list-title:visited,
+.post-list-title:hover,
+.post-list-title:focus {
     color: var(--color-text);
-    /*text-decoration: none;*/
     font-family: var(--heading-font-family);
     font-weight: 500;
-    font-size: calc(var(--style-heading-font) - 0.3rem);
+    font-size: var(--style-body-font);
+    text-decoration: none;
 }
 
-.post-list-description {
-    color: var(--color-text-dim);
-    padding: 0;
-    margin: 0;
+.post-list-title:hover {
+    text-decoration: underline;
 }
 
 .post-list-date {
+    font-family: var(--heading-font-family);
+    /* font-size: larger; */
     color: var(--color-text-dim);
-    min-width: 100px;
-    margin-left: 10px;
-    white-space: nowrap;
-    justify-self: end;
+    opacity: 0.5;
+    line-height: 1.3;
+}
+
+.collection-list-count {
+    font-family: var(--heading-font-family);
+    font-size: larger;
+    color: var(--color-text-dim);
+    opacity: 0.5;
+    line-height: 1.3;
 }
 
 @media (max-width: 640px) {
-    .post-list-element > div,
-    .post-list-row {
-        grid-template-columns: 1fr;
-        row-gap: 0;
-    }
-
-    .post-list-date {
-        min-width: 0;
-        margin-left: 0;
-        margin-top: 0.05rem;
-        white-space: normal;
-        justify-self: start;
-        line-height: 1.3;
+    .post-list-date,
+    .collection-list-count {
+        margin-top: 0;
     }
 }
 
@@ -489,7 +485,6 @@ pre code {
 
 pre > code {
     display: block;
-    /* border: 1px solid var(--color-text-dim); */
     text-indent: 0;
     white-space: pre;
     background-color: var(--color-background);
@@ -619,7 +614,7 @@ a > code {
     padding-inline: 0.4rem;
     /*border-radius: 0.35rem;*/
     /*border-radius: 4px;*/
-    font-size: 1.05rem;
+    font-size: inherit;
 }
 
 .video-container-1610 {

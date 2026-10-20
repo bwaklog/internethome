@@ -2,6 +2,7 @@
   "navbar": [
     {"posts": "collections/post.html"},
     {"til": "collections/til.html"},
+    {"tags": "tags.html"},
     {"talks": "presentations.html"},
     {"wiki": "wiki.html"},
     {"atom": "feed.xml"}
@@ -10,11 +11,12 @@
   "siteScripts": [],
   "siteTitle": "adihegde",
   "author": "mail@adihegde.com (Aditya Hegde)",
-  "copyright": "Personal blog © 2024 by Aditya Hegde is licensed under CC BY-NC-SA 4.0",
+  "copyright": "Personal blog © 2026 by Aditya Hegde is licensed under CC BY-NC-SA 4.0",
   "socials": {
     "github": "https://github.com/bwaklog",
     "twitter": "https://twitter.com/bwaklog",
-    "email": "mail@adihegde.com"
+    "email": "mail@adihegde.com",
+    "name": "Aditya Hegde"
   },
   "collectionLayouts": {
     "collections/posts.html": "posts-layout"

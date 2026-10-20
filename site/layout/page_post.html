@@ -11,14 +11,8 @@
             <!-- <div id="container-zoom" class="container-zoom"> -->
 
 
-            <p class="post-date">{{$PageData.Frontmatter.Date}}</p>
             <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
-
-             <p class="post-author">by {{ $.DeepDataMerge.LayoutConfig.Author }}</p >
-
-            {{range $PageData.Frontmatter.Tags}}
-            <a href="/tags/{{.}}.html" class="post-tag"><code style="font-size: 0.9rem;">{{.}}</code></a>
-            {{end}}
+            <span class="post-list-date">{{$PageData.Frontmatter.Date}}</span>
 
             {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
             {{ else }}
@@ -27,21 +21,16 @@
 
             {{ $PageData.Body }}
 
+            <br>
+            <!-- <p>Publish on: <span class="post-date">{{$PageData.Frontmatter.Date}}</span><br> -->
+            <p class="post-author"><i>by {{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}</i><br>
+            tagged by {{range $PageData.Frontmatter.Tags}}
+            <a href="/tags/{{.}}.html" class="post-tag"><code>{{.}}</code></a>
+            {{end}}
+            </p>
+
             <!-- </div> -->
 
-            <script>
-            const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-            const postDates = document.querySelectorAll('span.post-date');
-
-            postDates.forEach((element) => {
-              const commitDate = element.textContent;
-              const date = new Date(commitDate);
-              const monthIndex = date.getUTCMonth(); // 0-11
-              const monthName = month_names_short[monthIndex]; // adjust for zero-based index
-              element.textContent = `${monthName} ${date.getFullYear()}`;
-            });
-            </script>
     </div>
     {{template "footer" .}}
   </div>

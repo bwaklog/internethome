@@ -6,23 +6,18 @@
     <div class="container" id="container">
         {{template "header" .}}
 
-            <h1 class="post-title">Site Index</h1>
-            <!-- <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }} </h2> -->
-            <blockquote>
-                <p>Posts tagged {{ $PageData.Frontmatter.Title }}</p>
-            </blockquote>
+            <!-- <h1 class="post-title">Site Index</h1> -->
+            <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }}</h2>
+            <!-- <p>Posts tagged <b>{{ $PageData.Frontmatter.Title }}</b></p> -->
 
             <ul style="margin-left: 0px;">
                 {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
                 {{ range $TagSet }}
                 <li class="post-list-element">
-                    <div class="post-list-row">
-                        <div>
-                            <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                            <p class="post-list-description">{{.Frontmatter.Description}}</p>
-                        </div>
-                        <div class="post-list-date">{{.Frontmatter.Date}}</div>
-                    </div>
+                    <p class="post-list-content">
+                        <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
+                        <span class="post-list-date">{{.Frontmatter.Date}}</span>
+                    </p>
                 </li>
                 {{end}}
             </ul>

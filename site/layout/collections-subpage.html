@@ -23,18 +23,11 @@
             {{if gt $index 0}}
             {{end}}
             <li class="post-list-element">
-                <div>
-                    <div>
-                        <a class="post-list-title"
-                            href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
-                        {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
-                        {{ end }}
-                        <p style="opacity: 0.65;" class="post-list-description">{{$CollectionItem.Frontmatter.Description}}</p>
-                        {{ if ne (len $CollectionItem.Frontmatter.Description) 0 }}
-                        {{ end }}
-                    </div>
-                    <div class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</div>
-                </div>
+                <p class="post-list-content">
+                    <a class="post-list-title"
+                        href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
+                    <span class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</span>
+                </p>
                 <!--<hr />-->
                 <!-- <div class="post-body-truncated" {{ if gt (len $CollectionItem.Body) 500 }}data-truncated="true"{{ end }}>{{ printf "%.500s" $CollectionItem.Body }}</div>
                 <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a> -->
@@ -88,7 +81,6 @@
             element.style.width = '100%';
         });
     </script> -->
-
 </body>
 
 </html>

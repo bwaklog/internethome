@@ -33,8 +33,8 @@ updateClock();
 
 <footer>
     <!--<hr />-->
-    <div class="footer-text">
-        updated on 
+    <!-- <div class="footer-text"> -->
+        <!-- updated on  -->
         <!--<a class="footer-element" href="https://github.com/acmpesuecc/anna">anna</a>-->
         <!--<br />-->
         <!--&copy; Aditya Hegde 2026 <br />-->
@@ -45,11 +45,11 @@ updateClock();
         <!--     href="https://github.com/bwaklog/internethome/tree/d4908b1152b5b5ccb11075316fb4a2725a914cf0" -->
         <!--     >{commit_hash}</a -->
         <!-- > -->
-        <span id="commit-date">{commit_date}</span>
+        <!-- <span id="commit-date">{commit_date}</span> -->
         <!-- <span id="commit-message">{commit_message}</span> -->
-    </div>
-    <a href="https://adihegde.com">internethome</a> © 2026 by <a href="mailto:mail@adihegde.com">Aditya Hegde</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-    <p>
+    <!-- </div> -->
+    &copy; <a href="mailto:mail@adihegde.com">Aditya Hegde</a> 2026 | <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    <!-- <p>
         <a
             href="https://homebrew.hsp-ec.xyz/ring/prev?site=https://adihegde.com"
             class="webring-element"
@@ -64,7 +64,24 @@ updateClock();
         >
             →</a
         >
-    </p>
+    </p> -->
 </footer>
+
+<script>
+const postDates = document.querySelectorAll('.post-list-date, .post-date');
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+});
+
+postDates.forEach((element) => {
+    const date = new Date(element.textContent.trim());
+    if (!Number.isNaN(date.getTime())) {
+        element.textContent = dateFormatter.format(date);
+    }
+});
+</script>
 
 {{end}}

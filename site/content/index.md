@@ -25,10 +25,20 @@ I'm part of a small community called [HSP](https://hsp-ec.xyz) in my university 
 
 This site came about after my frustrations of maintaining a simple webpage without moving to a JS framework. A couple of my friends and I built [anna](https://github.com/anna-ssg/anna), which is what is used to build this site.
 
-This site has a bunch of semi-organised [posts](/collections/post.html) that I try writing once in a while and TIL's (huge inspiration from Simon Willson's TIL page at [til.simonwillison.net](https://til.simonwillison.net/)), where I will be dumping links and other side notes that I take while learning and when I attend talks.
+This site has a bunch of semi-organised [posts](/collections/post.html) that I try writing once in a while and TIL's (huge inspiration from Simon Willson's TIL page at [til.simonwillison.net](https://til.simonwillison.net/)), where I will be dumping links and other side notes that I take while learning and when I attend talks. (view [ACK](/ack.html))
 
-Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [Unsplash](https://unsplash.com/adihegde), [𝕏](https://x.com/bwaklog) or feel free drop an email at [mail@adihegde.com](mailto:mail@adihegde.com)
+<!-- Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [𝕏](https://x.com/bwaklog) or feel free drop an email at [mail@adihegde.com](mailto:mail@adihegde.com) -->
+
+If you would like to talk, please do reach out to [mail@adihegde.com](mailto:mail@adihegde.com) or any other of my [contacts](/connect.html)
+
+
+<!-- <p
+    style="margin-left: 1rem;"
+>
+    <span class="post-list-element"><a class="post-list-title" href="mailto:mail@adihegde.com">mail@adihegde.com</a> <span class="post-list-date">via mail</span></span> <br>
+    <span class="post-list-element"><a class="post-list-title" href="https://www.linkedin.com/in/adityamhegde/">adityamhegde</a> <span class="post-list-date">on LinkedIn</span></span> <br>
+    <span class="post-list-element"><a class="post-list-title" href="https://github.com/bwaklog">bwaklog</a> <span class="post-list-date">on github</span></span> <br>
+    <span class="post-list-element"><a class="post-list-title" href="https://x.com/bwaklog">bwaklog</a> <span class="post-list-date">on twitter / &Xopf;</span></span> 
+</p> -->
 
 <!-- <div id="lastfm" aria-live="polite">Trying to fetch what i'm listening to 🤘</div> -->
-
-> The design on this site derives its inspiration from these folks: [transactional.blog](https://transactional.blog/), [eatonphil.com](https://eatonphil.com), [matklad.github.io](https://matklad.github.io), [polarhive.net](https://polarhive.net), [rowjee.com](https://rowjee.com), [icyphox.sh](https://icyphox.sh)
