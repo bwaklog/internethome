@@ -23,11 +23,11 @@
 
             <br>
             <!-- <p>Publish on: <span class="post-date">{{$PageData.Frontmatter.Date}}</span><br> -->
-            <p class="post-author"><i>by {{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}</i><br>
-            tagged by {{range $PageData.Frontmatter.Tags}}
-            <a href="/tags/{{.}}.html" class="post-tag"><code>{{.}}</code></a>
-            {{end}}
-            </p>
+            <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em;">{{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}<br></p>
+
+            <p>post tagged by {{range $PageData.Frontmatter.Tags}}
+            <a href="/tags/{{.}}.html" class="post-tag">{{.}}</a>
+            {{end}}</p>
 
             <!-- </div> -->
 
