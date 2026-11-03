@@ -7,12 +7,11 @@ layout: page
 scripts: []
 ---
 
-<!-- <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(2.5 * var(--style-body-font));"> -->
-<!--   <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp"> -->
-<!--   <h1 style="margin: 0; overflow-wrap: break-word; word-break: break-word;">Aditya Hegde</h1> -->
-<!-- </div> -->
-
 # Aditya Hegde
+
+<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(8.5 * var(--style-body-font));">
+  <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp">
+</div>
 
 Hello world! I'm Aditya Hegde. Previosuly worked at [Akamai](https://www.akamai.com/) as a summer intern in the GHost blr development team. Was previously a research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) and currently am a member of the lab since 2025.
 
@@ -25,7 +24,7 @@ I'm part of a small community called [HSP](https://hsp-ec.xyz) in my university 
 
 This site came about after my frustrations of maintaining a simple webpage without moving to a JS framework. A couple of my friends and I built [anna](https://github.com/anna-ssg/anna), which is what is used to build this site.
 
-This site has a bunch of semi-organised [posts](/collections/post.html) that I try writing once in a while and TIL's (huge inspiration from Simon Willson's TIL page at [til.simonwillison.net](https://til.simonwillison.net/)), where I will be dumping links and other side notes that I take while learning and when I attend talks. (view [ACK](/ack.html))
+This site has a bunch of semi-organised [posts](/collections/post.html) that I try writing once in a while and TIL's (huge inspiration from Simon Willson's TIL page at [til.simonwillison.net](https://til.simonwillison.net/)), where I will be dumping links and other side notes that I take while learning and when I attend talks. (also list of _[acknowledgements](/ack.html)_ behind this site)
 
 <!-- Connect with me on [Github](https://github.com/bwaklog), [Linkedin](https://www.linkedin.com/in/adityamhegde/), [𝕏](https://x.com/bwaklog) or feel free drop an email at [mail@adihegde.com](mailto:mail@adihegde.com) -->
 

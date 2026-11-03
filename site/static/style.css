@@ -7,11 +7,9 @@
         --color-background-dim: #fbfaf97a;
 
         --inline-code-bg: #ececec;
-        /* --anchor-text: #395a84; */
-        --anchor-text: #bf616a;
-        --anchor-text-hover: #bf616a;
+        --anchor-text: #369;
+        --anchor-text-hover: #369;
 
-        /* Highlighting */
         --hl-type: #0086B3;
         --hl-tag: #000080;
         --hl-title-func: #990000;
@@ -36,11 +34,9 @@
         --color-background-dim: #1e1e1e;
 
         --inline-code-bg: #1c1b1a;
-        /* --anchor-text: #395a84; */
-        --anchor-text: #cc8188;
-        --anchor-text-hover: #cc8188;
+        --anchor-text: #8be;
+        --anchor-text-hover: #8be;
 
-        /* Highlighting */
         --hl-type: #0086B3;
         --hl-tag: #000080;
         --hl-title-func: #e55353;
@@ -55,17 +51,40 @@
         --hl-line: #ffc;
     }
 }
+
 :root {
+    /* --color-text: #000000; */
+    /* --color-text-dim: #1a1a1a; */
+    /**/
+    /* --color-background: #ffffff; */
+    /* --color-background-dim: #fbfaf97a; */
+    /**/
+    /* --inline-code-bg: #ececec; */
+    /* --anchor-text: #bf616a; */
+    /* --anchor-text-hover: #bf616a; */
+    /**/
+    /* --hl-type: #0086B3; */
+    /* --hl-tag: #000080; */
+    /* --hl-title-func: #990000; */
+    /* --hl-title-class: #445588; */
+    /* --hl-comment: #008000; */
+    /* --hl-meta: #3c5d5d; */
+    /* --hl-number: #009999; */
+    /* --hl-string: #d14; */
+    /* --hl-output: #2156a5; */
+    /* --hl-subst: rgba(0, 0, 0, .9); */
+    /* --hl-symbol: #008080; */
+    /* --hl-line: #ffc; */
 
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
     --style-border-radius: 0px;
     --style-border-radius-hover: 0px;
     --style-hover-scale: 1;
-    --style-container-width: 80ch;
+    --style-container-width: 650px;
     --style-code-block-overflow: 6ch;
 
-    --style-body-font: 1.10rem;
+    --style-body-font: 1rem;
     --style-heading-font: 1.45rem;
     --h1-fs: 1.8rem;
     --h2-fs: 1.5rem;
@@ -75,27 +94,27 @@
     --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    /* --body-font-family: "EB Garamond", Georgia, serif; */
-    /* --body-italic-font-family: "EB Garamond", Georgia, serif; */
-    /* --heading-font-family: "Crimson Pro", "EB Garamond",Georgia, serif; */
-    /* --heading-italic-font-family: "Crimson Pro", "EB Garamond", Georgia, serif; */
-    /* --blockquote-font-family: "EB Garamond", Georgia, serif; */
+    --body-font-family: "Crimson Pro", Georgia, serif;
+    --body-italic-font-family: "Crimson Pro", Georgia, serif;
+    --heading-font-family: "Crimson Pro", Georgia, serif;
+    --heading-italic-font-family: "Crimson Pro", Georgia, serif;
+    --blockquote-font-family: "Crimson Pro", Georgia, serif;
 
-    --body-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --body-italic-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --heading-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --heading-italic-font-family:
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
-    --blockquote-font-family: 
-        "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI,
-        Helvetica, Arial, sans-serif;
+    /* --body-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --body-italic-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --heading-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --heading-italic-font-family: */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
+    /* --blockquote-font-family:  */
+    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
+    /*     Helvetica, Arial, sans-serif; */
 
     --mono-font-family: "JetBrains Mono", monospace;
 
@@ -108,9 +127,9 @@
 }
 
 /*text selection colour*/
-/*::selection {
-    background-color: var(--selection-bg);
-}*/
+/* *::selection { */
+/*     background-color: var(--inline-code-bg); */
+/* } */
 
 i,
 em {
@@ -130,7 +149,8 @@ b {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     background-color: var(--color-background);
 }
 
@@ -141,7 +161,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-weight: 400;
+    font-weight: 350;
     font-size: var(--style-body-font);
     font-family: var(--body-font-family);
     font-size-adjust: ex-height 0.53;
@@ -198,8 +218,8 @@ p:has(.webring-element) {
 figure {
     margin: 0;
 
-    & > figcaption > *,
-    & > figcaption > small > a {
+    &>figcaption>*,
+    &>figcaption>small>a {
         color: var(--color-text-dim);
         opacity: 0.8;
         font-family: var(--body-italic-font-family);
@@ -250,9 +270,9 @@ blockquote {
     line-height: 1.7rem;
     --line-height: 1.7rem;
 
-    & > *,
-    & > * > *,
-    & > * > * > * {
+    &>*,
+    &>*>*,
+    &>*>*>* {
         color: var(--color-text);
         font-family: inherit;
     }
@@ -278,18 +298,18 @@ hr {
     opacity: 0.5;
 }
 
-h1 > i,
-h1 > em,
-h2 > i,
-h2 > em,
-h3 > i,
-h3 > em,
-h4 > i,
-h4 > em,
-h5 > i,
-h5 > em,
-h6 > i,
-h6 > em {
+h1>i,
+h1>em,
+h2>i,
+h2>em,
+h3>i,
+h3>em,
+h4>i,
+h4>em,
+h5>i,
+h5>em,
+h6>i,
+h6>em {
     /*font-family: InterItalic, sans-serif;*/
     font-family: var(--heading-italic-font-family);
     font-style: italic;
@@ -318,10 +338,10 @@ nav {
     margin-bottom: 1rem;
 }
 
-nav > .navigations > .header-element,
-nav > .navigations > .header-element-author {
+nav>.navigations>.header-element,
+nav>.navigations>.header-element-author {
     font-size: 1.1rem;
-    font-family: var(--heading-font-family);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
     color: var(--color-text);
     padding-right: 0.2rem;
@@ -339,7 +359,7 @@ ul {
     column-gap: 0.5rem;
 }
 
-.image-grid > figure > img {
+.image-grid>figure>img {
     margin-bottom: 0;
 }
 
@@ -386,9 +406,11 @@ ul {
 
 .post-list-element {
     list-style-type: none;
-    & > p {
+
+    &>p {
         margin: 0;
     }
+
     margin-bottom: 0.5rem;
 }
 
@@ -442,6 +464,7 @@ ul:has(.post-list-element) {
 }
 
 @media (max-width: 640px) {
+
     .post-list-date,
     .collection-list-count {
         margin-top: 0;
@@ -483,7 +506,7 @@ pre code {
     margin-inline: 10px;
 }
 
-pre > code {
+pre>code {
     display: block;
     text-indent: 0;
     white-space: pre;
@@ -549,61 +572,73 @@ pre code.hljs {
 
 .hljs-keyword,
 .hljs-literal {
-  color: var(--color-text);
-  font-weight: bold;
-}
-.hljs-type {
-  color: var(--hl-type);
-}
-.hljs-tag {
-  color: var(--hl-tag);
-}
-.hljs-title.function_ {
-  color: var(--hl-title-func);
-  font-weight: bold;
-}
-.hljs-title.class_ {
-  color: var(--hl-title-class);
-  font-weight: bold;
-}
-.hljs-comment {
-  color: var(--hl-comment);
-  font-style: italic;
-}
-.hljs-built_in,
-.hljs-meta {
-  color: var(--hl-meta);
-  font-weight: bold;
-}
-.hljs-number {
-  color: var(--hl-number);
-}
-.hljs-string {
-  color: var(--hl-string);
-}
-.hljs-output {
-  color: var(--hl-output);
-}
-.hljs-subst {
-  color: var(--hl-subst);
-}
-.hljs-attr,
-.hljs-symbol {
-  color: var(--hl-symbol);
-}
-.hljs-line {
-  background-color: var(--hl-line);
+    color: var(--color-text);
+    font-weight: bold;
 }
 
-p > code,
-li > code,
-dd > code,
-td > code,
-h1 > code,
-h2 > code,
-h3 > code,
-h4 > code,
-a > code {
+.hljs-type {
+    color: var(--hl-type);
+}
+
+.hljs-tag {
+    color: var(--hl-tag);
+}
+
+.hljs-title.function_ {
+    color: var(--hl-title-func);
+    font-weight: bold;
+}
+
+.hljs-title.class_ {
+    color: var(--hl-title-class);
+    font-weight: bold;
+}
+
+.hljs-comment {
+    color: var(--hl-comment);
+    font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-meta {
+    color: var(--hl-meta);
+    font-weight: bold;
+}
+
+.hljs-number {
+    color: var(--hl-number);
+}
+
+.hljs-string {
+    color: var(--hl-string);
+}
+
+.hljs-output {
+    color: var(--hl-output);
+}
+
+.hljs-subst {
+    color: var(--hl-subst);
+}
+
+.hljs-attr,
+.hljs-symbol {
+    color: var(--hl-symbol);
+}
+
+.hljs-line {
+    background-color: var(--hl-line);
+}
+
+p>code,
+li>code,
+dd>code,
+td>code,
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+a>code {
     font-family: JuliaMono, monospace;
     color: var(--color-heading);
     background-color: var(--inline-code-bg);
@@ -721,6 +756,7 @@ a > code {
 
 /* Mobile */
 @media (max-width: 640px) {
+
     /* Single column gallery on mobile */
     img {
         width: calc(100% + 40px);
