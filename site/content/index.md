@@ -9,9 +9,9 @@ scripts: []
 
 # Aditya Hegde
 
-<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(8.5 * var(--style-body-font));">
-  <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp">
-</div>
+<!-- <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: var(--style-body-font); --pfp-size: calc(8.5 * var(--style-body-font));"> -->
+<!--   <img src="https://images.adihegde.com/me.jpg" style="background-color: var(--inline-code-bg); height: var(--pfp-size); width: var(--pfp-size) !important; margin: 0 !important; flex-shrink: 0; object-fit: cover;" alt="Aditya Hegde pfp"> -->
+<!-- </div> -->
 
 Hello world! I'm Aditya Hegde. Previosuly worked at [Akamai](https://www.akamai.com/) as a summer intern in the GHost blr development team. Was previously a research intern at [PES Innovation Lab](https://www.theinnovationlab.in/) and currently am a member of the lab since 2025.
 

@@ -1,80 +1,82 @@
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-text: #000000;
-        --color-text-dim: #1a1a1a;
-
-        --color-background: #ffffff;
-        --color-background-dim: #fbfaf97a;
-
-        --inline-code-bg: #ececec;
-        --anchor-text: #369;
-        --anchor-text-hover: #369;
-
-        --hl-type: #0086B3;
-        --hl-tag: #000080;
-        --hl-title-func: #990000;
-        --hl-title-class: #445588;
-        --hl-comment: #008000;
-        --hl-meta: #3c5d5d;
-        --hl-number: #009999;
-        --hl-string: #d14;
-        --hl-output: #2156a5;
-        --hl-subst: rgba(0, 0, 0, .9);
-        --hl-symbol: #008080;
-        --hl-line: #ffc;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-text: #deded4;
-        --color-text-dim: #cecdc4;
-
-        --color-background: #100f0f;
-        --color-background-dim: #1e1e1e;
-
-        --inline-code-bg: #1c1b1a;
-        --anchor-text: #8be;
-        --anchor-text-hover: #8be;
-
-        --hl-type: #0086B3;
-        --hl-tag: #000080;
-        --hl-title-func: #e55353;
-        --hl-title-class: #445588;
-        --hl-comment: rgb(94, 164, 94);
-        --hl-meta: #3c5d5d;
-        --hl-number: #009999;
-        --hl-string: rgb(236, 63, 106);
-        --hl-output: #2156a5;
-        --hl-subst: rgba(0, 0, 0, .9);
-        --hl-symbol: #008080;
-        --hl-line: #ffc;
-    }
-}
+/* @media (prefers-color-scheme: light) { */
+/*     :root { */
+/*         --color-text: #000000; */
+/*         --color-text-dim: #1a1a1a; */
+/**/
+/*         --color-background: #ffffff; */
+/*         --color-background-dim: #fbfaf97a; */
+/**/
+/*         --inline-code-bg: #ececec; */
+/*         --anchor-text: #369; */
+/*         --anchor-text-hover: #369; */
+/**/
+/*         --hl-type: #0086B3; */
+/*         --hl-tag: #000080; */
+/*         --hl-title-func: #990000; */
+/*         --hl-title-class: #445588; */
+/*         --hl-comment: #008000; */
+/*         --hl-meta: #3c5d5d; */
+/*         --hl-number: #009999; */
+/*         --hl-string: #d14; */
+/*         --hl-output: #2156a5; */
+/*         --hl-subst: rgba(0, 0, 0, .9); */
+/*         --hl-symbol: #008080; */
+/*         --hl-line: #ffc; */
+/*     } */
+/* } */
+/**/
+/* @media (prefers-color-scheme: dark) { */
+/*     :root { */
+/*         --color-text: #deded4; */
+/*         --color-text-dim: #cecdc4; */
+/**/
+/*         --color-background: #100f0f; */
+/*         --color-background-dim: #1e1e1e; */
+/**/
+/*         --inline-code-bg: #1c1b1a; */
+/*         --anchor-text: #8be; */
+/*         --anchor-text-hover: #8be; */
+/**/
+/*         --hl-type: #0086B3; */
+/*         --hl-tag: #000080; */
+/*         --hl-title-func: #e55353; */
+/*         --hl-title-class: #445588; */
+/*         --hl-comment: rgb(94, 164, 94); */
+/*         --hl-meta: #3c5d5d; */
+/*         --hl-number: #009999; */
+/*         --hl-string: rgb(236, 63, 106); */
+/*         --hl-output: #2156a5; */
+/*         --hl-subst: rgba(0, 0, 0, .9); */
+/*         --hl-symbol: #008080; */
+/*         --hl-line: #ffc; */
+/*     } */
+/* } */
 
 :root {
-    /* --color-text: #000000; */
-    /* --color-text-dim: #1a1a1a; */
-    /**/
-    /* --color-background: #ffffff; */
-    /* --color-background-dim: #fbfaf97a; */
-    /**/
-    /* --inline-code-bg: #ececec; */
-    /* --anchor-text: #bf616a; */
-    /* --anchor-text-hover: #bf616a; */
-    /**/
-    /* --hl-type: #0086B3; */
-    /* --hl-tag: #000080; */
-    /* --hl-title-func: #990000; */
-    /* --hl-title-class: #445588; */
-    /* --hl-comment: #008000; */
-    /* --hl-meta: #3c5d5d; */
-    /* --hl-number: #009999; */
-    /* --hl-string: #d14; */
-    /* --hl-output: #2156a5; */
-    /* --hl-subst: rgba(0, 0, 0, .9); */
-    /* --hl-symbol: #008080; */
-    /* --hl-line: #ffc; */
+    --color-text: #000000;
+    --color-text-dim: #1a1a1a;
+
+    --color-background: #ffffff;
+    --color-background-dim: #fbfaf97a;
+
+    --inline-code-bg: #ececec;
+
+    --anchor-text: #000000;
+    --anchor-text-decoration: #1f1f1f;
+    --anchor-text-hover: #000000;
+
+    --hl-type: #0086B3;
+    --hl-tag: #000080;
+    --hl-title-func: #990000;
+    --hl-title-class: #445588;
+    --hl-comment: #008000;
+    --hl-meta: #3c5d5d;
+    --hl-number: #009999;
+    --hl-string: #d14;
+    --hl-output: #2156a5;
+    --hl-subst: rgba(0, 0, 0, .9);
+    --hl-symbol: #008080;
+    --hl-line: #ffc;
 
     /*--selection-bg: rgba(187, 220, 206, 0.3);*/
 
@@ -94,27 +96,22 @@
     --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    --body-font-family: "Crimson Pro", Georgia, serif;
-    --body-italic-font-family: "Crimson Pro", Georgia, serif;
-    --heading-font-family: "Crimson Pro", Georgia, serif;
-    --heading-italic-font-family: "Crimson Pro", Georgia, serif;
-    --blockquote-font-family: "Crimson Pro", Georgia, serif;
+    /* --body-font-family: "Crimson Pro", Georgia, serif; */
+    /* --body-italic-font-family: "Crimson Pro", Georgia, serif; */
+    /* --heading-font-family: "Crimson Pro", Georgia, serif; */
+    /* --heading-italic-font-family: "Crimson Pro", Georgia, serif; */
+    /* --blockquote-font-family: "Crimson Pro", Georgia, serif; */
 
-    /* --body-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --body-italic-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --heading-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --heading-italic-font-family: */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
-    /* --blockquote-font-family:  */
-    /*     "Open Sans", -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, */
-    /*     Helvetica, Arial, sans-serif; */
+    --body-font-family:
+        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --body-italic-font-family:
+        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --heading-font-family:
+        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --heading-italic-font-family:
+        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --blockquote-font-family:
+        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 
     --mono-font-family: "JetBrains Mono", monospace;
 
@@ -139,7 +136,7 @@ em {
 
 strong,
 b {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-text);
 }
 
@@ -161,7 +158,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-weight: 350;
+    font-weight: 400;
     font-size: var(--style-body-font);
     font-family: var(--body-font-family);
     font-size-adjust: ex-height 0.53;
@@ -284,8 +281,9 @@ h3,
 h4,
 h5,
 h6 {
+    font-size: var(--style-body-font);
     font-family: var(--heading-font-family);
-    font-weight: 450;
+    font-weight: 500;
     color: var(--color-text);
     line-height: 1.2;
 
@@ -293,6 +291,95 @@ h6 {
         font-size: inherit;
     }
 }
+
+/* 1. Initialize and reset child counters when a higher-level heading appears */
+body {
+    counter-reset: c1;
+}
+
+h1 {
+    counter-reset: c2;
+}
+
+h2 {
+    counter-reset: c3;
+}
+
+h3 {
+    counter-reset: c4;
+}
+
+h4 {
+    counter-reset: c5;
+}
+
+h5 {
+    counter-reset: c6;
+}
+
+/* 2. Increment counters on each heading level */
+h1 {
+    counter-increment: c1;
+}
+
+h2 {
+    counter-increment: c2;
+}
+
+h3 {
+    counter-increment: c3;
+}
+
+h4 {
+    counter-increment: c4;
+}
+
+h5 {
+    counter-increment: c5;
+}
+
+h6 {
+    counter-increment: c6;
+}
+
+/* 3. Base styling for all heading prefixes */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+    color: inherit;
+    opacity: 0.5;
+    margin-right: 8px;
+    /* Adds a small gap before the text */
+}
+
+/* 4. Define specific formats for each level */
+h1::before {
+    content: counter(c1) ".";
+}
+
+h2::before {
+    content: counter(c1) "." counter(c2) ".";
+}
+
+h3::before {
+    content: counter(c1) "." counter(c2) "." counter(c3) ".";
+}
+
+h4::before {
+    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) ".";
+}
+
+h5::before {
+    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) ".";
+}
+
+h6::before {
+    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) "." counter(c6) ".";
+}
+
 
 hr {
     opacity: 0.5;
@@ -321,9 +408,8 @@ h6>em {
 a {
     color: var(--anchor-text);
     text-decoration: underline;
-    /*font-family: var(--body-italic-font-family);*/
-    text-underline-offset: 3px;
-    /*background-color: var(--inline-code-bg);*/
+    text-decoration-thickness: 2px;
+    text-decoration-color: color-mix(in srgb, var(--anchor-text-decoration) 20%, transparent);
 
     &:visited {
         color: var(--anchor-text);
@@ -331,6 +417,7 @@ a {
 
     &:hover {
         color: var(--anchor-text-hover);
+        text-decoration-color: color-mix(in srgb, var(--anchor-text-decoration) 30%, transparent);
     }
 }
 
@@ -411,7 +498,7 @@ ul {
         margin: 0;
     }
 
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .post-body-preview {
@@ -433,18 +520,18 @@ ul:has(.post-list-element) {
 }
 
 .post-list-title,
-.post-list-title:visited,
-.post-list-title:hover,
-.post-list-title:focus {
+.post-list-title:visited {
     color: var(--color-text);
     font-family: var(--heading-font-family);
-    font-weight: 500;
+    font-weight: 400;
     font-size: var(--style-body-font);
-    text-decoration: none;
-}
-
-.post-list-title:hover {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: color-mix(in srgb, var(--anchor-text-decoration) 20%, transparent);
+
+    &:hover {
+        text-decoration-color: color-mix(in srgb, var(--anchor-text-decoration) 30%, transparent);
+    }
 }
 
 .post-list-date {

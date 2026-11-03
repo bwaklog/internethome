@@ -21,9 +21,8 @@
 
             {{ $PageData.Body }}
 
-            <br>
             <!-- <p>Publish on: <span class="post-date">{{$PageData.Frontmatter.Date}}</span><br> -->
-            <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em;">{{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}<br></p>
+            <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em; padding-top: 10px;">{{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}<br></p>
 
             <p>post tagged by {{range $PageData.Frontmatter.Tags}}
             <a href="/tags/{{.}}.html" class="post-tag">{{.}}</a>
