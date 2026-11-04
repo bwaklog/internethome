@@ -3,8 +3,7 @@
 {{ template "head" .}}
 
 <body>
-
-    <div class="container">
+    <main class="post-content">
         {{template "header" .}}
 
         {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
@@ -12,12 +11,9 @@
         {{ if eq .PageURL "collections/post.html"}}
 
         {{ else }}
-        <h3>Collection <b>{{ $PageData.Frontmatter.Title }}</b></h3>
+        <h1>Collection: <b>{{ $PageData.Frontmatter.Title }}</b></h1>
         {{ end }}
 
-
-
-        <!-- <table class="post-tatableble"> -->
         <ul style="margin-left: 0px;">
             {{range $index, $CollectionItem := $CollectionSet }}
             {{if gt $index 0}}
@@ -28,59 +24,11 @@
                         href="/{{$CollectionItem.CompleteURL}}">{{$CollectionItem.Frontmatter.Title}}</a>
                     <span class="post-list-date">{{$CollectionItem.Frontmatter.Date}}</span>
                 </p>
-                <!--<hr />-->
-                <!-- <div class="post-body-truncated" {{ if gt (len $CollectionItem.Body) 500 }}data-truncated="true"{{ end }}>{{ printf "%.500s" $CollectionItem.Body }}</div>
-                <a class="read-more" href="/{{$CollectionItem.CompleteURL}}">Read more →</a> -->
             </li>
             {{end}}
         </ul>
-        <!-- </table> -->
-
-    </div>
-
-    {{template "footer" .}}
-
-    <!-- <script>
-        document.querySelectorAll('.post-body-truncated').forEach(element => {
-            const rawHTML = element.innerHTML;
-
-            // Decode HTML entities
-            const textarea = document.createElement('textarea');
-            textarea.innerHTML = rawHTML;
-            let decodedHTML = textarea.value;
-
-            // Use DOMParser to fix any broken/incomplete HTML from truncation
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(decodedHTML, 'text/html');
-
-            // If the content was truncated, find the last text node and append "..."
-            if (element.dataset.truncated === 'true') {
-                const walker = document.createTreeWalker(
-                    doc.body,
-                    NodeFilter.SHOW_TEXT,
-                    {
-                        acceptNode: (node) =>
-                            node.textContent.trim()
-                                ? NodeFilter.FILTER_ACCEPT
-                                : NodeFilter.FILTER_SKIP
-                    }
-                );
-
-                let lastTextNode = null;
-                while (walker.nextNode()) {
-                    lastTextNode = walker.currentNode;
-                }
-
-                if (lastTextNode) {
-                    lastTextNode.textContent = lastTextNode.textContent.trimEnd() + '...';
-                }
-            }
-
-            element.innerHTML = doc.body.innerHTML;
-            element.style.display = 'block';
-            element.style.width = '100%';
-        });
-    </script> -->
+        {{template "footer" .}}
+    </main>
 </body>
 
 </html>

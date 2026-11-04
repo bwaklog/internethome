@@ -3,7 +3,7 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container">
+    <main class="post-content">
         {{template "header" .}}
 
         <h3>Collections available on site</h3>
@@ -41,12 +41,10 @@
         {{end}}
         </ul>
 
-    </div>
-
-    {{template "footer" .}}
-
+        {{template "footer" .}}
+    </main>
 </body>
 
 </html>
 
-{{ end}}
+{{ end }}

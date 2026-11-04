@@ -3,25 +3,21 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container" id="container">
-        {{template "header" .}}
+    {{template "header" .}}
 
-            <!-- <div id="container-zoom" class="container-zoom"> -->
-            <h1>Posts</h1>
+    <h1>Posts</h1>
 
-            <ul class="post-list">
-                {{range $index, $Post := .DeepDataMerge.Posts}}
-                <li class="post-list-element">
-                    <div class="post-list-content">
-                        <div class="post-list-date">{{$Post.Frontmatter.Date}}</div>
-                        <a class="post-list-title" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a>
-                    </div>
-                </li>
-                {{end}}
-            </ul>
+    <ul class="post-list">
+        {{range $index, $Post := .DeepDataMerge.Posts}}
+        <li class="post-list-element">
+            <div class="post-list-content">
+                <div class="post-list-date">{{$Post.Frontmatter.Date}}</div>
+                <a class="post-list-title" href="/{{ .CompleteURL }}">{{$Post.Frontmatter.Title}}</a>
+            </div>
+        </li>
+        {{end}}
+    </ul>
 
-            <!-- </div> -->
-    </div>
     {{template "footer" .}}
 </body>
 

@@ -30,12 +30,12 @@ Since then I’ve gone out and bought my first three bags of coffee and attempt 
 <div class="image-grid" id="image-grid">
 
 ![](https://images.adihegde.com/blogs/inked-1/firstthreebags.jpeg)
+First three bags of coffee from Blue Tokai
 
 ![](https://images.adihegde.com/blogs/inked-1/frenchpress.jpeg)
+Brewing with a French Press ([UPPHETTA](https://www.ikea.com/in/en/p/upphetta-coffee-tea-maker-glass-stainless-steel-80241388/)) from IKEA
 
 </div>
-
-> First three bags of coffee from Blue Tokai and my French Press
 
 Regardless of the output, I find the experience really fun. [@anirudhrowjee](https://rowjee.com) took [@anirudhsudhir](https://anirudhsudhir.com), Varuni and I around a couple of roasters near TERI post rootconf, ended up buying a bag of [Amaltas Blend](https://bluetokaicoffee.com/products/amaltas-blend) (went for a lighter roast this time around to make it a bit easier to brew at home - I don’t really have a temperature controlled kettle and heat my water up in a microwave). 
 
@@ -48,18 +48,12 @@ If you are visiting Indiranagar, recommend visiting these lovely cafes -
 - [Something’s brewing](https://share.google/IAKoHbNKLdF11sxBV) - highly recommend visiting this place if you want to nerd around looking at coffee making equipments, they’ve got everything.
 - [GB Coffee Roasters](https://share.google/vGlw9SdTviZ6SxgYz) - they do their roasting in store, you get to see the entire process if you are lucky.
 
-<div class="image-grid" id="image-grid">
-
 ![](https://images.adihegde.com/blogs/inked-1/somethingsbrewing-2.jpeg)
+Something's Brewing in Indiranagar
 
 ![](https://images.adihegde.com/blogs/inked-1/somethingsbrewing-1.jpeg)
-
-</div>
-
-> Something’s  Brewing in Indiranagar
+They have quite a lot of coffee grinders, all out of budget :)
 
 All of these cafes also sell beans as well, so definitely it’s worth the visit!
 
 As mentioned in my [previous inked](/posts/inked/been-a-minute), I’m trying to keep this little page alive. Hopefully I keep my word on the same on small incremental updates over the weeks, just to have something to look back at after a couple of years. See you in another 7 days 🌊
-
-Aditya.

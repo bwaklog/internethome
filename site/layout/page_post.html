@@ -3,38 +3,31 @@
 {{ template "head" .}}
 
 <body>
+  <main class="post-content">  
+    {{template "header" .}}
 
-    <div class="container" id="container">
+    <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
+    <span class="post-list-date">{{$PageData.Frontmatter.Date}}</span>
 
-            {{template "header" .}}
+    {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
+    {{ else }}
+    <!-- <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" /> -->
+    {{end}}
 
-            <!-- <div id="container-zoom" class="container-zoom"> -->
+    {{ $PageData.Body }}
 
+    <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em; padding-top: 10px;">
+      {{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}<br>
+    </p>
 
-            <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
-            <span class="post-list-date">{{$PageData.Frontmatter.Date}}</span>
+    <p>post tagged by {{range $PageData.Frontmatter.Tags}}
+      <a href="/tags/{{.}}.html" class="post-tag">{{.}}</a>
+    {{end}}</p>
 
-            {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
-            {{ else }}
-            <!-- <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" /> -->
-            {{end}}
-
-            {{ $PageData.Body }}
-
-            <!-- <p>Publish on: <span class="post-date">{{$PageData.Frontmatter.Date}}</span><br> -->
-            <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em; padding-top: 10px;">{{ index $.DeepDataMerge.LayoutConfig.Socials "name" }}<br></p>
-
-            <p>post tagged by {{range $PageData.Frontmatter.Tags}}
-            <a href="/tags/{{.}}.html" class="post-tag">{{.}}</a>
-            {{end}}</p>
-
-            <!-- </div> -->
-
-    </div>
     {{template "footer" .}}
-  </div>
+  </main>
 </body>
 
 </html>
 
-{{ end}}
+{{ end }}

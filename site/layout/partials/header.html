@@ -1,7 +1,6 @@
 {{define "header"}} {{ $PageData := index .DeepDataMerge.Templates .PageURL }}
 {{ if eq $PageData nil }} {{ $PageData = .TemplateData }} {{ end }}
 
-<!--<a class="header-element-author" href="/">{{ $.DeepDataMerge.LayoutConfig.Author }}</a>-->
 <header>
     <nav>
         <div class="navigations">
@@ -12,28 +11,8 @@
             }} {{ if eq . "index" }} {{else}}
             <a class="header-element" href="/{{.}}">{{ $key }}</a>
             {{end}} {{end}} {{end}}
-
-            <!--<div id="search-toggle" class="search-closed">
-                <p>search</p>
-            </div>-->
         </div>
     </nav>
 </header>
-
-<!-- <script> -->
-<!--     const currentPage = window.location.pathname; -->
-<!--     const headerElements = document.querySelectorAll(".header-element"); -->
-<!---->
-<!--     headerElements.forEach((element) => { -->
-<!--         const elementSrc = element.getAttribute("href"); // get src attribute of each element -->
-<!--         if (currentPage.includes(elementSrc)) { -->
-<!--             // element.classList.add('active'); // add "active" class to the matching element -->
-<!--             console.log(currentPage, elementSrc); -->
-<!--             // element.style.color = "var(--color-heading)"; -->
-<!--             element.style.fontWeight = "600"; -->
-<!--             console.log(currentPage, elementSrc); -->
-<!--         } -->
-<!--     }); -->
-<!-- </script> -->
 
 {{end}}

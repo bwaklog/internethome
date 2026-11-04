@@ -1,87 +1,26 @@
 {{define "footer"}}
 
-<!-- <footer>
-    <a href="https://x.com/bwaklog">aditya hegde</a>
-    <p><span id="local-time"></span></p>
-</footer> -->
-
-<!-- <script>
-function updateClock() {
-    // Create a new Date object for the current time
-    const now = new Date();
-
-    // Get the time string in HH-MM-SS format for Kolkata time zone
-    const options = {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false,
-        timeZone: 'Asia/Kolkata'
-    };
-    const timeString = now.toLocaleString('en-GB', options).replace(/:/g, ':');
-
-    // Display the time
-    document.getElementById('local-time').textContent = timeString;
-}
-
-// Update the clock every second
-setInterval(updateClock, 1000);
-
-// Initial call to display the clock immediately
-updateClock();
-</script> -->
-
 <footer>
-    <!--<hr />-->
-    <!-- <div class="footer-text"> -->
-        <!-- updated on  -->
-        <!--<a class="footer-element" href="https://github.com/acmpesuecc/anna">anna</a>-->
-        <!--<br />-->
-        <!--&copy; Aditya Hegde 2026 <br />-->
-        <!-- <a -->
-        <!--     id="commit-hash" -->
-        <!--     style="text-decoration: none" -->
-        <!--     class="footer-element" -->
-        <!--     href="https://github.com/bwaklog/internethome/tree/d4908b1152b5b5ccb11075316fb4a2725a914cf0" -->
-        <!--     >{commit_hash}</a -->
-        <!-- > -->
-        <!-- <span id="commit-date">{commit_date}</span> -->
-        <!-- <span id="commit-message">{commit_message}</span> -->
-    <!-- </div> -->
     &copy; <a href="mailto:mail@adihegde.com">Aditya Hegde</a> 2026 | <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-    <!-- <p>
-        <a
-            href="https://homebrew.hsp-ec.xyz/ring/prev?site=https://adihegde.com"
-            class="webring-element"
-            >←
-        </a>
-        <a href="https://homebrew.hsp-ec.xyz/webring" class="webring-element"
-            >homebrew webring</a
-        >
-        <a
-            href="https://homebrew.hsp-ec.xyz/ring/next?site=https://adihegde.com"
-            class="webring-element"
-        >
-            →</a
-        >
-    </p> -->
 </footer>
 
 <script>
-const postDates = document.querySelectorAll('.post-list-date, .post-date');
-const dateFormatter = new Intl.DateTimeFormat('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-    timeZone: 'UTC'
-});
+    // Script is available for all pages to format time
+    // Will remove when templating language changes (anna v6)
+    const postDates = document.querySelectorAll('.post-list-date, .post-date');
+    const dateFormatter = new Intl.DateTimeFormat('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        timeZone: 'UTC'
+    });
 
-postDates.forEach((element) => {
-    const date = new Date(element.textContent.trim());
-    if (!Number.isNaN(date.getTime())) {
-        element.textContent = dateFormatter.format(date);
-    }
-});
+    postDates.forEach((element) => {
+        const date = new Date(element.textContent.trim());
+        if (!Number.isNaN(date.getTime())) {
+            element.textContent = dateFormatter.format(date);
+        }
+    });
 </script>
 
 {{end}}

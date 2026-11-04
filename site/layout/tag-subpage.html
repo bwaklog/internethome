@@ -3,27 +3,25 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container" id="container">
+    <main class="post-content">
         {{template "header" .}}
 
-            <!-- <h1 class="post-title">Site Index</h1> -->
-            <h2 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }}</h2>
-            <!-- <p>Posts tagged <b>{{ $PageData.Frontmatter.Title }}</b></p> -->
+        <h1 class="tag-category-span">Posts tagged {{ $PageData.Frontmatter.Title }}</h1>
 
-            <ul style="margin-left: 0px;">
-                {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
-                {{ range $TagSet }}
-                <li class="post-list-element">
-                    <p class="post-list-content">
-                        <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
-                        <span class="post-list-date">{{.Frontmatter.Date}}</span>
-                    </p>
-                </li>
-                {{end}}
-            </ul>
+        <ul style="margin-left: 0px;">
+            {{ $TagSet := index .DeepDataMerge.TagsMap .PageURL }}
+            {{ range $TagSet }}
+            <li class="post-list-element">
+                <p class="post-list-content">
+                    <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a>
+                    <span class="post-list-date">{{.Frontmatter.Date}}</span>
+                </p>
+            </li>
+            {{end}}
+        </ul>
 
-    </div >
-    {{template "footer" .}}
+        {{template "footer" .}}
+    </main>
 </body>
 
 <script>

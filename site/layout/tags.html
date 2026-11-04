@@ -3,10 +3,10 @@
 {{ template "head" .}}
 
 <body>
-    <div class="container" id="container">
+    <main class="post-content">
         {{template "header" .}}
 
-        <h2>Site Index</h2>
+        <h1>Site Index</h1>
 
         <!-- previously a div that had post-tag -->
         <div class="all-tags">
@@ -19,69 +19,10 @@
             <p>These posts are also organised by collections, browse the available ones <a href="/collections.html">here</a></p>
         </div>
 
-        <!-- <h2>2025</h2> -->
-        <!-- <ul style="margin-left: 0px;"> -->
-        <!-- {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }} -->
-        <!--     {{ if eq $Collection "collections/2025.html" }} -->
-        <!--         {{ range $RelatedPages }} -->
-        <!--             <li class="post-list-element"> -->
-        <!--                 <div class="post-list-row"> -->
-        <!--                     <div> -->
-        <!--                         <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a> -->
-        <!--                         <p class="post-list-description">{{.Frontmatter.Description}}</p> -->
-        <!--                     </div> -->
-        <!--                     <div class="post-list-date">{{.Frontmatter.Date}}</div> -->
-        <!--                 </div> -->
-        <!--             </li> -->
-        <!--         {{ end }} -->
-        <!--     {{else}} -->
-        <!--     {{end}} -->
-        <!-- {{end}} -->
-        <!-- </ul> -->
-        <!---->
-        <!-- <h2>2024</h2> -->
-        <!-- <ul style="margin-left: 0px;"> -->
-        <!-- {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }} -->
-        <!--     {{ if eq $Collection "collections/2024.html" }} -->
-        <!--         {{ range $RelatedPages }} -->
-        <!--         <li class="post-list-element"> -->
-        <!--             <div class="post-list-row"> -->
-        <!--                 <div> -->
-        <!--                     <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a> -->
-        <!--                     <p class="post-list-description">{{.Frontmatter.Description}}</p> -->
-        <!--                 </div> -->
-        <!--                 <div class="post-list-date">{{.Frontmatter.Date}}</div> -->
-        <!--             </div> -->
-        <!--         </li> -->
-        <!--         {{ end }} -->
-        <!--     {{else}} -->
-        <!--     {{end}} -->
-        <!-- {{end}} -->
-        <!-- </ul> -->
-        <!---->
-        <!-- <h2>2023</h2> -->
-        <!-- <ul style="margin-left: 0px;"> -->
-        <!-- {{ range $Collection, $RelatedPages :=  .DeepDataMerge.CollectionsMap }} -->
-        <!--     {{ if eq $Collection "collections/2023.html" }} -->
-        <!--         {{ range $RelatedPages }} -->
-        <!--         <li class="post-list-element"> -->
-        <!--             <div class="post-list-row"> -->
-        <!--                 <div> -->
-        <!--                     <a class="post-list-title" href="/{{.CompleteURL}}">{{.Frontmatter.Title}}</a> -->
-        <!--                     <p class="post-list-description">{{.Frontmatter.Description}}</p> -->
-        <!--                 </div> -->
-        <!--                 <div class="post-list-date">{{.Frontmatter.Date}}</div> -->
-        <!--             </div> -->
-        <!--         </li> -->
-        <!--         {{ end }} -->
-        <!--     {{else}} -->
-        <!--     {{end}} -->
-        <!-- {{end}} -->
-        <!-- </ul> -->
-
-    </div >
-    {{template "footer" .}}
+        {{template "footer" .}}
+    </main>
 </body>
+
 <!-- <script>
 const month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
