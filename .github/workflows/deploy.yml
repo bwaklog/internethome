@@ -1,0 +1,63 @@
+name: Deploy internethome site
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ANNA_VERSION: ${{ vars.ANNA_VERSION }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+        with:
+            submodules: false
+
+      - name: Checkout Synapse Repository
+        env:
+            SYNAPSE_DEPLOY_KEY: ${{ secrets.SYNAPSE_DEPLOY_KEY }}
+        run: |
+          eval "$(ssh-agent -s)"
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          printf '%s\n' "$SYNAPSE_DEPLOY_KEY" | ssh-add -
+          git submodule sync
+          git submodule update --init --recursive
+
+      - name: Download Anna
+        run: |
+          curl -fsSL \
+            "https://github.com/anna-ssg/anna/releases/download/${ANNA_VERSION}/anna_Linux_x86_64.tar.gz" \
+            -o /tmp/anna.tar.gz
+
+          tar -xzf /tmp/anna.tar.gz
+
+          chmod +x anna
+
+          ./anna --version
+
+      - name: Build site
+        run: |
+          ./anna
+
+      - name: Verify build
+        run: |
+          test -d site/rendered
+          test -f site/rendered/index.html
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4"
+          command: deploy
