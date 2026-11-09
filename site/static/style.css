@@ -370,7 +370,24 @@ a {
     }
 }
 
+.footnote-ref {
+    text-decoration: none;
+}
+
+.footnote-ref::before {
+    content: "[";
+}
+
+.footnote-ref::after {
+    content: "]";
+}
+
+.footnotes>ol>li>p {
+    margin: 0;
+}
+
 nav {
+    margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -451,7 +468,7 @@ ul {
         margin: 0;
     }
 
-    margin-bottom: 0.1rem;
+    /* margin-bottom: 0.1rem; */
 }
 
 .post-body-preview {
@@ -476,7 +493,7 @@ ul:has(.post-list-element) {
 .post-list-title:visited {
     color: var(--color-text);
     font-family: var(--heading-font-family);
-    font-weight: 400;
+    font-weight: 450;
     font-size: var(--style-body-font);
     text-decoration: underline;
     text-decoration-thickness: 2px;

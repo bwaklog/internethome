@@ -1,0 +1,53 @@
+{{ define "collection-index"}}
+{{ $PageData := index .DeepDataMerge.Collections .PageURL }}
+{{ template "head" .}}
+
+<body>
+    <main class="post-content">
+        {{template "header" .}}
+
+        {{$CollectionIndexData := index .DeepDataMerge.Pages .PageURL}}
+        {{$CollectionHierarchy := index .DeepDataMerge.CollectionsHierarchyData .PageURL }}
+        {{$CollectionSet := index .DeepDataMerge.CollectionsMap .PageURL}}
+
+        {{$CollectionIndexData.Body}}
+
+        {{if or $CollectionHierarchy.ChildCollections $CollectionSet}}
+            {{if ne (len $CollectionIndexData.Body) 0}}
+                <hr />
+                <i>Explore the site</i>
+            {{end}}
+        {{end}}
+
+        <ul>
+            {{if $CollectionHierarchy.ChildCollections }}
+                {{range $CollectionHierarchy.ChildCollections}}
+                <li class="post-list-element">
+                    <a 
+                        class="post-list-title"
+                        href="/{{.}}"
+                    >{{cutSuffix . "/index.html"}}/</a>
+                </li>
+                {{end}}
+            {{end}}
+
+            {{range $CollectionSet}}
+                {{if and (ne .CompleteURL $.PageURL) (ne .CompleteURL "404.html")}}
+                    <li class="post-list-element">
+                        <a 
+                            class="post-list-title"
+                            href='{{if eq .CompleteURL "index.html"}}/{{else}}/{{.CompleteURL}}{{end}}'
+                        >{{.Frontmatter.Title}}</a>
+                        <span class="post-list-date">{{.Frontmatter.Date}}</span>
+                    </li>
+                {{end}}
+            {{end}}
+        </ul>
+
+        {{template "footer" .}}
+    </main>
+</body>
+
+</html>
+
+{{ end }}

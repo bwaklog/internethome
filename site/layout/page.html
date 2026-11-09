@@ -1,11 +1,34 @@
 {{ define "page"}}
-{{$PageData := index .DeepDataMerge.Templates .PageURL}}
+{{$PageData := index .DeepDataMerge.Pages .PageURL}}
 {{ template "head" .}}
 
 <body>
     <main class="post-content">
         {{template "header" .}}
-        {{ $PageData.Body }}
+
+        <h1 class="post-title">{{$PageData.Frontmatter.Title}}</h1>
+        <span class="post-list-date">{{$PageData.Frontmatter.Date}}</span>
+
+        {{ if eq (len $PageData.Frontmatter.PreviewImage) 0 }}
+        {{ else }}
+        <!-- <img loading="lazy" class="post-img-cover" src="{{ $PageData.Frontmatter.PreviewImage }}" /> -->
+        {{end}}
+
+        {{$PageData.Body}}
+
+        <p class="post-author" style="font-family: Over the Rainbow; font-size: 2em; padding-top: 10px;">
+        {{ index $.DeepDataMerge.Config.Socials "name" }}<br>
+        </p>
+
+        {{if ne (len $PageData.Frontmatter.Tags) 0}}
+        <p>
+            post tagged by 
+            {{range $PageData.Frontmatter.Tags}}
+                <a href="/tags/{{.}}.html" class="post-tag">{{.}}</a>
+            {{end}}
+        </p>
+        {{end}}
+
         {{template "footer" .}}
     </main>
 </body>

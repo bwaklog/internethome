@@ -1,16 +1,36 @@
-{{define "header"}} {{ $PageData := index .DeepDataMerge.Templates .PageURL }}
-{{ if eq $PageData nil }} {{ $PageData = .TemplateData }} {{ end }}
+{{define "header"}} 
+{{ $PageData := index .DeepDataMerge.Pages .PageURL }}
+{{ if eq $PageData nil }} 
+    {{ $PageData = .PageData }} 
+{{ end }}
 
 <header>
     <nav>
         <div class="navigations">
-            {{if eq $PageData.CompleteURL "index.html" }} {{else}}
-            <a class="header-element-author" href="/">home</a>
-            {{end}} {{ range $index_no, $map :=
-            .DeepDataMerge.LayoutConfig.Navbar }} {{ range $key, $value := $map
-            }} {{ if eq . "index" }} {{else}}
-            <a class="header-element" href="/{{.}}">{{ $key }}</a>
-            {{end}} {{end}} {{end}}
+            <!-- <a
+                {{if eq .PageURL "index.html" }} 
+                href="index.html"
+                {{else}}
+                href="../index.html"
+                {{end}}
+            >
+                <svg viewBox="0 0 100 100" xmlns="http://w3.org" style="width: calc(2 * var(--style-body-font)); height: calc(2 * var(--style-body-font));">
+                    <ellipse cx="50" cy="50" rx="50" ry="50" fill="var(--color-text-dim)" />
+                </svg>
+            </a> -->
+
+            <!-- {{if eq $PageData.CompleteURL "index.html" }} 
+            {{else}}
+                <a class="header-element-author" href="/">home</a>
+            {{end}} 
+            {{ range $index_no, $map := .DeepDataMerge.Config.Navbar }}
+                {{ range $key, $value := $map}} 
+                    {{ if eq . "index" }} 
+                    {{else}}
+                    <a class="header-element" href="/{{.}}">{{ $key }}</a>
+                    {{end}} 
+                {{end}} 
+            {{end}} -->
         </div>
     </nav>
 </header>
