@@ -227,95 +227,6 @@ h6 {
     }
 }
 
-/* 1. Initialize and reset child counters when a higher-level heading appears */
-body {
-    counter-reset: c1;
-}
-
-h1 {
-    counter-reset: c2;
-}
-
-h2 {
-    counter-reset: c3;
-}
-
-h3 {
-    counter-reset: c4;
-}
-
-h4 {
-    counter-reset: c5;
-}
-
-h5 {
-    counter-reset: c6;
-}
-
-/* 2. Increment counters on each heading level */
-h1 {
-    counter-increment: c1;
-}
-
-h2 {
-    counter-increment: c2;
-}
-
-h3 {
-    counter-increment: c3;
-}
-
-h4 {
-    counter-increment: c4;
-}
-
-h5 {
-    counter-increment: c5;
-}
-
-h6 {
-    counter-increment: c6;
-}
-
-/* 3. Base styling for all heading prefixes */
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-    color: inherit;
-    opacity: 0.5;
-    margin-right: 8px;
-    /* Adds a small gap before the text */
-}
-
-/* 4. Define specific formats for each level */
-h1::before {
-    content: counter(c1) ".";
-}
-
-h2::before {
-    content: counter(c1) "." counter(c2) ".";
-}
-
-h3::before {
-    content: counter(c1) "." counter(c2) "." counter(c3) ".";
-}
-
-h4::before {
-    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) ".";
-}
-
-h5::before {
-    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) ".";
-}
-
-h6::before {
-    content: counter(c1) "." counter(c2) "." counter(c3) "." counter(c4) "." counter(c5) "." counter(c6) ".";
-}
-
-
 hr {
     opacity: 0.5;
 }
@@ -389,8 +300,8 @@ nav>.navigations>.header-element-author {
 
 ul,
 ol {
-    margin-top: 0;
-    padding-left: 0;
+    margin: 0 0 0 1.25em;
+    padding: 0;
 }
 
 ul {
@@ -401,11 +312,15 @@ ul {
 li:has(> input[type="checkbox"]) {
     list-style: none;
 
+    /*flushed check list*/
+    margin-left: none;
+
     &::marker {
         content: "";
     }
 
-    &>input[type="checkbox"] {
+    &>input[type="checkbox"],
+    &>p>input[type="checkbox"] {
         -webkit-appearance: none;
         appearance: none;
         display: inline-block;
@@ -427,6 +342,17 @@ li:has(> input[type="checkbox"]) {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
         }
     }
+}
+
+/* Outermost checklist: flush left, no bullets */
+:not(li)>ul:has(> li > input[type="checkbox"]) {
+    margin-left: 0;
+    list-style: none;
+}
+
+li:has(> input[type="checkbox"])>ul {
+    margin-left: 1.75em;
+    /* checkbox width 1.35em + its right margin 0.4em */
 }
 
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
