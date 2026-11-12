@@ -1,3 +1,4 @@
 [submodule "site/content"]
 	path = site/content
 	url = git@github.com:bwaklog/synapse.git
+    branch = main

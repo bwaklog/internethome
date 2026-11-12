@@ -5,6 +5,7 @@
     {"atom": "feed.xml"}
   ],
   "baseURL": "https://adihegde.com",
+  "ignoreDirs": [".github"],
   "siteScripts": [],
   "siteTitle": "adihegde",
   "author": "mail@adihegde.com (Aditya Hegde)",

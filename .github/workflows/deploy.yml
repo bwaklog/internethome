@@ -23,16 +23,15 @@ jobs:
         with:
             submodules: false
 
-      - name: Checkout Synapse Repository
-        env:
-            SYNAPSE_DEPLOY_KEY: ${{ secrets.SYNAPSE_DEPLOY_KEY }}
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.10.0
+        with:
+            ssh-private-key: ${{ secrets.SYNAPSE_DEPLOY_KEY }}
+
+      - name: Checkout Submodules
         run: |
-          eval "$(ssh-agent -s)"
-          mkdir -p ~/.ssh
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          printf '%s\n' "$SYNAPSE_DEPLOY_KEY" | ssh-add -
           git submodule sync
-          git submodule update --init --recursive
+          git submodule update --init --remote --recursive
 
       - name: Download Anna
         run: |
