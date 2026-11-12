@@ -1,4 +1,4 @@
-This repository contains the template and styling source for my website, compatible with anna v5.0.0-rc-1 (breaking change)
+This repository contains the template and styling source for my website, compatible with anna [`v5.0.0-rc-2`](https://github.com/anna-ssg/anna/releases/tag/v5.0.0-rc-2) (breaking change)
 
 ## Setup
 
@@ -12,7 +12,7 @@ anna -s
 
 ## Deployment Setup
 
-The deploy action requires the following repository secrets:
+The [deploy action](https://github.com/bwaklog/internethome/blob/main/.github/workflows/deploy.yml) requires the following repository secrets:
 - `SYNAPSE_DEPLOY_KEY`: public key with read access to the synapse repository
 - `CLOUDFLARE_API_TOKEN`: an API token with the following permissions
     - Workers Scripts Write (entire account)
