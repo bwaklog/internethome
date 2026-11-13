@@ -216,11 +216,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: var(--style-body-font);
+    /* font-size: var(--style-heading-font); */
     font-family: var(--heading-font-family);
     font-weight: 500;
     color: var(--color-text);
     line-height: 1.2;
+    margin-bottom: 0;
 
     &>* {
         font-size: inherit;
@@ -300,7 +301,7 @@ nav>.navigations>.header-element-author {
 
 ul,
 ol {
-    margin: 0 0 0 1.25em;
+    margin: 0 0 .75em 1.25em;
     padding: 0;
 }
 
@@ -357,7 +358,7 @@ li:has(> input[type="checkbox"])>ul {
 
 /* Masonry-ish image grid using CSS columns (no JS column balancing needed) */
 .image-grid {
-    column-count: 1;
+    column-count: 2;
     column-gap: 0.5rem;
 }
 
