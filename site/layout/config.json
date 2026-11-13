@@ -6,7 +6,7 @@
   ],
   "baseURL": "https://adihegde.com",
   "ignoreDirs": [".github"],
-  "siteScripts": [],
+  "siteScripts": ["/static/wikilinks.js"],
   "siteTitle": "adihegde",
   "author": "mail@adihegde.com (Aditya Hegde)",
   "copyright": "Personal blog © 2026 by Aditya Hegde is licensed under CC BY-NC-SA 4.0",
