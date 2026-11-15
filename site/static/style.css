@@ -572,7 +572,6 @@ a>code {
     width: min(100%, var(--media-width, 900px));
     justify-self: center;
 
-    height: 0;
     margin-top: 1rem;
     margin-bottom: 2rem;
 
@@ -581,12 +580,12 @@ a>code {
 
 /* 16:9 */
 .video-container {
-    padding-bottom: 56.25%;
+    aspect-ratio: 16 / 9;
 }
 
 /* 16:10 */
 .video-container-1610 {
-    padding-bottom: 62.5%;
+    aspect-ratio: 16 / 10;
 }
 
 .video-container iframe,
