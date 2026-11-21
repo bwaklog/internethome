@@ -26,12 +26,14 @@
 
 	<body>
 		<main class="post-content">
-			<a 
-				href="/"
-				style="text-decoration: none; color: var(--color-text); font-size: var(--h2-fs);"
-			>
-				&#x21A9;&#xFE0E;
-			</a><br>
+            <a id="up-index-link" href="../index.html" aria-label="Up to index">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M7.83,13l5.6,5.6L12,20L4,12l8-8l1.43,1.4L7.83,11H20v2H7.83Z"/></svg>
+            </a>
+            <br>
+            <script>
+            const p = location.pathname, leaf = !p.endsWith("/") && !p.endsWith("index.html");
+            if (leaf) document.getElementById("up-index-link").href = "./index.html";
+            </script>
 
 			<p>List of talks and presentations</p>
 

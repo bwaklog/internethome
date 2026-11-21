@@ -18,25 +18,27 @@
     <meta property="og:description" content="acknowledgements to the sites that inspired the design and purpose of this page." />
 </head>
 <body>
-    <div class="container" id="container">
-    <a 
-        href="/"
-        style="text-decoration: none; color: var(--color-text); font-size: var(--h2-fs);"
-    >
-        &#x21A9;&#xFE0E;
-    </a><br>
-    <span>The design on this site derives its inspiration from these
-    folks:</span> 
-    <ul>
-        <li><a href="https://nelson.co/">nelson.co</a></li>
-        <li><a href="https://eatonphil.com">eatonphil.com</a></li>
-        <li><a href="https://til.simonwillison.net/">til.simonwillison.net</a></li>
-        <li><a href="https://matklad.github.io">matklad.github.io</a></li>
-        <li><a href="https://transactional.blog/">transactional.blog</a></li> 
-        <li><a href="https://polarhive.net">polarhive.net</a></li> 
-        <li><a href="https://anirudhsudhir.com">anirudhsudhir.com</a></li> 
-        <li><a href="https://rowjee.com">rowjee.com</a></li> 
-    </ul>
-    </div>
+    <main class="post-content">
+        <a id="up-index-link" href="../index.html" aria-label="Up to index">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M7.83,13l5.6,5.6L12,20L4,12l8-8l1.43,1.4L7.83,11H20v2H7.83Z"/></svg>
+        </a>
+        <br>
+        <script>
+        const p = location.pathname, leaf = !p.endsWith("/") && !p.endsWith("index.html");
+        if (leaf) document.getElementById("up-index-link").href = "./index.html";
+        </script>
+        <span>The design on this site derives its inspiration from these
+        folks:</span> 
+        <ul>
+            <li><a href="https://nelson.co/">nelson.co</a></li>
+            <li><a href="https://eatonphil.com">eatonphil.com</a></li>
+            <li><a href="https://til.simonwillison.net/">til.simonwillison.net</a></li>
+            <li><a href="https://matklad.github.io">matklad.github.io</a></li>
+            <li><a href="https://transactional.blog/">transactional.blog</a></li> 
+            <li><a href="https://polarhive.net">polarhive.net</a></li> 
+            <li><a href="https://anirudhsudhir.com">anirudhsudhir.com</a></li> 
+            <li><a href="https://rowjee.com">rowjee.com</a></li> 
+        </ul>
+    </main>
 </body>
 </html>

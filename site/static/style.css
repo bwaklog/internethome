@@ -2,7 +2,7 @@
     --color-text: #000000;
     --color-text-dim: #1a1a1a;
 
-    --color-background: #ffffff;
+    --color-background: #fff;
     --color-background-dim: #fbfaf97a;
 
     --inline-code-bg: #ececec;
@@ -29,22 +29,22 @@
     --h6-fs: 1.35rem;
     --style-body-font-mobile: 1rem;
 
-    /* --body-font-family: "Crimson Pro", Georgia, serif; */
-    /* --body-italic-font-family: "Crimson Pro", Georgia, serif; */
-    /* --heading-font-family: "Crimson Pro", Georgia, serif; */
-    /* --heading-italic-font-family: "Crimson Pro", Georgia, serif; */
-    /* --blockquote-font-family: "Crimson Pro", Georgia, serif; */
+    --body-font-family: "Libre Baskerville", Georgia, serif;
+    --body-italic-font-family: "Libre Baskerville", Georgia, serif;
+    /* --heading-font-family: "Libre Baskerville", Georgia, serif; */
+    /* --heading-italic-font-family: "Libre Baskerville", Georgia, serif; */
+    --blockquote-font-family: "Libre Baskerville", Georgia, serif;
 
-    --body-font-family:
-        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    --body-italic-font-family:
-        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    /* --body-font-family: */
+    /*     ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+    /* --body-italic-font-family: */
+    /*     ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
     --heading-font-family:
         ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --heading-italic-font-family:
         ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    --blockquote-font-family:
-        ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    /* --blockquote-font-family: */
+    /*     ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
 
     /* --mono-font-family: "JetBrains Mono", monospace; */
     --mono-font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -301,7 +301,7 @@ nav>.navigations>.header-element-author {
 
 ul,
 ol {
-    margin: 0 0 .75em 1.25em;
+    margin: 0 0 0 1.25em;
     padding: 0;
 }
 
@@ -360,6 +360,7 @@ li:has(> input[type="checkbox"])>ul {
 .image-grid {
     column-count: 2;
     column-gap: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .image-grid>figure>img {
@@ -438,7 +439,7 @@ ul:has(.post-list-element) {
 .post-list-title,
 .post-list-title:visited {
     color: var(--color-text);
-    font-family: var(--heading-font-family);
+    /* font-family: var(--heading-font-family); */
     font-weight: 450;
     font-size: var(--style-body-font);
     text-decoration: underline;
@@ -451,7 +452,7 @@ ul:has(.post-list-element) {
 }
 
 .post-list-date {
-    font-family: var(--heading-font-family);
+    /* font-family: var(--heading-font-family); */
     /* font-size: larger; */
     color: var(--color-text-dim);
     opacity: 0.5;
